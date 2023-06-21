@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import QCM_question from './components/QCM_question';
 import './App.css';
 
 function App() {
@@ -6,20 +7,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <QCM_question 
+          question="Est-ce qu'un immortel sent bon ?"
+          options={["Oui", "Non"]}
+          regle="Un vieux sent toujours mauvais."
+          reponse="Non"
+        />
       </header>
     </div>
   );
 }
 
 export default App;
+
