@@ -5,18 +5,18 @@
       "categorie": "grammaire",
       "titre": "Accord des adjectifs",
       "niveau": "intermédiaire",
-      "intitulé": "Complétez les phrases avec les adjectifs au féminin.",
+      "intitule": "Complétez les phrases avec les adjectifs au féminin.",
       "lien": "https://exemple.com/ex1",
       "explication": "Les adjectifs s'accordent en genre avec les noms qu'ils qualifient.",
       "questions": [
         {
           "type": "phraseTrous",
-          "ennonce": "Le chat est ___.",
+          "ennonce": "Le chat est .....",
           "reponse": "mignon"
         },
         {
           "type": "phraseTrous",
-          "ennonce": "La maison est ___.",
+          "ennonce": "La maison est .....",
           "reponse": "grande"
         }
       ]
@@ -26,18 +26,18 @@
       "categorie": "vocabulaire",
       "titre": "Synonymes",
       "niveau": "avancé",
-      "intitulé": "Trouvez le synonyme du mot souligné dans chaque phrase.",
+      "intitule": "Trouvez le synonyme du mot souligné dans chaque phrase.",
       "lien": "https://exemple.com/ex2",
       "explication": "Les synonymes sont des mots qui ont un sens similaire ou proche.",
       "questions": [
         {
           "type": "phraseTrous",
-          "ennonce": "Il est important de ___ ses objectifs.",
+          "ennonce": "Il est important de .... ses objectifs.",
           "reponse": "définir"
         },
         {
           "type": "phraseTrous",
-          "ennonce": "Elle a été ___ par sa performance.",
+          "ennonce": "Elle a été .... par sa performance.",
           "reponse": "applaudie"
         }
       ]
@@ -47,13 +47,13 @@
       "categorie": "conjugaison",
       "titre": "Imparfait vs passé composé",
       "niveau": "débutant",
-      "intitulé": "Indiquez si le verbe doit être conjugué à l'imparfait ou au passé composé.",
+      "intitule": "Indiquez si le verbe doit être conjugué à l'imparfait ou au passé composé.",
       "lien": "https://exemple.com/ex3",
       "explication": "L'imparfait est utilisé pour décrire une action habituelle ou en cours dans le passé, tandis que le passé composé indique une action ponctuelle ou terminée.",
       "questions": [
         {
           "type": "QCM",
-          "ennonce": "Hier, je ___ (manger) une pizza.",
+          "ennonce": "Hier, je .... (manger) une pizza.",
           "reponses": [
             {
               "reponse": "ai mangé",
@@ -67,7 +67,7 @@
         },
         {
           "type": "QCM",
-          "ennonce": "Quand j'étais jeune, je ___ (jouer) au football tous les jours.",
+          "ennonce": "Quand j'étais jeune, je .... (jouer) au football tous les jours.",
           "reponses": [
             {
               "reponse": "jouais",

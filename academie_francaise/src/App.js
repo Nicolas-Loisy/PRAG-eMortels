@@ -8,7 +8,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Exercice exercice={Exemple.Exercices[2]} />
+        {
+          Exemple.Exercices.map(exercice => (
+            <Exercice exercice={exercice} />
+          ))
+        }
       </header>
     </div>
   );
