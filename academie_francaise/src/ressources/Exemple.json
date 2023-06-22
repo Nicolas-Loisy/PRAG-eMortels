@@ -1,0 +1,109 @@
+{
+  "Exercices": [
+    {
+      "id": "ex1",
+      "categorie": "grammaire",
+      "titre": "Accord des adjectifs",
+      "niveau": "intermédiaire",
+      "intitulé": "Complétez les phrases avec les adjectifs au féminin.",
+      "lien": "https://exemple.com/ex1",
+      "explication": "Les adjectifs s'accordent en genre avec les noms qu'ils qualifient.",
+      "questions": [
+        {
+          "type": "phraseTrous",
+          "ennonce": "Le chat est ___.",
+          "reponse": "mignon"
+        },
+        {
+          "type": "phraseTrous",
+          "ennonce": "La maison est ___.",
+          "reponse": "grande"
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "categorie": "vocabulaire",
+      "titre": "Synonymes",
+      "niveau": "avancé",
+      "intitulé": "Trouvez le synonyme du mot souligné dans chaque phrase.",
+      "lien": "https://exemple.com/ex2",
+      "explication": "Les synonymes sont des mots qui ont un sens similaire ou proche.",
+      "questions": [
+        {
+          "type": "phraseTrous",
+          "ennonce": "Il est important de ___ ses objectifs.",
+          "reponse": "définir"
+        },
+        {
+          "type": "phraseTrous",
+          "ennonce": "Elle a été ___ par sa performance.",
+          "reponse": "applaudie"
+        }
+      ]
+    },
+    {
+      "id": "ex3",
+      "categorie": "conjugaison",
+      "titre": "Imparfait vs passé composé",
+      "niveau": "débutant",
+      "intitulé": "Indiquez si le verbe doit être conjugué à l'imparfait ou au passé composé.",
+      "lien": "https://exemple.com/ex3",
+      "explication": "L'imparfait est utilisé pour décrire une action habituelle ou en cours dans le passé, tandis que le passé composé indique une action ponctuelle ou terminée.",
+      "questions": [
+        {
+          "type": "QCM",
+          "ennonce": "Hier, je ___ (manger) une pizza.",
+          "reponses": [
+            {
+              "reponse": "ai mangé",
+              "correcte": true
+            },
+            {
+              "reponse": "mangeais",
+              "correcte": false
+            }
+          ]
+        },
+        {
+          "type": "QCM",
+          "ennonce": "Quand j'étais jeune, je ___ (jouer) au football tous les jours.",
+          "reponses": [
+            {
+              "reponse": "jouais",
+              "correcte": true
+            },
+            {
+              "reponse": "ai joué",
+              "correcte": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "typeQuestion": [
+    {
+      "id": "phraseTrous",
+      "nom": "Phrases à trous"
+    },
+    {
+      "id": "QCM",
+      "nom": "Questions à choix multiples"
+    }
+  ],
+  "categorie": [
+    {
+      "id": "grammaire",
+      "nom": "Grammaire"
+    },
+    {
+      "id": "vocabulaire",
+      "nom": "Vocabulaire"
+    },
+    {
+      "id": "conjugaison",
+      "nom": "Conjugaison"
+    }
+  ]
+}

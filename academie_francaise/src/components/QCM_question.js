@@ -1,16 +1,16 @@
-function QCM_question({ question, options, regle, reponse }) {
+function Qcm_question({ ennonce, reponses }) {
   return (
     <div>
-      <h3>{question}</h3>
+      <h3>{ennonce}</h3>
       <ul>
-        {options.map((option, index) => (
-          <li key={index} onClick={() => console.log(option === reponse) }>
-            {option}
+        {reponses.map((reponse, index) => (
+          <li key={index} onClick={() => console.log(reponse.correcte) }>
+            {reponse.reponse}
           </li>
         ))}
       </ul>
-      <button onClick={() => console.log(regle)}>Aide</button>
     </div>
   );
 }
-export default QCM_question;
+
+export default Qcm_question;

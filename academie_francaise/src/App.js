@@ -1,5 +1,6 @@
 import logo from './logo.svg';
-import QCM_question from './components/QCM_question';
+import Exercice from './components/Exercice';
+import Exemple from './ressources/Exemple.json'
 import './App.css';
 
 function App() {
@@ -7,12 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <QCM_question 
-          question="Est-ce qu'un immortel sent bon ?"
-          options={["Oui", "Non"]}
-          regle="Un vieux sent toujours mauvais."
-          reponse="Non"
-        />
+        <Exercice exercice={Exemple.Exercices[2]} />
       </header>
     </div>
   );
