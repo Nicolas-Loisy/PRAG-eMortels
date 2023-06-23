@@ -1,4 +1,5 @@
-import Qcm_question from "./Qcm_question";
+import EF_question from "./EF_questions";
+import Qcm_question from "./QCM_question";
 import Trou_question from "./Trou_question";
 
 function Exercice({ exercice }) {
@@ -26,6 +27,15 @@ function Exercice({ exercice }) {
                   reponse={question.reponse}
                 />
               );
+              case "EF":
+                return (
+                  <EF_question
+                    key={index}
+                    ennonce={question.ennonce}
+                    reponse={question.reponse}
+                    motErreur={question.motErreur}
+                  />
+                );
             default:
               return null;
           }

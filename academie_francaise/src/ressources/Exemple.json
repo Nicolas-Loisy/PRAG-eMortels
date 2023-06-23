@@ -58,10 +58,6 @@
             {
               "reponse": "ai mangé",
               "correcte": true
-            },
-            {
-              "reponse": "mangeais",
-              "correcte": false
             }
           ]
         },
@@ -80,6 +76,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ex4",
+      "categorie": "vocabulaire",
+      "titre": "Les homonymes",
+      "niveau": "débutant",
+      "intitule": "Cliquez sur le mot balade ou ballade si vous pensez qu’il est mal orthographié dans les phrases suivantes",
+      "lien": "https://www.academiefrancaise.fr/ballade-balade",
+      "explication": "BALLADE : 1. MOYEN ÂGE. Poème à forme fixe, composé de trois huitains ou dizains ... 2. Récit en vers divisé en strophes, avec ou sans refrain… ballade | Dictionnaire de l’Académie française | 9e édition (dictionnaireacademie.fr) BALADE : Fam. Promenade d’agrément. balade | Dictionnaire de l’Académie française | 9e édition (dictionnaireacademie.fr)",
+      "questions": [
+        {
+          "type": "EF",
+          "ennonce": "Les enfants sont sortis faire une ballade.",
+          "motErreur": "ballade",
+          "reponse": "balade"
+        },
+        {
+          "type": "EF",
+          "ennonce": "Odes et Balades est un recueil de Victor Hugo.",
+          "motErreur": "Balades",
+          "reponse": "Ballades"
+        },
+        {
+          "type": "EF",
+          "ennonce": "« La consultation du dictionnaire reste une balade délicieuse ». (B.Pivot)",
+          "motErreur": "Pas de faute",
+          "reponse": "Pas de faute"
+        },
+        {
+          "type": "EF",
+          "ennonce": "Demain j’irai me ballader avec Cassandre.",
+          "motErreur": "ballader",
+          "reponse": "balader"
+        }
+      ]
     }
   ],
   "typeQuestion": [
@@ -90,6 +121,10 @@
     {
       "id": "QCM",
       "nom": "Questions à choix multiples"
+    },
+    {
+      "id": "EF",
+      "nom": "Énoncé fautif"
     }
   ],
   "categorie": [
