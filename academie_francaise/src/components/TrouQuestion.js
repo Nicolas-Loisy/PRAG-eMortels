@@ -1,4 +1,4 @@
-function Trou_question({ ennonce }) {
+function TrouQuestion({ ennonce }) {
   return (
     <div>
       <h3 dangerouslySetInnerHTML={ajout_input(ennonce)}/>
@@ -13,4 +13,4 @@ function ajout_input(ennonce) {
   return { __html: replacedText };
 }
 
-export default Trou_question;
+export default TrouQuestion;

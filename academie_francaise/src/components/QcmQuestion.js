@@ -1,4 +1,4 @@
-function Qcm_question({ ennonce, reponses }) {
+function QcmQuestion({ ennonce, reponses }) {
   return (
     <div>
       <h3>{ennonce}</h3>
@@ -13,4 +13,4 @@ function Qcm_question({ ennonce, reponses }) {
   );
 }
 
-export default Qcm_question;
+export default QcmQuestion;
