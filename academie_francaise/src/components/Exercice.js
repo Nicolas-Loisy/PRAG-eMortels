@@ -1,6 +1,6 @@
-import EF_question from "./EF_questions";
-import Qcm_question from "./QCM_question";
-import Trou_question from "./Trou_question";
+import EfQuestion from "./EfQuestions";
+import QcmQuestion from "./QcmQuestion";
+import TrouQuestion from "./TrouQuestion";
 
 function Exercice({ exercice }) {
   return (
@@ -13,7 +13,7 @@ function Exercice({ exercice }) {
           switch (question.type) {
             case "QCM":
               return (
-                <Qcm_question
+                <QcmQuestion
                   key={index}
                   ennonce={question.ennonce}
                   reponses={question.reponses}
@@ -21,7 +21,7 @@ function Exercice({ exercice }) {
               );
             case "phraseTrous":
               return (
-                <Trou_question
+                <TrouQuestion
                   key={index}
                   ennonce={question.ennonce}
                   reponse={question.reponse}
@@ -29,7 +29,7 @@ function Exercice({ exercice }) {
               );
               case "EF":
                 return (
-                  <EF_question
+                  <EfQuestion
                     key={index}
                     ennonce={question.ennonce}
                     reponse={question.reponse}

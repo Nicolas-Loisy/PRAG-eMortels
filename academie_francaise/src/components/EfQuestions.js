@@ -1,4 +1,4 @@
-function EF_question({ ennonce, reponse, motErreur }) {
+function EfQuestion({ ennonce, reponse, motErreur }) {
     const mots = ennonce.split(' ');
     const msgPasErreur = "Pas de faute"
 
