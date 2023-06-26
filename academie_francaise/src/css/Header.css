@@ -1,0 +1,18 @@
+.Header {
+  margin-top: 1em;
+}
+
+.Header .logo {
+  max-width: 25%;
+}
+
+.Header .logo img {
+  max-width: 50%;
+  margin-bottom: 1em;
+}
+
+.Header .logo p {
+  font-family: "Baskerville";
+  font-size: 1.4em;
+  margin-top: 0;
+}

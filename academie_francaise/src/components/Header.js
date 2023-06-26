@@ -1,3 +1,4 @@
+import '../css/Header.css';
 import logo from "../ressources/Images/logo.png"
 
 function Header() {
@@ -7,12 +8,12 @@ function Header() {
   };
 
   return (
-    <header>
-      <div onClick={handleClick}>
+    <div className='Header'>
+      <div onClick={handleClick} className="logo">
         <img src={logo} alt="Logo" />
         <p>Académie Française</p>
       </div>
-    </header>
+    </div>
   );
 }
 

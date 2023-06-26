@@ -1,76 +1,321 @@
 {
   "Exercices": [
     {
-      "id": "ex1",
-      "categorie": "grammaire",
-      "titre": "Accord des adjectifs",
-      "niveau": "intermédiaire",
-      "intitule": "Complétez les phrases avec les adjectifs au féminin.",
-      "lien": "https://exemple.com/ex1",
-      "explication": "Les adjectifs s'accordent en genre avec les noms qu'ils qualifient.",
+      "id": 1,
+      "categorie": "syntaxe",
+      "titre": "Les adjectifs de couleur (accord)",
+      "niveau": "Niveau 1",
+      "intitule": "Texte à trous. Complétez la seconde phrase sur le modèle de la première, en accordant l’adjectif de couleur comme il convient.",
+      "lien": "https://www.academie-francaise.fr/questions-de-langue#25_strong-em-couleur-accord-de-l-adjectif-et-du-nom-em-strong",
+      "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : des costumes noirs, des cheveux blonds, des lacs verdâtres. Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : des chaussures marron, des robes pivoine. On peut en effet considérer ces formes comme des ellipses : des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine. On recense traditionnellement quatre exceptions à cette règle : rose, mauve, pourpre et écarlate, qui sont variables. Fauve et incarnat, étant d’abord des adjectifs, sont naturellement variables.",
       "questions": [
         {
           "type": "phraseTrous",
-          "ennonce": "Le chat est .....",
-          "reponse": "mignon"
+          "question": "Un chapeau noir.\nUne casquette …….",
+          "reponse": "noire"
         },
         {
           "type": "phraseTrous",
-          "ennonce": "La maison est .....",
-          "reponse": "grande"
+          "question": "Un chien marron.\nUne chienne ……",
+          "reponse": "marron"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Un gilet bleu.\nUne veste ……",
+          "reponse": "bleue"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Un portail vert.\nDes portes ……",
+          "reponse": "vertes"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Un mur topaze.\nDes façades ……",
+          "reponse": "topaze"
         }
       ]
     },
     {
       "id": "ex2",
-      "categorie": "vocabulaire",
-      "titre": "Synonymes",
-      "niveau": "avancé",
-      "intitule": "Trouvez le synonyme du mot souligné dans chaque phrase.",
-      "lien": "https://exemple.com/ex2",
-      "explication": "Les synonymes sont des mots qui ont un sens similaire ou proche.",
+      "categorie": "syntaxe",
+      "titre": "Les adjectifs de couleur (accord)",
+      "niveau": "Niveau 1",
+      "intitule": "Texte à trous. Complétez la seconde phrase sur le modèle de la première, en accordant l’adjectif de couleur comme il convient.",
+      "lien": "https://www.academie-francaise.fr/questions-de-langue#25_strong-em-couleur-accord-de-l-adjectif-et-du-nom-em-strong",
+      "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : des costumes noirs, des cheveux blonds, des lacs verdâtres. Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : des chaussures marron, des robes pivoine. On peut en effet considérer ces formes comme des ellipses : des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine. On recense traditionnellement quatre exceptions à cette règle : rose, mauve, pourpre et écarlate, qui sont variables. Fauve et incarnat, étant d’abord des adjectifs, sont naturellement variables.",
       "questions": [
         {
           "type": "phraseTrous",
-          "ennonce": "Il est important de .... ses objectifs.",
-          "reponse": "définir"
+          "question": "Des coussins lilas.\nUne couverture ……",
+          "reponse": "lilas"
         },
         {
           "type": "phraseTrous",
-          "ennonce": "Elle a été .... par sa performance.",
-          "reponse": "applaudie"
+          "question": "Une moto rose.\nDes bus ……",
+          "reponse": "roses"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Un papier peint beige.\nDes tissus ……",
+          "reponse": "beiges"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Une toge pourpre.\nDes capes ……",
+          "reponse": "pourpres"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Une gourde magenta.\nDes verres ……",
+          "reponse": "magenta"
+        }
+      ]
+    },
+    {
+      "id": "ex1",
+      "categorie": "syntaxe",
+      "titre": "L’interrogation",
+      "niveau": "Niveau 1",
+      "intitule": "Texte à trous. Terminez ces phrases en plaçant le bon signe de ponctuation ( ? ou . )",
+      "lien": "https://www.academie-francaise.fr/interrogative-directe-sans-inversion-vous-allez-ou",
+      "explication": "En français, l’interrogation directe se caractérise par une inversion de la place du sujet et du verbe par rapport à celle qu’ils occupent à la forme affirmative : Il dort. devient dort-il ? ; tu joues. devient joues-tu ? La langue orale, plus relâchée, oublie parfois cette inversion.",
+      "questions": [
+        {
+          "type": "phraseTrous",
+          "question": "Tu viendras ce soir ……",
+          "reponse": "?"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "A-t-elle déjeuné correctement ……",
+          "reponse": "?"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Vous avez froid ……",
+          "reponse": "?"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Est-ce que tu as de la monnaie ……",
+          "reponse": "?"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Il a peur ……",
+          "reponse": "."
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "categorie": "syntaxe",
+      "titre": "L’interrogation",
+      "niveau": "Niveau 1",
+      "intitule": "Texte à trous. Complétez ces phrases interrogatives en ajoutant le pronom personnel adéquat.",
+      "lien": "https://www.academie-francaise.fr/interrogative-directe-sans-inversion-vous-allez-ou",
+      "explication": "En français, l’interrogation directe se caractérise par une inversion de la place du sujet et du verbe par rapport à celle qu’ils occupent à la forme affirmative : Il dort. devient dort-il ? ; tu joues. devient joues-tu ? La langue orale, plus relâchée, oublie parfois cette inversion.",
+      "questions": [
+        {
+          "type": "phraseTrous",
+          "question": "Comment est …… habillée aujourd’hui ?",
+          "reponse": "-elle"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Avez …… vu votre frère ?",
+          "reponse": "-vous"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Louis sera …… là demain ?",
+          "reponse": "-t-il"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Pouvons …… jouer dehors ?",
+          "reponse": "-nous"
+        },
+        {
+          "type": "phraseTrous",
+          "question": "Quelqu’un a …… entendu les informations ?",
+          "reponse": "-t-il"
+        }
+      ]
+    },
+    {
+      "id": "ex1",
+      "categorie": "lexique",
+      "titre": "(balade / ballade)",
+      "niveau": "Niveau 1",
+      "intitule": "Énoncé fautif. Cliquez sur le mot balade ou ballade si vous pensez qu’il est mal orthographié dans les phrases suivantes.",
+      "lien": "https://www.academie-francaise.fr/ballade-balade",
+      "explication": "BALLADE : 1. MOYEN ÂGE. Poème à forme fixe, composé de trois huitains ou dizains ... 2. Récit en vers divisé en strophes, avec ou sans refrain… balade | Dictionnaire de l’Académie française | 9e édition (dictionnaire-academie.fr) BALADE : Fam. Promenade d’agrément. balade | Dictionnaire de l’Académie française | 9e édition (dictionnaire-academie.fr)",
+      "questions": [
+        {
+          "id": "phrase1",
+          "type": "EF",
+          "question": "Les enfants sont sortis faire une ballade.",
+          "reponse": "balade",
+          "motErreur": "ballade"
+        },
+        {
+          "id": "phrase2",
+          "type": "EF",
+          "question": "Odes et Balades est un recueil de Victor Hugo.",
+          "reponse": "Ballades",
+          "motErreur": "Balades"
+        },
+        {
+          "id": "phrase3",
+          "type": "EF",
+          "question": "« La consultation du dictionnaire reste une balade délicieuse ». (B. Pivot)",
+          "reponse": "Pas de faute.",
+          "motErreur": ""
+        },
+        {
+          "id": "phrase4",
+          "type": "EF",
+          "question": "Demain j’irai me ballader avec Cassandre.",
+          "reponse": "balader",
+          "motErreur": "ballader"
+        },
+        {
+          "id": "phrase5",
+          "type": "EF",
+          "question": "On va se balader.",
+          "reponse": "Pas de faute.",
+          "motErreur": ""
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "categorie": "lexique",
+      "titre": "(avant / avent)",
+      "niveau": "Niveau 1",
+      "intitule": "Énoncé fautif. Cliquez sur le mot avant ou avent si vous pensez qu’il est mal orthographié dans les phrases suivantes.",
+      "lien": "https://www.academie-francaise.fr/avant-pour-avent",
+      "explication": "Avent est un nom qui appartient à une langue littéraire un peu précieuse et, aussi et surtout, à la langue liturgique. Il est tiré du latin adventus, un dérivé de venire, « venir, arriver », et signifie « venue, arrivée, avènement ». Il désigne essentiellement la période qui précède Noël et l’arrivée du Christ. Mais comme cette époque est située avant Noël, beaucoup pensent qu’avent doit s’écrire avant. avent | Dictionnaire de l’Académie française | 9e édition (dictionnaire-academie.fr)",
+      "questions": [
+        {
+          "id": "phrase1",
+          "type": "EF",
+          "question": "C’est aux avants qu’on a coutume de planter la rhubarbe.",
+          "reponse": "avents",
+          "motErreur": "avants"
+        },
+        {
+          "id": "phrase2",
+          "type": "EF",
+          "question": "Un tombeau d’avent l’ère chrétienne.",
+          "reponse": "avant",
+          "motErreur": "avent"
+        },
+        {
+          "id": "phrase3",
+          "type": "EF",
+          "question": "Le premier dimanche de l’avant.",
+          "reponse": "avent",
+          "motErreur": "avant"
+        },
+        {
+          "id": "phrase4",
+          "type": "EF",
+          "question": "L’accident a eu lieu bien avant le tournant, dans la ligne droite.",
+          "reponse": "Pas de faute.",
+          "motErreur": ""
+        },
+        {
+          "id": "phrase5",
+          "type": "EF",
+          "question": "Je fais passer ma famille avant toute autre chose.",
+          "reponse": "Pas de faute.",
+          "motErreur": ""
         }
       ]
     },
     {
       "id": "ex3",
-      "categorie": "conjugaison",
-      "titre": "Imparfait vs passé composé",
-      "niveau": "débutant",
-      "intitule": "Indiquez si le verbe doit être conjugué à l'imparfait ou au passé composé.",
-      "lien": "https://exemple.com/ex3",
-      "explication": "L'imparfait est utilisé pour décrire une action habituelle ou en cours dans le passé, tandis que le passé composé indique une action ponctuelle ou terminée.",
+      "categorie": "lexique",
+      "titre": "(tache / tâche)",
+      "niveau": "Niveau 1",
+      "intitule": "Q.C.M. Dans les phrases suivantes, sélectionnez le terme adéquat.",
+      "lien": "https://www.academie-francaise.fr/la-tache-pour-la-tache",
+      "explication": "On ne confondra pas la tâche, le travail qui est donné à exécuter, avec la tache, la marque de salissure. La prononciation doit faire la distinction entre ces deux noms (comme elle le fait pour distinguer pâte de patte) ; rappelons que, dans tâche, le a doit être plus fermé et plus long que dans tache. Cet allongement, noté par l’accent circonflexe, est la trace d’un s que l’on trouvait autrefois dans ce mot, s que nos amis anglais ont conservé dans la forme équivalente task.",
       "questions": [
         {
+          "id": "phrase1",
           "type": "QCM",
-          "ennonce": "Hier, je .... (manger) une pizza.",
-          "reponses": [
+          "question": "Vous avez fait ... sur votre habit.",
+          "reponse": [
             {
-              "reponse": "ai mangé",
+              "reponse": "une tache",
+              "correcte": true
+            },
+            {
+              "reponse": "une tâche",
+              "correcte": false
+            }
+          ]
+        },
+        {
+          "id": "phrase2",
+          "type": "QCM",
+          "question": "Cette trahison imprime sur sa vie ... ineffaçable.",
+          "reponse": [
+            {
+              "reponse": "une tache",
+              "correcte": true
+            },
+            {
+              "reponse": "une tâche",
+              "correcte": false
+            }
+          ]
+        },
+        {
+          "id": "phrase3",
+          "type": "QCM",
+          "question": "Il faut toujours achever sa ... .",
+          "reponse": [
+            {
+              "reponse": "tache",
+              "correcte": false
+            },
+            {
+              "reponse": "tâche",
               "correcte": true
             }
           ]
         },
         {
+          "id": "phrase4",
           "type": "QCM",
-          "ennonce": "Quand j'étais jeune, je .... (jouer) au football tous les jours.",
-          "reponses": [
+          "question": "Avez-vous pris à ... de me contredire sur tout ?",
+          "reponse": [
             {
-              "reponse": "jouais",
+              "reponse": "tache",
+              "correcte": false
+            },
+            {
+              "reponse": "tâche",
+              "correcte": true
+            }
+          ]
+        },
+        {
+          "id": "phrase5",
+          "type": "QCM",
+          "question": "Chez les chrétiens, le baptême efface ... du péché originel.",
+          "reponse": [
+            {
+              "reponse": "la tache",
               "correcte": true
             },
             {
-              "reponse": "ai joué",
+              "reponse": "la tâche",
               "correcte": false
             }
           ]
@@ -78,37 +323,248 @@
       ]
     },
     {
-      "id": "ex4",
-      "categorie": "vocabulaire",
-      "titre": "Les homonymes",
-      "niveau": "débutant",
-      "intitule": "Cliquez sur le mot balade ou ballade si vous pensez qu’il est mal orthographié dans les phrases suivantes",
-      "lien": "https://www.academiefrancaise.fr/ballade-balade",
-      "explication": "BALLADE : 1. MOYEN ÂGE. Poème à forme fixe, composé de trois huitains ou dizains ... 2. Récit en vers divisé en strophes, avec ou sans refrain… ballade | Dictionnaire de l’Académie française | 9e édition (dictionnaireacademie.fr) BALADE : Fam. Promenade d’agrément. balade | Dictionnaire de l’Académie française | 9e édition (dictionnaireacademie.fr)",
+      "id": "ex1",
+      "categorie": "Syntaxe",
+      "titre": "Infinitif ou participe passé des verbes du 1er groupe",
+      "niveau": "Niveau 1",
+      "intitule": "Énoncé fautif.\n\nDans les phrases suivantes, choisissez, pour le verbe entre parenthèses, l’infinitif ou le participe passé en cliquant sur la forme correcte.\nPour savoir si un verbe du 1er groupe (terminé en -ER) est employé à l’infinitif ou au participe passé, il convient de le remplacer par un verbe du 3e groupe et de se poser la question :\nPris ou prendre ?\nVendu ou vendre ?\n\nJ’ai (acheter / acheté) trois croissants à la boulangerie.\nJ’ai acheté trois croissants à la boulangerie.\n\nAvez-vous (contempler / contemplé) l’éclipse lunaire cette nuit ?\nAvez-vous contemplé l’éclipse lunaire cette nuit ?\n\nNous avons (renoncer / renoncé) à le convaincre.\nNous avons renoncé à le convaincre.\n\nAllons (marcher / marché) en forêt cet après-midi.\nAllons marcher en forêt cet après-midi.\n\nMa voiture a été (réviser / révisée) par le garagiste.\nMa voiture a été révisée par le garagiste.",
       "questions": [
         {
-          "type": "EF",
-          "ennonce": "Les enfants sont sortis faire une ballade.",
-          "motErreur": "ballade",
-          "reponse": "balade"
+          "type": "QCM",
+          "question": "J’ai ... trois croissants à la boulangerie.",
+          "reponse": [
+            {
+              "reponse": "acheter",
+              "correcte": false
+            },
+            {
+              "reponse": "acheté",
+              "correcte": true
+            }
+          ]
         },
         {
-          "type": "EF",
-          "ennonce": "Odes et Balades est un recueil de Victor Hugo.",
-          "motErreur": "Balades",
-          "reponse": "Ballades"
+          "type": "QCM",
+          "question": "Avez-vous ... l’éclipse lunaire cette nuit ?",
+          "reponse": [
+            {
+              "reponse": "contempler",
+              "correcte": false
+            },
+            {
+              "reponse": "contemplé",
+              "correcte": true
+            }
+          ]
         },
         {
-          "type": "EF",
-          "ennonce": "« La consultation du dictionnaire reste une balade délicieuse ». (B.Pivot)",
-          "motErreur": "Pas de faute",
-          "reponse": "Pas de faute"
+          "type": "QCM",
+          "question": "Nous avons ... à le convaincre.",
+          "reponse": [
+            {
+              "reponse": "renoncer",
+              "correcte": false
+            },
+            {
+              "reponse": "renoncé",
+              "correcte": true
+            }
+          ]
         },
         {
-          "type": "EF",
-          "ennonce": "Demain j’irai me ballader avec Cassandre.",
-          "motErreur": "ballader",
-          "reponse": "balader"
+          "type": "QCM",
+          "question": "Allons ... en forêt cet après-midi.",
+          "reponse": [
+            {
+              "reponse": "marcher",
+              "correcte": true
+            },
+            {
+              "reponse": "marché",
+              "correcte": false
+            }
+          ]
+        },
+        {
+          "type": "QCM",
+          "question": "Ma voiture a été ... par le garagiste.",
+          "reponse": [
+            {
+              "reponse": "réviser",
+              "correcte": false
+            },
+            {
+              "reponse": "révisée",
+              "correcte": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "categorie": "syntaxe",
+      "titre": "Préalable 1: Infinitif ou participe passé des verbes du 1er groupe?",
+      "niveau": "Niveau 1",
+      "intitule": "Énoncé fautif. Dans les phrases suivantes, choisissez, pour le verbe entre parenthèses, l’infinitif ou le participe passé en cliquant sur la forme correcte.",
+      "explication": "Pour savoir si un verbe du 1er groupe (terminé en -ER) est employé à l’infinitif ou au participe passé, il convient de le remplacer par un verbe du 3e groupe et de se poser la question :\nPris ou prendre ?\nVendu ou vendre ?",
+      "questions": [
+        {
+          "id": "phrase1",
+          "type": "QCM",
+          "question": "Les mûres qu’ils ont ... sont délicieuses.",
+          "choix": [
+            {
+              "option": "ramasser",
+              "correcte": false
+            },
+            {
+              "option": "ramassées",
+              "correcte": true
+            }
+          ]
+        },
+        {
+          "id": "phrase2",
+          "type": "QCM",
+          "question": "Il faut se ... les mains avant de dîner.",
+          "choix": [
+            {
+              "option": "laver",
+              "correcte": true
+            },
+            {
+              "option": "lavé",
+              "correcte": false
+            }
+          ]
+        },
+        {
+          "id": "phrase3",
+          "type": "QCM",
+          "question": "Elle s’est ... avant de sortir.",
+          "choix": [
+            {
+              "option": "doucher",
+              "correcte": false
+            },
+            {
+              "option": "douchée",
+              "correcte": true
+            }
+          ]
+        },
+        {
+          "id": "phrase4",
+          "type": "QCM",
+          "question": "Quand iras-tu ... ton petit frère à l’école ?",
+          "choix": [
+            {
+              "option": "chercher",
+              "correcte": true
+            },
+            {
+              "option": "cherché",
+              "correcte": false
+            }
+          ]
+        },
+        {
+          "id": "phrase5",
+          "type": "QCM",
+          "question": "J’ai beaucoup ri à l’histoire qu’elle m’a ... .",
+          "choix": [
+            {
+              "option": "raconter",
+              "correcte": false
+            },
+            {
+              "option": "racontée",
+              "correcte": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex1",
+      "categorie": "syntaxe",
+      "titre": "Préalable 2: Savoir identifier le C.O.D. d’un verbe conjugué au passé composé avec l’auxiliaire avoir et repérer sa position.",
+      "niveau": "Niveau 1",
+      "intitule": "Repérage. Dans les phrases suivantes, cliquez sur l’élément (nom, groupe nominal ou pronom) qui a pour fonction d’être le C.O.D. du verbe conjugué à un temps composé avec l’auxiliaire avoir et repérer sa position.",
+      "explication": "Avec l’auxiliaire avoir, le participe passé est invariable lorsqu’il n’y a pas de C.O.D. ou si le C.O.D. est placé après le verbe. Il s’accorde avec le C.O.D. si celui-ci est placé avant le verbe.",
+      "questions": [
+        {
+          "id": "phrase1",
+          "type": "reperage",
+          "question": "Elle a rangé le linge dans l’armoire.",
+          "reponse": "le linge",
+          "extra": "(« le linge » = mot qui détermine l’accord du participe passé)"
+        },
+        {
+          "id": "phrase2",
+          "type": "reperage",
+          "question": "Le linge qu’elle a rangé dans l’armoire est propre.",
+          "reponse": "qu’elle a rangé",
+          "extra": "(« qu’elle a rangé » = C.O.D. ; « le linge » = mot qui détermine l’accord du participe passé)"
+        },
+        {
+          "id": "phrase3",
+          "type": "reperage",
+          "question": "Ma sœur ? Je l’ai rencontrée dans le métro tout à l’heure.",
+          "reponse": "l’ai rencontrée",
+          "extra": "(« l’ai rencontrée » = C.O.D. ; « Ma sœur » = mot qui détermine l’accord du participe passé)"
+        },
+        {
+          "id": "phrase4",
+          "type": "reperage",
+          "question": "Il a accompli sa tâche en deux heures.",
+          "reponse": "sa tâche",
+          "extra": "(« sa tâche » = mot qui détermine l’accord du participe passé)"
+        },
+        {
+          "id": "phrase5",
+          "type": "reperage",
+          "question": "La tâche qu’il a accomplie est considérable.",
+          "reponse": "qu’il a accomplie",
+          "extra": "(« qu’il a accomplie » = C.O.D. ; « La tâche » = mot qui détermine l’accord du participe passé)"
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "categorie": "syntaxe",
+      "titre": "Préalable 2: Savoir identifier le C.O.D. d’un verbe conjugué au passé composé avec l’auxiliaire avoir et repérer sa position.",
+      "niveau": "Niveau 1",
+      "intitule": "Repérage. Dans les phrases suivantes, cliquez sur l’élément (nom, groupe nominal ou pronom) qui a pour fonction d’être le C.O.D. du verbe conjugué au passé composé avec l’auxiliaire avoir.",
+      "explication": "Avec l’auxiliaire avoir, le participe passé est invariable lorsqu’il n’y a pas de C.O.D. ou si le C.O.D. est placé après le verbe. Il s’accorde avec le C.O.D. si celui-ci est placé avant le verbe. Un C.O.D. placé avant le verbe est soit le pronom relatif que (ou qu’), soit un pronom personnel (me, te, le, la, l’, nous, vous, les). Ce pronom renvoie à un mot ou à un groupe de mots déjà présent dans la phrase : c’est ce mot ou ce groupe de mots qui détermine l’accord du participe passé en genre et en nombre.",
+      "questions": [
+        {
+          "id": "phrase1",
+          "type": "reperage",
+          "question": "Il a assuré la direction des opérations avec efficacité.",
+          "reponse": "direction"
+        },
+        {
+          "id": "phrase2",
+          "type": "reperage",
+          "question": "La commande que j’ai passée est arrivée.",
+          "reponse": "que",
+          "extra": "(« que » = C.O.D. ; « La commande » = mot qui détermine l’accord du participe passé)"
+        },
+        {
+          "id": "phrase3",
+          "type": "reperage",
+          "question": "Les enfants, nous les avons vus hier.",
+          "reponse": "les",
+          "extra": "(« les » = C.O.D. ; « Les enfants » = mot qui détermine l’accord du participe passé)"
+        },
+        {
+          "id": "phrase4",
+          "type": "reperage",
+          "question": "La direction que nous avons suivie n’était pas la bonne.",
+          "reponse": "que",
+          "extra": "(« que » = C.O.D. ; « La direction » = mot qui détermine l’accord du participe passé)"
         }
       ]
     }
@@ -119,26 +575,26 @@
       "nom": "Phrases à trous"
     },
     {
-      "id": "QCM",
-      "nom": "Questions à choix multiples"
-    },
-    {
       "id": "EF",
       "nom": "Énoncé fautif"
+    },
+    {
+      "id": "QCM",
+      "nom": "Q.C.M."
+    },
+    {
+      "id": "reperage",
+      "nom": "Repérage"
     }
   ],
   "categorie": [
     {
-      "id": "grammaire",
-      "nom": "Grammaire"
+      "id": "syntaxe",
+      "nom": "Syntaxe"
     },
     {
-      "id": "vocabulaire",
-      "nom": "Vocabulaire"
-    },
-    {
-      "id": "conjugaison",
-      "nom": "Conjugaison"
+      "id": "lexique",
+      "nom": "Lexique"
     }
   ]
 }

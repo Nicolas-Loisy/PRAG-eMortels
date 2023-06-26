@@ -1,12 +1,16 @@
-Body {
+.Content {
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  min-width: 100vw;
   background-color: #f3f3f3;
   background-image: url("../ressources/Images/fondLogoAccueilCell.png");
   background-repeat: no-repeat;
   background-position: top right;
+  font-family: Georgia, Times;
+  min-height: 100vh;
 }
+
+
+
+
+

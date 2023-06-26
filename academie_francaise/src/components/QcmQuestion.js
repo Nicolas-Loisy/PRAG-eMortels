@@ -1,10 +1,12 @@
+import '../css/QcmQuestion.css';
+
 function QcmQuestion({ ennonce, reponses }) {
   return (
-    <div>
+    <div className='QcmQuestion'>
       <h3>{ennonce}</h3>
       <ul>
         {reponses.map((reponse, index) => (
-          <li key={index} onClick={() => console.log(reponse.correcte) } style={{ cursor: 'pointer' }}>
+          <li key={index}>
             {reponse.reponse}
           </li>
         ))}

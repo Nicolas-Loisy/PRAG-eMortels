@@ -1,10 +1,10 @@
-import '../css/Body.css';
+import '../css/Content.css';
 import Header from './Header';
 import Footer from './Footer';
 
-function Body({ children }) {
+function Content({ children }) {
   return (
-    <div>
+    <div className="Content">
       <Header/>
       {children}
       <Footer/>
@@ -12,4 +12,4 @@ function Body({ children }) {
   );
 }
 
-export default Body;
+export default Content;

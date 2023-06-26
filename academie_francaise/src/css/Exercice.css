@@ -1,0 +1,25 @@
+.Exercice .TagList {
+  display: flex;
+  justify-content: center;
+}
+
+.Exercice .TagList .col_1, .Exercice .TagList .col_2 {
+  width: 30%;
+  gap: 1em;
+  display: flex;
+}
+
+.Exercice .TagList .col_2 {
+  justify-content: end;
+}
+
+.Exercice .pagination {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+  gap: 0.7em;
+}
+
+.Exercice .intitule {
+  margin-top: 3em;
+}

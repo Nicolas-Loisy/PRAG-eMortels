@@ -1,8 +1,16 @@
+import '../css/Footer.css';
+
 function Footer() {
   return (
-    <div>
-      <div>
+    <div className='Footer'>
+
+      <div className='col col-1'>
         <ul>
+          <li>
+            <p>
+              Autres sites :
+            </p>
+          </li>
           <li>
             <a href="https://www.academie-francaise.fr" title="Académie Française">
               Académie Française
@@ -20,10 +28,15 @@ function Footer() {
           </li>
         </ul>
       </div>
-      <div>
+
+      <div className='col col-2'>
         <p>
           © Académie française, 2023
         </p>
+      </div>
+
+      <div className='col col-3'>
+
       </div>
     </div>
   );
