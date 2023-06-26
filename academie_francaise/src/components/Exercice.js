@@ -1,3 +1,4 @@
+import EfQuestion from "./EfQuestions";
 import QcmQuestion from "./QcmQuestion";
 import TrouQuestion from "./TrouQuestion";
 
@@ -26,6 +27,15 @@ function Exercice({ exercice }) {
                   reponse={question.reponse}
                 />
               );
+              case "EF":
+                return (
+                  <EfQuestion
+                    key={index}
+                    ennonce={question.ennonce}
+                    reponse={question.reponse}
+                    motErreur={question.motErreur}
+                  />
+                );
             default:
               return null;
           }
