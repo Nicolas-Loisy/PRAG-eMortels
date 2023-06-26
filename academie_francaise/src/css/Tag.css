@@ -2,7 +2,6 @@
   background-color: #2B5877;
   color: white;
   width: fit-content;
-  height: fit-content;
   font-family: "Baskerville";
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -12,4 +11,13 @@
 
 .Tag p {
   padding: 0.5em 1.3em;
+}
+
+.Tag.aide {
+  transition: background-color 0.15s ease;
+}
+
+
+.Tag.aide:hover {
+  background-color: #F27E19;
 }

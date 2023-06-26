@@ -1,11 +1,13 @@
+import React from 'react';
 import '../css/Tag.css';
 
-function Tag({Nom}) {
+function Tag({ children, className }) {
+  const tagClassName = `Tag ${className || ""}`;
+  
   return (
-    <div className='Tag'>
-      <p>{Nom}</p>
-    </div>
-  );
+    <div className={tagClassName}>
+      {children}
+    </div>);
 }
 
 export default Tag;

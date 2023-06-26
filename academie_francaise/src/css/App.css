@@ -20,3 +20,8 @@ a {
   color: inherit;
   outline: none;
 }
+
+p {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}

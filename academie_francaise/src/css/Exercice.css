@@ -23,3 +23,9 @@
 .Exercice .intitule {
   margin-top: 3em;
 }
+
+.Exercice .aide {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}

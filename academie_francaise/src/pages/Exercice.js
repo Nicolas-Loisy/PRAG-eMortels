@@ -18,9 +18,9 @@ function Exercice({ exercice }) {
   const pages = [
     { nom: exercice.categorie, url: 'https://www.example.com/page1' },
     { nom: exercice.niveau, url: 'https://www.example.com/page2' },
-    { nom: exercice.titre}
+    { nom: exercice.titre }
   ];
-  
+
   // Récupération des questions de l'exercice
   exercice.questions.forEach((question, index) => {
     switch (question.type) {
@@ -42,16 +42,24 @@ function Exercice({ exercice }) {
   return (
     <Body>
       <div className="Exercice">
-        
+
         <div className="TagList">
           <div className="col_1">
-            <Tag Nom={exercice.categorie} />
-            <Tag Nom={exercice.titre} />
+            <Tag>
+              <p>{exercice.categorie}</p>
+            </Tag>
+            <Tag>
+              <p>{exercice.titre}</p>
+            </Tag>
           </div>
 
           <div className="col_2">
-            <Tag Nom={exercice.niveau} />
-            <Tag Nom={exercice.id} />
+            <Tag>
+              <p>{exercice.niveau}</p>
+            </Tag>
+            <Tag>
+              <p>{exercice.id}</p>
+            </Tag>
           </div>
         </div>
 
@@ -72,9 +80,13 @@ function Exercice({ exercice }) {
           ))}
         </div>
 
-        <button onClick={() => console.log(exercice.explication)}>Aide</button>
-        
-        <Ariane pages={pages}/>
+        <div className='aide'>
+          <Tag className='aide'>
+            <p onClick={() => console.log(exercice.explication)}>Aide</p>
+          </Tag>
+        </div>
+
+        <Ariane pages={pages} />
 
       </div>
     </Body>
