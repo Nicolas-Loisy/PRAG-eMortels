@@ -1,4 +1,4 @@
-.App {
+Body {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   min-height: 100vh;
   min-width: 100vw;
   background-color: #f3f3f3;
-  background-image: url("./ressources/Images/fondLogoAccueilCell.png");
+  background-image: url("../ressources/Images/fondLogoAccueilCell.png");
   background-repeat: no-repeat;
   background-position: top right;
 }
