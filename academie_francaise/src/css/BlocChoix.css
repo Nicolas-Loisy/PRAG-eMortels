@@ -1,0 +1,20 @@
+.BlocChoix {
+  background-color: #2B5877;
+  border-radius: 10px;
+  width: 300px;
+  min-height: 300px;
+}
+
+.BlocChoix h3 {
+  background-color: #2B5877;
+  color: #fff;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  margin: 0;
+}
+
+.BlocChoix p {
+  background-color: #f3f3f3;
+}

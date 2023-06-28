@@ -1,6 +1,6 @@
 import '../css/NumQuestion.css';
 
-function NumQuestion({ Num, onClick, isSelected }) {
+function NumQuestion({ Num, onClick, isSelected, repondu }) {
   const handleClick = () => {
     onClick(Num);
   };
@@ -11,9 +11,13 @@ function NumQuestion({ Num, onClick, isSelected }) {
     containerClassName += ' selected';
   }
 
+  if (repondu !== null) {
+    containerClassName += repondu ? ' correct' : ' incorrect';
+  }
+
   return (
     <div className={containerClassName} onClick={handleClick}>
-      <p>{Num}</p>
+      <p>{Num + 1}</p>
     </div>
   );
 }

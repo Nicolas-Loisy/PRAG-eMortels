@@ -4,6 +4,7 @@
 
 .Header .logo {
   max-width: 25%;
+  display: block;
 }
 
 .Header .logo img {

@@ -1,5 +1,5 @@
 .NumQuestion {
-  border: 2px solid black;
+  border: 2px solid #2B5877;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -10,18 +10,18 @@
   transition: border 0.15s ease;
 }
 
-.NumQuestion.selected {
-  border: 2px solid #F27E19;
-}
-
-.NumQuestion.reponseCorrecte {
+.NumQuestion.correct {
   border: 2px solid #5CA03B;
 }
 
-.NumQuestion.reponseFausse {
+.NumQuestion.incorrect {
   border: 2px solid #BD0000;
 }
 
 .NumQuestion:hover {
+  border: 2px solid #F27E19;
+}
+
+.NumQuestion.selected {
   border: 2px solid #F27E19;
 }

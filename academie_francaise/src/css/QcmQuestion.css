@@ -8,10 +8,7 @@
 .QcmQuestion li {
   cursor: pointer;
   border: 2px solid #2B5877;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   width: fit-content;
   padding: 0.5em 1.3em;
   margin-top: 0.7em;
@@ -21,3 +18,14 @@
 .QcmQuestion li:hover {
   border: 2px solid #F27E19;
 }
+
+.QcmQuestion ul li.correct {
+  cursor: default;
+  border: 2px solid #5CA03B;
+}
+
+.QcmQuestion ul li.incorrect {
+  cursor: default;
+  border: 2px solid #BD0000;
+}
+

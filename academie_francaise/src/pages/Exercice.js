@@ -1,48 +1,59 @@
 import { useState } from 'react';
 
 import QcmQuestion from "../components/QcmQuestion";
-import Body from "../components/Content"
+import Content from "../components/Content"
 import Tag from "../components/Tag";
 import Ariane from "../components/Ariane";
 import NumQuestion from "../components/NumQuestion";
+import Recap from '../components/Recap';
 import '../css/Exercice.css';
 
 function Exercice({ exercice }) {
-  var questions = [];
+  const [questions, setQuestions] = useState(exercice.questions.map(question => ({ ...question, repondu: null })));
   const [questionCourante, setQuestionCourante] = useState(0);
+  const [voirRecap, setVoirRecap] = useState(false);
+  const pages = [
+    { nom: exercice.categorie, url: 'https://www.example.com/page1' },
+    { nom: exercice.titre, url: 'https://www.example.com/page2' },
+    { nom: exercice.niveau }
+  ];
+
 
   const handleClickQuestion = (numQuestion) => {
+    setVoirRecap(false);
     setQuestionCourante(numQuestion);
   };
 
-  const pages = [
-    { nom: exercice.categorie, url: 'https://www.example.com/page1' },
-    { nom: exercice.niveau, url: 'https://www.example.com/page2' },
-    { nom: exercice.titre }
-  ];
+  const handleUserResponse = (index, isCorrect) => {
+    setQuestions(prevQuestions => {
+      const updatedQuestions = [...prevQuestions];
+      updatedQuestions[index] = { ...updatedQuestions[index], repondu: isCorrect };
+      return updatedQuestions;
+    });
+  };
 
-  // Récupération des questions de l'exercice
-  exercice.questions.forEach((question, index) => {
+  const renderedQuestions = exercice.questions.map((question, index) => {
     switch (question.type) {
       case "QCM":
-        questions.push(
+        return (
           <QcmQuestion
-            key={index}
             ennonce={question.question}
             reponses={question.reponse}
+            repondu={questions[index].repondu}
+            onUserResponse={isCorrect => handleUserResponse(index, isCorrect)}
           />
         );
-        break;
       default:
         console.log("Type de question non pris en charge: " + question.type);
-        break;
+        return null;
     }
   });
 
   return (
-    <Body>
+    <Content>
       <div className="Exercice">
 
+        {/* Affichage des tags identifiants l'exercice */}
         <div className="TagList">
           <div className="col_1">
             <Tag>
@@ -63,33 +74,91 @@ function Exercice({ exercice }) {
           </div>
         </div>
 
-        <p className='intitule'>{exercice.intitule}</p>
+        <div className='col_container'>
 
-        <div>
-          {questions[questionCourante]}
+          {/* Affichage de la mascotte et des règles de français */}
+          <div className='col_1'>
+            <div className='Mascotte'></div>
+          </div>
+
+          {/* Contenu principal de l'exercice */}
+          <div className='col_2'>
+
+            {/* Question ou récapitulatif du score */}
+            <div>
+              {voirRecap ? (
+                <div className='Recap'>
+                  <Recap questions={questions} />
+                  <div>
+                    <Tag className='Cliquable'>
+                      <p onClick={() => {}}>Accueil</p>
+                    </Tag>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <p className='intitule'>{exercice.intitule}</p>
+                  {renderedQuestions[questionCourante]}
+                </div>
+              )}
+            </div>
+
+            {/* Bouton de navigation entre les questions */}
+            {!voirRecap && (
+              <div className='Navigation tagCliquable'>
+                {questionCourante > 0 && (
+                  <div>
+                    <Tag className='Cliquable'>
+                      <p onClick={() => setQuestionCourante(prevQuestionCourante => prevQuestionCourante - 1)}>Précédent</p>
+                    </Tag>
+                  </div>
+                )}
+
+                {questionCourante < questions.length - 1 && questions[questionCourante].repondu !== null && (
+                  <div>
+                    <Tag className='Cliquable'>
+                      <p onClick={() => setQuestionCourante(prevQuestionCourante => prevQuestionCourante + 1)}>Suivant</p>
+                    </Tag>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Bouton de récapitulatif */}
+            {questions.every(question => question.repondu !== null) && !voirRecap && (
+              <div className='tagCliquable'>
+                <Tag className='Cliquable'>
+                  <p onClick={() => {
+                    setVoirRecap(true);
+                    setQuestionCourante(-1);
+                  }}>Résumé</p>
+                </Tag>
+              </div>
+            )}
+
+            {/* Numératation des questions */}
+            <div className='pagination'>
+              {renderedQuestions.map((question, i) => (
+                <NumQuestion
+                  key={i}
+                  Num={i}
+                  isSelected={i === questionCourante}
+                  onClick={() => handleClickQuestion(i)}
+                  repondu={questions[i].repondu}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Colonne non utilisée */}
+          <div className='col3'></div>
         </div>
 
-        <div className='pagination'>
-          {questions.map((question, i) => (
-            <NumQuestion
-              key={i}
-              Num={i}
-              isSelected={i === questionCourante}
-              onClick={() => handleClickQuestion(i)}
-            />
-          ))}
-        </div>
-
-        <div className='aide'>
-          <Tag className='aide'>
-            <p onClick={() => console.log(exercice.explication)}>Aide</p>
-          </Tag>
-        </div>
-
+        {/* Fil d'ariane */}
         <Ariane pages={pages} />
 
       </div>
-    </Body>
+    </Content>
   );
 }
 

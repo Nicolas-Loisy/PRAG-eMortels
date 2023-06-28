@@ -13,11 +13,11 @@
   padding: 0.5em 1.3em;
 }
 
-.Tag.aide {
+.Tag.Cliquable {
+  cursor: pointer;
   transition: background-color 0.15s ease;
 }
 
-
-.Tag.aide:hover {
+.Tag.Cliquable:hover {
   background-color: #F27E19;
 }
