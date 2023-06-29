@@ -8,14 +8,18 @@ import NumQuestion from "../components/NumQuestion";
 import Recap from '../components/Recap';
 import '../css/Exercice.css';
 
-function Exercice({ exercice }) {
+function Exercice({ exercice, categorie }) {
+  //   const [questions, setQuestions] = useState(exercice.questions.questions.map(question => ({ ...question, repondu: null })));
   const [questions, setQuestions] = useState(exercice.questions.map(question => ({ ...question, repondu: null })));
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
   const pages = [
-    { nom: exercice.categorie, url: 'https://www.example.com/page1' },
-    { nom: exercice.titre, url: 'https://www.example.com/page2' },
-    { nom: exercice.niveau }
+    //{ nom: exercice.categorie, url: 'https://www.example.com/page1' },
+    { nom: categorie.nom, url: 'https://www.example.com/page1' },
+    //{ nom: exercice.titre, url: 'https://www.example.com/page2' },
+    { nom: categorie.sousCategories[0].nom, url: 'https://www.example.com/page2' },
+    //{ nom: exercice.niveau }
+    { nom: categorie.sousCategories[0].niveaux[1].nom }
   ];
 
 
@@ -38,7 +42,7 @@ function Exercice({ exercice }) {
         return (
           <QcmQuestion
             ennonce={question.question}
-            reponses={question.reponse}
+            reponses={question.reponses}
             repondu={questions[index].repondu}
             onUserResponse={isCorrect => handleUserResponse(index, isCorrect)}
           />
@@ -57,19 +61,19 @@ function Exercice({ exercice }) {
         <div className="TagList">
           <div className="col_1">
             <Tag>
-              <p>{exercice.categorie}</p>
+              <p>{categorie.nom}</p>
             </Tag>
             <Tag>
-              <p>{exercice.titre}</p>
+              <p>{categorie.sousCategories[0].nom}</p>
             </Tag>
           </div>
 
           <div className="col_2">
             <Tag>
-              <p>{exercice.niveau}</p>
+              <p>{categorie.sousCategories[0].niveaux[1].nom}</p>
             </Tag>
             <Tag>
-              <p>{exercice.id}</p>
+              <p>{exercice._id}</p>
             </Tag>
           </div>
         </div>
@@ -91,7 +95,7 @@ function Exercice({ exercice }) {
                   <Recap questions={questions} />
                   <div>
                     <Tag className='Cliquable'>
-                      <p onClick={() => {}}>Accueil</p>
+                      <p onClick={() => { }}>Accueil</p>
                     </Tag>
                   </div>
                 </div>
