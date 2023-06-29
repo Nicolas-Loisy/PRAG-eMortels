@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Exercice from "../pages/Exercice";
-//import data from "../ressources/Exemple.json"
 import Accueil from "../pages/Accueil";
-import data from "../ressources/nv1-2.json"
+//import data from "../ressources/Exemple.json"
+// import data from "../ressources/nv1-2.json"
+import data from "../ressources/bdd_exo.json"
 
 
 export const router = createBrowserRouter([

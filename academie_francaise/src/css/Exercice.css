@@ -59,6 +59,10 @@
   justify-content: center;
 }
 
+.Exercice .Mascotte::before {
+  content: url("../ressources/Images/renart_bouche.png");
+}
+
 .Exercice .Mascotte {
   content: url("../ressources/Images/renart_bouche_fermee_queue_droite.png");
   max-width: 100%;
