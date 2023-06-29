@@ -15,7 +15,7 @@ function QcmQuestion({ ennonce, reponses, repondu, onUserResponse }) {
           <li
             key={indexReponse}
             onClick={() => handleClick(indexReponse)}
-            className={repondu !== null && reponse.correcte ? 'correct' : repondu !== null && !reponse.correcte ? 'incorrect' : ''}
+            className={repondu !== null ? (reponse.correcte ? 'correct' : 'incorrect') : ''}
           >
             {reponse.reponse}
           </li>

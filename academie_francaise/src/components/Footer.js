@@ -12,17 +12,17 @@ function Footer() {
             </p>
           </li>
           <li>
-            <a href="https://www.academie-francaise.fr" title="Académie Française" target="_blank">
+            <a href="https://www.academie-francaise.fr" title="Académie Française" target="_blank" rel="noopener noreferrer">
               Académie Française
             </a>
           </li>
           <li>
-            <a href="https://www.dictionnaire-academie.fr" title="Dictionnaire de l'Académie Française" target="_blank">
+            <a href="https://www.dictionnaire-academie.fr" title="Dictionnaire de l'Académie Française" target="_blank" rel="noopener noreferrer">
               Dictionnaire de l'Académie Française
             </a>
           </li>
           <li>
-            <a href="https://www.institutdefrance.fr" title="Institut de France" target="_blank">
+            <a href="https://www.institutdefrance.fr" title="Institut de France" target="_blank" rel="noopener noreferrer">
               Institut de France
             </a>
           </li>

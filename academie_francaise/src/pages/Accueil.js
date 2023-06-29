@@ -2,10 +2,9 @@ import BlocChoix from "../components/BlocChoix";
 import Content from "../components/Content";
 import "../css/Accueil.css";
 
-function Accueil({ }) {
+function Accueil() {
   return (
     <Content>
-
       <h1>L'ACADEMIE DE RENART</h1>
       <div className="optionContainer">
         <BlocChoix

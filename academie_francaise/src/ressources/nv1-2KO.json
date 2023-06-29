@@ -18,27 +18,27 @@
                                     "questions": [
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un chapeau noir.<br>Une casquette ... .",
+                                            "question": "Un chapeau noir.<br/>Une casquette ... .",
                                             "reponse": "noire"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un chien marron.<br>Une chienne ... .",
+                                            "question": "Un chien marron.<br/>Une chienne ... .",
                                             "reponse": "marron"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un gilet bleu.<br>Une veste ... .",
+                                            "question": "Un gilet bleu.<br/>Une veste ... .",
                                             "reponse": "bleue"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un portail vert.<br>Des portes ... .",
+                                            "question": "Un portail vert.<br/>Des portes ... .",
                                             "reponse": "vertes"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un mur topaze.<br>Des façades ... .",
+                                            "question": "Un mur topaze.<br/>Des façades ... .",
                                             "reponse": "topaze"
                                         }
                                     ]
@@ -51,27 +51,27 @@
                                     "questions": [
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Des coussins lilas.<br>Une couverture ... .",
+                                            "question": "Des coussins lilas.<br/>Une couverture ... .",
                                             "reponse": "lilas"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une moto rose.<br>Des bus ... .",
+                                            "question": "Une moto rose.<br/>Des bus ... .",
                                             "reponse": "roses"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un papier peint beige.<br>Des tissus ... .",
+                                            "question": "Un papier peint beige.<br/>Des tissus ... .",
                                             "reponse": "beiges"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une toge pourpre.<br>Des capes ... .",
+                                            "question": "Une toge pourpre.<br/>Des capes ... .",
                                             "reponse": "pourpres"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une gourde magenta.<br>Des verres ... .",
+                                            "question": "Une gourde magenta.<br/>Des verres ... .",
                                             "reponse": "magenta"
                                         }
                                     ]
@@ -85,31 +85,31 @@
                                     "_id": "1",
                                     "intitule": "Texte à trous. Complétez les phrases suivantes en accordant l’adjectif de couleur comme il convient.",
                                     "lien": "https://www.academie-francaise.fr/questions-de-langue#25_strong-em-couleur-accord-de-l-adjectif-et-du-nom-em-strong",
-                                    "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : <I>des costumes noirs, des cheveux blonds, des lacs verdâtres</I>. <br>Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : <I>des chaussures marron, des robes pivoine</I>. On peut en effet considérer ces formes comme des ellipses : <I>des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine</I>. On recense traditionnellement quatre <strong>exceptions</strong> à cette règle : <strong>rose, mauve, pourpre et écarlate</strong>, qui sont variables. <strong>Fauve et incarnat</strong>, étant d’abord des adjectifs, sont naturellement variables.",
+                                    "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : <I>des costumes noirs, des cheveux blonds, des lacs verdâtres</I>. <br/>Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : <I>des chaussures marron, des robes pivoine</I>. On peut en effet considérer ces formes comme des ellipses : <I>des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine</I>. On recense traditionnellement quatre <strong>exceptions</strong> à cette règle : <strong>rose, mauve, pourpre et écarlate</strong>, qui sont variables. <strong>Fauve et incarnat</strong>, étant d’abord des adjectifs, sont naturellement variables.",
                                     "questions": [
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un œil bleu.<br>Des yeux ... .",
+                                            "question": "Un œil bleu.<br/>Des yeux ... .",
                                             "reponse": "bleus"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une robe noire.<br>Des robes ... .",
+                                            "question": "Une robe noire.<br/>Des robes ... .",
                                             "reponse": "noires"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un cheval blanc.<br>Des chevaux ... .",
+                                            "question": "Un cheval blanc.<br/>Des chevaux ... .",
                                             "reponse": "blancs"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une chaussure marron.<br>Des chaussures ... .",
+                                            "question": "Une chaussure marron.<br/>Des chaussures ... .",
                                             "reponse": "marron"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une porte verte.<br>Des portes ... .",
+                                            "question": "Une porte verte.<br/>Des portes ... .",
                                             "reponse": "vertes"
                                         }
                                     ]
@@ -118,31 +118,31 @@
                                     "_id": "2",
                                     "intitule": "Texte à trous. Complétez les phrases suivantes en accordant l’adjectif de couleur comme il convient.",
                                     "lien": "https://www.academie-francaise.fr/questions-de-langue#25_strong-em-couleur-accord-de-l-adjectif-et-du-nom-em-strong",
-                                    "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : <I>des costumes noirs, des cheveux blonds, des lacs verdâtres</I>. <br>Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : <I>des chaussures marron, des robes pivoine</I>. On peut en effet considérer ces formes comme des ellipses : <I>des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine</I>. On recense traditionnellement quatre <strong>exceptions</strong> à cette règle : <strong>rose, mauve, pourpre et écarlate</strong>, qui sont variables. <strong>Fauve et incarnat</strong>, étant d’abord des adjectifs, sont naturellement variables.",
+                                    "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : <I>des costumes noirs, des cheveux blonds, des lacs verdâtres</I>. <br/>Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : <I>des chaussures marron, des robes pivoine</I>. On peut en effet considérer ces formes comme des ellipses : <I>des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine</I>. On recense traditionnellement quatre <strong>exceptions</strong> à cette règle : <strong>rose, mauve, pourpre et écarlate</strong>, qui sont variables. <strong>Fauve et incarnat</strong>, étant d’abord des adjectifs, sont naturellement variables.",
                                     "questions": [
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une rose orange.<br>Des roses ... .",
+                                            "question": "Une rose orange.<br/>Des roses ... .",
                                             "reponse": "orange"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une orange rose.<br>Des oranges ... .",
+                                            "question": "Une orange rose.<br/>Des oranges ... .",
                                             "reponse": "roses"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une chemise corail.<br>Des chemises ... .",
+                                            "question": "Une chemise corail.<br/>Des chemises ... .",
                                             "reponse": "corail"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une chevelure fauve.<br>Des chevelures ... .",
+                                            "question": "Une chevelure fauve.<br/>Des chevelures ... .",
                                             "reponse": "fauves"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un ruban cerise.<br>Des rubans ... .",
+                                            "question": "Un ruban cerise.<br/>Des rubans ... .",
                                             "reponse": "cerise"
                                         }
                                     ]
@@ -151,31 +151,31 @@
                                     "_id": "3",
                                     "intitule": "Texte à trous. Complétez les phrases suivantes en accordant l’adjectif de couleur comme il convient.",
                                     "lien": "https://www.academie-francaise.fr/questions-de-langue#25_strong-em-couleur-accord-de-l-adjectif-et-du-nom-em-strong",
-                                    "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : <I>des costumes noirs, des cheveux blonds, des lacs verdâtres</I>. <br>Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : <I>des chaussures marron, des robes pivoine</I>. On peut en effet considérer ces formes comme des ellipses : <I>des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine</I>. On recense traditionnellement quatre <strong>exceptions</strong> à cette règle : <strong>rose, mauve, pourpre et écarlate</strong>, qui sont variables. <strong>Fauve et incarnat</strong>, étant d’abord des adjectifs, sont naturellement variables.",
+                                    "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : <I>des costumes noirs, des cheveux blonds, des lacs verdâtres</I>. <br/>Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : <I>des chaussures marron, des robes pivoine</I>. On peut en effet considérer ces formes comme des ellipses : <I>des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine</I>. On recense traditionnellement quatre <strong>exceptions</strong> à cette règle : <strong>rose, mauve, pourpre et écarlate</strong>, qui sont variables. <strong>Fauve et incarnat</strong>, étant d’abord des adjectifs, sont naturellement variables.",
                                     "questions": [
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un canapé crème.<br>Des canapés ... .",
+                                            "question": "Un canapé crème.<br/>Des canapés ... .",
                                             "reponse": "crème"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un chapeau jaune.<br>Des chapeaux ... .",
+                                            "question": "Un chapeau jaune.<br/>Des chapeaux ... .",
                                             "reponse": "jaunes"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Un pantalon violet et orange.<br>Des pantalons ... .",
+                                            "question": "Un pantalon violet et orange.<br/>Des pantalons ... .",
                                             "reponse": "violets et orange"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "Une robe bleue et noire.<br>Des robes ... .",
+                                            "question": "Une robe bleue et noire.<br/>Des robes ... .",
                                             "reponse": "bleues et noires"
                                         },
                                         {
                                             "type": "phraseTrous",
-                                            "question": "La nuit le chat est gris.<br>La nuit les chats sont ... .",
+                                            "question": "La nuit le chat est gris.<br/>La nuit les chats sont ... .",
                                             "reponse": "gris"
                                         }
                                     ]
@@ -265,7 +265,7 @@
                                     "_id": "1",
                                     "intitule": "Substitution. Transformez ces phrases déclaratives en phrases interrogatives.",
                                     "lien": "https://www.academie-francaise.fr/interrogative-directe-sans-inversion-vous-allez-ou",
-                                    "explication": "En français, l’interrogation directe se caractérise par une inversion de la place du sujet et du verbe par rapport à celle qu’ils occupent à la forme affirmative : <I>Il dort devient dort-il ?</I> ; <I>tu joues devient joues-tu ?</I> <br>Va-t-il ?<br>https://www.academie-francaise.fr/il-va-t-etre",
+                                    "explication": "En français, l’interrogation directe se caractérise par une inversion de la place du sujet et du verbe par rapport à celle qu’ils occupent à la forme affirmative : <I>Il dort devient dort-il ?</I> ; <I>tu joues devient joues-tu ?</I> <br/>Va-t-il ?<br/>https://www.academie-francaise.fr/il-va-t-etre",
                                     "questions": [
                                         {
                                             "type": "substitution",
@@ -298,7 +298,7 @@
                                     "_id": "2",
                                     "intitule": "Substitution. Mettez ces phrases interrogatives à la forme négative de sorte à obtenir une phrase interronégative.",
                                     "lien": "https://www.academie-francaise.fr/interrogative-directe-sans-inversion-vous-allez-ou",
-                                    "explication": "En français, l’interrogation directe se caractérise par une inversion de la place du sujet et du verbe par rapport à celle qu’ils occupent à la forme affirmative : <I>Il dort devient dort-il ?</I> ; <I>tu joues devient joues-tu ?</I> <br>Va-t-il ?<br>https://www.academie-francaise.fr/il-va-t-etre",
+                                    "explication": "En français, l’interrogation directe se caractérise par une inversion de la place du sujet et du verbe par rapport à celle qu’ils occupent à la forme affirmative : <I>Il dort devient dort-il ?</I> ; <I>tu joues devient joues-tu ?</I> <br/>Va-t-il ?<br/>https://www.academie-francaise.fr/il-va-t-etre",
                                     "questions": [
                                         {
                                             "type": "substitution",
@@ -331,7 +331,7 @@
                                     "_id": "3",
                                     "intitule": "Substitution. Posez une question portant sur l’élément souligné.",
                                     "lien": "https://www.academie-francaise.fr/interrogative-directe-sans-inversion-vous-allez-ou",
-                                    "explication": "En français, l’interrogation directe se caractérise par une inversion de la place du sujet et du verbe par rapport à celle qu’ils occupent à la forme affirmative : <I>Il dort devient dort-il ?</I> ; <I>tu joues devient joues-tu ?</I> <br>Par ailleurs, quand l’interrogation porte sur une partie de l’énoncé, elle est dite « interrogation partielle » ; on ne peut alors y répondre par oui ou par non, et un mot interrogatif (« comment », « pourquoi », « quand », etc.) correspond à cet partie de l’énoncé sur laquelle porte la question. La règle de l’inversion demeure cependant, et l’on écrira : <I>Comment a-t-il fait ?, Pourquoi n’est-elle pas venue ?, Quand viendrez-vous ?,</I> etc.<br> Va-t-il ?<br>https://www.academie-francaise.fr/il-va-t-etre",
+                                    "explication": "En français, l’interrogation directe se caractérise par une inversion de la place du sujet et du verbe par rapport à celle qu’ils occupent à la forme affirmative : <I>Il dort devient dort-il ?</I> ; <I>tu joues devient joues-tu ?</I> <br/>Par ailleurs, quand l’interrogation porte sur une partie de l’énoncé, elle est dite « interrogation partielle » ; on ne peut alors y répondre par oui ou par non, et un mot interrogatif (« comment », « pourquoi », « quand », etc.) correspond à cet partie de l’énoncé sur laquelle porte la question. La règle de l’inversion demeure cependant, et l’on écrira : <I>Comment a-t-il fait ?, Pourquoi n’est-elle pas venue ?, Quand viendrez-vous ?,</I> etc.<br/> Va-t-il ?<br/>https://www.academie-francaise.fr/il-va-t-etre",
                                     "questions": [
                                         {
                                             "type": "substitution",
@@ -364,7 +364,7 @@
                                     "_id": "4",
                                     "intitule": "Substitution. Posez une question portant sur l’élément souligné.",
                                     "lien": "https://www.academie-francaise.fr/interrogative-directe-sans-inversion-vous-allez-ou",
-                                    "explication": "En français, l’interrogation directe se caractérise par une inversion de la place du sujet et du verbe par rapport à celle qu’ils occupent à la forme affirmative : <I>Il dort devient dort-il ?</I> ; <I>tu joues devient joues-tu ?</I> <br>Par ailleurs, quand l’interrogation porte sur une partie de l’énoncé, elle est dite « interrogation partielle » ; on ne peut alors y répondre par oui ou par non, et un mot interrogatif (« comment », « pourquoi », « quand », etc.) correspond à cet partie de l’énoncé sur laquelle porte la question. La règle de l’inversion demeure cependant, et l’on écrira : <I>Comment a-t-il fait ?, Pourquoi n’est-elle pas venue ?, Quand viendrez-vous ?,</I> etc.<br> Va-t-il ?<br>https://www.academie-francaise.fr/il-va-t-etre",
+                                    "explication": "En français, l’interrogation directe se caractérise par une inversion de la place du sujet et du verbe par rapport à celle qu’ils occupent à la forme affirmative : <I>Il dort devient dort-il ?</I> ; <I>tu joues devient joues-tu ?</I> <br/>Par ailleurs, quand l’interrogation porte sur une partie de l’énoncé, elle est dite « interrogation partielle » ; on ne peut alors y répondre par oui ou par non, et un mot interrogatif (« comment », « pourquoi », « quand », etc.) correspond à cet partie de l’énoncé sur laquelle porte la question. La règle de l’inversion demeure cependant, et l’on écrira : <I>Comment a-t-il fait ?, Pourquoi n’est-elle pas venue ?, Quand viendrez-vous ?,</I> etc.<br/> Va-t-il ?<br/>https://www.academie-francaise.fr/il-va-t-etre",
                                     "questions": [
                                         {
                                             "type": "substitution",
@@ -407,7 +407,7 @@
                                     "_id": 1,
                                     "intitule": "Énoncé fautif. Dans les phrases suivantes, choisissez, pour le verbe entre parenthèses, l’infinitif ou le participe passé en cliquant sur la forme correcte.",
                                     "lien": "",
-                                    "explication": "Pour savoir si un verbe du 1er groupe (terminé en -ER) est employé à l’infinitif ou au participe passé, il convient de le remplacer par un verbe du 3e groupe et de se poser la question : <br><em>Pris ou prendre ?</em> <br><em>Vendu ou vendre ?</em>",
+                                    "explication": "Pour savoir si un verbe du 1er groupe (terminé en -ER) est employé à l’infinitif ou au participe passé, il convient de le remplacer par un verbe du 3e groupe et de se poser la question : <br/><em>Pris ou prendre ?</em> <br/><em>Vendu ou vendre ?</em>",
                                     "questions": [
                                         {
                                             "type": "QCM",
@@ -485,7 +485,7 @@
                                     "_id": 2,
                                     "intitule": "Énoncé fautif. Dans les phrases suivantes, choisissez, pour le verbe entre parenthèses, l’infinitif ou le participe passé en cliquant sur la forme correcte.",
                                     "lien": "",
-                                    "explication": "Pour savoir si un verbe du 1er groupe (terminé en -ER) est employé à l’infinitif ou au participe passé, il convient de le remplacer par un verbe du 3e groupe et de se poser la question : <br><em>Pris ou prendre ?</em> <br><em>Vendu ou vendre ?</em>",
+                                    "explication": "Pour savoir si un verbe du 1er groupe (terminé en -ER) est employé à l’infinitif ou au participe passé, il convient de le remplacer par un verbe du 3e groupe et de se poser la question : <br/><em>Pris ou prendre ?</em> <br/><em>Vendu ou vendre ?</em>",
                                     "questions": [
                                         {
                                             "type": "QCM",
@@ -656,7 +656,7 @@
                                     "_id": "1",
                                     "intitule": "Énoncé fautif. Dans les énoncés ci-après, cliquez sur les participes passés si vous pensez qu’ils contiennent une faute d’accord.",
                                     "lien": "https://www.academie-francaise.fr/questions-de-langue",
-                                    "explication": "Lorsque le participe passé est suivi d’un infinitif, il ne s’accorde que s’il y a un C.O.D. placé avant, qu’on peut considérer en même temps comme C.O.D. du verbe conjugué et sujet de l’infinitif.<br> Exemples : <i><u>La cantatrice</u> que j’ai entendue chanter</I> = <I>j’ai entendu <u>la cantatrice</u> (S) chanter</I>. Mais <I><u>Cette chanson</u>, je <strong>l’</strong>ai entendu chanter de nombreuses fois</I>.<br> -> Le participe passé <I>fait</I> suivi de l’infinitif ne s’accorde jamais.<br> NB : D’après les rectifications de l’orthographe de 1990, le participe laissé peut se comporter de même.",
+                                    "explication": "Lorsque le participe passé est suivi d’un infinitif, il ne s’accorde que s’il y a un C.O.D. placé avant, qu’on peut considérer en même temps comme C.O.D. du verbe conjugué et sujet de l’infinitif.<br/> Exemples : <i><u>La cantatrice</u> que j’ai entendue chanter</I> = <I>j’ai entendu <u>la cantatrice</u> (S) chanter</I>. Mais <I><u>Cette chanson</u>, je <strong>l’</strong>ai entendu chanter de nombreuses fois</I>.<br/> -> Le participe passé <I>fait</I> suivi de l’infinitif ne s’accorde jamais.<br/> NB : D’après les rectifications de l’orthographe de 1990, le participe laissé peut se comporter de même.",
                                     "questions": [
                                         {
                                             "type": "EF",
@@ -700,7 +700,7 @@
                                     "_id": "2",
                                     "intitule": "Énoncé fautif. Dans les énoncés ci-après, cliquez sur les participes passés si vous pensez qu’ils contiennent une faute d’accord.",
                                     "lien": "https://www.academie-francaise.fr/questions-de-langue",
-                                    "explication": "Lorsque le participe passé est suivi d’un infinitif, il ne s’accorde que s’il y a un C.O.D. placé avant, qu’on peut considérer en même temps comme C.O.D. du verbe conjugué et sujet de l’infinitif.<br> Exemples : <i><u>La cantatrice</u> que j’ai entendue chanter</I> = <I>j’ai entendu <u>la cantatrice</u> (S) chanter</I>. Mais <I><u>Cette chanson</u>, je <strong>l’</strong>ai entendu chanter de nombreuses fois</I>.<br> -> Le participe passé <I>fait</I> suivi de l’infinitif ne s’accorde jamais.<br> NB : D’après les rectifications de l’orthographe de 1990, le participe laissé peut se comporter de même.",
+                                    "explication": "Lorsque le participe passé est suivi d’un infinitif, il ne s’accorde que s’il y a un C.O.D. placé avant, qu’on peut considérer en même temps comme C.O.D. du verbe conjugué et sujet de l’infinitif.<br/> Exemples : <i><u>La cantatrice</u> que j’ai entendue chanter</I> = <I>j’ai entendu <u>la cantatrice</u> (S) chanter</I>. Mais <I><u>Cette chanson</u>, je <strong>l’</strong>ai entendu chanter de nombreuses fois</I>.<br/> -> Le participe passé <I>fait</I> suivi de l’infinitif ne s’accorde jamais.<br/> NB : D’après les rectifications de l’orthographe de 1990, le participe laissé peut se comporter de même.",
                                     "questions": [
                                         {
                                             "type": "EF",
@@ -738,7 +738,7 @@
                                     "_id": "3",
                                     "intitule": "Énoncé fautif. Dans les énoncés ci-après, cliquez sur les participes passés si vous pensez qu’ils contiennent une faute d’accord.",
                                     "lien": "https://www.academie-francaise.fr/questions-de-langue",
-                                    "explication": "Lorsque le participe passé est suivi d’un infinitif, il ne s’accorde que s’il y a un C.O.D. placé avant, qu’on peut considérer en même temps comme C.O.D. du verbe conjugué et sujet de l’infinitif.<br> Exemples : <i><u>La cantatrice</u> que j’ai entendue chanter</I> = <I>j’ai entendu <u>la cantatrice</u> (S) chanter</I>. Mais <I><u>Cette chanson</u>, je <strong>l’</strong>ai entendu chanter de nombreuses fois</I>.<br> -> Le participe passé <I>fait</I> suivi de l’infinitif ne s’accorde jamais.<br> NB : D’après les rectifications de l’orthographe de 1990, le participe laissé peut se comporter de même.",
+                                    "explication": "Lorsque le participe passé est suivi d’un infinitif, il ne s’accorde que s’il y a un C.O.D. placé avant, qu’on peut considérer en même temps comme C.O.D. du verbe conjugué et sujet de l’infinitif.<br/> Exemples : <i><u>La cantatrice</u> que j’ai entendue chanter</I> = <I>j’ai entendu <u>la cantatrice</u> (S) chanter</I>. Mais <I><u>Cette chanson</u>, je <strong>l’</strong>ai entendu chanter de nombreuses fois</I>.<br/> -> Le participe passé <I>fait</I> suivi de l’infinitif ne s’accorde jamais.<br/> NB : D’après les rectifications de l’orthographe de 1990, le participe laissé peut se comporter de même.",
                                     "questions": [
                                         {
                                             "type": "EF",
@@ -776,7 +776,7 @@
                                     "_id": "4",
                                     "intitule": "Énoncé fautif. Dans les énoncés ci-après, cliquez sur les participes passés si vous pensez qu’ils contiennent une faute d’accord.",
                                     "lien": "https://www.academie-francaise.fr/questions-de-langue",
-                                    "explication": "Lorsque le participe passé est suivi d’un infinitif, il ne s’accorde que s’il y a un C.O.D. placé avant, qu’on peut considérer en même temps comme C.O.D. du verbe conjugué et sujet de l’infinitif.<br> Exemples : <i><u>La cantatrice</u> que j’ai entendue chanter</I> = <I>j’ai entendu <u>la cantatrice</u> (S) chanter</I>. Mais <I><u>Cette chanson</u>, je <strong>l’</strong>ai entendu chanter de nombreuses fois</I>.<br> -> Le participe passé <I>fait</I> suivi de l’infinitif ne s’accorde jamais.<br> NB : D’après les rectifications de l’orthographe de 1990, le participe laissé peut se comporter de même.",
+                                    "explication": "Lorsque le participe passé est suivi d’un infinitif, il ne s’accorde que s’il y a un C.O.D. placé avant, qu’on peut considérer en même temps comme C.O.D. du verbe conjugué et sujet de l’infinitif.<br/> Exemples : <i><u>La cantatrice</u> que j’ai entendue chanter</I> = <I>j’ai entendu <u>la cantatrice</u> (S) chanter</I>. Mais <I><u>Cette chanson</u>, je <strong>l’</strong>ai entendu chanter de nombreuses fois</I>.<br/> -> Le participe passé <I>fait</I> suivi de l’infinitif ne s’accorde jamais.<br/> NB : D’après les rectifications de l’orthographe de 1990, le participe laissé peut se comporter de même.",
                                     "questions": [
                                         {
                                             "type": "EF",
@@ -911,7 +911,7 @@
                                     "_id": "1",
                                     "intitule": "Énoncé fautif. Dans les phrases suivantes, cliquez sur le mot <I>peut être</I> ou <I>peut-être</I> si vous pensez qu’il est mal orthographié.",
                                     "lien": "https://www.academie-francaise.fr/peut-etre-pour-peut-etre",
-                                    "explication": "L’adverbe <strong>Peut-être</strong> sert à exprimer le doute, l’incertitude : <I>Il viendra peut-être, ce roman aura peut-être du succès</I>. Placé en tête de phrase, il sert à introduire une hypothèse : <I>Peut-être aura-t-il été bloqué par la neige</I>.<br>Cet adverbe ne doit pas être confondu avec le groupe verbal <strong>peut être</strong>. Rappelons que ce dernier peut varier en temps et en personnes. <I>Il peut être vainqueur s’il s’entraîne bien, il pourra être vainqueur, nous aurions pu être vainqueurs,</I> etc.",
+                                    "explication": "L’adverbe <strong>Peut-être</strong> sert à exprimer le doute, l’incertitude : <I>Il viendra peut-être, ce roman aura peut-être du succès</I>. Placé en tête de phrase, il sert à introduire une hypothèse : <I>Peut-être aura-t-il été bloqué par la neige</I>.<br/>Cet adverbe ne doit pas être confondu avec le groupe verbal <strong>peut être</strong>. Rappelons que ce dernier peut varier en temps et en personnes. <I>Il peut être vainqueur s’il s’entraîne bien, il pourra être vainqueur, nous aurions pu être vainqueurs,</I> etc.",
                                     "questions": [
                                         {
                                             "type": "EF",
@@ -1025,7 +1025,7 @@
                                     "_id": "4",
                                     "intitule": "Q.C.M. Dans les phrases suivantes, sélectionnez le terme adéquat.",
                                     "lien": "https://www.academie(francaise.fr/fond-fonds-fonts",
-                                    "explication": "Ainsi <I>font, font, font les petites marionnettes,</I> nous apprend la comptine. Mais à côté de ces trois <strong>font</strong>, reprise du verbe <I>faire</I> à la troisième personne du pluriel, il existe une autre triplette d’homonymes de ces formes : <I>fond, fonds et fonts</I>.<br> Le premier (<strong>fond</strong>), issu du latin <I>fundus</I>, cousin de l’anglais <I>bottom</I> et de l’allemand <I>Boden</I>, a de nombreux sens : il désigne ce qui constitue la limite inférieure (<I>le fond d’une malle</I>), ce qui est situé à la plus grande profondeur (<I>le fond d’un puits</I>), mais aussi ce qui est le plus éloigné de l’ouverture, de l’entrée (<I>le fond de la salle</I>) ; ce nom désigne enfin les qualités essentielles et permanentes d’un être (<I>il a bon fond</I>).<br> <I>Fond</I> est aussi la 3e personne du présent de l’indicatif du verbe <I>fondre</I>.<br> La forme <strong>fonds</strong> peut être le pluriel de <I>fond</I> mais c’est aussi un nom autonome, qui désigne un bien ou un ensemble de biens de nature à permettre l’exercice d’une activité, d’une profession (<I>un fonds de commerce</I>) ; c’est aussi un capital, immobilier ou non, que l’on fait valoir (<I>le fonds et le revenu</I>) et c’est enfin un ensemble de ressources susceptibles d’être exploitées (<I>le fonds d’une bibliothèque</I>).<br> La troisième forme, <strong>fonts</strong>, ne s’emploie qu’au pluriel ; elle appartient à la même famille que fontaine et ne se rencontre guère que dans la locution <I>fonts baptismaux</I>, qui désigne la vasque où l’on conserve l’eau bénite dont on se sert pour les baptêmes.",
+                                    "explication": "Ainsi <I>font, font, font les petites marionnettes,</I> nous apprend la comptine. Mais à côté de ces trois <strong>font</strong>, reprise du verbe <I>faire</I> à la troisième personne du pluriel, il existe une autre triplette d’homonymes de ces formes : <I>fond, fonds et fonts</I>.<br/> Le premier (<strong>fond</strong>), issu du latin <I>fundus</I>, cousin de l’anglais <I>bottom</I> et de l’allemand <I>Boden</I>, a de nombreux sens : il désigne ce qui constitue la limite inférieure (<I>le fond d’une malle</I>), ce qui est situé à la plus grande profondeur (<I>le fond d’un puits</I>), mais aussi ce qui est le plus éloigné de l’ouverture, de l’entrée (<I>le fond de la salle</I>) ; ce nom désigne enfin les qualités essentielles et permanentes d’un être (<I>il a bon fond</I>).<br/> <I>Fond</I> est aussi la 3e personne du présent de l’indicatif du verbe <I>fondre</I>.<br/> La forme <strong>fonds</strong> peut être le pluriel de <I>fond</I> mais c’est aussi un nom autonome, qui désigne un bien ou un ensemble de biens de nature à permettre l’exercice d’une activité, d’une profession (<I>un fonds de commerce</I>) ; c’est aussi un capital, immobilier ou non, que l’on fait valoir (<I>le fonds et le revenu</I>) et c’est enfin un ensemble de ressources susceptibles d’être exploitées (<I>le fonds d’une bibliothèque</I>).<br/> La troisième forme, <strong>fonts</strong>, ne s’emploie qu’au pluriel ; elle appartient à la même famille que fontaine et ne se rencontre guère que dans la locution <I>fonts baptismaux</I>, qui désigne la vasque où l’on conserve l’eau bénite dont on se sert pour les baptêmes.",
                                     "questions": [
                                         {
                                             "type": "QCM",
@@ -1591,7 +1591,7 @@
                                     "_id": "1",
                                     "intitule": "Énoncé fautif. Dans les énoncés ci-après, cliquez sur les participes passés qui contiennent une faute.",
                                     "lien": null,
-                                    "explication": "<strong>Finales du participe passé</strong> :<br> Pour les verbes du 1er groupe : -é<br> Pour les verbes du 2e groupe : -i<br> Pour les verbes du 3e groupe : -i, - u ou -s, -t<br> -> Pour les verbes du 3e groupe, mettre au féminin pour savoir s’il contient une consonne finale muette.<br> -> Le participe passé d’avoir est « eu(e)(s) » <br>-> Le participe passé d’être est « été ».",
+                                    "explication": "<strong>Finales du participe passé</strong> :<br/> Pour les verbes du 1er groupe : -é<br/> Pour les verbes du 2e groupe : -i<br/> Pour les verbes du 3e groupe : -i, - u ou -s, -t<br/> -> Pour les verbes du 3e groupe, mettre au féminin pour savoir s’il contient une consonne finale muette.<br/> -> Le participe passé d’avoir est « eu(e)(s) » <br/>-> Le participe passé d’être est « été ».",
                                     "questions": [
                                         {
                                             "type": "EF",
@@ -1629,7 +1629,7 @@
                                     "_id": "2",
                                     "intitule": "Énoncé fautif. Dans les énoncés ci-après, cliquez sur les participes passés qui contiennent une faute.",
                                     "lien": null,
-                                    "explication": "<strong>Finales du participe passé</strong> :<br> Pour les verbes du 1er groupe : -é<br> Pour les verbes du 2e groupe : -i<br> Pour les verbes du 3e groupe : -i, - u ou -s, -t<br> -> Pour les verbes du 3e groupe, mettre au féminin pour savoir s’il contient une consonne finale muette.<br> -> Le participe passé d’avoir est « eu(e)(s) » <br>-> Le participe passé d’être est « été ».",
+                                    "explication": "<strong>Finales du participe passé</strong> :<br/> Pour les verbes du 1er groupe : -é<br/> Pour les verbes du 2e groupe : -i<br/> Pour les verbes du 3e groupe : -i, - u ou -s, -t<br/> -> Pour les verbes du 3e groupe, mettre au féminin pour savoir s’il contient une consonne finale muette.<br/> -> Le participe passé d’avoir est « eu(e)(s) » <br/>-> Le participe passé d’être est « été ».",
                                     "questions": [
                                         {
                                             "type": "EF",
@@ -1667,7 +1667,7 @@
                                     "_id": "3",
                                     "intitule": "Q.C.M. Choisissez la (ou les) réponse(s) juste(s).",
                                     "lien": "https://www.dictionnaire-academie.fr/article/A9A0175",
-                                    "explication": "<strong>Finales du participe passé</strong> :<br> Pour les verbes du 1er groupe : -é<br> Pour les verbes du 2e groupe : -i<br> Pour les verbes du 3e groupe : -i, - u ou -s, -t<br> -> Pour les verbes du 3e groupe, mettre au féminin pour savoir s’il contient une consonne finale muette.<br> Cas de <strong><I>absoudre, dissoudre</I></strong> : le participe passé se termine au masculin par un -s (absous, dissous) et au féminin par -te (<I>absoute, dissoute</I>).<br> >En orthographe rectifiée, le masculin est aligné sur le féminin : <I>absout, dissout.</I>",
+                                    "explication": "<strong>Finales du participe passé</strong> :<br/> Pour les verbes du 1er groupe : -é<br/> Pour les verbes du 2e groupe : -i<br/> Pour les verbes du 3e groupe : -i, - u ou -s, -t<br/> -> Pour les verbes du 3e groupe, mettre au féminin pour savoir s’il contient une consonne finale muette.<br/> Cas de <strong><I>absoudre, dissoudre</I></strong> : le participe passé se termine au masculin par un -s (absous, dissous) et au féminin par -te (<I>absoute, dissoute</I>).<br/> >En orthographe rectifiée, le masculin est aligné sur le féminin : <I>absout, dissout.</I>",
                                     "questions": [
                                         {
                                             "type": "QCM",
@@ -1777,7 +1777,7 @@
                                     "_id": "4",
                                     "intitule": "Q.C.M. Choisissez une et une seule des propositions de réponse.",
                                     "lien": null,
-                                    "explication": "<strong>Finales du participe passé</strong> :<br> Pour les verbes du 1er groupe : -é<br> Pour les verbes du 2e groupe : -i<br> Pour les verbes du 3e groupe : -i, - u ou -s, -t<br> -> Pour les verbes du 3e groupe, mettre au féminin pour savoir s’il contient une consonne finale muette.<br> -> Le participe passé d’avoir est « eu(e)(s) » <br>-> Le participe passé d’être est « été ».",
+                                    "explication": "<strong>Finales du participe passé</strong> :<br/> Pour les verbes du 1er groupe : -é<br/> Pour les verbes du 2e groupe : -i<br/> Pour les verbes du 3e groupe : -i, - u ou -s, -t<br/> -> Pour les verbes du 3e groupe, mettre au féminin pour savoir s’il contient une consonne finale muette.<br/> -> Le participe passé d’avoir est « eu(e)(s) » <br/>-> Le participe passé d’être est « été ».",
                                     "questions": [
                                         {
                                             "type": "QCM",

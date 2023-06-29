@@ -15,11 +15,8 @@ function Exercice({ exercice, categorie }) {
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
   const pages = [
-    //{ nom: exercice.categorie, url: 'https://www.example.com/page1' },
     { nom: categorie.nom, url: 'https://www.example.com/page1' },
-    //{ nom: exercice.titre, url: 'https://www.example.com/page2' },
     { nom: categorie.sousCategories[0].nom, url: 'https://www.example.com/page2' },
-    //{ nom: exercice.niveau }
     { nom: categorie.sousCategories[0].niveaux[1].nom }
   ];
 
