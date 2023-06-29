@@ -1,0 +1,660 @@
+{
+    "Exercices": [
+        {
+            "id": "1",
+            "categorie": "syntaxe",
+            "titre": "Les adjectifs de couleur",
+            "niveau": "NIVEAU 3",
+            "intitulé": "Texte à trous. Complétez les phrases suivantes en accordant l’adjectif de couleur comme il convient.",
+            "lien": "https://www.academie-francaise.fr/questions-de-langue#25_strong-em-couleur-accord-de-l-adjectif-et-du-nom-em-strong ",
+            "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : des costumes noirs, des cheveux blonds, des lacs verdâtres. Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : des chaussures marron, des robes pivoine. On peut en effet considérer ces formes comme des ellipses : des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine. On recense traditionnellement quatre exceptions à cette règle : rose, mauve, pourpre et écarlate, qui sont variables. Fauve et incarnat, étant d’abord des adjectifs, sont naturellement variables.\n\nLes formes adjectivales complexes sont invariables. On écrira ainsi :\n- des mers bleu-vert, des yeux gris-bleu\n- des gilets jaune paille, des robes rose bonbon\n- des pulls vert pâle, une voiture bleu foncé\n- des couvertures lie-de-vin, des soieries feuille-morte, des draps cuisse-de-nymphe (on lie les éléments par des traits d’union car ce qui était un syntagme libre devient un adjectif de forme figée).\n\nEmployées comme noms de couleur et non plus comme adjectifs, les formes ci-dessus ont les pluriels suivants :\n- des bleu-vert, des gris-bleu\n- des jaunes paille (les jaunes sont de la couleur de la paille), des roses bonbon\n- des verts pâles, des bleus foncés (les verts sont pâles, les bleus sont foncés).\nLorsque plusieurs adjectifs de couleur sont associés par la conjonction de coordination et :\n- ils restent invariables s’ils qualifient des objets bicolores, tricolores, etc. : des drapeaux bleu, blanc, rouge (chaque drapeau est tricolore), des écharpes rouge et noir (chaque écharpe est bicolore) ;\n- ils varient s’ils qualifient des objets unis : des drapeaux bleus, blancs, rouges (certains drapeaux sont bleus, d’autres sont blancs, d’autres encore sont rouges), des écharpes rouges et noires (certaines écharpes sont rouges, d’autres sont noires).",
+            "questions": [
+                {
+                    "type": "phraseTrous",
+                    "question": "Un océan bleu-vert.\nDes mers ……",
+                    "reponse": "bleu-vert"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Un pull vert pâle\nUne robe ……",
+                    "reponse": "vert pâle"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Un vélo bleu foncé.\nUne bicyclette ……",
+                    "reponse": "bleu foncé"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "De l’eau bleu turquoise.\nDes liquides ……",
+                    "reponse": "bleu turquoise"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Un chapeau de couleur jaune et rouge.\nDes chapeaux ……",
+                    "reponse": "jaune et rouge"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "categorie": "syntaxe",
+            "titre": "Les adjectifs de couleur",
+            "niveau": "NIVEAU 3",
+            "intitulé": "Texte à trous. Accordez en genre et en nombre les adjectifs entre parenthèses.",
+            "lien": "https://www.academie-francaise.fr/questions-de-langue#25_strong-em-couleur-accord-de-l-adjectif-et-du-nom-em-strong ",
+            "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : des costumes noirs, des cheveux blonds, des lacs verdâtres. Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : des chaussures marron, des robes pivoine. On peut en effet considérer ces formes comme des ellipses : des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine. On recense traditionnellement quatre exceptions à cette règle : rose, mauve, pourpre et écarlate, qui sont variables. Fauve et incarnat, étant d’abord des adjectifs, sont naturellement variables.\n\nLes formes adjectivales complexes sont invariables. On écrira ainsi :\n- des mers bleu-vert, des yeux gris-bleu\n- des gilets jaune paille, des robes rose bonbon\n- des pulls vert pâle, une voiture bleu foncé\n- des couvertures lie-de-vin, des soieries feuille-morte, des draps cuisse-de-nymphe (on lie les éléments par des traits d’union car ce qui était un syntagme libre devient un adjectif de forme figée).\n\nEmployées comme noms de couleur et non plus comme adjectifs, les formes ci-dessus ont les pluriels suivants :\n- des bleu-vert, des gris-bleu\n- des jaunes paille (les jaunes sont de la couleur de la paille), des roses bonbon\n- des verts pâles, des bleus foncés (les verts sont pâles, les bleus sont foncés).\nLorsque plusieurs adjectifs de couleur sont associés par la conjonction de coordination et :\n- ils restent invariables s’ils qualifient des objets bicolores, tricolores, etc. : des drapeaux bleu, blanc, rouge (chaque drapeau est tricolore), des écharpes rouge et noir (chaque écharpe est bicolore) ;\n- ils varient s’ils qualifient des objets unis : des drapeaux bleus, blancs, rouges (certains drapeaux sont bleus, d’autres sont blancs, d’autres encore sont rouges), des écharpes rouges et noires (certaines écharpes sont rouges, d’autres sont noires).",
+            "questions": [
+                {
+                    "type": "phraseTrous",
+                    "question": "J’ai toujours voulu avoir une voiture de sport (vert pomme) ……",
+                    "reponse": "vert pomme"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Ta sœur a les cheveux (brun foncé) ……",
+                    "reponse": "brun foncé"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Des fleurs (blanc) …… et d’autres (jaune) ……",
+                    "reponse": [
+                        "blanches",
+                        "jaunes"
+                    ]
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "J’adore la couleur (bleu-vert) ……",
+                    "reponse": "bleu-vert"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Elisa a acheté des crayons (noir) …… et des stylos (orange) ……",
+                    "reponse": [
+                        "noirs",
+                        "orange"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "categorie": "syntaxe",
+            "titre": "Les adjectifs de couleur",
+            "niveau": "NIVEAU 3",
+            "intitulé": "Texte à trous. Accordez en genre et en nombre les adjectifs entre parenthèses.",
+            "lien": "https://www.academie-francaise.fr/questions-de-langue#25_strong-em-couleur-accord-de-l-adjectif-et-du-nom-em-strong",
+            "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : des costumes noirs, des cheveux blonds, des lacs verdâtres. Toutefois, les noms communs employés comme adjectifs de couleur sont invariables : des chaussures marron, des robes pivoine. On peut en effet considérer ces formes comme des ellipses : des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine. On recense traditionnellement quatre exceptions à cette règle : rose, mauve, pourpre et écarlate, qui sont variables. Fauve et incarnat, étant d’abord des adjectifs, sont naturellement variables.\n\nLes formes adjectivales complexes sont invariables. On écrira ainsi :\n- des mers bleu-vert, des yeux gris-bleu\n- des gilets jaune paille, des robes rose bonbon\n- des pulls vert pâle, une voiture bleu foncé\n- des couvertures lie-de-vin, des soieries feuille-morte, des draps cuisse-de-nymphe (on lie les éléments par des traits d’union car ce qui était un syntagme libre devient un adjectif de forme figée).\n\nEmployées comme noms de couleur et non plus comme adjectifs, les formes ci-dessus ont les pluriels suivants :\n- des bleu-vert, des gris-bleu\n- des jaunes paille (les jaunes sont de la couleur de la paille), des roses bonbon\n- des verts pâles, des bleus foncés (les verts sont pâles, les bleus sont foncés).\nLorsque plusieurs adjectifs de couleur sont associés par la conjonction de coordination et :\n- ils restent invariables s’ils qualifient des objets bicolores, tricolores, etc. : des drapeaux bleu, blanc, rouge (chaque drapeau est tricolore), des écharpes rouge et noir (chaque écharpe est bicolore) ;\n- ils varient s’ils qualifient des objets unis : des drapeaux bleus, blancs, rouges (certains drapeaux sont bleus, d’autres sont blancs, d’autres encore sont rouges), des écharpes rouges et noires (certaines écharpes sont rouges, d’autres sont noires).",
+            "questions": [
+                {
+                    "type": "phraseTrous",
+                    "question": "Elle porte des robes (rouge) …… et des pantalons (vert) ……",
+                    "reponse": [
+                        "rouges",
+                        "verts"
+                    ]
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Ils ont commandé des foulards bicolores (vert) …… et (jaune) ……",
+                    "reponse": [
+                        "vert",
+                        "jaune"
+                    ]
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Elles ont acheté des écharpes (gris) …… et d’autres (mauve) ……",
+                    "reponse": [
+                        "grises",
+                        "mauves"
+                    ]
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "L’eau avait une coloration (vert émeraude) ……",
+                    "reponse": "vert émeraude"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Elle fait tapisser son salon avec des tissus (saumon) ……",
+                    "reponse": "saumon"
+                }
+            ]
+        },
+        {
+            "id": "",
+            "categorie": "lexique",
+            "titre": "Les Homonymes (À l’attention de / À l’intention de)",
+            "niveau": "NIVEAU 3",
+            "intitulé": "Texte à trous. Complétez les phrases suivantes.",
+            "lien": "https://www.academie-francaise.fr/questions-de-langue#3_strong-em--l-attention-de--l-intention-de-em-strong",
+            "explication": "La formule par laquelle, dans le langage de l’administration, on indique le destinataire d’une lettre, d’une communication, d’un envoi, est à l’attention de, pour marquer que l’on attire l’attention du destinataire, que l’on soumet cette lettre, etc., à son attention.\n\nLa locution à l’intention de (quelqu’un) signifie « pour lui, dans le dessein que cela lui soit agréable, profitable, bénéfique » : Il a acheté ce livre à leur intention, pour le leur offrir. On compose un poème à l’intention d’un ami. On fait dire une messe à l’intention d’un défunt.",
+            "questions": [
+                {
+                    "type": "phraseTrous",
+                    "question": "Il a commandé ce gâteau d’anniversaire à son …… .",
+                    "reponse": "intention"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Vous remettrez cette lettre à l’…… du président.",
+                    "reponse": "attention"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Je ferai dire une messe à l’…… du défunt.",
+                    "reponse": "intention"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Je signale à votre bienveillante …… le cas de cette personne.",
+                    "reponse": "attention"
+                },
+                {
+                    "type": "phraseTrous",
+                    "question": "Ce message est l’…… de Monsieur Martin.",
+                    "reponse": "attention"
+                }
+            ]
+        },
+        {
+            "id": "",
+            "categorie": "lexique",
+            "titre": "Les Homonymes (censé / sensé)",
+            "niveau": "NIVEAU 3",
+            "intitulé": "Énoncé fautif. Repérez si les énoncés ci-dessous contiennent une faute.",
+            "lien": "https://www.academie-francaise.fr/cense-sense",
+            "explication": "Les adjectifs censé et sensé sont trop souvent confondus à l’écrit. Ils ont pourtant des significations bien différentes. \nCensé nous vient du latin censere, « évaluer la fortune et le rang », puis « recenser, juger ». Il appartient à la même famille que cens, le montant de l’impôt qu’il fallait payer pour être éligible ou électeur, et il signifie « qui est supposé, réputé tel ».\n\nSensé est dérivé de sens et signifie « qui a sa raison, son bon sens ».",
+            "questions": [
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Ce que tu dis est censé.",
+                    "reponse": "sensé",
+                    "motErreur": "censé"
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Est-ce censé m’aider ?",
+                    "reponse": "Pas de faute.",
+                    "motErreur": ""
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Ses arguments sont sensés, c’est un bon orateur.",
+                    "reponse": "Pas de faute.",
+                    "motErreur": ""
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "C’est un être censé.",
+                    "reponse": "sensé",
+                    "motErreur": "censé"
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Elle est sensée passer à trois heures.",
+                    "reponse": "censée",
+                    "motErreur": "sensée"
+                }
+            ]
+        },
+        {
+            "id": "",
+            "categorie": "syntaxe",
+            "titre": "Les adjectifs de couleur",
+            "niveau": "NIVEAU 3",
+            "intitulé": "Q.C.M. Sélectionnez le bon accord.",
+            "lien": "https://www.academie-francaise.fr/questions-de-langue#25_strong-em-couleur-accord-de-l-adjectif-et-du-nom-em-strong",
+            "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : des costumes noirs, des cheveux blonds, des lacs verdâtres.\nToutefois, les noms communs employés comme adjectifs de couleur sont invariables : des chaussures marron, des robes pivoine. On peut en effet considérer ces formes comme des ellipses : des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine.\n\nOn recense traditionnellement quatre exceptions à cette règle : rose, mauve, pourpre et écarlate, qui sont variables. Fauve et incarnat, étant d’abord des adjectifs, sont naturellement variables.\n\nLes formes adjectivales complexes sont invariables. On écrira ainsi : des mers bleu-vert, des yeux gris-bleu ; des gilets jaune paille, des robes rose bonbon ; des pulls vert pâle, une voiture bleu foncé ; des couvertures lie-de-vin, des soieries feuille-morte, des draps cuisse-de-nymphe (on lie les éléments par des traits d’union car ce qui était un syntagme libre devient un adjectif de forme figée).\n\nEmployées comme noms de couleur et non plus comme adjectifs, les formes ci-dessus ont les pluriels suivants : des bleu-vert, des gris-bleu ; des jaunes paille (les jaunes sont de la couleur de la paille), des roses bonbon ; des verts pâles, des bleus foncés (les verts sont pâles, les bleus sont foncés).\n\nLorsque plusieurs adjectifs de couleur sont associés par la conjonction de coordination et :\n- ils restent invariables s’ils qualifient des objets bicolores, tricolores, etc. : des drapeaux bleu, blanc, rouge (chaque drapeau est tricolore), des écharpes rouge et noir (chaque écharpe est bicolore) ;\n- ils varient s’ils qualifient des objets unis : des drapeaux bleus, blancs, rouges (certains drapeaux sont bleus, d’autres sont blancs, d’autres encore sont rouges), des écharpes rouges et noires (certaines écharpes sont rouges, d’autres sont noires).",
+            "questions": [
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Des pulls ……",
+                    "reponses": [
+                        {
+                            "reponse": "bleus marine",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "bleu marin",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "bleu marine",
+                            "correcte": "true"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Des fleurs ……",
+                    "reponse": [
+                        {
+                            "reponse": "incarnat",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "incarnats",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "incarnates.",
+                            "correcte": "true"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Des chapeaux ……",
+                    "reponse": [
+                        {
+                            "reponse": "jaunes paille",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "jaune pailles",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "jaune paille",
+                            "correcte": "true"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Des visages ……",
+                    "reponse": [
+                        {
+                            "reponse": "rouges tomate",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "rouge tomate",
+                            "correcte": "true"
+                        },
+                        {
+                            "reponse": "rouge tomates",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "rouges tomates.",
+                            "correcte": "false"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Des fleurs ……",
+                    "reponse": [
+                        {
+                            "reponse": "rouge orange",
+                            "correcte": "true"
+                        },
+                        {
+                            "reponse": "rouges orange",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "rouges oranges",
+                            "correcte": "false"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "",
+            "categorie": "syntaxe",
+            "titre": "Les adjectifs de couleur",
+            "niveau": "NIVEAU 3",
+            "intitulé": "Q.C.M. Sélectionnez le bon accord.",
+            "lien": "https://www.academie-francaise.fr/questions-de-langue#25_strong-em-couleur-accord-de-l-adjectif-et-du-nom-em-strong",
+            "explication": "Les adjectifs simples de couleur s’accordent en genre et en nombre : des costumes noirs, des cheveux blonds, des lacs verdâtres.\nToutefois, les noms communs employés comme adjectifs de couleur sont invariables : des chaussures marron, des robes pivoine. On peut en effet considérer ces formes comme des ellipses : des chaussures (de la couleur du) marron, des robes (de la couleur de la) pivoine.\n\nOn recense traditionnellement quatre exceptions à cette règle : rose, mauve, pourpre et écarlate, qui sont variables. Fauve et incarnat, étant d’abord des adjectifs, sont naturellement variables.\n\nLes formes adjectivales complexes sont invariables. On écrira ainsi : des mers bleu-vert, des yeux gris-bleu ; des gilets jaune paille, des robes rose bonbon ; des pulls vert pâle, une voiture bleu foncé ; des couvertures lie-de-vin, des soieries feuille-morte, des draps cuisse-de-nymphe (on lie les éléments par des traits d’union car ce qui était un syntagme libre devient un adjectif de forme figée).\n\nEmployées comme noms de couleur et non plus comme adjectifs, les formes ci-dessus ont les pluriels suivants : des bleu-vert, des gris-bleu ; des jaunes paille (les jaunes sont de la couleur de la paille), des roses bonbon ; des verts pâles, des bleus foncés (les verts sont pâles, les bleus sont foncés).\n\nLorsque plusieurs adjectifs de couleur sont associés par la conjonction de coordination et :\n- ils restent invariables s’ils qualifient des objets bicolores, tricolores, etc. : des drapeaux bleu, blanc, rouge (chaque drapeau est tricolore), des écharpes rouge et noir (chaque écharpe est bicolore) ;\n- ils varient s’ils qualifient des objets unis : des drapeaux bleus, blancs, rouges (certains drapeaux sont bleus, d’autres sont blancs, d’autres encore sont rouges), des écharpes rouges et noires (certaines écharpes sont rouges, d’autres sont noires).",
+            "questions": [
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Des sandales ……",
+                    "reponses": [
+                        {
+                            "reponse": "abricot",
+                            "correcte": "true"
+                        },
+                        {
+                            "reponse": "abricots",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "abricote",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "abricotes.",
+                            "correcte": "false"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Des écharpes ……",
+                    "reponses": [
+                        {
+                            "reponse": "indigo",
+                            "correcte": "true"
+                        },
+                        {
+                            "reponse": "indigos",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "indigotes",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "indigote.",
+                            "correcte": "false"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Des cheveux ……",
+                    "reponses": [
+                        {
+                            "reponse": "oranges carottes",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "orange carotte",
+                            "correcte": "true"
+                        },
+                        {
+                            "reponse": "orange carottes.",
+                            "correcte": "false"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Les semelles de mes escarpins sont ……",
+                    "reponses": [
+                        {
+                            "reponse": "rouges et mauve",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "rouges et mauves",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "rouge et mauve.",
+                            "correcte": "true"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Des petites oursonnes ……",
+                    "reponses": [
+                        {
+                            "reponse": "brun",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "bruns",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "brunes.",
+                            "correcte": "true"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "",
+            "categorie": "syntaxe",
+            "titre": "Accord du participe passé (verbes pronominaux)",
+            "niveau": "NIVEAU 3",
+            "intitulé": "Q.C.M. Choisissez une et une seule proposition de réponse.",
+            "lien": "https://www.academie-francaise.fr/questions-de-langue#70_strong-em-pronominaux-verbes-accord-du-participe-pass-em-strong",
+            "explication": "Accord du participe passé des verbes pronominaux :\n\nCas 1. Le pronom réfléchi (me, te, se, nous, vous) ne peut pas être analysé comme un complément d’objet.\nDans ce cas, l’accord du participe se fait en genre et en nombre avec le sujet. La propriété s’est vendue à bas prix (= a été vendue à bas prix). Nous nous sommes souvenus. Ils se sont repentis. Elle s’est aperçue qu’on la volait.\n\nCas 2. Le pronom réfléchi (me, te, se, nous, vous) peut être analysé comme un complément d’objet.\nS’il est C.O.D., il commande l’accord du participe passé :\nElles se sont lavées. Ils se sont battus (le C.O.D. est le pronom réfléchi se, placé avant).\nS’il est C.O.I., il ne commande pas l’accord du participe passé :\nElles se sont lavé les mains (le C.O.D. est les mains, placé après ; se est C.O.I.).\nVous vous êtes parlé (l’un a parlé à l’autre).\nIls se sont succédé (l’un a succédé à l’autre).\nN.B. Quand le pronom réfléchi est C.O.I., le participe passé peut s’accorder avec un C.O.D. placé avant : La robe que les filles se sont achetée (que C.O.D. placé avant ; la robe mot qui détermine l’accord ; se C.O.I.).",
+            "questions": [
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Vous vous êtes …… de lui.",
+                    "extra": "(cas 1 : emploi pronominal de jouer au sens de « se moquer de quelqu’un »)",
+                    "reponses": [
+                        {
+                            "reponse": "joués",
+                            "correcte": "true"
+                        },
+                        {
+                            "reponse": "joué",
+                            "correcte": "false"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Ils se sont …… beaucoup d'injures.",
+                    "extra": "(cas 2 : se C.O.I. ; C.O.D. beaucoup d’injures placé après)",
+                    "reponses": [
+                        {
+                            "reponse": "adressés",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "adressé",
+                            "correcte": "true"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Elle s'est …… la tête.",
+                    "extra": "(cas 2 : se C.O.I. ; C.O.D. beaucoup d’injures placé après)",
+                    "reponses": [
+                        {
+                            "reponse": "blessée",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "blessé",
+                            "correcte": "true"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Elle s'est …… à la tête.",
+                    "extra": "(cas 2 : s’ C.O.D. placé avant)",
+                    "reponses": [
+                        {
+                            "reponse": "blessée",
+                            "correcte": "true"
+                        },
+                        {
+                            "reponse": "blessé",
+                            "correcte": "false"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "QCM",
+                    "question": "Elle s'est …… les foudres de son patron.",
+                    "extra": "(cas 2 : s’ C.O.I. ; C.O.D. les foudres de son patron placé après)",
+                    "reponses": [
+                        {
+                            "reponse": "attirée",
+                            "correcte": "false"
+                        },
+                        {
+                            "reponse": "attiré",
+                            "correcte": "true"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "",
+            "categorie": "lexique",
+            "titre": "Anglicismes",
+            "niveau": "NIVEAU 3",
+            "intitulé": "Énoncé fautif. Dans les énoncés suivants, cliquez sur l’anglicisme qu’il conviendrait de ne pas utiliser en français (attention certaines phrases ne comportent pas d’anglicisme fautif).",
+            "lien": "",
+            "explication": "",
+            "questions": [
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Ses travaux portent sur le langage des abeilles.",
+                    "reponse": "Pas de faute.",
+                    "motErreur": "",
+                    "extra": "(Le nom langage est dérivé de langue et c’est pour cette raison qu’il s’est parfois écrit, au Moyen Âge, language, concurremment à langage, plus conforme à la prononciation et qui peu à peu s’est imposé. C’est cependant la forme language qu’au xiiie siècle nos amis anglais nous ont empruntée. Depuis huit siècles, on écrit donc langage chez nous et language de l’autre côté de la Manche. Il convient de ne pas modifier une orthographe validée par un si long espace de temps et l’on évitera, en français, d’écrire language.)"
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Cette entreprise utilise des outils digitaux pour développer son activité en ligne.",
+                    "reponse": "numériques",
+                    "motErreur": "digitaux",
+                    "extra": "(L’adjectif digital en français signifie « qui appartient aux doigts, se rapporte aux doigts ». Il vient du latin digitalis, « qui a l’épaisseur d’un doigt », lui-même dérivé de digitus, « doigt ». C’est parce que l’on comptait sur ses doigts que de ce nom latin a aussi été tiré, en anglais, digit, « chiffre », et digital, « qui utilise des nombres ». On se gardera bien de confondre ces deux adjectifs digital, qui appartiennent à des langues différentes et dont les sens ne se recouvrent pas : on se souviendra que le français a à sa disposition l’adjectif numérique.)"
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Il a été confronté à de nombreux propos racistes durant son séjour à l’étranger.",
+                    "reponse": "a fait face à",
+                    "motErreur": "a été confronté à",
+                    "extra": "(Dans la langue du droit, le verbe confronter signifie « mettre des personnes en présence l’une de l’autre pour opposer et vérifier leurs déclarations » : on dit confronter des témoins à l’accusé, avec l’accusé. Dans la langue courante, il signifie « rapprocher deux choses pour les comparer », par exemple dans : nous avons confronté nos points de vue ; confronter deux écritures, des programmes politiques. Mais on ne doit pas employer ce verbe au passif avec le sens d’« être aux prises », de « devoir faire face », calque de l’anglais to be confronted with, « être placé devant une difficulté, un obstacle, etc. ».)"
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Les critiques auxquelles elle a fait face l’ont laissée de marbre.",
+                    "reponse": "Pas de faute.",
+                    "motErreur": "",
+                    "extra": "(Dans la langue du droit, le verbe confronter signifie « mettre des personnes en présence l’une de l’autre pour opposer et vérifier leurs déclarations » : on dit confronter des témoins à l’accusé, avec l’accusé. Dans la langue courante, il signifie « rapprocher deux choses pour les comparer », par exemple dans : nous avons confronté nos points de vue ; confronter deux écritures, des programmes politiques. Mais on ne doit pas employer ce verbe au passif avec le sens d’« être aux prises », de « devoir faire face », calque de l’anglais to be confronted with, « être placé devant une difficulté, un obstacle, etc. ».)"
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "J’ai longuement interchangé avec lui à la fin de la réunion.",
+                    "reponse": "échangé",
+                    "motErreur": "interchangé",
+                    "extra": "(Certains préfixes sont plus en vogue à certaines périodes. C’est le cas aujourd’hui pour inter-, qui semble être l’annonciateur de communion entre les individus. Mais parfois les formes ainsi créées ne diffèrent en rien de celles qu’elles sont supposées remplacer et n’ajoutent rien à leur sens. C’est le cas du néologisme interchanger, apparu il y a peu et utilisé en lieu et place d’échanger. On se gardera bien d’employer ce verbe un peu pataud et l’on conservera le plus élégant échanger.)"
+                }
+            ]
+        },
+        {
+            "id": "",
+            "categorie": "lexique",
+            "titre": "Anglicismes",
+            "niveau": "NIVEAU 3",
+            "intitulé": "Repérez si les énoncés suivants comportent un anglicisme qu’il faudrait remplacer par un équivalent français et cliquez sur l’anglicisme concerné (attention, certaines phrases ne comportent pas de faute).",
+            "lien": "",
+            "explication": "",
+            "questions": [
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "L’entraîneur insiste sur la nécessité de rester focus sur la compétition nationale.",
+                    "reponse": "concentré",
+                    "motErreur": "focus",
+                    "extra": "(Le nom focus appartient au vocabulaire de l’optique et c’est uniquement dans ce domaine qu’il doit être employé. Il convient également de ne pas en faire un adjectif qui serait l’équivalent du participe passé, appartenant à la même famille étymologique, focalisé, ou de formes synonymes comme concentré.)"
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Je trouve bien convénient d’habiter près de la gare.",
+                    "reponse": "pratique / commode",
+                    "motErreur": "convénient",
+                    "extra": "(Inconvénient est un nom français, inconvenient est un adjectif anglais signifiant « malcommode, gênant, inopportun ». Certes, il a aussi existé jadis en français un adjectif inconvénient, qui signifiait « inconvenant », mais, à son sujet, Littré disait déjà, dans son Dictionnaire, qu’il était vieilli. Et, même si la langue anglaise a également un adjectif, convenient, qui signifie « commode, pratique, opportun… », il convient d’éviter la forme convénient, que l’on commence à rencontrer ici ou là, puisque notre langue dispose de suffisamment de termes pour rendre compte des différents sens de cet anglicisme.)"
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Nous avons interchangé nos numéros de téléphone lorsque nous nous sommes rencontrés.",
+                    "reponse": "échangé",
+                    "motErreur": "interchangé",
+                    "extra": "(Certains préfixes sont plus en vogue à certaines périodes. C’est le cas aujourd’hui pour inter-, qui semble être l’annonciateur de communion entre les individus. Mais parfois les formes ainsi créées ne diffèrent en rien de celles qu’elles sont supposées remplacer et n’ajoutent rien à leur sens. C’est le cas du néologisme interchanger, apparu il y a peu et utilisé en lieu et place d’échanger. On se gardera bien d’employer ce verbe un peu pataud et l’on conservera le plus élégant échanger.)"
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "La pantomime est un language muet.",
+                    "reponse": "langage",
+                    "motErreur": "language",
+                    "extra": "(Le nom langage est dérivé de langue et c’est pour cette raison qu’il s’est parfois écrit, au Moyen Âge, language, concurremment à langage, plus conforme à la prononciation et qui peu à peu s’est imposé. C’est cependant la forme language qu’au xiiie siècle nos amis anglais nous ont empruntée. Depuis huit siècles, on écrit donc langage chez nous et language de l’autre côté de la Manche. Il convient de ne pas modifier une orthographe validée par un si long espace de temps et l’on évitera, en français, d’écrire language.)"
+                },
+                {
+                    "id": "",
+                    "type": "EF",
+                    "question": "Je reviens vers vous pour discuter de ma demande de visa.",
+                    "reponse": "reprendre notre échange",
+                    "motErreur": "reviens vers vous",
+                    "extra": "(L’expression Je reviens vers vous, employée en lieu et place de « Je reprends contact avec vous », « Je reprends nos affaires, notre sujet, etc. … », est incorrecte. Il s’agit d’un anglicisme, traduction hasardeuse de I’ll get back to you, devenu tic de langage, qu’il convient d’éviter. On pourra dire, outre les formes vues plus haut : Je me tourne à nouveau vers vous, revenons à nos affaires, etc.)"
+                }
+            ]
+        },
+        {
+            "typeQuestion": [
+                {
+                    "id": "phraseTrous",
+                    "nom": "Phrases à trous"
+                },
+                {
+                    "id": "QCM",
+                    "nom": "Questions à choix multiples"
+                },
+                {
+                    "id": "EF",
+                    "nom": "Énoncé fautif"
+                },
+                {
+                    "id": "reperage",
+                    "nom": "Repérage"
+                },
+                {
+                    "id": "sub",
+                    "nom": "Subtitution"
+                }
+            ],
+            "categorie": [
+                {
+                    "id": "syntaxe",
+                    "nom": "Syntaxe"
+                },
+                {
+                    "id": "lexique",
+                    "nom": "Lexique"
+                }
+            ]
+        }
+    ]
+}
