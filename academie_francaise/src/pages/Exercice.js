@@ -7,6 +7,7 @@ import Ariane from "../components/Ariane";
 import NumQuestion from "../components/NumQuestion";
 import Recap from '../components/Recap';
 import '../css/Exercice.css';
+import TrouQuestion from "../components/TrouQuestion";
 
 function Exercice({ exercice }) {
   const [questions, setQuestions] = useState(exercice.questions.map(question => ({ ...question, repondu: null })));
@@ -24,10 +25,10 @@ function Exercice({ exercice }) {
     setQuestionCourante(numQuestion);
   };
 
-  const handleUserResponse = (index, isCorrect) => {
+  const handleUserResponse = (index, isCorrect, userInput) => {
     setQuestions(prevQuestions => {
       const updatedQuestions = [...prevQuestions];
-      updatedQuestions[index] = { ...updatedQuestions[index], repondu: isCorrect };
+      updatedQuestions[index] = { ...updatedQuestions[index], repondu: isCorrect , reponseUtilisateur: userInput};
       return updatedQuestions;
     });
   };
@@ -40,9 +41,19 @@ function Exercice({ exercice }) {
             ennonce={question.question}
             reponses={question.reponse}
             repondu={questions[index].repondu}
-            onUserResponse={isCorrect => handleUserResponse(index, isCorrect)}
+            onUserResponse={(isCorrect) => handleUserResponse(index, isCorrect)}
           />
         );
+        case "phraseTrous":
+          return (
+            <TrouQuestion
+              ennonce={question.question}
+              reponse={question.reponse}
+              repondu={questions[index].repondu}
+              onUserResponse={(isCorrect, userInput) => handleUserResponse(index, isCorrect, userInput)}
+              reponseUtilisateur={questions[index].reponseUtilisateur}
+            />
+          );
       default:
         console.log("Type de question non pris en charge: " + question.type);
         return null;

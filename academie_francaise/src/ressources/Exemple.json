@@ -11,27 +11,27 @@
       "questions": [
         {
           "type": "phraseTrous",
-          "question": "Un chapeau noir.\nUne casquette …….",
+          "question": "Un chapeau noir.\nUne casquette .......",
           "reponse": "noire"
         },
         {
           "type": "phraseTrous",
-          "question": "Un chien marron.\nUne chienne ……",
+          "question": "Un chien marron.\nUne chienne ......",
           "reponse": "marron"
         },
         {
           "type": "phraseTrous",
-          "question": "Un gilet bleu.\nUne veste ……",
+          "question": "Un gilet bleu.\nUne veste ......",
           "reponse": "bleue"
         },
         {
           "type": "phraseTrous",
-          "question": "Un portail vert.\nDes portes ……",
+          "question": "Un portail vert.\nDes portes ......",
           "reponse": "vertes"
         },
         {
           "type": "phraseTrous",
-          "question": "Un mur topaze.\nDes façades ……",
+          "question": "Un mur topaze.\nDes façades ......",
           "reponse": "topaze"
         }
       ]

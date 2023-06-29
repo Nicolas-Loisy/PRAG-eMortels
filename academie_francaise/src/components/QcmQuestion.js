@@ -3,7 +3,7 @@ import '../css/QcmQuestion.css';
 function QcmQuestion({ ennonce, reponses, repondu, onUserResponse }) {
   const handleClick = (indexReponse) => {
     if (repondu === null) {
-      onUserResponse(reponses[indexReponse].correcte);
+      onUserResponse(reponses[indexReponse].correcte, reponses[indexReponse].reponse);
     }
   };
 

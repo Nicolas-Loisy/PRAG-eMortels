@@ -5,5 +5,5 @@ import Accueil from "../pages/Accueil";
 
 export const router = createBrowserRouter([
   {path: "/", element: <Accueil />},
-  {path: "/Exercice", element: <Exercice exercice={data.Exercices[6]} />}
+  {path: "/Exercice", element: <Exercice exercice={data.Exercices[0]} />}
 ]);
