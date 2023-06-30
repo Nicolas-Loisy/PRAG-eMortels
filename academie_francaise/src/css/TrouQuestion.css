@@ -1,10 +1,14 @@
-  .TrouQuestion p.correct {
-    color: #5CA03B;
+  .TrouQuestion .correct {
+    color: hsl(100, 46%, 43%);
     font-weight: bold;
   }
 
-  .TrouQuestion p.incorrect {
+  .TrouQuestion .incorrect {
     color: #BD0000;
+  }
+
+  .TrouQuestion .reponseUtilisateur  {
+    font-weight: bold;
   }
 
   .inline-div {
@@ -20,13 +24,12 @@
 .TrouQuestion input.user-input {
   font-family: inherit;
   width: 100%;
+  font-size: 100%;
   border: 0;
   border-bottom: 2px solid #9b9b9b;
   outline: 0;
-  font-size: 1.1rem;
   font-weight: bold;
   color: black;
-  padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
   max-width: 25%;

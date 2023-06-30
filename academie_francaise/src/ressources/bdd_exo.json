@@ -186,31 +186,31 @@
                   "questions": {
                     "1" : {
                       "type": "phraseTrous",
-                      "question": "Un océan bleu-vert.\nDes mers ... .",
+                      "question": "Un océan bleu-vert.<br/>Des mers ... .",
                       "reponse": "bleu-vert",
                       "extra": ""
                     },
                     "2" :{
                       "type": "phraseTrous",
-                      "question": "Un pull vert pâle\nUne robe ... .",
+                      "question": "Un pull vert pâle.<br/>Une robe ... .",
                       "reponse": "vert pâle",
                       "extra": ""
                     },
                     "3" :{
                       "type": "phraseTrous",
-                      "question": "Un vélo bleu foncé.\nUne bicyclette ... .",
+                      "question": "Un vélo bleu foncé.<br/>Une bicyclette ... .",
                       "reponse": "bleu foncé",
                       "extra": ""
                     },
                     "4" :{
                       "type": "phraseTrous",
-                      "question": "De l’eau bleu turquoise.\nDes liquides ... .",
+                      "question": "De l’eau bleu turquoise.<br/>Des liquides ... .",
                       "reponse": "bleu turquoise",
                       "extra": ""
                     },
                     "5" : {
                       "type": "phraseTrous",
-                      "question": "Un chapeau de couleur jaune et rouge.\nDes chapeaux ... .",
+                      "question": "Un chapeau de couleur jaune et rouge.<br/>Des chapeaux ... .",
                       "reponse": "jaune et rouge",
                       "extra": ""
                     }
@@ -1048,7 +1048,7 @@
                 "1" : {
                   "intitule": "Q.C.M. Choisissez une et une seule proposition de réponse.",
                   "lien": "https://www.academie-francaise.fr/questions-de-langue#70_strong-em-pronominaux-verbes-accord-du-participe-pass-em-strong",
-                  "explication": "Accord du participe passé des verbes pronominaux :\n\nCas 1. Le pronom réfléchi (me, te, se, nous, vous) ne peut pas être analysé comme un complément d’objet.\nDans ce cas, l’accord du participe se fait en genre et en nombre avec le sujet. La propriété s’est vendue à bas prix (= a été vendue à bas prix). Nous nous sommes souvenus. Ils se sont repentis. Elle s’est aperçue qu’on la volait.\n\nCas 2. Le pronom réfléchi (me, te, se, nous, vous) peut être analysé comme un complément d’objet.\nS’il est C.O.D., il commande l’accord du participe passé :\nElles se sont lavées. Ils se sont battus (le C.O.D. est le pronom réfléchi se, placé avant).\nS’il est C.O.I., il ne commande pas l’accord du participe passé :\nElles se sont lavé les mains (le C.O.D. est les mains, placé après ; se est C.O.I.).\nVous vous êtes parlé (l’un a parlé à l’autre).\nIls se sont succédé (l’un a succédé à l’autre).\nN.B. Quand le pronom réfléchi est C.O.I., le participe passé peut s’accorder avec un C.O.D. placé avant : La robe que les filles se sont achetée (que C.O.D. placé avant ; la robe mot qui détermine l’accord ; se C.O.I.).",
+                  "explication": "Accord du participe passé des verbes pronominaux :<br/><br/>Cas 1. Le pronom réfléchi (me, te, se, nous, vous) ne peut pas être analysé comme un complément d’objet.<br/>Dans ce cas, l’accord du participe se fait en genre et en nombre avec le sujet. La propriété s’est vendue à bas prix (= a été vendue à bas prix). Nous nous sommes souvenus. Ils se sont repentis. Elle s’est aperçue qu’on la volait.<br/><br/>Cas 2. Le pronom réfléchi (me, te, se, nous, vous) peut être analysé comme un complément d’objet.<br/>S’il est C.O.D., il commande l’accord du participe passé :<br/>Elles se sont lavées. Ils se sont battus (le C.O.D. est le pronom réfléchi se, placé avant).<br/>S’il est C.O.I., il ne commande pas l’accord du participe passé :<br/>Elles se sont lavé les mains (le C.O.D. est les mains, placé après ; se est C.O.I.).<br/>Vous vous êtes parlé (l’un a parlé à l’autre).<br/>Ils se sont succédé (l’un a succédé à l’autre).<br/>N.B. Quand le pronom réfléchi est C.O.I., le participe passé peut s’accorder avec un C.O.D. placé avant : La robe que les filles se sont achetée (que C.O.D. placé avant ; la robe mot qui détermine l’accord ; se C.O.I.).",
                   "questions": {
                     "1" :{
                       "type": "QCM",
