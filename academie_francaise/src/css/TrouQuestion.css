@@ -7,11 +7,11 @@
     color: #BD0000;
   }
 
-  .TrouQuestion .reponseUtilisateur  {
+  .TrouQuestion .reponseUtilisateur {
     font-weight: bold;
   }
 
-  .inline-div {
+  .TrouQuestion.inline-div {
     display: inline;
   }
 
@@ -21,39 +21,44 @@
     font-style: italic;
   }
 
-.TrouQuestion input.user-input {
-  font-family: inherit;
-  width: 100%;
-  font-size: 100%;
-  border: 0;
-  border-bottom: 2px solid #9b9b9b;
-  outline: 0;
-  font-weight: bold;
-  color: black;
-  background: transparent;
-  transition: border-color 0.2s;
-  max-width: 25%;
-  margin-bottom: 1em;
-}
+  .TrouQuestion .validation {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .TrouQuestion input.user-input {
+    font-family: inherit;
+    width: 100%;
+    font-size: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-weight: bold;
+    color: black;
+    background: transparent;
+    transition: border-color 0.2s;
+    max-width: 25%;
+    margin-bottom: 1em;
+  }
 
-.TrouQuestion button {
-  cursor: pointer;
-  border: 2px solid #2B5877;
-  border-radius: 10px;
-  width: fit-content;
-  padding: 0.5em 1.3em;
-  transition: border 0.15s ease;
-  margin-top: 1em;
-}
+  .TrouQuestion .button {
+    cursor: pointer;
+    border: 2px solid #2B5877;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 0.5em 1.3em;
+    transition: border 0.15s ease;
+    margin-top: 1em;
+  }
 
-.TrouQuestion button:hover {
-  border: 2px solid #F27E19;
-}
+  .TrouQuestion .button:hover {
+    border: 2px solid #F27E19;
+  }
 
-.TrouQuestion div.ennonce {
-  margin-top: 1em;
-}
+  .TrouQuestion div.ennonce {
+    margin-top: 1em;
+  }
 
-.TrouQuestion {
-  margin-top: 1em;
-}
+  .TrouQuestion {
+    margin-top: 1em;
+  }
