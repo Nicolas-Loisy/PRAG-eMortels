@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import '../css/TrouQuestion.css';
 
+const ReactDOMServer = require('react-dom/server');
+const regex = /\.{2,}/g;
+
 function TrouQuestion({ ennonce, reponse, repondu, onUserResponse, reponseUtilisateur }) {
   const [inputValue, setInputValue] = useState('');
+  // Transformation de l'input text en string
+  const userInput = ReactDOMServer.renderToString(
+    <input type='text' id='test' className='user-input' value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
+  );
+  // Remplace les points en input
+  const ennonceUpdated = ennonce.replace(regex, userInput);
 
+  // Actions effectuées en cliquant sur "Valider"
   const handleClick = () => {
     if (repondu === null) {
+      console.log(inputValue);
       if (inputValue === reponse) {
         onUserResponse(true, inputValue);
       } else {
@@ -15,50 +26,30 @@ function TrouQuestion({ ennonce, reponse, repondu, onUserResponse, reponseUtilis
     }
   };
 
-  const regex = /\.{2,}/g;
-  const parts = ennonce.split(regex);
-
   return (
     <div className='TrouQuestion'>
-      {parts.map((part, index) => {
-        if (index === parts.length - 1) {
-          return <span key={index}>{part}</span>;
-        } else {
-          if (repondu !== null) {
-            if (repondu) return(
-              <React.Fragment key={index}>
-              <br/>
-              <h3>{part} <div className={`${repondu !== null ? repondu ? 'correct' : 'incorrect' : ''} inline-div`}>
-                {reponseUtilisateur}</div>.
-              </h3>
-            </React.Fragment>
-            );
-            else
-          return(
-            <React.Fragment key={index}>
-              <br/>
-              <h3>{part} <div className={`${repondu !== null ? repondu ? 'correct' : 'incorrect' : ''} inline-div`}>
-                {reponseUtilisateur}</div>.
-              </h3>
-              <p className='correction'>{part} <div className={`correct inline-div`}> {reponse}</div>.</p>
-            </React.Fragment>
-          );
-          } else {
-          return (
-            <React.Fragment key={index}>
-              <br/>
-              <h3>{part}
-              <input type="text" placeholder='...' className="user-input" value={inputValue} onChange={(event) => setInputValue(event.target.value)} />.
-              </h3>
-              <ul><li onClick={handleClick}>Valider</li></ul>
-            </React.Fragment>
-          );
-          }
-        }
-      })}
-      
+      <div className='ennonce'>
+        {repondu === null ? <div className='textEnnonce' dangerouslySetInnerHTML={{ __html: ennonceUpdated }}></div> : afficherReponseEnnonce(ennonce, repondu, reponseUtilisateur, reponse)}
+      </div>
+      <div className='validation'>
+        {repondu === null ? <button onClick={handleClick}>Valider</button> : null}
+      </div>
     </div>
   );
 }
+
+// Affichage de l'ennoncé après validation
+function afficherReponseEnnonce(ennonce, repondu, reponseUtilisateur, reponse) {
+  const test = <div className='correct'>{reponse}</div>
+  const ennonceUpdated = ennonce.replace(regex, test);
+  if (repondu === false) {
+    return (
+      <div className='correction'>
+        <div className='ennonce' dangerouslySetInnerHTML={{ __html: ennonceUpdated }}/>
+      </div>
+    );
+  }
+}
+
 
 export default TrouQuestion;
