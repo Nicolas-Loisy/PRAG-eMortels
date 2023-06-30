@@ -47,7 +47,7 @@ function Exercice() {
     });
   };
 
-  const renderedQuestions = exercice.questions.map((question, index) => {
+  const renderedQuestions = Object.values(exercice.questions).map((question, index) => {
     switch (question.type) {
       case "QCM":
         return (
