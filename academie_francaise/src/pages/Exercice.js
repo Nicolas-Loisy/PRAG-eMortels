@@ -29,9 +29,9 @@ function Exercice() {
   const [voirRecap, setVoirRecap] = useState(false);
   const pages = [
     { nom: categorie.nom, url: '/parcours-precis' },
-    { nom: sousCategorie.nom, url: '/parcours-precis/' + categorie._id + "/" + sousCategorie._id },
-    { nom: niveau.nom, url: '/parcours-precis/' + categorie._id + "/" + sousCategorie._id },
-    { nom: "Exercice " + exercice._id}
+    { nom: sousCategorie.nom, url: '/parcours-precis/' + categorieId + "/" + sousCategorieId },
+    { nom: niveau.nom, url: '/parcours-precis/' + categorieId + "/" + niveauId },
+    { nom: "Exercice " + exerciceId}
   ];
 
   const handleClickQuestion = (numQuestion) => {
@@ -94,7 +94,7 @@ function Exercice() {
               <p>{niveau.nom}</p>
             </Tag>
             <Tag>
-              <p>{"Exercice" + exercice._id}</p>
+              <p>{"Exercice " + exerciceId}</p>
             </Tag>
           </div>
         </div>
