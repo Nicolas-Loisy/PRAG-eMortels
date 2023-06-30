@@ -5,9 +5,11 @@
       "nom": "Syntaxe",
       "sousCategories": [
         {
+          "_id": "couleur",
           "nom": "Les adjectifs de couleur",
           "niveaux": [
             {
+              "_id": "1",
               "nom": "Niveau 1",
               "exercices": [
                 {
@@ -79,6 +81,7 @@
               ]
             },
             {
+              "_id" : "2",
               "nom": "Niveau 2",
               "exercices": [
                 {
@@ -183,6 +186,7 @@
               ]
             },
             {
+              "_id" : "3",
               "nom": "Niveau 3",
               "exercices": [
                 {
@@ -441,6 +445,7 @@
           ]
         },
         {
+          "_id": "interrogation",
           "nom": "L’interrogation",
           "niveaux": [
             {

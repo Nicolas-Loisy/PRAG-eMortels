@@ -1,25 +1,35 @@
 import { useState } from 'react';
+import { useParams } from "react-router-dom";
 
 import QcmQuestion from "../components/QcmQuestion";
+import TrouQuestion from "../components/TrouQuestion";
 import Content from "../components/Content"
 import Tag from "../components/Tag";
 import Ariane from "../components/Ariane";
 import NumQuestion from "../components/NumQuestion";
 import Recap from '../components/Recap';
-import '../css/Exercice.css';
-import TrouQuestion from "../components/TrouQuestion";
 
-function Exercice({ exercice, categorie }) {
-  //   const [questions, setQuestions] = useState(exercice.questions.questions.map(question => ({ ...question, repondu: null })));
+import { getCategorieById, getSousCategorieById, getNiveauById, getExerciceById } from '../utils/Api';
+import '../css/Exercice.css';
+
+function Exercice() {
+
+  const { categorieId, sousCategorieId, niveauId, exerciceId } = useParams();
+
+  const categorie = getCategorieById(categorieId);
+  const sousCategorie = getSousCategorieById(categorieId, sousCategorieId);
+  const niveau = getNiveauById(categorieId, sousCategorieId, niveauId);
+  const exercice = getExerciceById(categorieId, sousCategorieId, niveauId, exerciceId);
+
   const [questions, setQuestions] = useState(exercice.questions.map(question => ({ ...question, repondu: null })));
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
   const pages = [
-    { nom: categorie.nom, url: 'https://www.example.com/page1' },
-    { nom: categorie.sousCategories[0].nom, url: 'https://www.example.com/page2' },
-    { nom: categorie.sousCategories[0].niveaux[1].nom }
+    { nom: categorie.nom, url: '/parcours-precis' },
+    { nom: sousCategorie.nom, url: '/parcours-precis/' + categorie._id + "/" + sousCategorie._id },
+    { nom: niveau.nom, url: '/parcours-precis/' + categorie._id + "/" + sousCategorie._id },
+    { nom: "Exercice " + exercice._id}
   ];
-
 
   const handleClickQuestion = (numQuestion) => {
     setVoirRecap(false);
@@ -72,16 +82,16 @@ function Exercice({ exercice, categorie }) {
               <p>{categorie.nom}</p>
             </Tag>
             <Tag>
-              <p>{categorie.sousCategories[0].nom}</p>
+              <p>{sousCategorie.nom}</p>
             </Tag>
           </div>
 
           <div className="col_2">
             <Tag>
-              <p>{categorie.sousCategories[0].niveaux[1].nom}</p>
+              <p>{niveau.nom}</p>
             </Tag>
             <Tag>
-              <p>{exercice._id}</p>
+              <p>{"Exercice" + exercice._id}</p>
             </Tag>
           </div>
         </div>
