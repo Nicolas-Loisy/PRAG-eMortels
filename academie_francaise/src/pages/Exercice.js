@@ -21,7 +21,10 @@ function Exercice() {
   const niveau = getNiveauById(categorieId, sousCategorieId, niveauId);
   const exercice = getExerciceById(categorieId, sousCategorieId, niveauId, exerciceId);
 
-  const [questions, setQuestions] = useState(exercice.questions.map(question => ({ ...question, repondu: null })));
+  const [questions, setQuestions] = useState(
+    Object.values(exercice.questions).map(question => ({ ...question, repondu: null }))
+  );
+
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
   const pages = [

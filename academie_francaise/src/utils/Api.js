@@ -25,7 +25,7 @@ export function getCategorieById(categorieId) {
 }
 
 export function getSousCategorieById(categorieId, sousCategorieId) {
-  return data.categories[categorieId][sousCategorieId];
+  return data.categories[categorieId].sousCategories[sousCategorieId];
 }
 
 export function getNiveauById(categorieId, sousCategorieId, niveauId) {
