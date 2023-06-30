@@ -1,11 +1,11 @@
 import BlocChoix from "../components/BlocChoix";
 import Content from "../components/Content";
-import { categories } from "../utils/Api";
+import { getListeCategories } from "../utils/Api";
 
 import "../css/Accueil.css";
 
 function ParcoursPrecis() {
-  console.log(categories);
+  console.log(getListeCategories());
   return (
     <Content>
     </Content>

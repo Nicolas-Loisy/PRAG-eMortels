@@ -1,44 +1,37 @@
 import data from "../ressources/bdd_exo.json";
 
-export const categories = data.categories.map((categorie) => ({
-  id: categorie._id,
-  nom: categorie.nom,
-  sousCategories: categorie.sousCategories.map((sousCategorie) => ({
-    id: sousCategorie._id,
-    nom: sousCategorie.nom,
-  })),
-}));
+export function getListeCategories() {
+  const categories = data.categories;
+
+  const listeCategories = Object.keys(categories).map((categorieId) => {
+    const categorie = categories[categorieId];
+    const sousCategories = categorie.sousCategories;
+
+    const listeSousCategories = Object.keys(sousCategories).map(
+      (sousCategorieId) => sousCategories[sousCategorieId].nom
+    );
+
+    return {
+      nom: categorie.nom,
+      sousCategories: listeSousCategories,
+    };
+  });
+
+  return listeCategories;
+}
 
 export function getCategorieById(categorieId) {
-  const categorie = data.categories.find((cat) => cat._id === categorieId);
-  return categorie || null;
+  return data.categories[categorieId];
 }
 
 export function getSousCategorieById(categorieId, sousCategorieId) {
-  const categorie = getCategorieById(categorieId);
-  if (categorie) {
-    const sousCategorie = categorie.sousCategories.find(
-      (sousCat) => sousCat._id === sousCategorieId
-    );
-    return sousCategorie || null;
-  }
-  return null;
+  return data.categories[categorieId][sousCategorieId];
 }
 
 export function getNiveauById(categorieId, sousCategorieId, niveauId) {
-  const sousCategorie = getSousCategorieById(categorieId, sousCategorieId);
-  if (sousCategorie) {
-    const niveau = sousCategorie.niveaux.find((niv) => niv._id == niveauId);
-    return niveau || null;
-  }
-  return null;
+  return data.categories[categorieId].sousCategories[sousCategorieId].niveaux[niveauId];
 }
 
 export function getExerciceById(categorieId, sousCategorieId, niveauId, exerciceId) {
-  const niveau = getNiveauById(categorieId, sousCategorieId, niveauId);
-  if (niveau) {
-    const exercice = niveau.exercices.find((exo) => exo._id == exerciceId);
-    return exercice || null;
-  }
-  return null;
+  return data.categories[categorieId].sousCategories[sousCategorieId].niveaux[niveauId].exercices[exerciceId];
 }
