@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Accueil from "../pages/Accueil";
-import ParcoursPrecis from "../pages/ParcoursPrecis";
+import ParcoursPrecis from "../pages/ChoixTheme";
 import ChoixExercice from "../pages/ChoixExercice";
 import Exercice from "../pages/Exercice";
+import NotFound from "../pages/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -14,19 +15,23 @@ export const router = createBrowserRouter([
     element: <ParcoursPrecis />
   },
   {
-    path: "/parcours-precis/:categorieId",
+    path: "/parcours-precis/categorie/:categorie",
     element: <ParcoursPrecis />
   },
   {
-    path: "/parcours-precis/:categorieId/:sousCategorieId",
+    path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie",
     element: <ChoixExercice />
   },
   {
-    path: "/parcours-precis/:categorieId/:sousCategorieId/:niveauId",
+    path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau",
     element: <ChoixExercice />
   },
   {
-    path: "/parcours-precis/:categorieId/:sousCategorieId/:niveauId/:exerciceId",
+    path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau/exercice/:exercice",
     element: <Exercice />
   },
+  {
+    path: "*",
+    element: <NotFound />
+  }
 ]);

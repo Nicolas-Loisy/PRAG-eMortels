@@ -13,13 +13,11 @@ import { getCategorieById, getSousCategorieById, getNiveauById, getExerciceById 
 import '../css/Exercice.css';
 
 function Exercice() {
-
-  const { categorieId, sousCategorieId, niveauId, exerciceId } = useParams();
-
-  const categorie = getCategorieById(categorieId);
-  const sousCategorie = getSousCategorieById(categorieId, sousCategorieId);
-  const niveau = getNiveauById(categorieId, sousCategorieId, niveauId);
-  const exercice = getExerciceById(categorieId, sousCategorieId, niveauId, exerciceId);
+  const params = useParams();
+  const categorie = getCategorieById(params.categorie);
+  const sousCategorie = getSousCategorieById(params.categorie, params.sousCategorie);
+  const niveau = getNiveauById(params.categorie, params.sousCategorie, params.niveau);
+  const exercice = getExerciceById(params.categorie, params.sousCategorie, params.niveau, params.exercice);
 
   const [questions, setQuestions] = useState(
     Object.values(exercice.questions).map(question => ({ ...question, repondu: null }))
@@ -27,12 +25,6 @@ function Exercice() {
 
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
-  const pages = [
-    { nom: categorie.nom, url: '/parcours-precis' },
-    { nom: sousCategorie.nom, url: '/parcours-precis/' + categorieId + "/" + sousCategorieId },
-    { nom: niveau.nom, url: '/parcours-precis/' + categorieId + "/" + niveauId },
-    { nom: "Exercice " + exerciceId}
-  ];
 
   const handleClickQuestion = (numQuestion) => {
     setVoirRecap(false);
@@ -74,6 +66,7 @@ function Exercice() {
     }
   });
 
+
   return (
     <Content>
       <div className="Exercice">
@@ -94,7 +87,7 @@ function Exercice() {
               <p>{niveau.nom}</p>
             </Tag>
             <Tag>
-              <p>{"Exercice " + exerciceId}</p>
+              <p>{"Exercice " + params.exercice}</p>
             </Tag>
           </div>
         </div>
@@ -178,9 +171,6 @@ function Exercice() {
           {/* Colonne non utilisée */}
           <div className='col3'></div>
         </div>
-
-        {/* Fil d'ariane */}
-        <Ariane pages={pages} />
 
       </div>
     </Content>

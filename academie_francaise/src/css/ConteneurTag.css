@@ -1,0 +1,27 @@
+.ConteneurTag {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  border: 2px solid #2B5877;
+}
+
+.ConteneurTag h3{
+  background-color: #2B5877;
+  transition: background-color 0.15s ease;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #fff;
+  padding: 1em;
+}
+
+.ConteneurTag .Tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+.ConteneurTag .Tag {
+  margin: 0.5em;
+  max-width: 80%;
+  text-align: justify;
+}
+
