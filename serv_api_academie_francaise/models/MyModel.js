@@ -17,6 +17,10 @@ const ReponsesSchema = new mongoose.Schema({
 
 // Schéma pour les questions
 const QuestionSchema = new mongoose.Schema({
+  _id: {
+    type: String,
+    required: true
+  },
   type: {
     type: String,
     required: true
@@ -69,6 +73,10 @@ const ExerciceSchema = new mongoose.Schema({
 
 // Schéma pour les niveaux
 const NiveauSchema = new mongoose.Schema({
+  _id: {
+    type: String,
+    required: true
+  },
   nom: {
     type: String,
     required: true
@@ -82,6 +90,10 @@ const NiveauSchema = new mongoose.Schema({
 
 // Schéma pour les sous-catégories
 const SousCategorieSchema = new mongoose.Schema({
+  _id: {
+    type: String,
+    required: true
+  },
   nom: {
     type: String,
     required: true
@@ -119,6 +131,8 @@ const MySchema = new mongoose.Schema({
 // Création du modèle
 // Attention => La ligne suivante ajoute une nouvelle "collection" dans la database de MongoDB.
 // Ici "categorie" est le nom de la "collection".
-const MyModel = mongoose.model('categorie', MySchema);
+// const MyModel = mongoose.model('categorie', MySchema);
+// const MyModel = mongoose.model('newstruct', MySchema);
+const MyModel = mongoose.model('newstruct2', MySchema);
 
 module.exports = MyModel;
