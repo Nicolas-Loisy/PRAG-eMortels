@@ -1,0 +1,9 @@
+.ChoixExercice .ExercicesConteneur {
+  max-width: 70%;
+  margin: auto;
+}
+
+.ChoixExercice .ConteneurTag {
+  margin-bottom: 2em;
+}
+

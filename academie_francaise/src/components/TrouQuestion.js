@@ -1,62 +1,80 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/TrouQuestion.css';
 
 function TrouQuestion({ ennonce, reponse, repondu, onUserResponse, reponseUtilisateur }) {
+  const regex = /\.{2,}/g;
   const [inputValue, setInputValue] = useState('');
+  const ennonceUpdated = remplacePointsParInput(ennonce);
+  const [corrige, setCorrige] = useState('');
 
-  const handleClick = () => {
+  useEffect(() => {
+    if (repondu === true) {
+      setCorrige(
+        <p dangerouslySetInnerHTML={{ __html: ennonce.replace(regex, `<span class="reponseUtilisateur correct">${reponseUtilisateur}</span>`) }} />
+      );
+    } else {
+      setCorrige(
+        <>
+          <p dangerouslySetInnerHTML={{ __html: ennonce.replace(regex, `<span class="reponseUtilisateur incorrect">${reponseUtilisateur}</span>`) }} />
+          <p className='correction' dangerouslySetInnerHTML={{ __html: ennonce.replace(regex, `<span class="correct">${reponse}</span>`) }} />
+        </>
+      );
+    }
+  }, [ennonce, repondu]);
+
+  // Actions effectuées en cliquant sur "Valider"
+  function handleClick() {
     if (repondu === null) {
       if (inputValue === reponse) {
         onUserResponse(true, inputValue);
+        setCorrige(
+          <p dangerouslySetInnerHTML={{ __html: ennonce.replace(regex, `<span class="reponseUtilisateur correct">${inputValue}</span>`) }} />
+        );
       } else {
         onUserResponse(false, inputValue);
+        setCorrige(
+          <>
+            <p dangerouslySetInnerHTML={{ __html: ennonce.replace(regex, `<span class="reponseUtilisateur incorrect">${inputValue}</span>`) }} />
+            <p className='correction' dangerouslySetInnerHTML={{ __html: ennonce.replace(regex, `<span class="correct">${reponse}</span>`) }} />
+          </>
+        );
       }
-      setInputValue(''); // Réinitialise la valeur de l'input après la validation
+      setInputValue('');
     }
-  };
+  }
 
-  const regex = /\.{2,}/g;
-  const parts = ennonce.split(regex);
+  function remplacePointsParInput(str) {
+    const parts = str.split(regex);
+    const elements = parts.map((part, index) => {
+      return (
+        <React.Fragment key={`element-${index}`}>
+          <span dangerouslySetInnerHTML={{ __html: part }} />
+          {index !== parts.length - 1 && (
+            <input type="text" className="user-input" value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
+          )}
+        </React.Fragment>
+      );
+    });
+  
+    return elements;
+  }
 
   return (
     <div className='TrouQuestion'>
-      {parts.map((part, index) => {
-        if (index === parts.length - 1) {
-          return <span key={index}>{part}</span>;
-        } else {
-          if (repondu !== null) {
-            if (repondu) return(
-              <React.Fragment key={index}>
-              <br/>
-              <h3>{part} <div className={`${repondu !== null ? repondu ? 'correct' : 'incorrect' : ''} inline-div`}>
-                {reponseUtilisateur}</div>.
-              </h3>
-            </React.Fragment>
-            );
-            else
-          return(
-            <React.Fragment key={index}>
-              <br/>
-              <h3>{part} <div className={`${repondu !== null ? repondu ? 'correct' : 'incorrect' : ''} inline-div`}>
-                {reponseUtilisateur}</div>.
-              </h3>
-              <p className='correction'>{part} <div className={`correct inline-div`}> {reponse}</div>.</p>
-            </React.Fragment>
-          );
-          } else {
-          return (
-            <React.Fragment key={index}>
-              <br/>
-              <h3>{part}
-              <input type="text" placeholder='...' className="user-input" value={inputValue} onChange={(event) => setInputValue(event.target.value)} />.
-              </h3>
-              <ul><li onClick={handleClick}>Valider</li></ul>
-            </React.Fragment>
-          );
-          }
-        }
-      })}
-      
+      {repondu === null ? (
+        <div className='ennonce'>
+          <p className='textEnnonce'>
+            {ennonceUpdated}
+          </p>
+          <div className='validation'>
+            <div className="button" onClick={handleClick}>Valider</div>
+          </div>
+        </div>
+      ) : (
+        <div>
+          {corrige}
+        </div>
+      )}
     </div>
   );
 }

@@ -2,12 +2,16 @@ import '../css/Header.css';
 import logo from "../ressources/Images/Logo.png";
 
 function Header() {
+  const handleClick = () => {
+    window.location.href = "/";
+  };
+
   return (
     <div className='Header'>
-      <a className="logo" href='./'>
+      <div className="logo"  onClick={handleClick}>
         <img src={logo} alt="Logo" />
         <p>Académie Française</p>
-      </a>
+      </div>
     </div>
   );
 }

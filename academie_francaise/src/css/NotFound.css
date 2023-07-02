@@ -1,0 +1,20 @@
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ajoutez cette ligne pour centrer horizontalement */
+}
+
+.NotFound .button  {
+  cursor: pointer;
+  border: 2px solid #2B5877;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 0.5em 1.3em;
+  margin-top: 6em;
+  transition: border 0.15s ease;
+  font-size: 120%;
+}
+
+.NotFound .button:hover {
+  border: 2px solid #F27E19;
+}

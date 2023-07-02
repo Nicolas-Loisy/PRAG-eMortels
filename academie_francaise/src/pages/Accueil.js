@@ -9,13 +9,13 @@ function Accueil() {
       <div className="optionContainer">
         <BlocChoix
           titre="Rechercher un thème"
-          url="/categorie"
+          url="/parcours-precis"
           description="Je souhaite m'entrainer sur une thèmatique précise."
         />
 
         <BlocChoix
           titre="Questions aléatoires"
-          url="/choix-niveau"
+          url="/parcours-aleatoire"
           description="Je souhaite m'entrainer en répondant à des questions aléatoires."
         />
       </div>

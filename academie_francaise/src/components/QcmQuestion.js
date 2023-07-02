@@ -1,9 +1,9 @@
 import '../css/QcmQuestion.css';
 
 function QcmQuestion({ ennonce, reponses, repondu, onUserResponse }) {
-  const handleClick = (indexReponse) => {
+  const handleClick = (reponse) => {
     if (repondu === null) {
-      onUserResponse(reponses[indexReponse].correcte, reponses[indexReponse].reponse);
+      onUserResponse(reponse.correcte, reponse.reponse);
     }
   };
 
@@ -11,10 +11,10 @@ function QcmQuestion({ ennonce, reponses, repondu, onUserResponse }) {
     <div className='QcmQuestion'>
       <h3>{ennonce}</h3>
       <ul>
-        {reponses.map((reponse, indexReponse) => (
+        {Object.values(reponses).map((reponse, indexReponse) => (
           <li
             key={indexReponse}
-            onClick={() => handleClick(indexReponse)}
+            onClick={() => handleClick(reponse)}
             className={repondu !== null ? (reponse.correcte ? 'correct' : 'incorrect') : ''}
           >
             {reponse.reponse}

@@ -1,44 +1,17 @@
-.TrouQuestion ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .TrouQuestion li {
-    cursor: pointer;
-    border: 2px solid #2B5877;
-    border-radius: 10px;
-    width: fit-content;
-    padding: 0.5em 1.3em;
-    margin-top: 0.7em;
-    transition: border 0.15s ease;
-  }
-  
-  .TrouQuestion li:hover {
-    border: 2px solid #F27E19;
-  }
-  
-  .TrouQuestion ul li.correct {
-    cursor: default;
-    border: 2px solid #5CA03B;
-  }
-  
-  .TrouQuestion ul li.incorrect {
-    cursor: default;
-    border: 2px solid #BD0000;
-  }
-
-  .TrouQuestion div.correct {
-    color: #5CA03B;
+  .TrouQuestion .correct {
+    color: hsl(100, 46%, 43%);
     font-weight: bold;
   }
 
-  .TrouQuestion div.incorrect {
+  .TrouQuestion .incorrect {
     color: #BD0000;
   }
 
-  .inline-div {
+  .TrouQuestion .reponseUtilisateur {
+    font-weight: bold;
+  }
+
+  .TrouQuestion.inline-div {
     display: inline;
   }
 
@@ -48,19 +21,44 @@
     font-style: italic;
   }
 
-.user-input {
-  font-family: inherit;
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid #9b9b9b;
-  outline: 0;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: black;
-  padding: 7px 0;
-  background: transparent;
-  transition: border-color 0.2s;
-  max-width: 25%;
-}
+  .TrouQuestion .validation {
+    display: flex;
+    justify-content: center;
+  }
   
-  
+  .TrouQuestion input.user-input {
+    font-family: inherit;
+    width: 100%;
+    font-size: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-weight: bold;
+    color: black;
+    background: transparent;
+    transition: border-color 0.2s;
+    max-width: 25%;
+    margin-bottom: 1em;
+  }
+
+  .TrouQuestion .button {
+    cursor: pointer;
+    border: 2px solid #2B5877;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 0.5em 1.3em;
+    transition: border 0.15s ease;
+    margin-top: 1em;
+  }
+
+  .TrouQuestion .button:hover {
+    border: 2px solid #F27E19;
+  }
+
+  .TrouQuestion div.ennonce {
+    margin-top: 1em;
+  }
+
+  .TrouQuestion {
+    margin-top: 1em;
+  }
