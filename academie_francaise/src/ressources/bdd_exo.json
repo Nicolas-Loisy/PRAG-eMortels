@@ -1,12 +1,15 @@
 {
-  "categories": {
-    "syntaxe" : {
+  "categories": [
+    {
+      "_id": "syntaxe",
       "nom": "Syntaxe",
-      "sousCategories": {
-        "couleur" : {
+      "sousCategories": [
+        {
+          "_id": "couleur",
           "nom": "Les adjectifs de couleur",
-          "niveaux": {
-            "1" : {
+          "niveaux": [
+            {
+              "_id": "1",
               "nom": "Niveau 1",
               "exercices": [
                 {
@@ -45,7 +48,7 @@
                       "question": "Un mur topaze.<br/>Des façades ... .",
                       "reponse": "topaze"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -83,11 +86,12 @@
                       "question": "Une gourde magenta.<br/>Des verres ... .",
                       "reponse": "magenta"
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             },
-            "2" : {
+            {
+              "_id" : "2",
               "nom": "Niveau 2",
               "exercices": [
                 {
@@ -126,7 +130,7 @@
                       "question": "Une porte verte.<br/>Des portes ... .",
                       "reponse": "vertes"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -164,7 +168,7 @@
                       "question": "Un ruban cerise.<br/>Des rubans ... .",
                       "reponse": "cerise"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "3",
@@ -202,11 +206,12 @@
                       "question": "La nuit le chat est gris.<br/>La nuit les chats sont ... .",
                       "reponse": "gris"
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             },
-            "3" : {
+            {
+              "_id" : "3",
               "nom": "Niveau 3",
               "exercices": [
                 {
@@ -218,39 +223,39 @@
                     {
                       "_id": "1",
                       "type": "phraseTrous",
-                      "question": "Un océan bleu-vert.<br/>Des mers ... .",
+                      "question": "Un océan bleu-vert.\nDes mers ... .",
                       "reponse": "bleu-vert",
                       "extra": ""
                     },
                     {
                       "_id": "2",
                       "type": "phraseTrous",
-                      "question": "Un pull vert pâle.<br/>Une robe ... .",
+                      "question": "Un pull vert pâle\nUne robe ... .",
                       "reponse": "vert pâle",
                       "extra": ""
                     },
                     {
                       "_id": "3",
                       "type": "phraseTrous",
-                      "question": "Un vélo bleu foncé.<br/>Une bicyclette ... .",
+                      "question": "Un vélo bleu foncé.\nUne bicyclette ... .",
                       "reponse": "bleu foncé",
                       "extra": ""
                     },
                     {
                       "_id": "4",
                       "type": "phraseTrous",
-                      "question": "De l’eau bleu turquoise.<br/>Des liquides ... .",
+                      "question": "De l’eau bleu turquoise.\nDes liquides ... .",
                       "reponse": "bleu turquoise",
                       "extra": ""
                     },
                     {
                       "_id": "5",
                       "type": "phraseTrous",
-                      "question": "Un chapeau de couleur jaune et rouge.<br/>Des chapeaux ... .",
+                      "question": "Un chapeau de couleur jaune et rouge.\nDes chapeaux ... .",
                       "reponse": "jaune et rouge",
                       "extra": ""
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -278,7 +283,7 @@
                           "reponse": "bleu marine",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "2",
@@ -300,7 +305,7 @@
                           "reponse": "incarnates",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "3",
@@ -322,7 +327,7 @@
                           "reponse": "jaune paille",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "4",
@@ -349,7 +354,7 @@
                           "reponse": "rouges tomates",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "5",
@@ -371,9 +376,9 @@
                           "reponse": "rouges oranges",
                           "correcte": false
                         }
-                      }
+                      ]
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "3",
@@ -406,7 +411,7 @@
                           "reponse": "abricotes.",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "2",
@@ -433,7 +438,7 @@
                           "reponse": "indigote.",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "3",
@@ -455,7 +460,7 @@
                           "reponse": "orange carottes.",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "4",
@@ -477,7 +482,7 @@
                           "reponse": "rouge et mauve.",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "5",
@@ -499,15 +504,16 @@
                           "reponse": "brunes.",
                           "correcte": true
                         }
-                      }
+                      ]
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             }
-          }
+          ]
         },
-        "interrogation" : {
+        {
+          "_id": "interrogation",
           "nom": "L’interrogation",
           "niveaux": [
             {
@@ -550,7 +556,7 @@
                       "question": "Il a peur ...",
                       "reponse": "."
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -588,9 +594,9 @@
                       "question": "Quelqu’un a ... entendu les informations ?",
                       "reponse": "-t-il"
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             },
             {
               "_id": "2",
@@ -632,7 +638,7 @@
                       "question": "Tu aimes les histoires à dormir debout.",
                       "reponse": "Aimes-tu les histoires à dormir debout ?"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -670,7 +676,7 @@
                       "question": "Pensez-vous venir demain ?",
                       "reponse": "Ne pensez-vous pas venir demain ?"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "3",
@@ -708,7 +714,7 @@
                       "question": "Il partira en vacances <u>demain</u>.",
                       "reponse": "Quand partira-t-il en vacances ?"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "4",
@@ -746,11 +752,11 @@
                       "question": "Elle aime dessiner <u>au fusain</u>.",
                       "reponse": "Avec quoi aime-t-elle dessiner ?"
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             }
-          }
+          ]
         },
         {
           "_id": "prealable-1",
@@ -781,7 +787,7 @@
                           "reponse": "acheté",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "2",
@@ -798,7 +804,7 @@
                           "reponse": "contemplé",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "3",
@@ -815,7 +821,7 @@
                           "reponse": "renoncé",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "4",
@@ -832,7 +838,7 @@
                           "reponse": "marché",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "5",
@@ -849,9 +855,9 @@
                           "reponse": "révisée",
                           "correcte": true
                         }
-                      }
+                      ]
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -874,7 +880,7 @@
                           "option": "ramassées",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "2",
@@ -891,7 +897,7 @@
                           "option": "lavé",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "3",
@@ -908,7 +914,7 @@
                           "option": "douchée",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "4",
@@ -925,7 +931,7 @@
                           "option": "cherché",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "5",
@@ -942,13 +948,13 @@
                           "option": "racontée",
                           "correcte": true
                         }
-                      }
+                      ]
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             }
-          }
+          ]
         },
         {
           "_id": "prealable-2",
@@ -998,7 +1004,7 @@
                       "reponse": "qu’",
                       "extra": "(« qu’ » = C.O.D. ; « La tâche » = mot qui détermine l’accord du participe passé)"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -1039,11 +1045,11 @@
                       "reponse": "que",
                       "extra": "(« que » = C.O.D. ; « La direction » = mot qui détermine l’accord du participe passé)"
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             }
-          }
+          ]
         },
         {
           "_id": "accord-participe-passe",
@@ -1100,7 +1106,7 @@
                       "reponse": "Pas de faute.",
                       "motErreur": ""
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -1143,7 +1149,7 @@
                       "reponse": "Pas de faute.",
                       "motErreur": ""
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "3",
@@ -1186,7 +1192,7 @@
                       "reponse": "demandé",
                       "motErreur": "demandées"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "4",
@@ -1229,9 +1235,9 @@
                       "reponse": "cru",
                       "motErreur": "crue"
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             },
             {
               "_id": "3",
@@ -1259,7 +1265,7 @@
                           "reponse": "joué",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "2",
@@ -1277,7 +1283,7 @@
                           "reponse": "adressé",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "3",
@@ -1295,7 +1301,7 @@
                           "reponse": "blessé",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "4",
@@ -1313,7 +1319,7 @@
                           "reponse": "blessé",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "5",
@@ -1331,17 +1337,18 @@
                           "reponse": "attiré",
                           "correcte": true
                         }
-                      }
+                      ]
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             }
-          }
+          ]
         }
-      }
+      ]
     },
-    "lexique" :{
+    {
+      "_id": "lexique",
       "nom": "Lexique",
       "sousCategories": [
         {
@@ -1393,7 +1400,7 @@
                       "reponse": "Pas de faute.",
                       "motErreur": ""
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -1436,9 +1443,9 @@
                       "reponse": "Pas de faute.",
                       "motErreur": ""
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             },
             {
               "_id": "2",
@@ -1485,7 +1492,7 @@
                       "reponse": "peut être",
                       "motErreur": "peut-être"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -1528,7 +1535,7 @@
                       "reponse": "d'avantage",
                       "motErreur": "davantage"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "3",
@@ -1571,7 +1578,7 @@
                       "reponse": "Se faisant",
                       "motErreur": "Ce faisant"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "4",
@@ -1599,7 +1606,7 @@
                           "reponse": "font",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "2",
@@ -1621,7 +1628,7 @@
                           "reponse": "fonds",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "3",
@@ -1643,7 +1650,7 @@
                           "reponse": "font",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "4",
@@ -1665,7 +1672,7 @@
                           "reponse": "fonds",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "5",
@@ -1687,11 +1694,11 @@
                           "reponse": "font",
                           "correcte": false
                         }
-                      }
+                      ]
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             },
             {
               "_id": "3",
@@ -1738,7 +1745,7 @@
                       "reponse": "attention",
                       "extra": ""
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -1786,11 +1793,11 @@
                       "motErreur": "sensée",
                       "extra": ""
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             }
-          }
+          ]
         },
         {
           "_id": "anglicismes",
@@ -1846,7 +1853,7 @@
                       "extra": "(Le verbe anglais <I>to forward</I> a de nombreux sens, entre autres celui de « transférer ». Il est construit à l’aide de racines qui ont servi à former le latin <I>fores</I>, « porte », mais aussi « situé à l’extérieur », et <I>vertere</I>, « tourner, retourner ». On pourrait donc trouver à cette forme une lointaine parenté avec des mots français ; mais cela ne justifie pas que l’on use et abuse, dans notre langue, de l’étrange <I>forwarder</I>, un anglicisme bien inutile, puisqu’on l’emploie en lieu et place de <I>transférer</I>, et que ce dernier est attesté depuis plus de six siècles dans la langue française.)",
                       "lien": "https://www.academie-francaise.fr/forwarder"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -1900,7 +1907,7 @@
                       "extra": "(La façon de situer un événement dans une décennie particulière en disant « les années » suivi d’une date arrondie à la dizaine, est implantée dans notre langue depuis longtemps. Aussi, il n'est pas nécessaire de remplacer ces formes par un équivalent anglais comme <I>seventies</I> ou <I>eighties</I>... Rappelons enfin que l'on peut écrire la décennie en toutes lettres, lorsqu'il n'y a pas d'ambiguïté sur le siècle : <I>le cinéma des années soixante, la crise des années trente</I>...)",
                       "lien": "https://www.academie-francaise.fr/les-sixties-les-seventies"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "3",
@@ -1948,7 +1955,7 @@
                       "extra": "(Il est d'usage dans certains congrès, dans certaines réunions internationales, d'offrir des cadeaux aux participants. Le plus souvent, ces cadeaux ne sont pas personnalisés et chacun reçoit les mêmes présents. Nos amis anglais les appellent des <I>welcome packs</I>. Fort bien, mais il est regrettable que nombre d'institutions françaises emploient aussi cette expression en lieu et place de <I>cadeau de bienvenue</I>, qui dirait la même chose.)",
                       "lien": "https://www.academie-francaise.fr/welcome-pack"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "4",
@@ -1999,7 +2006,7 @@
                       "extra": "(Le nom <I>shopping</I> est attesté depuis deux siècles dans notre langue. L’académicien Prosper Mérimée parlait déjà, en 1857, de <I>la grande affaire du shopping</I>, si intéressante pour les demoiselles. Ce nom a la même origine que notre <I>échoppe</I>. Le verbe récent <I>shopper</I>, que l’on emploie au sens de « courir les magasins », constitue quant à lui un contresens par rapport à l’anglais <I>to shop</I>, « présenter sur un étal, mettre en vente ».)",
                       "lien": "https://www.academie-francaise.fr/shopper"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "5",
@@ -2047,7 +2054,7 @@
                       "extra": "(Cette forme n’est correcte ni en français ni en anglais parce qu’elle participe des deux langues. Les Anglais emploient le terme <em>live </em>seul quand nous utilisons la locution adjectivale ou adverbiale <em>en direct </em>: <em>Notre envoyé spécial, en direct de New York, une émission en direct, retransmettre en direct. </em>C’est donc cette locution que l’on emploiera dans un texte français. On évitera tout autant l’étrange et redondante juxtaposition <em>en direct live.</em>",
                       "lien": "https://www.academie-francaise.fr/en-live"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "6",
@@ -2099,7 +2106,7 @@
                       "extra": "(Le nom anglais News signifie « nouvelle(s) » ou « information(s). Il est tiré du latin novus, « nouveau, neuf ». Ce nom est d’un emploi correct dans un texte anglophone ; comme il correspond à une réalité pour laquelle le français a des termes à sa disposition, ce sont ceux-ci que nous emploierons.)",
                       "lien": "https://www.academie-francaise.fr/news"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "7",
@@ -2146,7 +2153,7 @@
                       "extra": "(Beaucoup d’anglicismes viennent du monde du sport. Parmi ceux-ci : <em>challenge, </em>qui désigne d’abord le défi lancé par un prétendant au tenant d’un titre, puis tout type de compétition. À l’origine de ce mot, on l’oublie trop souvent, il y a l’ancien français <em>chalenge, </em>qui est issu, par l’intermédiaire du latin médiéval <em>calengia, </em>« réclamation », de <em>calumnia, </em>« accusation ». En ancien français, <em>chalenge, </em>qui s’écrivait aussi <em>calonge, calompne, chaloigne, </em>etc., désignait d’abord une action en justice, puis un défi. Peu à peu <em>défi </em>s’est imposé dans l’usage et <em>chalenge </em>a disparu. Avec les termes<em> défi </em>et <em>compétition, </em>le français a les mots nécessaires pour éviter le recours à l’anglicisme <em>challenge.</em>)",
                       "lien": "https://www.academie-francaise.fr/challenge"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "8",
@@ -2194,7 +2201,7 @@
                       "extra": "(Le participe passé <em>versus,</em> du verbe latin <em>vertere, </em>« tourner », était employé en latin classique comme adverbe pour compléter les prépositions <em>in </em>et <em>ad</em> : <em>in forum versus, </em>« dans la direction du forum », <em>ad Oceanum versus,</em> « du côté de l’Océan ». Par la suite, en latin médiéval, ce mot devint une préposition signifiant « contre », aussi bien au sens locatif qu’au sens adversatif, préposition que l’on retrouve en anglais à partir du xv<sup>e </sup>siècle. Il existe en français depuis le milieu des années 1960, mais c’est surtout depuis les années 1980 qu’il est devenu d’usage courant. C’est le sport, et en particulier la boxe, qui a assuré sa popularité en y recourant pour présenter les deux adversaires d’un combat. On pouvait ainsi lire sur les affiches : <em>Ali versus Frazier, Hagler versus Leonard. </em>Par la suite <em>versus </em>s’est répandu dans tous les domaines où l’on voulait évoquer une opposition, un antagonisme ou une comparaison. On rappellera que les prépositions ou locutions prépositives françaises <em>contre, ou, face à, en face de, par opposition à </em>peuvent exprimer cette idée et qu’il est donc inutile de les remplacer par cet anglicisme ou par sa forme abrégée <em>vs.)</em>",
                       "lien": "https://www.academie-francaise.fr/versus"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "9",
@@ -2242,7 +2249,7 @@
                       "extra": "(Il existe des anglicismes qui ont pour eux une concision qui les rend parfois difficilement traduisibles ou transposables, mais il en est d’autres qui dès leur apparition ont eu des substituts français parfaitement adéquats et dont la longévité étonne. Parmi ceux-ci <em>after-shave, </em>très tôt traduit par « après-rasage ». Comme l’un et l’autre peuvent être employés comme adjectifs ou comme noms et que, quelle que soit la façon dont on les appelle, les produits seront identiques, il serait judicieux d’utiliser les formes françaises.)",
                       "lien": "https://www.academie-francaise.fr/after-shave"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "10",
@@ -2290,9 +2297,9 @@
                       "extra": "(En 1971, le film américain The French Connection reçut cinq Oscars mais il causa quelques dommages à la langue française. Le premier arriva très vite. On oublia trop souvent que connexion, qui désigne le fait d’être connexe, était emprunté du latin connexio et non dérivé du verbe connecter, et la graphie « connection » se répandit. Le second fut un peu plus long à se faire sentir : ce mot est aujourd’hui employé, particulièrement dans le milieu professionnel, avec le sens de « lien », de « relation », de « contact ».)",
                       "lien": "https://www.academie-francaise.fr/connexion-au-sens-de-relation-contact"
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             },
             {
               "_id": "3",
@@ -2351,7 +2358,7 @@
                       "motErreur": "interchangé",
                       "extra": "(Certains préfixes sont plus en vogue à certaines périodes. C’est le cas aujourd’hui pour inter-, qui semble être l’annonciateur de communion entre les individus. Mais parfois les formes ainsi créées ne diffèrent en rien de celles qu’elles sont supposées remplacer et n’ajoutent rien à leur sens. C’est le cas du néologisme interchanger, apparu il y a peu et utilisé en lieu et place d’échanger. On se gardera bien d’employer ce verbe un peu pataud et l’on conservera le plus élégant échanger.)"
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -2405,15 +2412,16 @@
                       "motErreur": "reviens vers vous",
                       "extra": "(L’expression Je reviens vers vous, employée en lieu et place de « Je reprends contact avec vous », « Je reprends nos affaires, notre sujet, etc. … », est incorrecte. Il s’agit d’un anglicisme, traduction hasardeuse de I’ll get back to you, devenu tic de langage, qu’il convient d’éviter. On pourra dire, outre les formes vues plus haut : Je me tourne à nouveau vers vous, revenons à nos affaires, etc.)"
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             }
-          }
+          ]
         }
-      }
+      ]
     },
-    "morphologie" :{
+    {
+      "_id": "morphologie",
       "nom": "Morphologie",
       "sousCategories": [
         {
@@ -2465,7 +2473,7 @@
                       "reponse": "Pas de faute.",
                       "motErreur": ""
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "2",
@@ -2508,7 +2516,7 @@
                       "reponse": "Pas de faute.",
                       "motErreur": ""
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "3",
@@ -2541,7 +2549,7 @@
                           "reponse": "dissout",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "2",
@@ -2568,7 +2576,7 @@
                           "reponse": "dissolu",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "3",
@@ -2590,7 +2598,7 @@
                           "reponse": "dissoute",
                           "correcte": true
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "4",
@@ -2617,7 +2625,7 @@
                           "reponse": "absoute",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "5",
@@ -2639,9 +2647,9 @@
                           "reponse": "absoue",
                           "correcte": false
                         }
-                      }
+                      ]
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "4",
@@ -2669,7 +2677,7 @@
                           "reponse": "entreprit",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "2",
@@ -2691,7 +2699,7 @@
                           "reponse": "entreprit",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "3",
@@ -2713,7 +2721,7 @@
                           "reponse": "écrites",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "4",
@@ -2735,7 +2743,7 @@
                           "reponse": "finit",
                           "correcte": false
                         }
-                      }
+                      ]
                     },
                     {
                       "_id": "5",
@@ -2757,18 +2765,18 @@
                           "reponse": "rendue",
                           "correcte": false
                         }
-                      }
+                      ]
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             }
-          }
+          ]
         }
-      }
+      ]
     },
     {
-      "_id": "morphologie-syntaxe",
+      "_id": "morphologie/syntaxe",
       "nom": "Morphologie / Syntaxe",
       "sousCategories": [
         {
@@ -2825,7 +2833,7 @@
                       "motErreur": "Quoi que",
                       "extra": ""
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "4",
@@ -2873,7 +2881,7 @@
                       "motErreur": "septique",
                       "extra": ""
                     }
-                  }
+                  ]
                 },
                 {
                   "_id": "5",
@@ -2921,13 +2929,13 @@
                       "motErreur": "prémisses",
                       "extra": ""
                     }
-                  }
+                  ]
                 }
-              }
+              ]
             }
-          }
+          ]
         }
-      }
+      ]
     }
-  }
+  ]
 }
