@@ -31,3 +31,5 @@ Le Json avec les données se trouve dans le dossier Documentations.
 1. Accédez au répertoire du serveur Api Node : `cd serv_api_academie_francaise`
 2. Installer les composants : `npm install`
 3. Lancer le serveur : `npm start`
+
+## Documentations
