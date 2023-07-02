@@ -1,4 +1,4 @@
-.ParcoursPrecis .CategorieContainer {
+.ChoixTheme .CategorieContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
@@ -7,6 +7,6 @@
   margin-bottom: 3em;
 }
 
-.ParcoursPrecis .ConteneurTag {
+.ChoixTheme .ConteneurTag {
   width: 40%;
 }

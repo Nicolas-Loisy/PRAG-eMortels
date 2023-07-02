@@ -1,25 +1,14 @@
 import React from 'react';
-import Tag from './Tag';
 import '../css/ConteneurTag.css';
 
-function ConteneurTag({ categorie }) {
-  const handleClick = (url) => {
-    window.location.href = url;
-  };
-
+function ConteneurTag({ nom, tags }) {
   return (
     <div className="ConteneurTag">
-      <h3>{categorie.nom}</h3>
+      <h3>{nom}</h3>
       <div className='Tags'>
-        {
-          Object.values(categorie.sousCategories).map((sousCategorie, index) => {
-            return (
-              <Tag key={index} className="Cliquable">
-                <p onClick={() => handleClick()}>{sousCategorie}</p>
-              </Tag>
-            );
-          })
-        }
+        {tags.map((tag) => (
+           tag 
+        ))}
       </div>
     </div>
   );

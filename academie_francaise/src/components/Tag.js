@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/Tag.css';
 
-function Tag({ children, className }) {
+function Tag({ children, className}) {
   const tagClassName = `Tag ${className || ""}`;
   
   return (
