@@ -9,44 +9,33 @@ function Content({ children }) {
   const location = useLocation();
   const url = location.pathname;
 
-  if (url.includes("parcours-precis")) {
-    params.parcours = "parcours-precis";
-  }
-
   var pages = initPages();
 
   function initPages() {
     //Crée les différents objets {url, nom} selon l'URL
 
     var array = [];
-    var baseURL = "";
+    var baseURL = "/";
+
+    if (url.includes("parcours-precis")) {
+      baseURL += "parcours-precis";
+    }
+
     const arrayParams = Object.entries(params);
 
-    // Trouver l'index de l'attribut que vous ajoutez
-    const addedAttributeIndex = arrayParams.findIndex(([key]) => key === 'parcours');
 
-    // Créer un tableau temporaire avec les clés dans l'ordre souhaité
-    const orderedParams = [
-      ...arrayParams.slice(addedAttributeIndex, addedAttributeIndex + 1),
-      ...arrayParams.slice(0, addedAttributeIndex),
-      ...arrayParams.slice(addedAttributeIndex + 1)
-    ];
-
-    for (let i = 0; i < orderedParams.length; i++) {
-      var [key, value] = orderedParams[i];
+    for (let i = 0; i < arrayParams.length; i++) {
+      var [key, value] = arrayParams[i];
 
       //Cas particulier où la clef n'est pas affichée
-      if (key === "parcours") {
-        baseURL += "/" + value;
-      } else {
-        baseURL += "/" + key + "/" + value;
-      }
+      baseURL += "/" + key + "/" + value;
+    
 
       //Cas particulier où la clef est affichée avec le nom
       if (key === "niveau" || key === "exercice") {
         value = key + " " + value;
       }
-      if (i === orderedParams.length - 1) {
+      if (i === arrayParams.length - 1) {
         array.push({ nom: value });
       } else {
         array.push({ nom: value, url: baseURL });
@@ -61,7 +50,7 @@ function Content({ children }) {
     <div className="Content">
       <Header />
       {children}
-      {pages.length > 2 &&
+      {pages.length > 1 &&
         <Ariane pages={pages} />
       }
       <Footer />
