@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const MyModel = require('./models/MyModel');
 
+
 // GET /categories : Récupère la liste des catégories disponibles.
 router.get('/categories', async (req, res) => {
   try {
@@ -166,34 +167,42 @@ router.get('/exercice/:categorie/:sousCategorie/:niveau/:exerciceId', async (req
 
     console.log(`Requête : /exercice/${categorie}/${sousCategorie}/${niveau}/${exerciceId}`);
 
-    const exercice = await MyModel.aggregate([
-      { $unwind: "$categories" },
-      { $match: { "categories._id": categorie } },
-      { $unwind: "$categories.sousCategories" },
-      { $match: { "categories.sousCategories._id": sousCategorie } },
-      { $unwind: "$categories.sousCategories.niveaux" },
-      { $match: { "categories.sousCategories.niveaux._id": niveau } },
-      { $unwind: "$categories.sousCategories.niveaux.exercices" },
-      { $match: { "categories.sousCategories.niveaux.exercices._id": exerciceId } },
-      {
-        $project: {
-          "_id": "$categories.sousCategories.niveaux.exercices._id",
-          "intitule": "$categories.sousCategories.niveaux.exercices.intitule",
-          "lien": "$categories.sousCategories.niveaux.exercices.lien",
-          "explication": "$categories.sousCategories.niveaux.exercices.explication",
-          "questions": "$categories.sousCategories.niveaux.exercices.questions"
-        }
-      }  
-    ]).exec();
+    const [categorieInfo, sousCategorieInfo, exercice] = await Promise.all([
+      MyModel.findOne({ "categories._id": categorie }, { "categories.$": 1 }),
+      MyModel.findOne({ "categories.sousCategories._id": sousCategorie }, { "categories.$": 1 }),
+      MyModel.aggregate([
+        { $unwind: "$categories" },
+        { $match: { "categories._id": categorie } },
+        { $unwind: "$categories.sousCategories" },
+        { $match: { "categories.sousCategories._id": sousCategorie } },
+        { $unwind: "$categories.sousCategories.niveaux" },
+        { $match: { "categories.sousCategories.niveaux._id": niveau } },
+        { $unwind: "$categories.sousCategories.niveaux.exercices" },
+        { $match: { "categories.sousCategories.niveaux.exercices._id": exerciceId } },
+        {
+          $project: {
+            "_id": "$categories.sousCategories.niveaux.exercices._id",
+            "intitule": "$categories.sousCategories.niveaux.exercices.intitule",
+            "lien": "$categories.sousCategories.niveaux.exercices.lien",
+            "explication": "$categories.sousCategories.niveaux.exercices.explication",
+            "questions": "$categories.sousCategories.niveaux.exercices.questions"
+          }
+        }  
+      ]).exec()
+    ]);
 
     if (!exercice) {
       return res.status(404).json({ error: 'Exercice not found' });
     }
 
-    res.json(exercice);
+    const categorieNom = categorieInfo.categories[0].nom;
+    const sousCategorieNom = sousCategorieInfo.categories[0].sousCategories[0].nom;
+
+    res.json({ categorieNom, sousCategorieNom, exercice });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error. Error: ' + error });
   }
 });
+
 
 module.exports = router;
