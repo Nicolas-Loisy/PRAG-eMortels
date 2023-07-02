@@ -5,7 +5,6 @@ import QcmQuestion from "../components/QcmQuestion";
 import TrouQuestion from "../components/TrouQuestion";
 import Content from "../components/Content"
 import Tag from "../components/Tag";
-import Ariane from "../components/Ariane";
 import NumQuestion from "../components/NumQuestion";
 import Recap from '../components/Recap';
 
