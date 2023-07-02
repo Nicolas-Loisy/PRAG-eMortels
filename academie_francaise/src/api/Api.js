@@ -81,6 +81,55 @@ class Api {
       throw error;
     }
   }
+
+  /**
+   * GET /sousCategories/:categorie : Récupère les sous-catégories d'une catégorie spécifique 
+   */
+  async getSousCategories(categorie) {
+    try {
+      return await this.get(`/sousCategories/${categorie}`);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
+
+  /**
+   * GET /niveaux/:categorie/:sousCategorie : Récupère les niveaux et les types des exercices d'une catégorie et d'une sous-catégorie spécifiques 
+   */
+  async getNiveaux(categorie, sousCategorie) {
+    try {
+      return await this.get(`/niveaux/${categorie}/${sousCategorie}`);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
+
+  /**
+   * GET /exercices/:categorie/:sousCategorie/:niveau : Récupère les exercices d'une catégorie, d'une sous-catégorie et d'un niveau spécifiques 
+   */
+  async getExercices(categorie, sousCategorie, niveau) {
+    try {
+      return await this.get(`/exercices/${categorie}/${sousCategorie}/${niveau}`);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
+
+  /**
+   * GET /exercice/:categorie/:sousCategorie/:niveau/:exerciceId : Récupère un exercice en fonction d'une catégorie, d'une sous-catégorie, d'un niveau et de l'id de l'exercice 
+   */
+  async getExercice(categorie, sousCategorie, niveau, exerciceId) {
+    try {
+      return await this.get(`/exercice/${categorie}/${sousCategorie}/${niveau}/${exerciceId}`);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
+
 }
 
 export const api = new Api("http://localhost:3000/api");

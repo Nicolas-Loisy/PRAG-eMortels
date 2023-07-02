@@ -4,6 +4,7 @@ const routes = require('./routes');
 const cors = require('cors'); // Importez le module CORS
 
 const app = express();
+const port = 3000;
 
 app.use(express.json());
 
@@ -18,7 +19,7 @@ app.use(cors({
 }));
 
 // Start the server
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server is running on port 3000');
 });
 
