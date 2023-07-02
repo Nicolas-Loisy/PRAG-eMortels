@@ -1,41 +1,58 @@
-import Content from "../components/Content";
-import ConteneurTag from "../components/ConteneurTag"
-import Tag from "../components/Tag";
-import { getListeCategories } from "../utils/Api";
+import React, { useState, useEffect } from 'react';
 
+import Content from "../components/Content";
+import ConteneurTag from "../components/ConteneurTag";
+import Tag from "../components/Tag";
+
+import { api } from "../api/Api";
 import "../css/ChoixTheme.css";
 
 function ChoixTheme() {
-  const categories = getListeCategories();
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const categoriesData = await api.getCategories();
+      setCategories(categoriesData.categories.sort((a, b) => a.nom.localeCompare(b.nom)));
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const handleClick = (url) => {
     window.location.href = url;
   };
 
-  function getTags(categorie) {
-    return Object.values(categorie.sousCategories).map((sousCategorie, index) => {
-      return (
-        <Tag className="Cliquable" key={index}>
-          <p onClick={handleClick}>{sousCategorie}</p>
-        </Tag>
-      );
-    });
-  }
-  
+  const renderTags = (categorie) => {
+    return categorie.sousCategories.map((sousCategorie, index) => (
+      <Tag className="Cliquable" key={index}>
+        <p onClick={() => handleClick("parcours-precis/categorie/" + categorie._id + "/sousCategorie/" + sousCategorie._id)}>{sousCategorie.nom}</p>
+      </Tag>
+    ));
+  };
+
   return (
     <Content>
       <h1>Categories</h1>
-      <div className="ChoixTheme">
-        <div className="CategorieContainer">
-          {
-            Object.values(categories).map((categorie, index) => {
-              return <ConteneurTag nom={categorie.nom} tags={getTags(categorie)} key={index} />;
-            })
-          }
+      {categories.length > 0 && (
+        <div className="ChoixTheme">
+          <div className="CategorieContainer">
+            {categories.map((categorie, index) => (
+              <ConteneurTag
+                nom={categorie.nom}
+                tags={renderTags(categorie)}
+                key={index}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </Content>
   );
 }
 
-export default ChoixTheme; 
+export default ChoixTheme;

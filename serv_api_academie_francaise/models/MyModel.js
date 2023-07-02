@@ -133,6 +133,6 @@ const MySchema = new mongoose.Schema({
 // Ici "categorie" est le nom de la "collection".
 // const MyModel = mongoose.model('categorie', MySchema);
 // const MyModel = mongoose.model('newstruct', MySchema);
-const MyModel = mongoose.model('newstruct2', MySchema);
+const MyModel = mongoose.model('categorie', MySchema);
 
 module.exports = MyModel;
