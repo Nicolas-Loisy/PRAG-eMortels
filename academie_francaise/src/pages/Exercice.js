@@ -1,0 +1,224 @@
+import { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
+
+import QcmQuestion from "../components/QcmQuestion";
+import TrouQuestion from "../components/TrouQuestion";
+import Content from "../components/Content"
+import Tag from "../components/Tag";
+import NumQuestion from "../components/NumQuestion";
+import Recap from '../components/Recap';
+
+import { api } from "../api/Api";
+
+import '../css/Exercice.css';
+
+function Exercice() {
+  const params = useParams();
+  const [exercice, setExercice] = useState(null);
+  const [questionCourante, setQuestionCourante] = useState(0);
+  const [voirRecap, setVoirRecap] = useState(false);
+  const [renderedQuestions, setRenderedQuestions] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      const exerciceData = await api.getExercice(
+        params.categorie,
+        params.sousCategorie,
+        params.niveau,
+        params.exercice
+      );
+      const updatedQuestions = exerciceData[0].questions.map((question) => ({
+        ...question,
+        repondu: null,
+      }));
+      const updatedExercice = {
+        ...exerciceData[0],
+        questions: updatedQuestions,
+      };
+      setExercice(updatedExercice);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
+  useEffect(() => {
+    fetchData();
+  }, [params]);
+
+  useEffect(() => {
+    if (exercice !== null && exercice.questions) {
+      const updatedRenderedQuestions = exercice.questions.map((question, index) => {
+        switch (question.type) {
+          case "QCM":
+            return (
+              <QcmQuestion
+                key={index}
+                ennonce={question.question}
+                reponses={question.reponses}
+                repondu={question.repondu}
+                onUserResponse={(isCorrect) => handleUserResponse(index, isCorrect)}
+              />
+            );
+          case "phraseTrous":
+            return (
+              <TrouQuestion
+                key={index}
+                ennonce={question.question}
+                reponse={question.reponse}
+                repondu={question.repondu}
+                onUserResponse={(isCorrect, userInput) =>
+                  handleUserResponse(index, isCorrect, userInput)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
+              />
+            );
+          default:
+            console.log("Type de question non pris en charge: " + question.type);
+            return null;
+        }
+      });
+
+      setRenderedQuestions(updatedRenderedQuestions);
+    }
+  }, [exercice]);
+
+  const handleClickQuestion = (numQuestion) => {
+    setVoirRecap(false);
+    setQuestionCourante(numQuestion);
+  };
+
+  const handleUserResponse = (index, isCorrect, userInput) => {
+    setExercice((prevExercice) => {
+      const updatedQuestions = prevExercice.questions.map((question, i) => {
+        if (i === index) {
+          return {
+            ...question,
+            repondu: isCorrect,
+            reponseUtilisateur: userInput,
+          };
+        }
+        return question;
+      });
+      return {
+        ...prevExercice,
+        questions: updatedQuestions,
+      };
+    });
+  };
+
+  return (
+    <Content>
+      <div className="Exercice">
+        {/* Affichage des tags identifiants l'exercice */}
+        <div className="TagList">
+          <div className="col_1">
+            <Tag>
+              <p>{params.categorie}</p>
+            </Tag>
+            <Tag>
+              <p>{params.sousCategorie}</p>
+            </Tag>
+          </div>
+
+          <div className="col_2">
+            <Tag>
+              <p>{params.niveau}</p>
+            </Tag>
+            <Tag>
+              <p>{"Exercice " + params.exercice}</p>
+            </Tag>
+          </div>
+        </div>
+
+        <div className="col_container">
+          {/* Affichage de la mascotte et des règles de français */}
+          <div className="col_1">
+            <div className="Mascotte"></div>
+          </div>
+
+          {/* Contenu principal de l'exercice */}
+          <div className="col_2">
+            {exercice && (
+              <>
+                {voirRecap ? (
+                  <div className="Recap">
+                    <Recap questions={exercice.questions} />
+                    <div>
+                      <Tag className="Cliquable">
+                        <p onClick={() => {window.location.href = "/"}}>Accueil</p>
+                      </Tag>
+                    </div>
+                  </div>
+                ) : (
+                  <div>
+                    <p className="intitule">{exercice.intitule}</p>
+                    {renderedQuestions.length > 0 && renderedQuestions[questionCourante]}
+                  </div>
+                )}
+
+                {!voirRecap && (
+                  <div className="Navigation tagCliquable">
+                    {questionCourante > 0 && (
+                      <div>
+                        <Tag className="Cliquable">
+                          <p onClick={() => setQuestionCourante((prevQuestionCourante) => prevQuestionCourante - 1)}>
+                            Précédent
+                          </p>
+                        </Tag>
+                      </div>
+                    )}
+
+                    {exercice.questions[questionCourante].repondu !== null && questionCourante < exercice.questions.length - 1 && (
+                      <div>
+                        <Tag className="Cliquable">
+                          <p onClick={() => setQuestionCourante((prevQuestionCourante) => prevQuestionCourante + 1)}>
+                            Suivant
+                          </p>
+                        </Tag>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {exercice.questions.every((question) => question.repondu !== null) && !voirRecap && (
+                  <div className="tagCliquable">
+                    <Tag className="Cliquable">
+                      <p
+                        onClick={() => {
+                          setVoirRecap(true);
+                          setQuestionCourante(-1);
+                        }}
+                      >
+                        Résumé
+                      </p>
+                    </Tag>
+                  </div>
+                )}
+
+                <div className="pagination">
+                  {exercice.questions.map((question, i) =>
+                    (
+                      <NumQuestion
+                        key={i}
+                        Num={i}
+                        isSelected={i === questionCourante}
+                        onClick={() => handleClickQuestion(i)}
+                        repondu={question.repondu}
+                      />
+                    )
+                  )}
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* Colonne non utilisée */}
+          <div className="col3"></div>
+        </div>
+      </div>
+    </Content>
+  );
+}
+
+export default Exercice;

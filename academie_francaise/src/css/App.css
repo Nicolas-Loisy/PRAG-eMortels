@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  position:relative;
+  min-height: 100vh;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2,h3, h4{
+  font-family: Avenir, Galvji;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+p, h3 {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}

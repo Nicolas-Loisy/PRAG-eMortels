@@ -1,0 +1,31 @@
+.BlocChoix {
+  border: 2px solid #2B5877;
+  border-radius: 10px;
+  width: 300px;
+  min-height: 300px;
+  cursor: pointer;
+  transition: border 0.15s ease;
+}
+
+.BlocChoix:hover {
+  border: 2px solid #F27E19;
+}
+
+.BlocChoix:hover h3 {
+  background-color: #F27E19;
+}
+
+.BlocChoix h3 {
+  background-color: #2B5877;
+  transition: background-color 0.15s ease;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #fff;
+  padding: 1em;
+}
+
+.BlocChoix p {
+  color: black;
+  height: 100%;
+  padding: 1em 0;
+}

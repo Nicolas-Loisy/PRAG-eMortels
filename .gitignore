@@ -1,1 +1,5 @@
+.DS_Store
 academie_francaise/tools/brouillon.py
+serv_api_academie_francaise/node_modules/
+serv_api_academie_francaise/routesNEW-HS.js
+node_modules/

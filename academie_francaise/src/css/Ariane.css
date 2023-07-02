@@ -1,0 +1,13 @@
+.Ariane {
+  display: flex;
+  justify-content: left;
+  margin-left: 2em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  gap: 0.2em;
+
+}
+
+.Ariane a:hover {
+  text-decoration: underline;
+}
