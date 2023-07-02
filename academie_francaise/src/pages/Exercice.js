@@ -27,28 +27,35 @@ function Exercice() {
         params.niveau,
         params.exercice
       );
-      const updatedQuestions = exerciceData[0].questions.map((question) => ({
+  
+      const updatedQuestions = exerciceData.exercice[0].questions.map((question) => ({
         ...question,
         repondu: null,
       }));
+  
       const updatedExercice = {
-        ...exerciceData[0],
+        ...exerciceData.exercice[0],
         questions: updatedQuestions,
       };
-      setExercice(updatedExercice);
+  
+      setExercice({
+        ...exerciceData,
+        exercice: [updatedExercice],
+      });
+  
     } catch (error) {
       console.error(error);
     }
   };
-
+      
 
   useEffect(() => {
     fetchData();
   }, [params]);
 
   useEffect(() => {
-    if (exercice !== null && exercice.questions) {
-      const updatedRenderedQuestions = exercice.questions.map((question, index) => {
+    if (exercice !== null && exercice.exercice[0].questions) {
+      const updatedRenderedQuestions = exercice.exercice[0].questions.map((question, index) => {
         switch (question.type) {
           case "QCM":
             return (
@@ -90,20 +97,25 @@ function Exercice() {
 
   const handleUserResponse = (index, isCorrect, userInput) => {
     setExercice((prevExercice) => {
-      const updatedQuestions = prevExercice.questions.map((question, i) => {
-        if (i === index) {
-          return {
-            ...question,
-            repondu: isCorrect,
-            reponseUtilisateur: userInput,
-          };
-        }
-        return question;
-      });
-      return {
+      const updatedExercice = {
         ...prevExercice,
-        questions: updatedQuestions,
+        exercice: [
+          {
+            ...prevExercice.exercice[0],
+            questions: prevExercice.exercice[0].questions.map((question, i) => {
+              if (i === index) {
+                return {
+                  ...question,
+                  repondu: isCorrect,
+                  reponseUtilisateur: userInput,
+                };
+              }
+              return question;
+            }),
+          },
+        ],
       };
+      return updatedExercice;
     });
   };
 
@@ -111,25 +123,28 @@ function Exercice() {
     <Content>
       <div className="Exercice">
         {/* Affichage des tags identifiants l'exercice */}
-        <div className="TagList">
-          <div className="col_1">
-            <Tag>
-              <p>{params.categorie}</p>
-            </Tag>
-            <Tag>
-              <p>{params.sousCategorie}</p>
-            </Tag>
-          </div>
+        {exercice &&
+          <div className="TagList">
+            <div className="col_1">
+              <Tag>
+                <p>{exercice.categorieNom}</p>
+              </Tag>
+              <Tag>
+                <p>{exercice.sousCategorieNom}</p>
+              </Tag>
+            </div>
 
-          <div className="col_2">
-            <Tag>
-              <p>{params.niveau}</p>
-            </Tag>
-            <Tag>
-              <p>{"Exercice " + params.exercice}</p>
-            </Tag>
+            <div className="col_2">
+              <Tag>
+                <p>{"Niveau " + params.niveau}</p>
+              </Tag>
+              <Tag>
+                <p>{"Exercice " + params.exercice}</p>
+              </Tag>
+            </div>
           </div>
-        </div>
+        }
+
 
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
@@ -143,16 +158,16 @@ function Exercice() {
               <>
                 {voirRecap ? (
                   <div className="Recap">
-                    <Recap questions={exercice.questions} />
+                    <Recap questions={exercice.exercice[0].questions} />
                     <div>
                       <Tag className="Cliquable">
-                        <p onClick={() => {window.location.href = "/"}}>Accueil</p>
+                        <p onClick={() => { window.location.href = "/" }}>Accueil</p>
                       </Tag>
                     </div>
                   </div>
                 ) : (
                   <div>
-                    <p className="intitule">{exercice.intitule}</p>
+                    <p className="intitule">{exercice.exercice[0].intitule}</p>
                     {renderedQuestions.length > 0 && renderedQuestions[questionCourante]}
                   </div>
                 )}
@@ -169,7 +184,7 @@ function Exercice() {
                       </div>
                     )}
 
-                    {exercice.questions[questionCourante].repondu !== null && questionCourante < exercice.questions.length - 1 && (
+                    {exercice.exercice[0].questions[questionCourante].repondu !== null && questionCourante < exercice.exercice[0].questions.length - 1 && (
                       <div>
                         <Tag className="Cliquable">
                           <p onClick={() => setQuestionCourante((prevQuestionCourante) => prevQuestionCourante + 1)}>
@@ -181,7 +196,7 @@ function Exercice() {
                   </div>
                 )}
 
-                {exercice.questions.every((question) => question.repondu !== null) && !voirRecap && (
+                {exercice.exercice[0].questions.every((question) => question.repondu !== null) && !voirRecap && (
                   <div className="tagCliquable">
                     <Tag className="Cliquable">
                       <p
@@ -197,16 +212,16 @@ function Exercice() {
                 )}
 
                 <div className="pagination">
-                  {exercice.questions.map((question, i) =>
-                    (
-                      <NumQuestion
-                        key={i}
-                        Num={i}
-                        isSelected={i === questionCourante}
-                        onClick={() => handleClickQuestion(i)}
-                        repondu={question.repondu}
-                      />
-                    )
+                  {exercice.exercice[0].questions.map((question, i) =>
+                  (
+                    <NumQuestion
+                      key={i}
+                      Num={i}
+                      isSelected={i === questionCourante}
+                      onClick={() => handleClickQuestion(i)}
+                      repondu={question.repondu}
+                    />
+                  )
                   )}
                 </div>
               </>
