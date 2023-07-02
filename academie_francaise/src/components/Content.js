@@ -10,7 +10,7 @@ function Content({ children }) {
   const url = location.pathname;
 
   if (url.includes("parcours-precis")) {
-    params.parcours = "parcours précis";
+    params.parcours = "parcours-precis";
   }
 
   var pages = initPages();

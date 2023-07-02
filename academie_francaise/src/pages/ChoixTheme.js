@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import Content from "../components/Content";
 import ConteneurTag from "../components/ConteneurTag";
@@ -30,7 +30,7 @@ function ChoixTheme() {
   const renderTags = (categorie) => {
     return categorie.sousCategories.map((sousCategorie, index) => (
       <Tag className="Cliquable" key={index}>
-        <p onClick={() => handleClick("parcours-precis/categorie/" + categorie._id + "/sousCategorie/" + sousCategorie._id)}>{sousCategorie.nom}</p>
+        <p onClick={() => handleClick("/parcours-precis/categorie/" + categorie._id + "/sousCategorie/" + sousCategorie._id)}>{sousCategorie.nom}</p>
       </Tag>
     ));
   };
