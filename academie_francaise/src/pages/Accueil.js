@@ -3,6 +3,7 @@ import Content from "../components/Content";
 import "../css/Accueil.css";
 
 function Accueil() {
+
   return (
     <Content>
       <h1>L'ACADEMIE DE RENART</h1>
