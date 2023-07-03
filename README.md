@@ -4,7 +4,7 @@ Projet Académie Française
 
 IUT Descartes L3 MIAGE
 
-Groupe : Nicolas Loisy / Clément Diot / Ita Maknine / Alexis Léon / Annaëlle Tomkeu Dassy / Adrien Delage
+Groupe : Nicolas Loisy / Clément Diot / Ita Maknine / Alexis Léon / Annaëlle Tomkeu-Dassy / Adrien Delage
 
 Projet : Site d'entraînement à la langue française pour l'Académie française
 
