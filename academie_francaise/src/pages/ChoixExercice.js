@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from "react-router";
 
 import Content from "../components/Content";
@@ -12,19 +12,18 @@ function ChoixExercice() {
   const params = useParams();
   const [niveaux, setNiveaux] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, );
-
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
-      const niveauxData = await api.getNiveaux(params.categorie, params.sousCategorie);
-      console.log(niveauxData);
+      const niveauxData = await api.getNiveauxTypesExo(params.categorie, params.sousCategorie);
       setNiveaux(niveauxData);
     } catch (error) {
       console.error(error);
     }
-  };
+  }, [params.categorie, params.sousCategorie]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   const handleClick = (url) => {
     window.location.href = url;

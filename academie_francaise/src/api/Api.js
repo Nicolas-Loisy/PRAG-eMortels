@@ -95,11 +95,11 @@ class Api {
   }
 
   /**
-   * GET /niveaux/:categorie/:sousCategorie : Récupère les niveaux et les types des exercices d'une catégorie et d'une sous-catégorie spécifiques 
+   * GET /niveaux_types_exo/:categorie/:sousCategorie : Récupère les niveaux et les types des exercices d'une catégorie et d'une sous-catégorie spécifiques 
    */
-  async getNiveaux(categorie, sousCategorie) {
+  async getNiveauxTypesExo(categorie, sousCategorie) {
     try {
-      return await this.get(`/niveaux/${categorie}/${sousCategorie}`);
+      return await this.get(`/niveaux_types_exo/${categorie}/${sousCategorie}`);
     } catch (error) {
       console.error(error);
       throw error;
@@ -130,6 +130,17 @@ class Api {
     }
   }
 
+  /**
+   * GET /niveaux 
+   */
+  async getAllNiveaux() {
+    try {
+      return await this.get(`/niveaux`);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
 }
 
 export const api = new Api("http://localhost:3000/api");

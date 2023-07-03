@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from "react-router-dom";
 
 import QcmQuestion from "../components/QcmQuestion";
@@ -20,7 +20,7 @@ function Exercice() {
   const [voirRecap, setVoirRecap] = useState(false);
   const [renderedQuestions, setRenderedQuestions] = useState([]);
 
-  const fetchData = async () => {
+  const fetchData =  useCallback(async () => {
     try {
       const exerciceData = await api.getExercice(
         params.categorie,
@@ -47,12 +47,11 @@ function Exercice() {
     } catch (error) {
       console.error(error);
     }
-  };
-      
+  }, [params]);  
 
   useEffect(() => {
     fetchData();
-  }, [params]);
+  }, [fetchData, params]);
 
   useEffect(() => {
     if (exercice !== null && exercice.exercice[0].questions) {
@@ -65,7 +64,10 @@ function Exercice() {
                 ennonce={question.question}
                 reponses={question.reponses}
                 repondu={question.repondu}
-                onUserResponse={(isCorrect) => handleUserResponse(index, isCorrect)}
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
               />
             );
           case "phraseTrous":
@@ -75,8 +77,8 @@ function Exercice() {
                 ennonce={question.question}
                 reponse={question.reponse}
                 repondu={question.repondu}
-                onUserResponse={(isCorrect, userInput) =>
-                  handleUserResponse(index, isCorrect, userInput)
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
                 }
                 reponseUtilisateur={question.reponseUtilisateur}
               />
@@ -104,7 +106,7 @@ function Exercice() {
     setQuestionCourante(numQuestion);
   };
 
-  const handleUserResponse = (index, isCorrect, userInput) => {
+  const handleUserResponse = (index, isCorrect, reponseUtilisateur) => {
     setExercice((prevExercice) => {
       const updatedExercice = {
         ...prevExercice,
@@ -116,7 +118,7 @@ function Exercice() {
                 return {
                   ...question,
                   repondu: isCorrect,
-                  reponseUtilisateur: userInput,
+                  reponseUtilisateur: reponseUtilisateur,
                 };
               }
               return question;
