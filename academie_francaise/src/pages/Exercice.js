@@ -11,6 +11,7 @@ import Recap from '../components/Recap';
 import { api } from "../api/Api";
 
 import '../css/Exercice.css';
+import Substitution from '../components/Substitution';
 
 function Exercice() {
   const params = useParams();
@@ -27,27 +28,27 @@ function Exercice() {
         params.niveau,
         params.exercice
       );
-  
+
       const updatedQuestions = exerciceData.exercice[0].questions.map((question) => ({
         ...question,
         repondu: null,
       }));
-  
+
       const updatedExercice = {
         ...exerciceData.exercice[0],
         questions: updatedQuestions,
       };
-  
+
       setExercice({
         ...exerciceData,
         exercice: [updatedExercice],
       });
-  
+
     } catch (error) {
       console.error(error);
     }
   };
-      
+
 
   useEffect(() => {
     fetchData();
@@ -70,6 +71,19 @@ function Exercice() {
           case "phraseTrous":
             return (
               <TrouQuestion
+                key={index}
+                ennonce={question.question}
+                reponse={question.reponse}
+                repondu={question.repondu}
+                onUserResponse={(isCorrect, userInput) =>
+                  handleUserResponse(index, isCorrect, userInput)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
+              />
+            );
+          case "substitution":
+            return (
+              <Substitution
                 key={index}
                 ennonce={question.question}
                 reponse={question.reponse}
