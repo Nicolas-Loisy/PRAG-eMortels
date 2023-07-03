@@ -4,7 +4,7 @@ Projet Académie Française
 
 IUT Descartes L3 MIAGE
 
-Groupe : Nicolas Loisy / Clément Diot / Ita Maknine / Alexis Léon / Annaëlle Tomkeu Dassy / Adrien Delage
+Groupe : Nicolas Loisy / Clément Diot / Ita Maknine / Alexis Léon / Annaëlle Tomkeu-Dassy / Adrien Delage
 
 Projet : Site d'entraînement à la langue française pour l'Académie française
 
@@ -31,3 +31,5 @@ Le Json avec les données se trouve dans le dossier Documentations.
 1. Accédez au répertoire du serveur Api Node : `cd serv_api_academie_francaise`
 2. Installer les composants : `npm install`
 3. Lancer le serveur : `npm start`
+
+## Documentations
