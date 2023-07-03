@@ -1,4 +1,4 @@
-.NumQuestion {
+.Numerotation {
   border: 2px solid #2B5877;
   border-radius: 50%;
   width: 30px;
@@ -10,18 +10,18 @@
   transition: border 0.15s ease;
 }
 
-.NumQuestion.correct {
+.Numerotation.correct {
   border: 2px solid #5CA03B;
 }
 
-.NumQuestion.incorrect {
+.Numerotation.incorrect {
   border: 2px solid #BD0000;
 }
 
-.NumQuestion:hover {
+.Numerotation:hover {
   border: 2px solid #F27E19;
 }
 
-.NumQuestion.selected {
+.Numerotation.selected {
   border: 2px solid #F27E19;
 }

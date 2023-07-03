@@ -1,36 +1,36 @@
-.Substitution .correct {
+.SubstitutionQuestion .correct {
     color: hsl(100, 46%, 43%);
     font-weight: bold;
 }
 
-.Substitution .incorrect {
+.SubstitutionQuestion .incorrect {
     margin-top: 1em;
     color: #BD0000;
 }
 
-.Substitution .reponseUtilisateur {
+.SubstitutionQuestion .reponseUtilisateur {
     font-weight: bold;
 }
 
 
-.Substitution.inline-div {
+.SubstitutionQuestion.inline-div {
     display: inline;
 }
 
 
-.Substitution p.correction {
+.SubstitutionQuestion p.correction {
     margin-top: 0.5em;
     margin-bottom: 1em;
     font-style: italic;
 }
 
-.Substitution p.rep_incorrecte {
+.SubstitutionQuestion p.rep_incorrecte {
     margin-top: 0.5em;
     margin-bottom: 1em;
     font-style: italic;
 }
 
-.Substitution .validation {
+.SubstitutionQuestion .validation {
     display: flex;
     justify-content: center;
 }
@@ -39,7 +39,7 @@
 
 
 
-.Substitution .validation {
+.SubstitutionQuestion .validation {
     display: flex;
     justify-content: center;
 }
@@ -49,7 +49,7 @@
 /*bouton de validation*/
 
 
-.Substitution .user-input {
+.SubstitutionQuestion .user-input {
     font-family: inherit;
     width: 100%;
     font-size: 100%;
@@ -65,7 +65,7 @@
     margin-top: 1em;
 }
 
-.Substitution .button {
+.SubstitutionQuestion .button {
     cursor: pointer;
     border: 2px solid #2B5877;
     border-radius: 10px;
@@ -75,14 +75,14 @@
     margin-top: 1em;
 }
 
-.Substitution .button:hover {
+.SubstitutionQuestion .button:hover {
     border: 2px solid #F27E19;
 }
 
-.Substitution div.ennonce {
+.SubstitutionQuestion div.ennonce {
     margin-top: 1em;
 }
 
-.Substitution {
+.SubstitutionQuestion {
     margin-top: 1em;
 }

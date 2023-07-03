@@ -145,7 +145,7 @@ class Api {
   /**
    * GET /exercices/:nbExercice 
    */
-  async getNbExercice() {
+  async getNbExercice(nbExercice) {
     try {
       return await this.get(`/exercices/${nbExercice}`);
     } catch (error) {
@@ -157,7 +157,7 @@ class Api {
   /**
    * GET /questions/:nbQuestions
    */
-  async getNbQuestions() {
+  async getNbQuestions(nbQuestions) {
     try {
       return await this.get(`/questions/${nbQuestions}`);
     } catch (error) {
@@ -169,7 +169,7 @@ class Api {
   /**
    * GET /questions/:niveau/:nbQuestions
    */
-  async getNbQuestionsNiveau() {
+  async getNbQuestionsNiveau(niveau, nbQuestions) {
     try {
       return await this.get(`/questions/${niveau}/${nbQuestions}`);
     } catch (error) {

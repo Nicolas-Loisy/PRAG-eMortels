@@ -5,13 +5,13 @@ import QcmQuestion from "../components/QcmQuestion";
 import TrouQuestion from "../components/TrouQuestion";
 import Content from "../components/Content"
 import Tag from "../components/Tag";
-import NumQuestion from "../components/NumQuestion";
+import Numerotation from "../components/Numerotation";
 import Recap from '../components/Recap';
 
 import { api } from "../api/Api";
 
 import '../css/Exercice.css';
-import Substitution from '../components/Substitution';
+import SubstitutionQuestion from '../components/SubstitutionQuestion';
 
 function Exercice() {
   const params = useParams();
@@ -85,26 +85,13 @@ function Exercice() {
             );
           case "substitution":
             return (
-              <Substitution
+              <SubstitutionQuestion
                 key={index}
                 ennonce={question.question}
                 reponse={question.reponse}
                 repondu={question.repondu}
                 onUserResponse={(isCorrect, reponseUtilisateur) =>
                   handleUserResponse(index, isCorrect, reponseUtilisateur)
-                }
-                reponseUtilisateur={question.reponseUtilisateur}
-              />
-            );
-          case "substitution":
-            return (
-              <Substitution
-                key={index}
-                ennonce={question.question}
-                reponse={question.reponse}
-                repondu={question.repondu}
-                onUserResponse={(isCorrect, userInput) =>
-                  handleUserResponse(index, isCorrect, userInput)
                 }
                 reponseUtilisateur={question.reponseUtilisateur}
               />
@@ -243,7 +230,7 @@ function Exercice() {
                 <div className="pagination">
                   {exercice.exercice[0].questions.map((question, i) =>
                   (
-                    <NumQuestion
+                    <Numerotation
                       key={i}
                       Num={i}
                       isSelected={i === questionCourante}

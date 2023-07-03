@@ -1,11 +1,11 @@
-import '../css/NumQuestion.css';
+import '../css/Numerotation.css';
 
-function NumQuestion({ Num, onClick, isSelected, repondu }) {
+function Numerotation({ Num, onClick, isSelected, repondu }) {
   const handleClick = () => {
     onClick(Num);
   };
 
-  let containerClassName = 'NumQuestion';
+  let containerClassName = 'Numerotation';
 
   if (isSelected) {
     containerClassName += ' selected';
@@ -22,4 +22,4 @@ function NumQuestion({ Num, onClick, isSelected, repondu }) {
   );
 }
 
-export default NumQuestion;
+export default Numerotation;
