@@ -11,6 +11,7 @@ import Recap from '../components/Recap';
 import { api } from "../api/Api";
 
 import '../css/Exercice.css';
+import EfQuestion from '../components/EfQuestions';
 
 function Exercice() {
   const params = useParams();
@@ -78,6 +79,14 @@ function Exercice() {
                   handleUserResponse(index, isCorrect, userInput)
                 }
                 reponseUtilisateur={question.reponseUtilisateur}
+              />
+            );
+          case "EF":
+            return (
+              <EfQuestion
+                enonce={question.question}
+                reponse={question.reponse}
+                motErreur={question.motErreur}
               />
             );
           default:
