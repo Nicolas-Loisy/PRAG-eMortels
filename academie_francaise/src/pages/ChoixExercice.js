@@ -14,12 +14,11 @@ function ChoixExercice() {
 
   useEffect(() => {
     fetchData();
-  }, );
+  }, [params.categorie, params.sousCategorie]);
 
   const fetchData = async () => {
     try {
       const niveauxData = await api.getNiveaux(params.categorie, params.sousCategorie);
-      console.log(niveauxData);
       setNiveaux(niveauxData);
     } catch (error) {
       console.error(error);
