@@ -141,6 +141,42 @@ class Api {
       throw error;
     }
   }
+
+  /**
+   * GET /exercices/:nbExercice 
+   */
+  async getNbExercice() {
+    try {
+      return await this.get(`/exercices/${nbExercice}`);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
+
+  /**
+   * GET /questions/:nbQuestions
+   */
+  async getNbQuestions() {
+    try {
+      return await this.get(`/questions/${nbQuestions}`);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
+
+  /**
+   * GET /questions/:niveau/:nbQuestions
+   */
+  async getNbQuestionsNiveau() {
+    try {
+      return await this.get(`/questions/${niveau}/${nbQuestions}`);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
 }
 
 export const api = new Api("http://localhost:3000/api");
