@@ -75,8 +75,8 @@ router.get('/sousCategories/:categorie', async (req, res) => {
   }
 });
 
-// GET /niveaux/:categorie/:sousCategorie : Récupère les niveaux et les types des exercices d'une catégorie et d'une sous-catégorie spécifiques.
-router.get('/niveaux/:categorie/:sousCategorie', async (req, res) => {
+// GET /niveaux_types_exo/:categorie/:sousCategorie : Récupère les niveaux et les types des exercices d'une catégorie et d'une sous-catégorie spécifiques.
+router.get('/niveaux_types_exo/:categorie/:sousCategorie', async (req, res) => {
   try {
     const { categorie, sousCategorie } = req.params;
 
@@ -204,5 +204,23 @@ router.get('/exercice/:categorie/:sousCategorie/:niveau/:exerciceId', async (req
   }
 });
 
+// GET /niveaux : Récupère tous les différents niveaux disponibles avec leurs noms et leurs IDs (sans répétition)
+router.get('/niveaux', async (req, res) => {
+  console.log(`Requête : /niveaux`);
+
+  try {
+    const niveaux = await MyModel.aggregate([
+      { $unwind: "$categories" },
+      { $unwind: "$categories.sousCategories" },
+      { $unwind: "$categories.sousCategories.niveaux" },
+      { $group: { _id: "$categories.sousCategories.niveaux._id", nom: { $first: "$categories.sousCategories.niveaux.nom" } } }
+    ]);
+
+    res.json(niveaux);
+  } catch (err) {
+    console.error('Erreur lors de la récupération des niveaux', err);
+    res.status(500).send('Erreur lors de la récupération des niveaux');
+  }
+});
 
 module.exports = router;

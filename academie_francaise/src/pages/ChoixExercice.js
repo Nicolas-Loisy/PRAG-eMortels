@@ -18,7 +18,7 @@ function ChoixExercice() {
 
   const fetchData = async () => {
     try {
-      const niveauxData = await api.getNiveaux(params.categorie, params.sousCategorie);
+      const niveauxData = await api.getNiveauxTypesExo(params.categorie, params.sousCategorie);
       console.log(niveauxData);
       setNiveaux(niveauxData);
     } catch (error) {
