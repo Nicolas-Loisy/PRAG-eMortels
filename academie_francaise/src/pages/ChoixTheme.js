@@ -37,7 +37,7 @@ function ChoixTheme() {
 
   return (
     <Content>
-      <h1>Categories</h1>
+      <h1>Catégories</h1>
       {categories.length > 0 && (
         <div className="ChoixTheme">
           <div className="CategorieContainer">

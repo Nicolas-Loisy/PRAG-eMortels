@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import '../css/TrouQuestion.css';
 
 function TrouQuestion({ ennonce, reponse, repondu, onUserResponse, reponseUtilisateur }) {
-  const regex = /\.{2,}/g;
+  const regex = useMemo(() => /\.{2,}/g, []);
   const [inputValue, setInputValue] = useState('');
   const ennonceUpdated = remplacePointsParInput(ennonce);
   const [corrige, setCorrige] = useState('');
@@ -20,7 +20,7 @@ function TrouQuestion({ ennonce, reponse, repondu, onUserResponse, reponseUtilis
         </>
       );
     }
-  }, [ennonce, repondu]);
+  }, [regex, reponse, reponseUtilisateur, ennonce, repondu]);
 
   // Actions effectuées en cliquant sur "Valider"
   function handleClick() {

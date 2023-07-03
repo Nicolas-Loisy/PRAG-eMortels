@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from "react-router-dom";
 
 import QcmQuestion from "../components/QcmQuestion";
@@ -11,6 +11,7 @@ import Recap from '../components/Recap';
 import { api } from "../api/Api";
 
 import '../css/Exercice.css';
+import Substitution from '../components/Substitution';
 
 function Exercice() {
   const params = useParams();
@@ -19,7 +20,7 @@ function Exercice() {
   const [voirRecap, setVoirRecap] = useState(false);
   const [renderedQuestions, setRenderedQuestions] = useState([]);
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       const exerciceData = await api.getExercice(
         params.categorie,
@@ -27,31 +28,30 @@ function Exercice() {
         params.niveau,
         params.exercice
       );
-  
+
       const updatedQuestions = exerciceData.exercice[0].questions.map((question) => ({
         ...question,
         repondu: null,
       }));
-  
+
       const updatedExercice = {
         ...exerciceData.exercice[0],
         questions: updatedQuestions,
       };
-  
+
       setExercice({
         ...exerciceData,
         exercice: [updatedExercice],
       });
-  
+
     } catch (error) {
       console.error(error);
     }
-  };
-      
+  }, [params]);
 
   useEffect(() => {
     fetchData();
-  }, [params]);
+  }, [fetchData, params]);
 
   useEffect(() => {
     if (exercice !== null && exercice.exercice[0].questions) {
@@ -64,12 +64,41 @@ function Exercice() {
                 ennonce={question.question}
                 reponses={question.reponses}
                 repondu={question.repondu}
-                onUserResponse={(isCorrect) => handleUserResponse(index, isCorrect)}
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
               />
             );
           case "phraseTrous":
             return (
               <TrouQuestion
+                key={index}
+                ennonce={question.question}
+                reponse={question.reponse}
+                repondu={question.repondu}
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
+              />
+            );
+          case "substitution":
+            return (
+              <Substitution
+                key={index}
+                ennonce={question.question}
+                reponse={question.reponse}
+                repondu={question.repondu}
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
+              />
+            );
+          case "substitution":
+            return (
+              <Substitution
                 key={index}
                 ennonce={question.question}
                 reponse={question.reponse}
@@ -95,7 +124,7 @@ function Exercice() {
     setQuestionCourante(numQuestion);
   };
 
-  const handleUserResponse = (index, isCorrect, userInput) => {
+  const handleUserResponse = (index, isCorrect, reponseUtilisateur) => {
     setExercice((prevExercice) => {
       const updatedExercice = {
         ...prevExercice,
@@ -107,7 +136,7 @@ function Exercice() {
                 return {
                   ...question,
                   repondu: isCorrect,
-                  reponseUtilisateur: userInput,
+                  reponseUtilisateur: reponseUtilisateur,
                 };
               }
               return question;
