@@ -67,8 +67,26 @@
   content: url("../ressources/Images/renart_bouche_fermee_queue_droite.png");
   max-width: 100%;
   max-height: 45vh;
+  cursor: pointer;
+  position: absolute;
+  bottom: 18.5%;
 }
 
 .Exercice .Mascotte:hover {
   content: url("../ressources/Images/renart_bouche.png");
+}
+
+.Exercice .Explication {
+  position: absolute;
+  top: 40%; 
+  transform: translateY(-46.5%);
+  padding: 5px;
+  border-radius: 10px; 
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  max-width: 18%; 
+  max-height: 35%;
+  overflow: auto;
+  text-align: left; 
+  display: inline-block;  
 }

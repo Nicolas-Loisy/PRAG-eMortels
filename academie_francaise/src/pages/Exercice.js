@@ -18,6 +18,7 @@ function Exercice() {
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
   const [renderedQuestions, setRenderedQuestions] = useState([]);
+  const [voirExplication, setVoirExplication] = useState(false);
 
   const fetchData = async () => {
     try {
@@ -48,7 +49,6 @@ function Exercice() {
     }
   };
       
-
   useEffect(() => {
     fetchData();
   }, [params]);
@@ -64,6 +64,7 @@ function Exercice() {
                 ennonce={question.question}
                 reponses={question.reponses}
                 repondu={question.repondu}
+                regle={question.explication}
                 onUserResponse={(isCorrect) => handleUserResponse(index, isCorrect)}
               />
             );
@@ -74,6 +75,7 @@ function Exercice() {
                 ennonce={question.question}
                 reponse={question.reponse}
                 repondu={question.repondu}
+                regle={question.explication}
                 onUserResponse={(isCorrect, userInput) =>
                   handleUserResponse(index, isCorrect, userInput)
                 }
@@ -93,6 +95,11 @@ function Exercice() {
   const handleClickQuestion = (numQuestion) => {
     setVoirRecap(false);
     setQuestionCourante(numQuestion);
+    setVoirExplication(false);
+  };
+
+  const handleClickExplication = () => {
+    setVoirExplication(!voirExplication);
   };
 
   const handleUserResponse = (index, isCorrect, userInput) => {
@@ -149,7 +156,12 @@ function Exercice() {
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
-            <div className="Mascotte"></div>
+            <div className="Mascotte" onClick={handleClickExplication}></div>
+            {voirExplication && (
+              <div className="Explication">
+                <p dangerouslySetInnerHTML={{ __html: exercice.exercice[0].explication}}/>
+              </div>
+            )}
           </div>
 
           {/* Contenu principal de l'exercice */}
