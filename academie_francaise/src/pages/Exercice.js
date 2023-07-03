@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from "react-router-dom";
 
 import QcmQuestion from "../components/QcmQuestion";
@@ -19,7 +19,7 @@ function Exercice() {
   const [voirRecap, setVoirRecap] = useState(false);
   const [renderedQuestions, setRenderedQuestions] = useState([]);
 
-  const fetchData = async () => {
+  const fetchData =  useCallback(async () => {
     try {
       const exerciceData = await api.getExercice(
         params.categorie,
@@ -46,11 +46,11 @@ function Exercice() {
     } catch (error) {
       console.error(error);
     }
-  };
+  }, [params]);  
 
   useEffect(() => {
     fetchData();
-  }, [params]);
+  }, [fetchData, params]);
 
   useEffect(() => {
     if (exercice !== null && exercice.exercice[0].questions) {
