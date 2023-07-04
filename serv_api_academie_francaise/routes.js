@@ -197,8 +197,9 @@ router.get('/exercice/:categorie/:sousCategorie/:niveau/:exerciceId', async (req
 
     const categorieNom = categorieInfo.categories[0].nom;
     const sousCategorieNom = sousCategorieInfo.categories[0].sousCategories[0].nom;
+    const exo = exercice[0];
 
-    res.json({ categorieNom, sousCategorieNom, exercice });
+    res.json({ categorieNom, sousCategorieNom, exo });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error. Error: ' + error });
   }
