@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Accueil from "../pages/Accueil";
 import ParcoursPrecis from "../pages/ChoixTheme";
 import ChoixExercice from "../pages/ChoixExercice";
-import Exercice from "../pages/Exercice";
+import ExercicePrecis from "../pages/ExercicePrecis";
 import NotFound from "../pages/NotFound";
 import ChoixNiveau from "../pages/ChoixNiveau";
 import ExerciceAleatoire from "../pages/ExerciceAleatoire";
@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau/exercice/:exercice",
-    element: <Exercice />
+    element: <ExercicePrecis />
   },
   {
     path: "/parcours-aleatoire",

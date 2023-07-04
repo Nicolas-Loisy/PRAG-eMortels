@@ -9,9 +9,9 @@ import Recap from '../components/Recap';
 
 import { api } from "../api/Api";
 
-import '../css/Exercice.css';
+import '../css/ExercicePrecis.css';
 
-function Exercice() {
+function ExercicePrecis() {
   const params = useParams();
   const [exercice, setExercice] = useState(null);
   const [questionCourante, setQuestionCourante] = useState(0);
@@ -98,7 +98,7 @@ function Exercice() {
 
   return (
     <Content>
-      <div className="Exercice">
+      <div className="ExercicePrecis">
 
         {/* Tags d'identifications de l'exercice */}
         {exercice &&
@@ -216,4 +216,4 @@ function Exercice() {
   );
 }
 
-export default Exercice;
+export default ExercicePrecis;
