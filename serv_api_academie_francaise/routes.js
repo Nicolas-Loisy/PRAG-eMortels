@@ -167,7 +167,7 @@ router.get('/exercice/:categorie/:sousCategorie/:niveau/:exerciceId', async (req
 
     console.log(`Requête : /exercice/${categorie}/${sousCategorie}/${niveau}/${exerciceId}`);
 
-    const [categorieInfo, sousCategorieInfo, exercice] = await Promise.all([
+    const [categorieInfo, sousCategorieInfo, exo] = await Promise.all([
       MyModel.findOne({ "categories._id": categorie }, { "categories.$": 1 }),
       MyModel.findOne({ "categories.sousCategories._id": sousCategorie }, { "categories.$": 1 }),
       MyModel.aggregate([
@@ -191,15 +191,15 @@ router.get('/exercice/:categorie/:sousCategorie/:niveau/:exerciceId', async (req
       ]).exec()
     ]);
 
-    if (!exercice) {
+    if (!exo) {
       return res.status(404).json({ error: 'Exercice not found' });
     }
 
     const categorieNom = categorieInfo.categories[0].nom;
     const sousCategorieNom = sousCategorieInfo.categories[0].sousCategories[0].nom;
-    const exo = exercice[0];
+    const exercice = exo[0];
 
-    res.json({ categorieNom, sousCategorieNom, exo });
+    res.json({ categorieNom, sousCategorieNom, exercice });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error. Error: ' + error });
   }
