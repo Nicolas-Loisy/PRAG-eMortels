@@ -4,6 +4,7 @@ function EfQuestion({ enonce, reponse, motErreur, repondu, onUserResponse, repon
   const mots = enonce.split(' ');
   const msgPasErreur = "Pas de faute";
 
+  // Vérifie s'il s'agit de la bonne réponse ou non
   function verifMot(mot, motErreur) {
     if (reponse.toLowerCase().includes(msgPasErreur.toLowerCase())) {
       if (reponse.toLowerCase().includes(mot.toLowerCase())) {
@@ -18,6 +19,7 @@ function EfQuestion({ enonce, reponse, motErreur, repondu, onUserResponse, repon
     return false;
   }
 
+  // Définition du nom de la classe (pour le style du texte)
   function defineNomClasse(mot, repondu, isCorrection) {
     if (isCorrection) {
       if (mot.toLowerCase().includes(reponse.toLowerCase())) {
@@ -64,6 +66,7 @@ function EfQuestion({ enonce, reponse, motErreur, repondu, onUserResponse, repon
       );
   }
 
+  // Affichage HTML (ternaires à refaire)
   return (
     <div className='EfQuestion'>
       {mots.map((mot, index) => (

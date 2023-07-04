@@ -14,7 +14,7 @@ function Question({ question, index, handleUserResponse }) {
         return (
           <QcmQuestion
             key={index}
-            ennonce={question.question}
+            enonce={question.question}
             reponses={question.reponses}
             repondu={question.repondu}
             onUserResponse={(isCorrect, reponseUtilisateur) =>
@@ -27,7 +27,7 @@ function Question({ question, index, handleUserResponse }) {
         return (
           <TrouQuestion
             key={index}
-            ennonce={question.question}
+            enonce={question.question}
             reponse={question.reponse}
             repondu={question.repondu}
             onUserResponse={(isCorrect, reponseUtilisateur) =>
@@ -40,7 +40,7 @@ function Question({ question, index, handleUserResponse }) {
         return (
           <SubstitutionQuestion
             key={index}
-            ennonce={question.question}
+            enonce={question.question}
             reponse={question.reponse}
             repondu={question.repondu}
             onUserResponse={(isCorrect, reponseUtilisateur) =>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/QcmQuestion.css';
 
-function QcmQuestion({ ennonce, reponses, repondu, onUserResponse, reponseUtilisateur }) {
+function QcmQuestion({ enonce, reponses, repondu, onUserResponse, reponseUtilisateur }) {
   const handleClick = (reponse) => {
     if (repondu === null) {
       onUserResponse(reponse.correcte, reponse.reponse);
@@ -10,7 +10,7 @@ function QcmQuestion({ ennonce, reponses, repondu, onUserResponse, reponseUtilis
 
   return (
     <div className='QcmQuestion'>
-      <p>{ennonce}</p>
+      <p>{enonce}</p>
       <ul>
         {Object.values(reponses).map((reponse, indexReponse) => (
           <li

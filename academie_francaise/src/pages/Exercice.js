@@ -61,7 +61,7 @@ function Exercice() {
             return (
               <QcmQuestion
                 key={index}
-                ennonce={question.question}
+                enonce={question.question}
                 reponses={question.reponses}
                 repondu={question.repondu}
                 onUserResponse={(isCorrect, reponseUtilisateur) =>
@@ -74,7 +74,7 @@ function Exercice() {
             return (
               <TrouQuestion
                 key={index}
-                ennonce={question.question}
+                enonce={question.question}
                 reponse={question.reponse}
                 repondu={question.repondu}
                 onUserResponse={(isCorrect, reponseUtilisateur) =>
