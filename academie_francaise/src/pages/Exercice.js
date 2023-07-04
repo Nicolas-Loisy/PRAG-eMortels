@@ -64,7 +64,6 @@ function Exercice() {
                 ennonce={question.question}
                 reponses={question.reponses}
                 repondu={question.repondu}
-                regle={question.explication}
                 onUserResponse={(isCorrect) => handleUserResponse(index, isCorrect)}
               />
             );
@@ -75,7 +74,6 @@ function Exercice() {
                 ennonce={question.question}
                 reponse={question.reponse}
                 repondu={question.repondu}
-                regle={question.explication}
                 onUserResponse={(isCorrect, userInput) =>
                   handleUserResponse(index, isCorrect, userInput)
                 }
@@ -152,16 +150,45 @@ function Exercice() {
           </div>
         }
 
-
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
-            <div className="Mascotte" onClick={handleClickExplication}></div>
-            {voirExplication && (
+            <div className="Mascotte" onClick={handleClickExplication}/>
+
+            {/* {voirExplication && exercice.exercice[0].explication && (
               <div className="Explication">
                 <p dangerouslySetInnerHTML={{ __html: exercice.exercice[0].explication}}/>
               </div>
+            )} */}
+
+            {voirExplication && exercice.exercice[0].explication && exercice.exercice[0].lien && (
+                <div className='ExplicationEtLien'>
+                  <div className="Explication">
+                    <p dangerouslySetInnerHTML={{ __html: exercice.exercice[0].explication}}/>
+                  </div>
+                  <div className="Lien">
+                    <a href={exercice.exercice[0].lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
+                  </div>
+                </div>
             )}
+
+            {/* {voirExplication && exercice.exercice[0].questions[0].extra && (
+              <div className="Explication">
+                <p dangerouslySetInnerHTML={{ __html: exercice.exercice[0].questions[0].extra}}/>
+              </div>
+            )}  */}
+
+            {/* {voirExplication && exercice.exercice[0].lien && (
+              <div className="Lien">
+                <a href={exercice.exercice[0].lien} target="_blank" rel="noreferrer">Lien d'explication</a>
+              </div>
+            )}
+
+            {voirExplication && exercice.exercice[0].questions[0].lien && (
+              <div className="Lien">
+                <a href={exercice.exercice[0].questions[0].lien} target="_blank" rel="noreferrer">Lien d'explication</a>
+              </div>
+            )} */}
           </div>
 
           {/* Contenu principal de l'exercice */}

@@ -78,15 +78,48 @@
 
 .Exercice .Explication {
   position: absolute;
-  top: 40%; 
-  transform: translateY(-46.5%);
+  top: 24.5%; 
+  left: 13%;
+  max-width: 20%; 
+  max-height: 35vh;
   padding: 5px;
   border-radius: 10px; 
   background-color: #ffffff;
   border: 1px solid #000000;
-  max-width: 18%; 
-  max-height: 35%;
-  overflow: auto;
   text-align: left; 
-  display: inline-block;  
+  overflow: auto;
+  display: inline-block;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
+
+.Exercice .Explication::-webkit-scrollbar {
+  width: 10px;
+}
+
+.Exercice .Explication::-webkit-scrollbar-thumb {
+  background-color: #F27E19;
+  border-radius: 100px;
+}
+
+.Exercice .Lien a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #F27E19;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.Exercice .Lien a:hover {
+  background-color: #D1600E;
+}
+
+.Exercice .ExplicationEtLien {
+
+}
+
+/* .Exercice .Explication::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}*/
+
