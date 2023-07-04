@@ -1,6 +1,6 @@
 function EfQuestion({ ennonce, reponse, motErreur }) {
-  const mots = ennonce.split(' ');
-  const msgPasErreur = "Pas de faute"
+  const mots = ennonce.split(' '); // Divise la chaîne de caractères "ennonce" en mots individuels
+  const msgPasErreur = "Pas de faute"; // Message à afficher pour le bouton "Pas de faute"
 
   return (
     <div>
