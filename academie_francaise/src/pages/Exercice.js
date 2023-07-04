@@ -16,9 +16,9 @@ import SubstitutionQuestion from '../components/SubstitutionQuestion';
 function Exercice() {
   const params = useParams();
   const [exercice, setExercice] = useState(null);
+  const [renderedQuestions, setRenderedQuestions] = useState([]);
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
-  const [renderedQuestions, setRenderedQuestions] = useState([]);
 
   const fetchData = useCallback(async () => {
     try {

@@ -4,6 +4,8 @@ import ParcoursPrecis from "../pages/ChoixTheme";
 import ChoixExercice from "../pages/ChoixExercice";
 import Exercice from "../pages/Exercice";
 import NotFound from "../pages/NotFound";
+import ChoixNiveau from "../pages/ChoixNiveau";
+import ExerciceAleatoire from "../pages/ExerciceAleatoire";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ export const router = createBrowserRouter([
   {
     path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau/exercice/:exercice",
     element: <Exercice />
+  },
+  {
+    path: "/parcours-aleatoire",
+    element: <ChoixNiveau />
+  },
+  {
+    path: "/parcours-aleatoire/niveau/:niveau",
+    element: <ExerciceAleatoire />
   },
   {
     path: "*",
