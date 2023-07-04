@@ -1,21 +1,20 @@
 .EfQuestion .correct {
     color: hsl(100, 46%, 43%);
     font-weight: bold;
+    margin-top: 1em;
   }
 
   .EfQuestion .incorrect {
     color: #BD0000;
-  }
-
-  .EfQuestion .reponseUtilisateur {
     font-weight: bold;
+    margin-top: 1em;
   }
 
   .EfQuestion.inline-div {
     display: inline;
   }
 
-  .EfQuestion p.correction {
+  .EfQuestion .correction {
     margin-top: 1em;
     margin-bottom: 1em;
     font-style: italic;
@@ -43,7 +42,7 @@
     border: 2px solid #F27E19;
   }
 
-  .EfQuestion span.ennonce:hover {
+  .EfQuestion span.enonce:hover {
     color: #F27E19;
     cursor: pointer;
   }

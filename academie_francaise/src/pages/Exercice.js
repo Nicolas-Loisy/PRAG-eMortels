@@ -89,6 +89,11 @@ function Exercice() {
                 enonce={question.question}
                 reponse={question.reponse}
                 motErreur={question.motErreur}
+                repondu={question.repondu}
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
               />
             );
           default:
@@ -178,7 +183,7 @@ function Exercice() {
                   </div>
                 ) : (
                   <div>
-                    <p className="intitule">{exercice.exercice[0].intitule}</p>
+                    <p className="intitule" dangerouslySetInnerHTML={{ __html: exercice.exercice[0].intitule}} />
                     {renderedQuestions.length > 0 && renderedQuestions[questionCourante]}
                   </div>
                 )}

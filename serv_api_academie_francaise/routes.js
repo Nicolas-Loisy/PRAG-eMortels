@@ -167,7 +167,7 @@ router.get('/exercice/:categorie/:sousCategorie/:niveau/:exerciceId', async (req
 
     console.log(`Requête : /exercice/${categorie}/${sousCategorie}/${niveau}/${exerciceId}`);
 
-    const [categorieInfo, sousCategorieInfo, exercice] = await Promise.all([
+    const [categorieInfo, sousCategorieInfo, exo] = await Promise.all([
       MyModel.findOne({ "categories._id": categorie }, { "categories.$": 1 }),
       MyModel.findOne({ "categories.sousCategories._id": sousCategorie }, { "categories.$": 1 }),
       MyModel.aggregate([
@@ -191,12 +191,13 @@ router.get('/exercice/:categorie/:sousCategorie/:niveau/:exerciceId', async (req
       ]).exec()
     ]);
 
-    if (!exercice) {
+    if (!exo) {
       return res.status(404).json({ error: 'Exercice not found' });
     }
 
     const categorieNom = categorieInfo.categories[0].nom;
     const sousCategorieNom = sousCategorieInfo.categories[0].sousCategories[0].nom;
+    const exercice = exo[0];
 
     res.json({ categorieNom, sousCategorieNom, exercice });
   } catch (error) {
@@ -220,6 +221,98 @@ router.get('/niveaux', async (req, res) => {
   } catch (err) {
     console.error('Erreur lors de la récupération des niveaux', err);
     res.status(500).send('Erreur lors de la récupération des niveaux');
+  }
+});
+
+// GET /exercices/:nbExercice : Récupère un nombre spécifique d'exercices aléatoirement parmi toutes les données.
+router.get('/exercices/:nbExercice', async (req, res) => {
+  const { nbExercice } = req.params;
+
+  console.log(`Requête : /exercices/${nbExercice}`);
+
+  try {
+    const exercices = await MyModel.aggregate([
+      { $unwind: "$categories" },
+      { $unwind: "$categories.sousCategories" },
+      { $unwind: "$categories.sousCategories.niveaux" },
+      { $unwind: "$categories.sousCategories.niveaux.exercices" },
+      { $sample: { size: parseInt(nbExercice) } },
+      { $limit: parseInt(nbExercice) }
+    ]);
+
+    res.json(exercices);
+  } catch (err) {
+    console.error('Erreur lors de la récupération des exercices', err);
+    res.status(500).send('Erreur lors de la récupération des exercices');
+  }
+});
+
+// GET /questions/:nbQuestions : Récupère un nombre spécifique de questions aléatoirement parmi toutes les données.
+router.get('/questions/:nbQuestions', async (req, res) => {
+  const { nbQuestions } = req.params;
+
+  console.log(`Requête : /questions/${nbQuestions}`);
+
+  try {
+    const questions = await MyModel.aggregate([
+      { $unwind: "$categories" },
+      { $unwind: "$categories.sousCategories" },
+      { $unwind: "$categories.sousCategories.niveaux" },
+      { $unwind: "$categories.sousCategories.niveaux.exercices" },
+      { $unwind: "$categories.sousCategories.niveaux.exercices.questions" },
+      { $sample: { size: parseInt(nbQuestions) } },
+      { $limit: parseInt(nbQuestions) }
+    ]);
+
+    const formattedQuestions = questions.map(question => {
+      return {
+        "categorieNom": question.categories.nom,
+        "sousCategorieNom": question.categories.sousCategories.nom,
+        "intitule": question.categories.sousCategories.niveaux.exercices.intitule,
+        "exerciceId": question.categories.sousCategories.niveaux.exercices._id,
+        "question": question.categories.sousCategories.niveaux.exercices.questions
+      };
+    });
+
+    res.json({ questions: formattedQuestions });
+  } catch (err) {
+    console.error('Erreur lors de la récupération des questions', err);
+    res.status(500).send('Erreur lors de la récupération des questions');
+  }
+});
+
+// GET /questions/:niveau/:nbQuestions : Récupère un nombre spécifique de questions aléatoirement parmi les exercices d'un niveau donné.
+router.get('/questions/:niveauId/:nbQuestions', async (req, res) => {
+  const { niveauId, nbQuestions } = req.params;
+
+  console.log(`Requête : /questions/${niveauId}/${nbQuestions}`);
+
+  try {
+    const questions = await MyModel.aggregate([
+      { $unwind: "$categories" },
+      { $unwind: "$categories.sousCategories" },
+      { $unwind: "$categories.sousCategories.niveaux" },
+      { $match: { "categories.sousCategories.niveaux._id": niveauId } },
+      { $unwind: "$categories.sousCategories.niveaux.exercices" },
+      { $unwind: "$categories.sousCategories.niveaux.exercices.questions" },
+      { $sample: { size: parseInt(nbQuestions) } },
+      { $limit: parseInt(nbQuestions) }
+    ]);
+
+    const formattedQuestions = questions.map(question => {
+      return {
+        categorieNom: question.categories.nom,
+        sousCategorieNom: question.categories.sousCategories.nom,
+        intitule: question.categories.sousCategories.niveaux.exercices.intitule,
+        exerciceId: question.categories.sousCategories.niveaux.exercices._id,
+        question: question.categories.sousCategories.niveaux.exercices.questions
+      };
+    });
+
+    res.json({ questions: formattedQuestions });
+  } catch (err) {
+    console.error('Erreur lors de la récupération des questions', err);
+    res.status(500).send('Erreur lors de la récupération des questions');
   }
 });
 

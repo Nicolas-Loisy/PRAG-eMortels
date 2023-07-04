@@ -33,3 +33,6 @@ Le Json avec les données se trouve dans le dossier Documentations.
 3. Lancer le serveur : `npm start`
 
 ## Documentations
+
+Toutes les documentations sont dans le dossier `Documentations`.
+Le contenu de la base de données se trouve dans le fichier `bdd_exo.json` dans le dossier `Documentations`.
