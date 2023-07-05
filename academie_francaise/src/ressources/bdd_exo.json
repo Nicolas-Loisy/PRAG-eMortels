@@ -973,34 +973,34 @@
                     {
                       "_id": "1",
                       "type": "reperage",
-                      "question": "Elle a rangé le linge dans l’armoire.",
-                      "reponse": "le linge",
+                      "question": "Elle a&nbsp;rangé le&nbsp;linge dans l’armoire.",
+                      "reponse": "le&nbsp;linge",
                       "extra": "(« qu’ » = C.O.D. ; « le linge » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "2",
                       "type": "reperage",
-                      "question": "Le linge qu’elle a rangé dans l’armoire est propre.",
+                      "question": "Le&nbsp;linge qu’elle a&nbsp;rangé dans l’armoire est propre.",
                       "reponse": "qu’",
                       "extra": "(« qu’ » = C.O.D. ; « le linge » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "3",
                       "type": "reperage",
-                      "question": "Ma sœur ? Je l’ai rencontrée dans le métro tout à l’heure.",
+                      "question": "Ma&nbsp;sœur ? Je l’ai rencontrée dans le&nbsp;métro tout à l’heure.",
                       "reponse": "l’",
                       "extra": "(« l’ » = C.O.D. ; « Ma sœur » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "4",
                       "type": "reperage",
-                      "question": "Il a accompli sa tâche en deux heures.",
-                      "reponse": "sa tâche"
+                      "question": "Il a&nbsp;accompli sa&nbsp;tâche en deux heures.",
+                      "reponse": "sa&nbsp;tâche"
                     },
                     {
                       "_id": "5",
                       "type": "reperage",
-                      "question": "La tâche qu’il a accomplie est considérable.",
+                      "question": "La&nbsp;tâche qu’il a&nbsp;accomplie est considérable.",
                       "reponse": "qu’",
                       "extra": "(« qu’ » = C.O.D. ; « La tâche » = mot qui détermine l’accord du participe passé)"
                     }
@@ -1015,33 +1015,33 @@
                     {
                       "_id": "1",
                       "type": "reperage",
-                      "question": "As-tu fini ton travail ?",
-                      "reponse": "ton travail"
+                      "question": "As-tu fini ton&nbsp;travail ?",
+                      "reponse": "ton&nbsp;travail"
                     },
                     {
                       "_id": "2",
                       "type": "reperage",
-                      "question": "Il a assuré la direction des opérations avec efficacité.",
-                      "reponse": "la direction"
+                      "question": "Il a&nbsp;assuré la&nbsp;direction des opérations avec efficacité.",
+                      "reponse": "la&nbsp;direction"
                     },
                     {
                       "_id": "3",
                       "type": "reperage",
-                      "question": "La commande que j’ai passée est arrivée.",
+                      "question": "La&nbsp;commande que j’ai passée est&nbsp;arrivée.",
                       "reponse": "que",
                       "extra": "(« que » = C.O.D. ; « La commande » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "4",
                       "type": "reperage",
-                      "question": "Les enfants, nous les avons vus hier.",
+                      "question": "Les&nbsp;enfants, nous les avons vus hier.",
                       "reponse": "les",
                       "extra": "(« les » = C.O.D. ; « Les enfants » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "5",
                       "type": "reperage",
-                      "question": "La direction que nous avons suivie n’était pas la bonne.",
+                      "question": "La&nbsp;direction que nous avons&nbsp;suivie n’était pas la bonne.",
                       "reponse": "que",
                       "extra": "(« que » = C.O.D. ; « La direction » = mot qui détermine l’accord du participe passé)"
                     }
@@ -1270,7 +1270,7 @@
                     {
                       "_id": "2",
                       "type": "QCM",
-                      "question": "Ils se sont ... beaucoup d'injures.",
+                      "question": "Ils se sont ... beaucoup d’injures.",
                       "extra": "(cas 2 : se C.O.I. ; C.O.D. beaucoup d’injures placé après)",
                       "reponses": [
                         {
@@ -1288,7 +1288,7 @@
                     {
                       "_id": "3",
                       "type": "QCM",
-                      "question": "Elle s'est ... la tête.",
+                      "question": "Elle s’est ... la tête.",
                       "extra": "(cas 2 : se C.O.I. ; C.O.D. beaucoup d’injures placé après)",
                       "reponses": [
                         {
@@ -1306,7 +1306,7 @@
                     {
                       "_id": "4",
                       "type": "QCM",
-                      "question": "Elle s'est ... à la tête.",
+                      "question": "Elle s’est ... à la tête.",
                       "extra": "(cas 2 : s’ C.O.D. placé avant)",
                       "reponses": [
                         {
@@ -1324,7 +1324,7 @@
                     {
                       "_id": "5",
                       "type": "QCM",
-                      "question": "Elle s'est ... les foudres de son patron.",
+                      "question": "Elle s’est ... les foudres de son patron.",
                       "extra": "(cas 2 : s’ C.O.I. ; C.O.D. les foudres de son patron placé après)",
                       "reponses": [
                         {
@@ -1361,7 +1361,7 @@
               "exercices": [
                 {
                   "_id": "1",
-                  "intitule": "Énoncé fautif. Cliquez sur le mot balade ou ballade si vous pensez qu’il est mal orthographié dans les phrases suivantes.",
+                  "intitule": "Énoncé fautif. Cliquez sur le mot <I>balade</I> ou <I>ballade</I> si vous pensez qu’il est mal orthographié dans les phrases suivantes.",
                   "lien": "https://www.academie-francaise.fr/ballade-balade",
                   "explication": "<em>BALLADE</em> : 1. MOYEN ÂGE. Poème à forme fixe, composé de trois huitains ou dizains... 2. Récit en vers divisé en strophes, avec ou sans refrain... <em>BALADE</em> : Fam. Promenade d’agrément.",
                   "questions": [
@@ -1460,14 +1460,14 @@
                     {
                       "_id": "1",
                       "type": "EF",
-                      "question": "Il a peut être changé d'avis.",
+                      "question": "Il a peut&nbsp;être changé d’avis.", 
                       "reponse": "peut-être",
-                      "motErreur": "peut être"
+                      "motErreur": "peut&nbsp;être"
                     },
                     {
                       "_id": "2",
                       "type": "EF",
-                      "question": "Ce ne sont peut-être pas ses paroles, mais c'est sa pensée.",
+                      "question": "Ce ne sont peut-être pas ses paroles, mais c’est sa pensée.",
                       "reponse": "Pas de faute",
                       "motErreur": ""
                     },
@@ -1475,37 +1475,37 @@
                       "_id": "3",
                       "type": "EF",
                       "question": "Sa lettre ne peut-être perdue.",
-                      "reponse": "peut être",
+                      "reponse": "peut&nbsp;être",
                       "motErreur": "peut-être"
                     },
                     {
                       "_id": "4",
                       "type": "EF",
-                      "question": "Peut être aurait-il réussi, s'il avait essayé ?",
+                      "question": "Peut&nbsp;être aurait-il réussi, s’il avait essayé ?",
                       "reponse": "Peut-être",
-                      "motErreur": "Peut être"
+                      "motErreur": "Peut&nbsp;être"
                     },
                     {
                       "_id": "5",
                       "type": "EF",
-                      "question": "L'horloger me dit que cette montre ne peut-être réparée.",
-                      "reponse": "peut être",
+                      "question": "L’horloger me dit que cette montre ne peut-être réparée.",
+                      "reponse": "peut&nbsp;être",
                       "motErreur": "peut-être"
                     }
                   ]
                 },
                 {
                   "_id": "2",
-                  "intitule": "Énoncé fautif. Dans les phrases suivantes, cliquez sur le mot <I>davantage</I> ou <I>d'avantage</I> si vous pensez qu’il est mal orthographié.",
+                  "intitule": "Énoncé fautif. Dans les phrases suivantes, cliquez sur le mot <I>davantage</I> ou <I>d’avantage</I> si vous pensez qu’il est mal orthographié.",
                   "lien": "https://www.academie-francaise.fr/davantage-davantages",
-                  "explication": "Au XVIe siècle, la préposition élidée <I>d'</I> et le nom <I>avantage</I> se sont agglutinés pour former l’adverbe davantage. Mais cinq siècles plus tard, le sentiment de composition est toujours très fort et bien souvent cet adverbe se rencontre sous sa forme originelle, aujourd’hui fautive, <I>d'avantage</I>. Cette graphie, même si elle est empreinte de bon sens, n’en reste pas moins une erreur.",
+                  "explication": "Au XVIe siècle, la préposition élidée <I>d’</I> et le nom <I>avantage</I> se sont agglutinés pour former l’adverbe davantage. Mais cinq siècles plus tard, le sentiment de composition est toujours très fort et bien souvent cet adverbe se rencontre sous sa forme originelle, aujourd’hui fautive, <I>d’avantage</I>. Cette graphie, même si elle est empreinte de bon sens, n’en reste pas moins une erreur.",
                   "questions": [
                     {
                       "_id": "1",
                       "type": "EF",
                       "question": "Je n’attendrai pas d’avantage.",
                       "reponse": "davantage",
-                      "motErreur": "d'avantage"
+                      "motErreur": "d’avantage"
                     },
                     {
                       "_id": "2",
@@ -1524,59 +1524,59 @@
                     {
                       "_id": "4",
                       "type": "EF",
-                      "question": "La beauté est précieuse, mais la vertu l’est encore d'avantage.",
+                      "question": "La beauté est précieuse, mais la vertu l’est encore d’avantage.",
                       "reponse": "davantage",
-                      "motErreur": "d'avantage"
+                      "motErreur": "d’avantage"
                     },
                     {
                       "_id": "5",
                       "type": "EF",
                       "question": "Il n’y a pas davantage à être mauvais.",
-                      "reponse": "d'avantage",
+                      "reponse": "d’avantage",
                       "motErreur": "davantage"
                     }
                   ]
                 },
                 {
                   "_id": "3",
-                  "intitule": "Énoncé fautif. Dans les phrases suivantes, cliquez sur l'expression <I>se faisant</I> ou <I>ce faisant</I> si vous pensez qu’elle est mal orthographié.",
+                  "intitule": "Énoncé fautif. Dans les phrases suivantes, cliquez sur l’expression <I>se faisant</I> ou <I>ce faisant</I> si vous pensez qu’elle est mal orthographié.",
                   "lien": "https://www.academie-francaise.fr/ce-faisant-pour-se-faisant",
                   "explication": "Les formes <I>ce faisant</I> et <I>se faisant</I> sont homophones mais ne sont pas homographes. Dans la première, le verbe est à la voix active et a pour complément d’objet direct le pronom démonstratif <I>ce</I> ; <I>ce faisant</I> signifie donc « <I>en faisant cela</I> ». Dans la seconde, le verbe est à la voix pronominale et a pour complément d’objet direct le pronom réfléchi <I>se</I>. <I>Se faisant</I> s’emploie pour indiquer qu’une action est en train de se dérouler, alors que <I>ce faisant</I> est une locution figée qui équivaut à « pour cette raison », le pronom <I>ce</I> reprenant un fait évoqué précédemment. Se souvenir de ces différences de sens permet d’éviter de confondre ces deux formes, et donc de les écrire correctement.",
                   "questions": [
                     {
                       "_id": "1",
                       "type": "EF",
-                      "question": "Le serveur nous apporte les menus et, ce faisant, présente le plat du jour.",
+                      "question": "Le serveur nous apporte les menus et, ce&nbsp;faisant, présente le plat du jour.",
                       "reponse": "Pas de faute",
                       "motErreur": ""
                     },
                     {
                       "_id": "2",
                       "type": "EF",
-                      "question": "On m’a donné une nouvelle mission, et se faisant, j’ai développé de nouvelles compétences.",
-                      "reponse": "ce faisant",
-                      "motErreur": "se faisant"
+                      "question": "On m’a donné une nouvelle mission, et se&nbsp;faisant, j’ai développé de nouvelles compétences.",
+                      "reponse": "ce&nbsp;faisant",
+                      "motErreur": "se&nbsp;faisant"
                     },
                     {
                       "_id": "3",
                       "type": "EF",
-                      "question": "Ils ont réussi à dévaliser la banque en ce faisant passer pour des membres de la sécurité.",
-                      "reponse": "se faisant",
-                      "motErreur": "ce faisant"
+                      "question": "Ils ont réussi à dévaliser la banque en ce&nbsp;faisant passer pour des membres de la sécurité.",
+                      "reponse": "se&nbsp;faisant",
+                      "motErreur": "ce&nbsp;faisant"
                     },
                     {
                       "_id": "4",
                       "type": "EF",
-                      "question": "Il a pu partir en vacances discrètement en se faisant remplacer par son jumeau.",
+                      "question": "Il a pu partir en vacances discrètement en se&nbsp;faisant remplacer par son jumeau.",
                       "reponse": "Pas de faute",
                       "motErreur": ""
                     },
                     {
                       "_id": "5",
                       "type": "EF",
-                      "question": "Ce faisant tout petit, il a pu passer.",
-                      "reponse": "Se faisant",
-                      "motErreur": "Ce faisant"
+                      "question": "Ce&nbsp;faisant tout petit, il a pu passer.",
+                      "reponse": "Se&nbsp;faisant",
+                      "motErreur": "Ce&nbsp;faisant"
                     }
                   ]
                 },
@@ -1677,7 +1677,7 @@
                     {
                       "_id": "5",
                       "type": "QCM",
-                      "question": "Le ... ancien d'une bibliothèque.",
+                      "question": "Le ... ancien d’une bibliothèque.",
                       "reponses": [
                         {
                           "_id": "1",
@@ -1706,7 +1706,7 @@
               "exercices": [
                 {
                   "_id": "1",
-                  "intitule": "Texte à trous. Complétez les phrases suivantes.",
+                  "intitule": "Texte à trous. Complétez les phrases suivantes (À l’attention de / À l’intention de).",
                   "lien": "https://www.academie-francaise.fr/questions-de-langue#3_strong-em--l-attention-de--l-intention-de-em-strong",
                   "explication": "La formule par laquelle, dans le langage de l’administration, on indique le destinataire d’une lettre, d’une communication, d’un envoi, est <b><i>a</i></b><b><i>̀ l’attention de</i></b>, pour marquer que l’on attire l’attention du destinataire, que l’on soumet cette lettre, etc., à son attention.<br/> La locution <b><i>à l’intention de </i></b><b>(quelqu’un) </b>signifie « pour lui, dans le dessein que cela lui soit agréable, profitable, bénéfique » : <i>Il a </i><i>achete</i><i>́ ce livre à leur intention, </i>pour le leur offrir. On compose un poème <i>à l’intention d’un ami. </i>On fait dire une messe <i>a</i><i>̀ l’intention d’un </i><i>défunt</i><i>. </i>",
                   "questions": [
@@ -1749,7 +1749,7 @@
                 },
                 {
                   "_id": "2",
-                  "intitule": "Énoncé fautif. Repérez si les énoncés ci-dessous contiennent une faute.",
+                  "intitule": "Énoncé fautif. Repérez si les énoncés ci-dessous contiennent une faute (censé / sensé).",
                   "lien": "https://www.academie-francaise.fr/cense-sense",
                   "explication": "Les adjectifs <i>censé </i>et <i>sense</i><i>́ </i>sont trop souvent confondus à l’écrit. Ils ont pourtant des significations bien différentes.<br/><br/><b><i>Censé </i></b>nous vient du latin <i>censere</i>, « évaluer la fortune et le rang », puis « recenser, juger ». Il appartient à la même famille que <i>cens</i>, le montant de l’impôt qu’il fallait payer pour être éligible ou électeur, et il signifie « qui est supposé, réputé tel ». <br/><br/><b><i>Sensé</i></b> est dérivé de <i>sens </i>et signifie « qui a sa raison, son bon sens ».",
                   "questions": [
@@ -1904,7 +1904,7 @@
                         "années 1970",
                         "années soixante-dix"
                       ],
-                      "extra": "(La façon de situer un événement dans une décennie particulière en disant « les années » suivi d’une date arrondie à la dizaine, est implantée dans notre langue depuis longtemps. Aussi, il n'est pas nécessaire de remplacer ces formes par un équivalent anglais comme <I>seventies</I> ou <I>eighties</I>... Rappelons enfin que l'on peut écrire la décennie en toutes lettres, lorsqu'il n'y a pas d'ambiguïté sur le siècle : <I>le cinéma des années soixante, la crise des années trente</I>...)",
+                      "extra": "(La façon de situer un événement dans une décennie particulière en disant « les années » suivi d’une date arrondie à la dizaine, est implantée dans notre langue depuis longtemps. Aussi, il n’est pas nécessaire de remplacer ces formes par un équivalent anglais comme <I>seventies</I> ou <I>eighties</I>... Rappelons enfin que l’on peut écrire la décennie en toutes lettres, lorsqu’il n’y a pas d’ambiguïté sur le siècle : <I>le cinéma des années soixante, la crise des années trente</I>...)",
                       "lien": "https://www.academie-francaise.fr/les-sixties-les-seventies"
                     }
                   ]
@@ -1920,7 +1920,7 @@
                       "type": "phraseTrous",
                       "question": "N’oubliez pas de prendre un plateau : cette cantine est en (self-service) ... .",
                       "reponse": "libre-service",
-                      "extra": "(Le nom <I>self-service</I> est apparu aux États-Unis après la Première Guerre mondiale et en France après la Seconde. Plusieurs formes ont été proposées pour remplacer cet anglicisme : <I>auto-service</I>, dont l'usage n'a pas voulu, et <I>libre-service</I>, qu'il convient d'employer plutôt que <I>self-service</I> ou sa forme abrégée, <I>self</I>.)",
+                      "extra": "(Le nom <I>self-service</I> est apparu aux États-Unis après la Première Guerre mondiale et en France après la Seconde. Plusieurs formes ont été proposées pour remplacer cet anglicisme : <I>auto-service</I>, dont l’usage n’a pas voulu, et <I>libre-service</I>, qu’il convient d’employer plutôt que <I>self-service</I> ou sa forme abrégée, <I>self</I>.)",
                       "lien": "https://www.academie-francaise.fr/self-service"
                     },
                     {
@@ -1928,7 +1928,7 @@
                       "type": "phraseTrous",
                       "question": "(Ce nouveau label) ... de vêtements connaît un succès fulgurant.",
                       "reponse": "Cette nouvelle marque",
-                      "extra": "(Le terme <I>label</I> est issu, par l'intermédiaire de l'anglais <I>label</I>, « étiquette », de l'ancien français <I>label</I>, qui désignait un ruban et qui est également à l'origine de notre lambeau. <I>Label</I>, au sens de « marque distinctive », est bien ancré dans l'usage en droit, domaine où il garantit qu'une entreprise respecte les conditions de travail définies par la loi (<I>label syndical</I>) et dans le monde du commerce où il peut certifier l'origine, la qualité d'un produit (<I>label de conformité, d'origine</I>). On évitera de l'employer au figuré au sens de <I>signature, étiquette</I> ou <I>caution</I>, tout particulièrement dans le domaine politique.)",
+                      "extra": "(Le terme <I>label</I> est issu, par l’intermédiaire de l’anglais <I>label</I>, « étiquette », de l’ancien français <I>label</I>, qui désignait un ruban et qui est également à l’origine de notre lambeau. <I>Label</I>, au sens de « marque distinctive », est bien ancré dans l’usage en droit, domaine où il garantit qu’une entreprise respecte les conditions de travail définies par la loi (<I>label syndical</I>) et dans le monde du commerce où il peut certifier l’origine, la qualité d’un produit (<I>label de conformité, d’origine</I>). On évitera de l’employer au figuré au sens de <I>signature, étiquette</I> ou <I>caution</I>, tout particulièrement dans le domaine politique.)",
                       "lien": "https://www.academie-francaise.fr/label"
                     },
                     {
@@ -1936,7 +1936,7 @@
                       "type": "phraseTrous",
                       "question": "Peux-tu établir (le listing) ... des invités du mariage de Mariam ?",
                       "reponse": "la liste",
-                      "extra": "(Le nom anglais <I>listing</I> désigne l'établissement d'une liste et la liste qui en résulte. Le mot français <I>listage</I> traduit parfaitement le premier sens de <I>listing</I> et s'emploie parfois pour le second quand on évoque une liste faite à l'aide d'outils informatiques, même si, quelle que soit la manière dont celle-ci est obtenue, il est préférable de dire simplement <I>liste</I>.)",
+                      "extra": "(Le nom anglais <I>listing</I> désigne l’établissement d’une liste et la liste qui en résulte. Le mot français <I>listage</I> traduit parfaitement le premier sens de <I>listing</I> et s’emploie parfois pour le second quand on évoque une liste faite à l’aide d’outils informatiques, même si, quelle que soit la manière dont celle-ci est obtenue, il est préférable de dire simplement <I>liste</I>.)",
                       "lien": "https://www.academie-francaise.fr/listing"
                     },
                     {
@@ -1944,7 +1944,7 @@
                       "type": "phraseTrous",
                       "question": "Il est ravi d’apprendre que sa chanteuse préférée sera (la guest-star) ... de ce film.",
                       "reponse": "l’invitée vedette",
-                      "extra": "(Le verbe <I>inviter</I> est attesté en ancien français depuis le XIVe siècle et le nom qui en est tiré, <I>invité</I>, depuis le XVIIIe siècle. On considérera donc que ce dernier est assez ancien pour qu'il n'y ait pas lieu de lui substituer la forme anglaise guest. Il serait donc préférable d'éviter des formes comme le guest du mois. Transformer un invité en <I>guest</I> ne le rendra pas plus prestigieux, de même qu'il est probable qu'une <I>guest-star</I> ne sera pas plus brillante qu'une <I>invitée vedette</I>.)",
+                      "extra": "(Le verbe <I>inviter</I> est attesté en ancien français depuis le XIVe siècle et le nom qui en est tiré, <I>invité</I>, depuis le XVIIIe siècle. On considérera donc que ce dernier est assez ancien pour qu’il n’y ait pas lieu de lui substituer la forme anglaise guest. Il serait donc préférable d’éviter des formes comme le guest du mois. Transformer un invité en <I>guest</I> ne le rendra pas plus prestigieux, de même qu’il est probable qu’une <I>guest-star</I> ne sera pas plus brillante qu’une <I>invitée vedette</I>.)",
                       "lien": "https://www.academie-francaise.fr/guest-le-guest-du-mois"
                     },
                     {
@@ -1952,7 +1952,7 @@
                       "type": "phraseTrous",
                       "question": "L’école d’ingénieurs offre ... (des welcome packs) à tous les nouveaux étudiants.",
                       "reponse": "des cadeaux de bienvenue",
-                      "extra": "(Il est d'usage dans certains congrès, dans certaines réunions internationales, d'offrir des cadeaux aux participants. Le plus souvent, ces cadeaux ne sont pas personnalisés et chacun reçoit les mêmes présents. Nos amis anglais les appellent des <I>welcome packs</I>. Fort bien, mais il est regrettable que nombre d'institutions françaises emploient aussi cette expression en lieu et place de <I>cadeau de bienvenue</I>, qui dirait la même chose.)",
+                      "extra": "(Il est d’usage dans certains congrès, dans certaines réunions internationales, d’offrir des cadeaux aux participants. Le plus souvent, ces cadeaux ne sont pas personnalisés et chacun reçoit les mêmes présents. Nos amis anglais les appellent des <I>welcome packs</I>. Fort bien, mais il est regrettable que nombre d’institutions françaises emploient aussi cette expression en lieu et place de <I>cadeau de bienvenue</I>, qui dirait la même chose.)",
                       "lien": "https://www.academie-francaise.fr/welcome-pack"
                     }
                   ]
@@ -1968,7 +1968,7 @@
                       "type": "phraseTrous",
                       "question": "Contre toute attente, ce groupe de rock a annoncé son (come back) ... dans la presse.",
                       "reponse": "retour",
-                      "extra": "(La locution nominale <I>come back</I> est un anglicisme tiré du verbe anglais « to come back », qui signifie 'revenir'. Elle s'est d'abord répandue dans le monde du sport, puis de la politique, et est maintenant utilisée dans tous les domaines. Cependant, il est important de ne pas oublier que la langue française dispose de suffisamment de termes pour exprimer cette idée, et il serait dommage de ne pas les utiliser à la place de <I>come back</I> ou de ses dérivés <I>come backeur</I> et <I>come backeuse</I>.)",
+                      "extra": "(La locution nominale <I>come back</I> est un anglicisme tiré du verbe anglais « to come back », qui signifie ’revenir’. Elle s’est d’abord répandue dans le monde du sport, puis de la politique, et est maintenant utilisée dans tous les domaines. Cependant, il est important de ne pas oublier que la langue française dispose de suffisamment de termes pour exprimer cette idée, et il serait dommage de ne pas les utiliser à la place de <I>come back</I> ou de ses dérivés <I>come backeur</I> et <I>come backeuse</I>.)",
                       "lien": "https://www.academie-francaise.fr/come-back"
                     },
                     {
@@ -1976,7 +1976,7 @@
                       "type": "phraseTrous",
                       "question": "Il y a quelqu’un de grand assis devant moi qui m’empêche de voir l’écran, cela te dérange si on (switch) ... nos places ?",
                       "reponse": "échange",
-                      "extra": "(Le nom anglais <I>switch</I> a initialement désigné une baguette, puis une aiguille, et enfin un système d'aiguillage ou un commutateur. Le verbe dérivé <I>to switch</I> a suivi une évolution similaire, signifiant à la fois « donner des coups de baguette », « changer d'aiguillage » et, avec l'aide de prépositions, « allumer ou éteindre un appareil », ainsi que « changer, échanger ». C'est dans ce dernier sens que cet anglicisme s'est répandu en français, et l'on entend de plus en plus d'expressions telles que « switcher des places, switcher une date ». Pour rendre compte de toutes ces actions, la langue française dispose de verbes ou de locutions verbales précises.)",
+                      "extra": "(Le nom anglais <I>switch</I> a initialement désigné une baguette, puis une aiguille, et enfin un système d’aiguillage ou un commutateur. Le verbe dérivé <I>to switch</I> a suivi une évolution similaire, signifiant à la fois « donner des coups de baguette », « changer d’aiguillage » et, avec l’aide de prépositions, « allumer ou éteindre un appareil », ainsi que « changer, échanger ». C’est dans ce dernier sens que cet anglicisme s’est répandu en français, et l’on entend de plus en plus d’expressions telles que « switcher des places, switcher une date ». Pour rendre compte de toutes ces actions, la langue française dispose de verbes ou de locutions verbales précises.)",
                       "lien": "https://www.academie-francaise.fr/switcher"
                     },
                     {
@@ -1984,7 +1984,7 @@
                       "type": "phraseTrous",
                       "question": "Notre (team) ... doit se réunir tout à l’heure pour discuter des différents objectifs.",
                       "reponse": "équipe",
-                      "extra": "(En 1992, les États-Unis décident d'envoyer aux Jeux olympiques une équipe de basketball composée, non plus d'universitaires amateurs, mais des meilleurs professionnels. Outre-Atlantique, cette équipe est baptisée <I>dream team</I>, « l'équipe de rêve ». Cette appellation fera florès. Aujourd'hui, team se rencontre dans tous les domaines et en particulier dans le monde du travail pour désigner une équipe de personnes travaillant dans la même entreprise ou dans le même service. On préférera à cet anglicisme le nom <I>équipe</I> ou, dans certains sports, celui d'<I>écurie</I>.)",
+                      "extra": "(En 1992, les États-Unis décident d’envoyer aux Jeux olympiques une équipe de basketball composée, non plus d’universitaires amateurs, mais des meilleurs professionnels. Outre-Atlantique, cette équipe est baptisée <I>dream team</I>, « l’équipe de rêve ». Cette appellation fera florès. Aujourd’hui, team se rencontre dans tous les domaines et en particulier dans le monde du travail pour désigner une équipe de personnes travaillant dans la même entreprise ou dans le même service. On préférera à cet anglicisme le nom <I>équipe</I> ou, dans certains sports, celui d’<I>écurie</I>.)",
                       "lien": "https://www.academie-francaise.fr/team-pour-equipe"
                     },
                     {
@@ -2308,14 +2308,7 @@
                 {
                   "_id": "1",
                   "intitulé": "Énoncé fautif. Dans les énoncés suivants, cliquez sur l’anglicisme qu’il conviendrait de ne pas utiliser en français (attention certaines phrases ne comportent pas d’anglicisme fautif).",
-                  "lien": [
-                    "https://wwwacademie-francaisefr/language",
-                    "https://www.academie-francaise.fr/digital",
-                    "https://www.academie-francaise.fr/etre-confronte-au-sens-d-etre-aux-prises-ou-de-devoir-faire-face",
-                    "https://www.academie-francaise.fr/etre-confronte-au-sens-d-etre-aux-prises-ou-de-devoir-faire-face",
-                    "https://www.academie-francaise.fr/etre-confronte-au-sens-d-etre-aux-prises-ou-de-devoir-faire-face",
-                    "https://www.academie-francaise.fr/interchanger"
-                  ],
+                  "lien": null,
                   "explication": "",
                   "questions": [
                     {
@@ -2324,7 +2317,8 @@
                       "question": "Ses travaux portent sur le langage des abeilles.",
                       "reponse": "Pas de faute.",
                       "motErreur": "",
-                      "extra": "(Le nom langage est dérivé de langue et c’est pour cette raison qu’il s’est parfois écrit, au Moyen Âge, language, concurremment à langage, plus conforme à la prononciation et qui peu à peu s’est imposé. C’est cependant la forme language qu’au xiiie siècle nos amis anglais nous ont empruntée. Depuis huit siècles, on écrit donc langage chez nous et language de l’autre côté de la Manche. Il convient de ne pas modifier une orthographe validée par un si long espace de temps et l’on évitera, en français, d’écrire language.)"
+                      "extra": "(Le nom langage est dérivé de langue et c’est pour cette raison qu’il s’est parfois écrit, au Moyen Âge, language, concurremment à langage, plus conforme à la prononciation et qui peu à peu s’est imposé. C’est cependant la forme language qu’au xiiie siècle nos amis anglais nous ont empruntée. Depuis huit siècles, on écrit donc langage chez nous et language de l’autre côté de la Manche. Il convient de ne pas modifier une orthographe validée par un si long espace de temps et l’on évitera, en français, d’écrire language.)",
+                      "lien": "https://wwwacademie-francaisefr/language"
                     },
                     {
                       "_id": "2",
@@ -2332,15 +2326,17 @@
                       "question": "Cette entreprise utilise des outils digitaux pour développer son activité en ligne.",
                       "reponse": "numériques",
                       "motErreur": "digitaux",
-                      "extra": "(L’adjectif digital en français signifie « qui appartient aux doigts, se rapporte aux doigts ». Il vient du latin digitalis, « qui a l’épaisseur d’un doigt », lui-même dérivé de digitus, « doigt ». C’est parce que l’on comptait sur ses doigts que de ce nom latin a aussi été tiré, en anglais, digit, « chiffre », et digital, « qui utilise des nombres ». On se gardera bien de confondre ces deux adjectifs digital, qui appartiennent à des langues différentes et dont les sens ne se recouvrent pas : on se souviendra que le français a à sa disposition l’adjectif numérique.)"
+                      "extra": "(L’adjectif digital en français signifie « qui appartient aux doigts, se rapporte aux doigts ». Il vient du latin digitalis, « qui a l’épaisseur d’un doigt », lui-même dérivé de digitus, « doigt ». C’est parce que l’on comptait sur ses doigts que de ce nom latin a aussi été tiré, en anglais, digit, « chiffre », et digital, « qui utilise des nombres ». On se gardera bien de confondre ces deux adjectifs digital, qui appartiennent à des langues différentes et dont les sens ne se recouvrent pas : on se souviendra que le français a à sa disposition l’adjectif numérique.)",
+                      "lien": "https://www.academie-francaise.fr/digital"
                     },
                     {
                       "_id": "3",
                       "type": "EF",
-                      "question": "Il a été confronté à de nombreux propos racistes durant son séjour à l’étranger.",
-                      "reponse": "a fait face à",
-                      "motErreur": "a été confronté à",
-                      "extra": "(Dans la langue du droit, le verbe confronter signifie « mettre des personnes en présence l’une de l’autre pour opposer et vérifier leurs déclarations » : on dit confronter des témoins à l’accusé, avec l’accusé. Dans la langue courante, il signifie « rapprocher deux choses pour les comparer », par exemple dans : nous avons confronté nos points de vue ; confronter deux écritures, des programmes politiques. Mais on ne doit pas employer ce verbe au passif avec le sens d’« être aux prises », de « devoir faire face », calque de l’anglais to be confronted with, « être placé devant une difficulté, un obstacle, etc. ».)"
+                      "question": "Il a&nbsp;été&nbsp;confronté&nbsp;à de nombreux propos racistes durant son séjour à l’étranger.",
+                      "reponse": "a&nbsp;fait&nbsp;face&nbsp;à",
+                      "motErreur": "a&nbsp;été&nbsp;confronté&nbsp;à",
+                      "extra": "(Dans la langue du droit, le verbe confronter signifie « mettre des personnes en présence l’une de l’autre pour opposer et vérifier leurs déclarations » : on dit confronter des témoins à l’accusé, avec l’accusé. Dans la langue courante, il signifie « rapprocher deux choses pour les comparer », par exemple dans : nous avons confronté nos points de vue ; confronter deux écritures, des programmes politiques. Mais on ne doit pas employer ce verbe au passif avec le sens d’« être aux prises », de « devoir faire face », calque de l’anglais to be confronted with, « être placé devant une difficulté, un obstacle, etc. ».)",
+                      "lien": "https://www.academie-francaise.fr/etre-confronte-au-sens-d-etre-aux-prises-ou-de-devoir-faire-face"
                     },
                     {
                       "_id": "4",
@@ -2348,7 +2344,8 @@
                       "question": "Les critiques auxquelles elle a fait face l’ont laissée de marbre.",
                       "reponse": "Pas de faute.",
                       "motErreur": "",
-                      "extra": "(Dans la langue du droit, le verbe confronter signifie « mettre des personnes en présence l’une de l’autre pour opposer et vérifier leurs déclarations » : on dit confronter des témoins à l’accusé, avec l’accusé. Dans la langue courante, il signifie « rapprocher deux choses pour les comparer », par exemple dans : nous avons confronté nos points de vue ; confronter deux écritures, des programmes politiques. Mais on ne doit pas employer ce verbe au passif avec le sens d’« être aux prises », de « devoir faire face », calque de l’anglais to be confronted with, « être placé devant une difficulté, un obstacle, etc. ».)"
+                      "extra": "(Dans la langue du droit, le verbe confronter signifie « mettre des personnes en présence l’une de l’autre pour opposer et vérifier leurs déclarations » : on dit confronter des témoins à l’accusé, avec l’accusé. Dans la langue courante, il signifie « rapprocher deux choses pour les comparer », par exemple dans : nous avons confronté nos points de vue ; confronter deux écritures, des programmes politiques. Mais on ne doit pas employer ce verbe au passif avec le sens d’« être aux prises », de « devoir faire face », calque de l’anglais to be confronted with, « être placé devant une difficulté, un obstacle, etc. ».)",
+                      "lien": "https://www.academie-francaise.fr/etre-confronte-au-sens-d-etre-aux-prises-ou-de-devoir-faire-face"
                     },
                     {
                       "_id": "5",
@@ -2356,21 +2353,16 @@
                       "question": "J’ai longuement interchangé avec lui à la fin de la réunion.",
                       "reponse": "échangé",
                       "motErreur": "interchangé",
-                      "extra": "(Certains préfixes sont plus en vogue à certaines périodes. C’est le cas aujourd’hui pour inter-, qui semble être l’annonciateur de communion entre les individus. Mais parfois les formes ainsi créées ne diffèrent en rien de celles qu’elles sont supposées remplacer et n’ajoutent rien à leur sens. C’est le cas du néologisme interchanger, apparu il y a peu et utilisé en lieu et place d’échanger. On se gardera bien d’employer ce verbe un peu pataud et l’on conservera le plus élégant échanger.)"
+                      "extra": "(Certains préfixes sont plus en vogue à certaines périodes. C’est le cas aujourd’hui pour inter-, qui semble être l’annonciateur de communion entre les individus. Mais parfois les formes ainsi créées ne diffèrent en rien de celles qu’elles sont supposées remplacer et n’ajoutent rien à leur sens. C’est le cas du néologisme interchanger, apparu il y a peu et utilisé en lieu et place d’échanger. On se gardera bien d’employer ce verbe un peu pataud et l’on conservera le plus élégant échanger.)",
+                      "lien": "https://www.academie-francaise.fr/interchanger"
                     }
                   ]
                 },
                 {
                   "_id": "2",
                   "intitulé": "Repérez si les énoncés suivants comportent un anglicisme qu’il faudrait remplacer par un équivalent français et cliquez sur l’anglicisme concerné (attention, certaines phrases ne comportent pas de faute).",
-                  "lien": [
-                    "https://www.academie-francaise.fr/etre-focus-sur-pour-etre-concentre-focalise-polarise-sur",
-                    "https://www.academie-francaise.fr/convenient",
-                    "https://www.academie-francaise.fr/interchanger",
-                    "https://www.academie-francaise.fr/language",
-                    "https://www.academie-francaise.fr/je-reviens-vers-vous"
-                  ],
-                  "explication": "",
+                  "lien": null,
+                  "explication": null,
                   "questions": [
                     {
                       "_id": "1",
@@ -2378,15 +2370,17 @@
                       "question": "L’entraîneur insiste sur la nécessité de rester focus sur la compétition nationale.",
                       "reponse": "concentré",
                       "motErreur": "focus",
-                      "extra": "(Le nom focus appartient au vocabulaire de l’optique et c’est uniquement dans ce domaine qu’il doit être employé. Il convient également de ne pas en faire un adjectif qui serait l’équivalent du participe passé, appartenant à la même famille étymologique, focalisé, ou de formes synonymes comme concentré.)"
+                      "extra": "(Le nom focus appartient au vocabulaire de l’optique et c’est uniquement dans ce domaine qu’il doit être employé. Il convient également de ne pas en faire un adjectif qui serait l’équivalent du participe passé, appartenant à la même famille étymologique, focalisé, ou de formes synonymes comme concentré.)",
+                      "lien": "https://www.academie-francaise.fr/etre-focus-sur-pour-etre-concentre-focalise-polarise-sur"
                     },
                     {
                       "_id": "2",
                       "type": "EF",
                       "question": "Je trouve bien convénient d’habiter près de la gare.",
-                      "reponse": "pratique / commode",
+                      "reponse": "pratique&nbsp;/&nbsp;commode",
                       "motErreur": "convénient",
-                      "extra": "(Inconvénient est un nom français, inconvenient est un adjectif anglais signifiant « malcommode, gênant, inopportun ». Certes, il a aussi existé jadis en français un adjectif inconvénient, qui signifiait « inconvenant », mais, à son sujet, Littré disait déjà, dans son Dictionnaire, qu’il était vieilli. Et, même si la langue anglaise a également un adjectif, convenient, qui signifie « commode, pratique, opportun… », il convient d’éviter la forme convénient, que l’on commence à rencontrer ici ou là, puisque notre langue dispose de suffisamment de termes pour rendre compte des différents sens de cet anglicisme.)"
+                      "extra": "(Inconvénient est un nom français, inconvenient est un adjectif anglais signifiant « malcommode, gênant, inopportun ». Certes, il a aussi existé jadis en français un adjectif inconvénient, qui signifiait « inconvenant », mais, à son sujet, Littré disait déjà, dans son Dictionnaire, qu’il était vieilli. Et, même si la langue anglaise a également un adjectif, convenient, qui signifie « commode, pratique, opportun… », il convient d’éviter la forme convénient, que l’on commence à rencontrer ici ou là, puisque notre langue dispose de suffisamment de termes pour rendre compte des différents sens de cet anglicisme.)",
+                      "lien": "https://www.academie-francaise.fr/convenient"
                     },
                     {
                       "_id": "3",
@@ -2394,7 +2388,8 @@
                       "question": "Nous avons interchangé nos numéros de téléphone lorsque nous nous sommes rencontrés.",
                       "reponse": "échangé",
                       "motErreur": "interchangé",
-                      "extra": "(Certains préfixes sont plus en vogue à certaines périodes. C’est le cas aujourd’hui pour inter-, qui semble être l’annonciateur de communion entre les individus. Mais parfois les formes ainsi créées ne diffèrent en rien de celles qu’elles sont supposées remplacer et n’ajoutent rien à leur sens. C’est le cas du néologisme interchanger, apparu il y a peu et utilisé en lieu et place d’échanger. On se gardera bien d’employer ce verbe un peu pataud et l’on conservera le plus élégant échanger.)"
+                      "extra": "(Certains préfixes sont plus en vogue à certaines périodes. C’est le cas aujourd’hui pour inter-, qui semble être l’annonciateur de communion entre les individus. Mais parfois les formes ainsi créées ne diffèrent en rien de celles qu’elles sont supposées remplacer et n’ajoutent rien à leur sens. C’est le cas du néologisme interchanger, apparu il y a peu et utilisé en lieu et place d’échanger. On se gardera bien d’employer ce verbe un peu pataud et l’on conservera le plus élégant échanger.)",
+                      "lien": "https://www.academie-francaise.fr/interchanger"
                     },
                     {
                       "_id": "4",
@@ -2402,15 +2397,17 @@
                       "question": "La pantomime est un language muet.",
                       "reponse": "langage",
                       "motErreur": "language",
-                      "extra": "(Le nom langage est dérivé de langue et c’est pour cette raison qu’il s’est parfois écrit, au Moyen Âge, language, concurremment à langage, plus conforme à la prononciation et qui peu à peu s’est imposé. C’est cependant la forme language qu’au xiiie siècle nos amis anglais nous ont empruntée. Depuis huit siècles, on écrit donc langage chez nous et language de l’autre côté de la Manche. Il convient de ne pas modifier une orthographe validée par un si long espace de temps et l’on évitera, en français, d’écrire language.)"
+                      "extra": "(Le nom langage est dérivé de langue et c’est pour cette raison qu’il s’est parfois écrit, au Moyen Âge, language, concurremment à langage, plus conforme à la prononciation et qui peu à peu s’est imposé. C’est cependant la forme language qu’au xiiie siècle nos amis anglais nous ont empruntée. Depuis huit siècles, on écrit donc langage chez nous et language de l’autre côté de la Manche. Il convient de ne pas modifier une orthographe validée par un si long espace de temps et l’on évitera, en français, d’écrire language.)",
+                      "lien": "https://www.academie-francaise.fr/language"
                     },
                     {
                       "_id": "5",
                       "type": "EF",
-                      "question": "Je reviens vers vous pour discuter de ma demande de visa.",
-                      "reponse": "reprendre notre échange",
-                      "motErreur": "reviens vers vous",
-                      "extra": "(L’expression Je reviens vers vous, employée en lieu et place de « Je reprends contact avec vous », « Je reprends nos affaires, notre sujet, etc. … », est incorrecte. Il s’agit d’un anglicisme, traduction hasardeuse de I’ll get back to you, devenu tic de langage, qu’il convient d’éviter. On pourra dire, outre les formes vues plus haut : Je me tourne à nouveau vers vous, revenons à nos affaires, etc.)"
+                      "question": "Je reviens&nbsp;vers&nbsp;vous pour discuter de ma demande de visa.",
+                      "reponse": "reprendre&nbsp;notre&nbsp;échange",
+                      "motErreur": "reviens&nbsp;vers&nbsp;vous",
+                      "extra": "(L’expression Je reviens vers vous, employée en lieu et place de « Je reprends contact avec vous », « Je reprends nos affaires, notre sujet, etc. … », est incorrecte. Il s’agit d’un anglicisme, traduction hasardeuse de I’ll get back to you, devenu tic de langage, qu’il convient d’éviter. On pourra dire, outre les formes vues plus haut : Je me tourne à nouveau vers vous, revenons à nos affaires, etc.)",
+                      "lien": "https://www.academie-francaise.fr/je-reviens-vers-vous"
                     }
                   ]
                 }
@@ -2505,7 +2502,7 @@
                     {
                       "_id": "4",
                       "type": "EF",
-                      "question": "Tony, n'oublie pas ce que je t'ai dit !",
+                      "question": "Tony, n’oublie pas ce que je t’ai dit !",
                       "reponse": "Pas de faute.",
                       "motErreur": ""
                     },
@@ -2527,7 +2524,7 @@
                     {
                       "_id": "1",
                       "type": "QCM",
-                      "question": "Le préparateur a ... le chlore dans l'eau.",
+                      "question": "Le préparateur a ... le chlore dans l’eau.",
                       "reponses": [
                         {
                           "_id": "1",
@@ -2554,7 +2551,7 @@
                     {
                       "_id": "2",
                       "type": "QCM",
-                      "question": "Le sucre s'est ... dans le café.",
+                      "question": "Le sucre s’est ... dans le café.",
                       "reponses": [
                         {
                           "_id": "1",
@@ -2581,7 +2578,7 @@
                     {
                       "_id": "3",
                       "type": "QCM",
-                      "question": "L'assemblée a finalement été ... .",
+                      "question": "L’assemblée a finalement été ... .",
                       "reponses": [
                         {
                           "_id": "1",
@@ -2630,7 +2627,7 @@
                     {
                       "_id": "5",
                       "type": "QCM",
-                      "question": "Cette pénitente, le prêtre l'a ... .",
+                      "question": "Cette pénitente, le prêtre l’a ... .",
                       "reponses": [
                         {
                           "_id": "1",
@@ -2789,7 +2786,7 @@
               "exercices": [
                 {
                   "_id": "3",
-                  "intitule": "Énoncé fautif. Repérez si les énoncés ci-dessous contiennent une faute.",
+                  "intitule": "Énoncé fautif. Repérez si les énoncés ci-dessous contiennent une faute (quoique / quoi que).",
                   "lien": "https://www.academie-francaise.fr/questions-de-langue#73_strong-em-quoique-quoi-que-em-strong",
                   "explication": "<b><i>Quoique</i></b>, en un seul mot, est une conjonction de subordination (on peut la remplacer par <i>bien que</i>, <i>encore que</i>) qui s’emploie pour introduire une proposition subordonnée concessive au subjonctif ou au participe : <i>Nous lui avons conservé notre amitié, quoiqu’il ait menti. Quoique ne manquant pas d’aisance, il prenait rarement la parole. <br/><br/></i><b><i>Quoi que</i></b>, en deux mots, est une locution conjonctive (on peut la remplacer par <i>peu importe ce que</i>...) formée du pronom relatif <i>quoi </i>et de la conjonction <i>que</i>, qui permet d’introduire une proposition subordonnée concessive au subjonctif : <i>Quoi que je dise, personne ne me croit. Quoi que vous fassiez, il faut réussir. </i>",
                   "questions": [
@@ -2797,7 +2794,7 @@
                       "_id": "1",
                       "type": "EF",
                       "question": "Quoique je dise, personne ne me croit.",
-                      "reponse": "Quoi que",
+                      "reponse": "Quoi&nbsp;que",
                       "motErreur": "Quoique",
                       "extra": ""
                     },
@@ -2812,9 +2809,9 @@
                     {
                       "_id": "3",
                       "type": "EF",
-                      "question": "Quoi que de petite taille, il a beaucoup de prestance.",
+                      "question": "Quoi&nbsp;que de petite taille, il a beaucoup de prestance.",
                       "reponse": "Quoique",
-                      "motErreur": "Quoi que",
+                      "motErreur": "Quoi&nbsp;que",
                       "extra": ""
                     },
                     {
@@ -2828,16 +2825,16 @@
                     {
                       "_id": "5",
                       "type": "EF",
-                      "question": "Quoi que ces deux chapeaux soient beaux, je préfère le premier.",
+                      "question": "Quoi&nbsp;que ces deux chapeaux soient beaux, je préfère le premier.",
                       "reponse": "Quoique",
-                      "motErreur": "Quoi que",
+                      "motErreur": "Quoi&nbsp;que",
                       "extra": ""
                     }
                   ]
                 },
                 {
                   "_id": "4",
-                  "intitule": "Énoncé fautif. Repérez si les énoncés ci-dessous contiennent une faute.",
+                  "intitule": "Énoncé fautif. Repérez si les énoncés ci-dessous contiennent une faute (septique / sceptique).",
                   "lien": "https://www.academie-francaise.fr/septique-pour-sceptique",
                   "explication": "<b>Septique</b>, qui nous vient, par l’intermédiaire du latin, du grec <i>sêptikos</i>, « qui engendre la putréfaction », sert à qualifier ce qui provoque une infection. Cet adjectif est de la même famille <i>qu’antisepsie </i>ou <i>aseptiser</i>.<br/><br/> <b>Sceptique</b>, lui, est directement emprunté du grec <i>skeptikos</i>, « qui observe, qui réfléchit », dans lequel on retrouve la racine *<i>skep</i><i> </i>/ <i>skop</i><i> </i>de notre suffixe <i>-scope</i>, indiquant une observation (<i>horoscope</i>, <i>périscope</i>, <i>télescope</i>, etc.). Ainsi les philosophes de l’Antiquité dits <i>sceptiques </i>avaient reçu cette appellation car ils pensaient que de leurs observations ils ne pouvaient tirer de vérités définitives. Par extension cet adjectif s’emploie aujourd’hui essentiellement avec le sens de « méfiant, incrédule ».",
                   "questions": [
@@ -2868,7 +2865,7 @@
                     {
                       "_id": "4",
                       "type": "EF",
-                      "question": "Pyrrhon d'Élis est un philosophe sceptique.",
+                      "question": "Pyrrhon d’Élis est un philosophe sceptique.",
                       "reponse": "Pas de faute.",
                       "motErreur": "",
                       "extra": ""
@@ -2885,7 +2882,7 @@
                 },
                 {
                   "_id": "5",
-                  "intitule": "Énoncé fautif. Repérez si les énoncés ci-dessous contiennent une faute.",
+                  "intitule": "Énoncé fautif. Repérez si les énoncés ci-dessous contiennent une faute (prémices / prémisse).",
                   "lien": "https://www.academie-francaise.fr/premisse-premices",
                   "explication": "Prémices, qui ne s’emploie qu’au pluriel, a d’abord désigné les premières productions de la terre ou de l’élevage que l’on offrait en sacrifice aux dieux, puis, par extension, ce nom a aussi pris le sens de « prélude, signe avant-coureur ».<br/><br/>Quant à prémisse, qui se rencontre au singulier comme au pluriel, il appartient à la langue de la logique et désigne chacune des deux propositions d’un syllogisme d’où résulte la conclusion ; par extension, ce nom désigne aussi tout argument d’où découle une conséquence. On veillera donc bien à ne pas employer l’un pour l’autre et on rappellera que tous deux sont des féminins.",
                   "questions": [

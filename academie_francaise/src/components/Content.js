@@ -1,13 +1,12 @@
 import '../css/Content.css';
-import Header from './Header';
 import Footer from './Footer';
 import Ariane from './Ariane';
 import { useParams, useLocation } from "react-router-dom";
 
 function Content({ children }) {
-  const params = useParams();
-  const location = useLocation();
-  const url = location.pathname;
+  const params = useParams(); // Extraction des paramètres de l'URL
+  const location = useLocation(); // Récupération de l'objet de localisation de l'URL
+  const url = location.pathname; // Récupération du chemin de l'URL
 
   var pages = initPages();
 
@@ -17,12 +16,11 @@ function Content({ children }) {
     var array = [];
     var baseURL = "/";
 
-    if (url.includes("parcours-precis")) {
-      baseURL += "parcours-precis";
+    if (url.includes("catalogue")) {
+      baseURL += "catalogue";
     }
 
     const arrayParams = Object.entries(params);
-
 
     for (let i = 0; i < arrayParams.length; i++) {
       var [key, value] = arrayParams[i];
@@ -48,8 +46,9 @@ function Content({ children }) {
 
   return (
     <div className="Content">
-      <Header />
-      {children}
+      <div className='Page'>
+        {children}
+      </div>
       {pages.length > 1 &&
         <Ariane pages={pages} />
       }

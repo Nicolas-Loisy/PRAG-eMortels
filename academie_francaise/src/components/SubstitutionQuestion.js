@@ -37,14 +37,15 @@ function SubstitutionQuestion({ enonce, reponse, repondu, onUserResponse, repons
 					</>
 				);
 			}
-			setInputValue('');
+			setInputValue(''); // Réinitialisation de la valeur de l'input
 		}
 	}
 
 	return (
 		<div className='SubstitutionQuestion'>
 			<div className='enonce'>
-				<p dangerouslySetInnerHTML={{ __html: enonce  }} />
+				<p dangerouslySetInnerHTML={{ __html: enonce  }} /> {/* Affiche le contenu de "enonce" en tant que balise HTML */}
+
 			</div>
 			{repondu === null ? (
 				<><input type="text" placeholder="Entrez votre texte ici" className="user-input" value={inputValue} onChange={(event) => setInputValue(event.target.value)} /><div className='validation'>
@@ -52,7 +53,7 @@ function SubstitutionQuestion({ enonce, reponse, repondu, onUserResponse, repons
 				</div></>
 			) : (
 				<div>
-					{corrige}
+					{corrige} {/* Affiche le contenu corrigé */}
 				</div>
 			)}
 		</div>

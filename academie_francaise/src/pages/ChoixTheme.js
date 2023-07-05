@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Content from "../components/Content";
-import ConteneurTag from "../components/ConteneurTag";
-import Tag from "../components/Tag";
+import Bouton from '../components/Bouton';
 
 import { api } from "../api/Api";
 import "../css/ChoixTheme.css";
@@ -11,44 +10,42 @@ function ChoixTheme() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetchData();
+    fetchData(); // Appel de la fonction fetchData après le rendu initial du composant
   }, []);
 
+  // Fonction asynchrone pour récupérer les données des catégories depuis l'API
   const fetchData = async () => {
     try {
       const categoriesData = await api.getCategories();
-      setCategories(categoriesData.categories.sort((a, b) => a.nom.localeCompare(b.nom)));
+      setCategories(categoriesData.categories.sort((a, b) => a.nom.localeCompare(b.nom))); // Mise à jour de la variable d'état categories avec les catégories triées par nom
     } catch (error) {
       console.error(error);
     }
   };
 
-  const handleClick = (url) => {
-    window.location.href = url;
-  };
-
-  const renderTags = (categorie) => {
-    return categorie.sousCategories.map((sousCategorie, index) => (
-      <Tag className="Cliquable" key={index}>
-        <p onClick={() => handleClick("/parcours-precis/categorie/" + categorie._id + "/sousCategorie/" + sousCategorie._id)}>{sousCategorie.nom}</p>
-      </Tag>
-    ));
-  };
-
   return (
     <Content>
-      <h1>Catégories</h1>
       {categories.length > 0 && (
         <div className="ChoixTheme">
-          <div className="CategorieContainer">
-            {categories.map((categorie, index) => (
-              <ConteneurTag
-                nom={categorie.nom}
-                tags={renderTags(categorie)}
-                key={index}
-              />
-            ))}
-          </div>
+          <h1>Catégories</h1>
+          {/* Pour chaque catégorie */}
+          {categories.map((categorie, index) => (
+            <div className="Categorie" key={index}>
+              <h2>{categorie.nom}</h2>
+
+              {/* Pour chaque sous-catégorie */}
+              <div className='Conteneur_SousCategorie'>
+                {categorie.sousCategories.map((sousCategorie, subIndex) => (
+                  <Bouton
+                    key={subIndex}
+                    className={"Primaire Big"}
+                    nom={sousCategorie.nom}
+                    url={"/catalogue/categorie/" + categorie._id + "/sousCategorie/" + sousCategorie._id}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       )}
     </Content>

@@ -66,10 +66,65 @@
 
 .ExercicePrecis .Mascotte {
   content: url("../ressources/Images/renart_bouche_fermee_queue_droite.png");
-  max-width: 100%;
+  max-width: 18%;
   max-height: 45vh;
+  cursor: pointer;
+  position: absolute;
+  bottom: 26%;
+  left: -2%;
 }
 
 .ExercicePrecis .Mascotte:hover {
   content: url("../ressources/Images/renart_bouche.png");
+}
+
+.ExercicePrecis .Explication {
+  max-width: 33vh; 
+  max-height: 35vh;
+  border-radius: 5px; 
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: justify; 
+  padding: 5px;
+  overflow: auto;
+  display: inline-block;
+}
+
+.ExercicePrecis .Explication .Lien {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.ExercicePrecis .Explication::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.ExercicePrecis .Explication::-webkit-scrollbar-thumb {
+  background-color: #F27E19;
+  border-radius: 100px;
+  max-height: 30px;
+}
+
+.ExercicePrecis .Lien a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #F27E19;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.ExercicePrecis .Lien a:hover {
+  background-color: #D1600E;
+}
+
+.ExercicePrecis .ExplicationEtLien {
+  position: absolute;
+  bottom: 60%;
+  left: 13%;
+  max-width: 20%; 
+  max-height: 15%; 
 }
