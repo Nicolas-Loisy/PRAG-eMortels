@@ -13,31 +13,31 @@ export const router = createBrowserRouter([
     element: <Accueil />
   },
   {
-    path: "/parcours-precis",
+    path: "/catalogue",
     element: <ParcoursPrecis />
   },
   {
-    path: "/parcours-precis/categorie/:categorie",
+    path: "/catalogue/categorie/:categorie",
     element: <ParcoursPrecis />
   },
   {
-    path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie",
+    path: "/catalogue/categorie/:categorie/sousCategorie/:sousCategorie",
     element: <ChoixExercice />
   },
   {
-    path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau",
+    path: "/catalogue/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau",
     element: <ChoixExercice />
   },
   {
-    path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau/exercice/:exercice",
+    path: "/catalogue/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau/exercice/:exercice",
     element: <ExercicePrecis />
   },
   {
-    path: "/parcours-aleatoire",
+    path: "/entrainement",
     element: <ChoixNiveau />
   },
   {
-    path: "/parcours-aleatoire/niveau/:niveau",
+    path: "/entrainement/niveau/:niveau",
     element: <ExerciceAleatoire />
   },
   {
