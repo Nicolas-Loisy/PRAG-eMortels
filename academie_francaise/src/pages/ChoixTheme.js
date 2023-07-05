@@ -27,7 +27,7 @@ function ChoixTheme() {
     <Content>
       {categories.length > 0 && (
         <div className="ChoixTheme">
-          <h1>Catégories</h1>
+          <h1>CATÉGORIES</h1>
           {/* Pour chaque catégorie */}
           {categories.map((categorie, index) => (
             <div className="Categorie" key={index}>

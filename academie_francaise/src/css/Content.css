@@ -4,7 +4,6 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  font-family: Georgia, Times;
   min-height: 100vh;
   background: url('../ressources/Images/BG_feuilles.png'), rgb(248, 251, 255); 
   background-size: 50%;
@@ -21,6 +20,10 @@
   padding: 1em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   background: url('../ressources/Images/feuille.png') right top/150px auto no-repeat;
+  position: relative;
 }
 
-/* rgb(248, 251, 255), rgb(245, 239, 233)*/
+.Content .Ariane {
+  position: absolute;
+  top: 0;
+}

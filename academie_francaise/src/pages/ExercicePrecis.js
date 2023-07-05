@@ -105,6 +105,7 @@ function ExercicePrecis() {
 
   return (
     <Content>
+      <h1>EXERCICE</h1>
       <div className="ExercicePrecis">
 
         {/* Tags d'identifications de l'exercice */}
@@ -133,18 +134,18 @@ function ExercicePrecis() {
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
-            <div className="Mascotte" onClick={handleClickExplication}/>
-              {/* Affichage de la règle de français et du lien si ils existent */}
-              {voirExplication && exercice.exercice.explication && exercice.exercice.lien && (
-                    <div className='ExplicationEtLien'>
-                      <div className="Explication">
-                        <p dangerouslySetInnerHTML={{ __html: exercice.exercice.explication}}/>
-                        <div className="Lien">
-                          <a href={exercice.exercice.lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
-                        </div>
-                      </div>
-                    </div>
-              )}
+            <div className="Mascotte" onClick={handleClickExplication} />
+            {/* Affichage de la règle de français et du lien si ils existent */}
+            {voirExplication && exercice.exercice.explication && exercice.exercice.lien && (
+              <div className='ExplicationEtLien'>
+                <div className="Explication">
+                  <p dangerouslySetInnerHTML={{ __html: exercice.exercice.explication }} />
+                  <div className="Lien">
+                    <a href={exercice.exercice.lien} target="_blank" rel="noreferrer">Lien d'explication</a>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="col_2">
@@ -155,14 +156,14 @@ function ExercicePrecis() {
                   <>
                     {/* Contenu de l'exercice */}
                     <div>
-                      <p className="intitule">{exercice.exercice.intitule}</p>
+                      <p className="intitule" dangerouslySetInnerHTML={{ __html: exercice.exercice.intitule }} />
                       <Question
                         question={exercice.exercice.questions[questionCourante]}
                         index={questionCourante}
                         handleUserResponse={handleUserResponse}
                       />
                     </div>
-          
+
                     {/* Navigation (précédent / suivant) */}
                     <div className="Navigation tagCliquable">
                       {questionCourante > 0 && (

@@ -9,7 +9,7 @@ function Bouton({ nom, url, className }) {
 
   return (
     <div className={"Bouton " + className}  onClick={() => handleClick(url)}>
-      <p>{nom}</p>
+      <p dangerouslySetInnerHTML={{ __html: nom }}/>
     </div>
   )
 

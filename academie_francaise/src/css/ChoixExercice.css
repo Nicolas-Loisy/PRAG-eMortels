@@ -1,9 +1,17 @@
-.ChoixExercice .ExercicesConteneur {
-  max-width: 70%;
+.ChoixExercice {
+  width: 90%;
   margin: auto;
 }
 
-.ChoixExercice .ConteneurTag {
-  margin-bottom: 2em;
+.ChoixExercice .Niveau h2 {
+  text-align: start;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
 }
 
+.ChoixExercice .Exercices {
+  display: flex;
+  flex-wrap: wrap; /* Ajout de la propriété flex-wrap pour permettre le retour à la ligne */
+  margin-bottom: 1em;
+  gap: 1em;
+}
