@@ -2,8 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useParams } from "react-router";
 
 import Content from "../components/Content";
-import ConteneurTag from "../components/ConteneurTag"
-import Tag from "../components/Tag";
+import Bouton from '../components/Bouton';
 
 import { api } from "../api/Api";
 import "../css/ChoixExercice.css";
@@ -26,45 +25,41 @@ function ChoixExercice() {
     fetchData();
   }, [fetchData]);
 
-  // Fonction pour gérer le clic sur un tag et rediriger l'utilisateur vers une autre page
-  const handleClick = (url) => {
-    window.location.href = url;
-  };
-
   // Fonction pour formater les valeurs uniques et les afficher dans les tags
-  function formatUniqueValues(uniqueValues) {
-    var str = ` - ${uniqueValues.join(', ')}`;
+  function getUniquesTypes(exercice) {
+    const typesUniques = [...new Set(exercice.questions.map(obj => obj.type))];
+    var str = `${typesUniques.join(', ')}`;
     str = str.replace("phraseTrous", "Texte à trous");
     str = str.replace("EF", "Enoncé fautif");
     return str;
   }
 
-  // Fonction pour générer les tags à partir des données et des paramètres
-  function getTags(niveau) {
-    return niveau.exercices.map((exercice, index) => {
-      const typesUniques = [...new Set(exercice.questions.map(obj => obj.type))];
-      const typesAffichage = formatUniqueValues(typesUniques);
-      return (
-        <Tag className="Cliquable" key={index}>
-          <p onClick={() => handleClick("/catalogue/categorie/" + params.categorie + "/sousCategorie/" + params.sousCategorie + "/niveau/" + niveau._id + "/exercice/" + exercice._id)}>
-            {
-              "Exercice " + exercice._id + typesAffichage
-            }
-          </p>
-        </Tag>
-      );
-    });
-  }
-
   return (
     <Content>
-      <h1>Exercices</h1>
       <div className="ChoixExercice">
-        <div className="ExercicesConteneur">
+        <h1>EXERCICES</h1>
+        <div className="Niveaux">
           {
             niveaux.map((niveau, index) => {
-              return <ConteneurTag nom={niveau.nom} tags={getTags(niveau)} key={index} />;
-            })
+              return (
+              <div className='Niveau' key={index}>
+                <h2>{niveau.nom}</h2>
+                <div className='Exercices'>
+                    {
+                      niveau.exercices.map((exercice, subIndex) => {
+                        return (
+                          <Bouton
+                            key={subIndex}
+                            nom={"<b>Exercice " + exercice._id + "</b><br>" + getUniquesTypes(exercice)}
+                            url={"/catalogue/categorie/" + params.categorie + "/sousCategorie/" + params.sousCategorie + "/niveau/" + niveau._id + "/exercice/" + exercice._id}
+                            className={"Primaire Big"}
+                          />
+                        )
+                      })
+                    }
+                </div>
+              </div>
+            )})
           }
         </div>
       </div>

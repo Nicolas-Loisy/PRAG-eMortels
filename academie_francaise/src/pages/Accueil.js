@@ -29,12 +29,12 @@ function Accueil() {
             </Bulle>
             <div className="Navigation">
               <Bouton
-                nom="Mode Catalogue"
+                nom="Catalogue"
                 url="/catalogue"
                 className="Primaire"
               />
               <Bouton
-                nom="Mode Entrainement"
+                nom="Entrainement"
                 url="/entrainement"
                 className="Primaire"
               />

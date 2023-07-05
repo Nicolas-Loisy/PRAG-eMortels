@@ -105,6 +105,7 @@ function ExercicePrecis() {
 
   return (
     <Content>
+      <h1>EXERCICE</h1>
       <div className="ExercicePrecis">
 
         {/* Tags d'identifications de l'exercice */}
@@ -155,7 +156,7 @@ function ExercicePrecis() {
                   <>
                     {/* Contenu de l'exercice */}
                     <div>
-                      <p className="intitule">{exercice.exercice.intitule}</p>
+                      <p className="intitule" dangerouslySetInnerHTML={{ __html: exercice.exercice.intitule}}/>
                       <Question
                         question={exercice.exercice.questions[questionCourante]}
                         index={questionCourante}

@@ -10,17 +10,27 @@ function Content({ children }) {
 
   var pages = initPages();
 
+  //Crée les différents objets {url, nom} selon l'URL
   function initPages() {
-    //Crée les différents objets {url, nom} selon l'URL
+    const arrayParams = Object.entries(params);
 
     var array = [];
     var baseURL = "/";
-
-    if (url.includes("catalogue")) {
-      baseURL += "catalogue";
+    
+    if (arrayParams.length > 0) {
+      array.push({ nom: "Accueil", url: baseURL });
+      if (url.includes("catalogue")) {
+        if (arrayParams.length === 1) {
+          array.push({ nom: "Catalogue" });
+        }
+        baseURL += "catalogue";
+      } else if (url.includes("entrainement")) {
+        if (arrayParams.length === 1) {
+          array.push({ nom: "Entrainement" });
+        }
+        baseURL += "entrainement";
+      }
     }
-
-    const arrayParams = Object.entries(params);
 
     for (let i = 0; i < arrayParams.length; i++) {
       var [key, value] = arrayParams[i];
@@ -48,10 +58,10 @@ function Content({ children }) {
     <div className="Content">
       <div className='Page'>
         {children}
+        {pages.length > 0 &&
+          <Ariane pages={pages} />
+        }
       </div>
-      {pages.length > 1 &&
-        <Ariane pages={pages} />
-      }
       <Footer />
     </div>
   );

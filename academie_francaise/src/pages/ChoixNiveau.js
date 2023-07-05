@@ -26,7 +26,7 @@ function ChoixNiveau() {
   return (
     <Content>
       <div className="ChoixNiveau">
-        <h1>Niveaux</h1>
+        <h1>NIVEAUX</h1>
         <div className='NiveauConteneur'>
           {
             niveaux && niveaux.map((niveau, index) => {
