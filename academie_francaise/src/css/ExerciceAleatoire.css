@@ -66,8 +66,12 @@
 
 .ExerciceAleatoire .Mascotte {
   content: url("../ressources/Images/renart_bouche_fermee_queue_droite.png");
-  max-width: 100%;
+  max-width: 18%;
   max-height: 45vh;
+  cursor: pointer;
+  position: absolute;
+  bottom: 23%;
+  left: 6%;
 }
 
 .ExerciceAleatoire .Mascotte:hover {
