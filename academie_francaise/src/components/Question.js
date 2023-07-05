@@ -3,6 +3,8 @@ import React, { useCallback } from 'react';
 import QcmQuestion from './QcmQuestion';
 import SubstitutionQuestion from './SubstitutionQuestion';
 import TrouQuestion from './TrouQuestion';
+import EfQuestion from './EfQuestion';
+import ReperageQuestion from './ReperageQuestion';
 
 import '../css/Question.css';
 
@@ -49,6 +51,31 @@ function Question({ question, index, handleUserResponse }) {
             reponseUtilisateur={question.reponseUtilisateur}
           />
         );
+        case "EF":
+          return (
+            <EfQuestion
+              enonce={question.question}
+              reponse={question.reponse}
+              motErreur={question.motErreur}
+              repondu={question.repondu}
+              onUserResponse={(isCorrect, reponseUtilisateur) =>
+                handleUserResponse(index, isCorrect, reponseUtilisateur)
+              }
+              reponseUtilisateur={question.reponseUtilisateur}
+            />
+          );
+        case "reperage":
+          return (
+            <ReperageQuestion
+              enonce={question.question}
+              reponse={question.reponse}
+              repondu={question.repondu}
+              onUserResponse={(isCorrect, reponseUtilisateur) =>
+                handleUserResponse(index, isCorrect, reponseUtilisateur)
+              }
+              reponseUtilisateur={question.reponseUtilisateur}
+            />
+          );
       default:
         console.log('Type de question non pris en charge: ' + question.type);
         return null;

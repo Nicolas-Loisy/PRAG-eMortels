@@ -7,11 +7,14 @@ import Content from "../components/Content"
 import Tag from "../components/Tag";
 import NumQuestion from "../components/NumQuestion";
 import Recap from '../components/Recap';
+import EfQuestion from '../components/EfQuestion';
+import SubstitutionQuestion from './SubstitutionQuestion';
+import ReperageQuestion from './ReperageQuestion';
 
 import { api } from "../api/Api";
 
 import '../css/Exercice.css';
-import EfQuestion from '../components/EfQuestions';
+
 
 function Exercice() {
   const params = useParams();
@@ -83,12 +86,37 @@ function Exercice() {
                 reponseUtilisateur={question.reponseUtilisateur}
               />
             );
+          case 'substitution':
+            return (
+              <SubstitutionQuestion
+                key={index}
+                enonce={question.question}
+                reponse={question.reponse}
+                repondu={question.repondu}
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
+              />
+            );
           case "EF":
             return (
               <EfQuestion
                 enonce={question.question}
                 reponse={question.reponse}
                 motErreur={question.motErreur}
+                repondu={question.repondu}
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
+              />
+            );
+          case "reperage":
+          return (
+              <ReperageQuestion
+                enonce={question.question}
+                reponse={question.reponse}
                 repondu={question.repondu}
                 onUserResponse={(isCorrect, reponseUtilisateur) =>
                   handleUserResponse(index, isCorrect, reponseUtilisateur)
