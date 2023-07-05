@@ -12,8 +12,10 @@
 .Content .Page {
   border-radius: 10px;
   background-color: #ffffff;
+  min-width: 80%;
   max-width: 80%;
   min-height: 80vh;
   margin: 1em;
+  padding-top: 1em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
