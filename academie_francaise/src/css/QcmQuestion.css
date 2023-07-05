@@ -2,8 +2,9 @@
   margin-top: 2em;
 }
 
-.QcmQuestion h3 {
+.QcmQuestion p {
   margin-bottom: 1em;
+  font-size: 110%;
 }
 
 .QcmQuestion ul {
@@ -11,6 +12,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.QcmQuestion .selected {
+  font-weight: bold;
 }
 
 .QcmQuestion li {

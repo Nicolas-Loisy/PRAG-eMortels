@@ -1,0 +1,52 @@
+.EfQuestion .correct {
+    color: hsl(100, 46%, 43%);
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  .EfQuestion .incorrect {
+    color: #BD0000;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  .EfQuestion.inline-div {
+    display: inline;
+  }
+
+  .EfQuestion .correction {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-style: italic;
+  }
+
+  .EfQuestion .validation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .EfQuestion button {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    cursor: pointer;
+    border: 2px solid #2B5877;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 0.5em 1.3em;
+    transition: border 0.15s ease;
+    margin-top: 1em;
+  }
+
+  .EfQuestion .button:hover {
+    border: 2px solid #F27E19;
+  }
+
+  .EfQuestion span.enonce:hover {
+    color: #F27E19;
+    cursor: pointer;
+  }
+
+  .EfQuestion {
+    margin-top: 1em;
+  }

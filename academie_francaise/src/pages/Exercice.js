@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from "react-router-dom";
 
 import QcmQuestion from "../components/QcmQuestion";
@@ -11,6 +11,7 @@ import Recap from '../components/Recap';
 import { api } from "../api/Api";
 
 import '../css/Exercice.css';
+import EfQuestion from '../components/EfQuestions';
 
 function Exercice() {
   const params = useParams();
@@ -20,7 +21,7 @@ function Exercice() {
   const [renderedQuestions, setRenderedQuestions] = useState([]);
   const [voirExplication, setVoirExplication] = useState(false);
 
-  const fetchData = async () => {
+  const fetchData =  useCallback(async () => {
     try {
       const exerciceData = await api.getExercice(
         params.categorie,
@@ -47,11 +48,11 @@ function Exercice() {
     } catch (error) {
       console.error(error);
     }
-  };
-      
+  }, [params]);  
+
   useEffect(() => {
     fetchData();
-  }, [params]);
+  }, [fetchData, params]);
 
   useEffect(() => {
     if (exercice !== null && exercice.exercice[0].questions) {
@@ -61,21 +62,37 @@ function Exercice() {
             return (
               <QcmQuestion
                 key={index}
-                ennonce={question.question}
+                enonce={question.question}
                 reponses={question.reponses}
                 repondu={question.repondu}
-                onUserResponse={(isCorrect) => handleUserResponse(index, isCorrect)}
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
               />
             );
           case "phraseTrous":
             return (
               <TrouQuestion
                 key={index}
-                ennonce={question.question}
+                enonce={question.question}
                 reponse={question.reponse}
                 repondu={question.repondu}
-                onUserResponse={(isCorrect, userInput) =>
-                  handleUserResponse(index, isCorrect, userInput)
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
+                }
+                reponseUtilisateur={question.reponseUtilisateur}
+              />
+            );
+          case "EF":
+            return (
+              <EfQuestion
+                enonce={question.question}
+                reponse={question.reponse}
+                motErreur={question.motErreur}
+                repondu={question.repondu}
+                onUserResponse={(isCorrect, reponseUtilisateur) =>
+                  handleUserResponse(index, isCorrect, reponseUtilisateur)
                 }
                 reponseUtilisateur={question.reponseUtilisateur}
               />
@@ -100,7 +117,7 @@ function Exercice() {
     setVoirExplication(!voirExplication);
   };
 
-  const handleUserResponse = (index, isCorrect, userInput) => {
+  const handleUserResponse = (index, isCorrect, reponseUtilisateur) => {
     setExercice((prevExercice) => {
       const updatedExercice = {
         ...prevExercice,
@@ -112,7 +129,7 @@ function Exercice() {
                 return {
                   ...question,
                   repondu: isCorrect,
-                  reponseUtilisateur: userInput,
+                  reponseUtilisateur: reponseUtilisateur,
                 };
               }
               return question;
@@ -184,7 +201,7 @@ function Exercice() {
                   </div>
                 ) : (
                   <div>
-                    <p className="intitule">{exercice.exercice[0].intitule}</p>
+                    <p className="intitule" dangerouslySetInnerHTML={{ __html: exercice.exercice[0].intitule}} />
                     {renderedQuestions.length > 0 && renderedQuestions[questionCourante]}
                   </div>
                 )}

@@ -2,8 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import Accueil from "../pages/Accueil";
 import ParcoursPrecis from "../pages/ChoixTheme";
 import ChoixExercice from "../pages/ChoixExercice";
-import Exercice from "../pages/Exercice";
+import ExercicePrecis from "../pages/ExercicePrecis";
 import NotFound from "../pages/NotFound";
+import ChoixNiveau from "../pages/ChoixNiveau";
+import ExerciceAleatoire from "../pages/ExerciceAleatoire";
 
 export const router = createBrowserRouter([
   {
@@ -11,24 +13,32 @@ export const router = createBrowserRouter([
     element: <Accueil />
   },
   {
-    path: "/parcours-precis",
+    path: "/catalogue",
     element: <ParcoursPrecis />
   },
   {
-    path: "/parcours-precis/categorie/:categorie",
+    path: "/catalogue/categorie/:categorie",
     element: <ParcoursPrecis />
   },
   {
-    path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie",
+    path: "/catalogue/categorie/:categorie/sousCategorie/:sousCategorie",
     element: <ChoixExercice />
   },
   {
-    path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau",
+    path: "/catalogue/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau",
     element: <ChoixExercice />
   },
   {
-    path: "/parcours-precis/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau/exercice/:exercice",
-    element: <Exercice />
+    path: "/catalogue/categorie/:categorie/sousCategorie/:sousCategorie/niveau/:niveau/exercice/:exercice",
+    element: <ExercicePrecis />
+  },
+  {
+    path: "/entrainement",
+    element: <ChoixNiveau />
+  },
+  {
+    path: "/entrainement/niveau/:niveau",
+    element: <ExerciceAleatoire />
   },
   {
     path: "*",

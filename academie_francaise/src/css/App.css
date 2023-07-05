@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Klee_one"; /* Nom de la police que vous souhaitez utiliser */
+  src: url("../ressources/font/Klee_One/KleeOne-SemiBold.ttf") format("truetype"); /* Chemin vers le fichier de police */
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,8 +16,13 @@ ul, li {
   list-style: none;
 }
 
-h1, h2,h3, h4{
-  font-family: Avenir, Galvji;
+h1, h2,h3, h4 {
+  font-family: "Klee_one";
+}
+
+h1 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 a {
@@ -21,7 +31,11 @@ a {
   outline: none;
 }
 
-p, h3 {
+p, h1, h2,h3, h4 {
   margin-block-end: 0;
   margin-block-start: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
 }
