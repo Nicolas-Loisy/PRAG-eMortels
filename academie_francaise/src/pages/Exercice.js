@@ -19,6 +19,7 @@ function Exercice() {
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
   const [renderedQuestions, setRenderedQuestions] = useState([]);
+  const [voirExplication, setVoirExplication] = useState(false);
 
   const fetchData =  useCallback(async () => {
     try {
@@ -109,6 +110,11 @@ function Exercice() {
   const handleClickQuestion = (numQuestion) => {
     setVoirRecap(false);
     setQuestionCourante(numQuestion);
+    setVoirExplication(false);
+  };
+
+  const handleClickExplication = () => {
+    setVoirExplication(!voirExplication);
   };
 
   const handleUserResponse = (index, isCorrect, reponseUtilisateur) => {
@@ -161,11 +167,23 @@ function Exercice() {
           </div>
         }
 
-
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
-            <div className="Mascotte"></div>
+
+            {voirExplication && exercice.exercice[0].explication && exercice.exercice[0].lien && (
+                <div className='ExplicationEtLien'>
+                  <div className="Explication">
+                    <p dangerouslySetInnerHTML={{ __html: exercice.exercice[0].explication}}/>
+                    <div className="Lien">
+                      <a href={exercice.exercice[0].lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
+                    </div>
+                  </div>
+                </div>
+            )}
+
+            <div className="Mascotte" onClick={handleClickExplication}/>
+
           </div>
 
           {/* Contenu principal de l'exercice */}
