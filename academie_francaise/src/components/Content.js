@@ -20,16 +20,19 @@ function Content({ children }) {
     if (arrayParams.length > 0) {
       array.push({ nom: "Accueil", url: baseURL });
       if (url.includes("catalogue")) {
-        if (arrayParams.length === 1) {
-          array.push({ nom: "Catalogue" });
-        }
         baseURL += "catalogue";
       } else if (url.includes("entrainement")) {
-        if (arrayParams.length === 1) {
-          array.push({ nom: "Entrainement" });
-        }
         baseURL += "entrainement";
       }
+    } else {
+        if (url.includes("catalogue")) {
+          array.push({ nom: "Accueil", url: baseURL });
+          array.push({ nom: "Catalogue" });
+        }
+        if (url.includes("entrainement")) {
+          array.push({ nom: "Accueil", url: baseURL });
+          array.push({ nom: "Entrainement" });
+        }
     }
 
     for (let i = 0; i < arrayParams.length; i++) {
