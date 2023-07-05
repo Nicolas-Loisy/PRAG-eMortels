@@ -224,36 +224,31 @@
                       "_id": "1",
                       "type": "phraseTrous",
                       "question": "Un océan bleu-vert.\nDes mers ... .",
-                      "reponse": "bleu-vert",
-                      "extra": ""
+                      "reponse": "bleu-vert"
                     },
                     {
                       "_id": "2",
                       "type": "phraseTrous",
                       "question": "Un pull vert pâle\nUne robe ... .",
-                      "reponse": "vert pâle",
-                      "extra": ""
+                      "reponse": "vert pâle"
                     },
                     {
                       "_id": "3",
                       "type": "phraseTrous",
                       "question": "Un vélo bleu foncé.\nUne bicyclette ... .",
-                      "reponse": "bleu foncé",
-                      "extra": ""
+                      "reponse": "bleu foncé"
                     },
                     {
                       "_id": "4",
                       "type": "phraseTrous",
                       "question": "De l'eau bleu turquoise.\nDes liquides ... .",
-                      "reponse": "bleu turquoise",
-                      "extra": ""
+                      "reponse": "bleu turquoise"
                     },
                     {
                       "_id": "5",
                       "type": "phraseTrous",
                       "question": "Un chapeau de couleur jaune et rouge.\nDes chapeaux ... .",
-                      "reponse": "jaune et rouge",
-                      "extra": ""
+                      "reponse": "jaune et rouge"
                     }
                   ]
                 },
@@ -1353,7 +1348,7 @@
       "sousCategories": [
         {
           "_id": "homonymes",
-          "nom": "Les homonymes",
+          "nom": "Les Homonymes",
           "niveaux": [
             {
               "_id": "1",
@@ -1714,36 +1709,31 @@
                       "_id": "1",
                       "type": "phraseTrous",
                       "question": "Il a commandé ce gâteau d'anniversaire à son ... .",
-                      "reponse": "intention",
-                      "extra": ""
+                      "reponse": "intention"
                     },
                     {
                       "_id": "2",
                       "type": "phraseTrous",
                       "question": "Vous remettrez cette lettre à l'... du président.",
-                      "reponse": "attention",
-                      "extra": ""
+                      "reponse": "attention"
                     },
                     {
                       "_id": "3",
                       "type": "phraseTrous",
                       "question": "Je ferai dire une messe à l'... du défunt.",
-                      "reponse": "intention",
-                      "extra": ""
+                      "reponse": "intention"
                     },
                     {
                       "_id": "4",
                       "type": "phraseTrous",
                       "question": "Je signale à votre bienveillante ... le cas de cette personne.",
-                      "reponse": "attention",
-                      "extra": ""
+                      "reponse": "attention"
                     },
                     {
                       "_id": "5",
                       "type": "phraseTrous",
                       "question": "Ce message est l'... de Monsieur Martin.",
-                      "reponse": "attention",
-                      "extra": ""
+                      "reponse": "attention"
                     }
                   ]
                 },
@@ -1758,40 +1748,35 @@
                       "type": "EF",
                       "question": "Ce que tu dis est censé.",
                       "reponse": "sensé",
-                      "motErreur": "censé",
-                      "extra": ""
+                      "motErreur": "censé"
                     },
                     {
                       "_id": "2",
                       "type": "EF",
                       "question": "Est-ce censé m'aider ?",
                       "reponse": "Pas de faute.",
-                      "motErreur": "",
-                      "extra": ""
+                      "motErreur": ""
                     },
                     {
                       "_id": "3",
                       "type": "EF",
                       "question": "Ses arguments sont sensés, c'est un bon orateur.",
                       "reponse": "Pas de faute.",
-                      "motErreur": "",
-                      "extra": ""
+                      "motErreur": ""
                     },
                     {
                       "_id": "4",
                       "type": "EF",
                       "question": "C'est un être censé.",
                       "reponse": "sensé",
-                      "motErreur": "censé",
-                      "extra": ""
+                      "motErreur": "censé"
                     },
                     {
                       "_id": "5",
                       "type": "EF",
                       "question": "Elle est sensée passer à trois heures.",
                       "reponse": "censée",
-                      "motErreur": "sensée",
-                      "extra": ""
+                      "motErreur": "sensée"
                     }
                   ]
                 }
@@ -2795,40 +2780,35 @@
                       "type": "EF",
                       "question": "Quoique je dise, personne ne me croit.",
                       "reponse": "Quoi&nbsp;que",
-                      "motErreur": "Quoique",
-                      "extra": ""
+                      "motErreur": "Quoique"
                     },
                     {
                       "_id": "2",
                       "type": "EF",
                       "question": "Quoique ne manquant pas d'aisance, il prenait rarement la parole.",
                       "reponse": "Pas de faute.",
-                      "motErreur": "",
-                      "extra": ""
+                      "motErreur": ""
                     },
                     {
                       "_id": "3",
                       "type": "EF",
                       "question": "Quoi&nbsp;que de petite taille, il a beaucoup de prestance.",
                       "reponse": "Quoique",
-                      "motErreur": "Quoi&nbsp;que",
-                      "extra": ""
+                      "motErreur": "Quoi&nbsp;que"
                     },
                     {
                       "_id": "4",
                       "type": "EF",
                       "question": "Ces deux termes, quoique proches, ne sont pas synonymes.",
                       "reponse": "Pas de faute.",
-                      "motErreur": "",
-                      "extra": ""
+                      "motErreur": ""
                     },
                     {
                       "_id": "5",
                       "type": "EF",
                       "question": "Quoi&nbsp;que ces deux chapeaux soient beaux, je préfère le premier.",
                       "reponse": "Quoique",
-                      "motErreur": "Quoi&nbsp;que",
-                      "extra": ""
+                      "motErreur": "Quoi&nbsp;que"
                     }
                   ]
                 },
@@ -2843,40 +2823,35 @@
                       "type": "EF",
                       "question": "Ses propos me laissent septique.",
                       "reponse": "sceptique",
-                      "motErreur": "septique",
-                      "extra": ""
+                      "motErreur": "septique"
                     },
                     {
                       "_id": "2",
                       "type": "EF",
                       "question": "Cet patient a fait un choc septique.",
                       "reponse": "Pas de faute.",
-                      "motErreur": "",
-                      "extra": ""
+                      "motErreur": ""
                     },
                     {
                       "_id": "3",
                       "type": "EF",
                       "question": "Attention à ne pas boucher la fosse sceptique !",
                       "reponse": "septique",
-                      "motErreur": "sceptique",
-                      "extra": ""
+                      "motErreur": "sceptique"
                     },
                     {
                       "_id": "4",
                       "type": "EF",
                       "question": "Pyrrhon d'Élis est un philosophe sceptique.",
                       "reponse": "Pas de faute.",
-                      "motErreur": "",
-                      "extra": ""
+                      "motErreur": ""
                     },
                     {
                       "_id": "5",
                       "type": "EF",
                       "question": "C'est un esprit septique.",
                       "reponse": "sceptique",
-                      "motErreur": "septique",
-                      "extra": ""
+                      "motErreur": "septique"
                     }
                   ]
                 },
@@ -2891,40 +2866,35 @@
                       "type": "EF",
                       "question": "Les paysans offrirent à Cérès les prémisses de leur récolte.",
                       "reponse": "prémices",
-                      "motErreur": "prémisses",
-                      "extra": ""
+                      "motErreur": "prémisses"
                     },
                     {
                       "_id": "2",
                       "type": "EF",
                       "question": "Pour Aristote, la démonstration se fonde sur des prémisses indubitables, l'opinion sur des prémisses probables.",
                       "reponse": "Pas de faute.",
-                      "motErreur": "",
-                      "extra": ""
+                      "motErreur": ""
                     },
                     {
                       "_id": "3",
                       "type": "EF",
                       "question": "Une théorie fondée sur des prémices douteuses.",
                       "reponse": "prémisses",
-                      "motErreur": "prémices",
-                      "extra": ""
+                      "motErreur": "prémices"
                     },
                     {
                       "_id": "4",
                       "type": "EF",
                       "question": "Réfuter les prémisses d'une argumentation.",
                       "reponse": "Pas de faute.",
-                      "motErreur": "",
-                      "extra": ""
+                      "motErreur": ""
                     },
                     {
                       "_id": "5",
                       "type": "EF",
                       "question": "Ces manifestations furent les prémisses de l'émeute.",
                       "reponse": "prémices",
-                      "motErreur": "prémisses",
-                      "extra": ""
+                      "motErreur": "prémisses"
                     }
                   ]
                 }
