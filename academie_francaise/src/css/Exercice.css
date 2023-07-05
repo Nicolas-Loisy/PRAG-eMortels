@@ -65,11 +65,12 @@
 
 .Exercice .Mascotte {
   content: url("../ressources/Images/renart_bouche_fermee_queue_droite.png");
-  max-width: 100%;
+  max-width: 18%;
   max-height: 45vh;
   cursor: pointer;
   position: absolute;
-  bottom: 18.5%;
+  bottom: 26%;
+  left: -2%;
 }
 
 .Exercice .Mascotte:hover {
@@ -77,28 +78,33 @@
 }
 
 .Exercice .Explication {
-  position: absolute;
-  top: 24.5%; 
-  left: 13%;
-  max-width: 20%; 
+  max-width: 33vh; 
   max-height: 35vh;
-  padding: 5px;
-  border-radius: 10px; 
+  border-radius: 5px; 
   background-color: #ffffff;
   border: 1px solid #000000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   text-align: left; 
+  padding: 5px;
   overflow: auto;
   display: inline-block;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Exercice .Explication .Lien {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .Exercice .Explication::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 .Exercice .Explication::-webkit-scrollbar-thumb {
   background-color: #F27E19;
   border-radius: 100px;
+  max-height: 30px;
 }
 
 .Exercice .Lien a {
@@ -115,11 +121,9 @@
 }
 
 .Exercice .ExplicationEtLien {
-
+  position: absolute;
+  bottom: 60%;
+  left: 13%;
+  max-width: 20%; 
+  max-height: 15%; 
 }
-
-/* .Exercice .Explication::-webkit-scrollbar-track {
-  background-color: #e4e4e4;
-  border-radius: 100px;
-}*/
-

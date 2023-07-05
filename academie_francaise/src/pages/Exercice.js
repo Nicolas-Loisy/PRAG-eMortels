@@ -153,42 +153,20 @@ function Exercice() {
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
-            <div className="Mascotte" onClick={handleClickExplication}/>
-
-            {/* {voirExplication && exercice.exercice[0].explication && (
-              <div className="Explication">
-                <p dangerouslySetInnerHTML={{ __html: exercice.exercice[0].explication}}/>
-              </div>
-            )} */}
 
             {voirExplication && exercice.exercice[0].explication && exercice.exercice[0].lien && (
                 <div className='ExplicationEtLien'>
                   <div className="Explication">
                     <p dangerouslySetInnerHTML={{ __html: exercice.exercice[0].explication}}/>
-                  </div>
-                  <div className="Lien">
-                    <a href={exercice.exercice[0].lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
+                    <div className="Lien">
+                      <a href={exercice.exercice[0].lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
+                    </div>
                   </div>
                 </div>
             )}
 
-            {/* {voirExplication && exercice.exercice[0].questions[0].extra && (
-              <div className="Explication">
-                <p dangerouslySetInnerHTML={{ __html: exercice.exercice[0].questions[0].extra}}/>
-              </div>
-            )}  */}
+            <div className="Mascotte" onClick={handleClickExplication}/>
 
-            {/* {voirExplication && exercice.exercice[0].lien && (
-              <div className="Lien">
-                <a href={exercice.exercice[0].lien} target="_blank" rel="noreferrer">Lien d'explication</a>
-              </div>
-            )}
-
-            {voirExplication && exercice.exercice[0].questions[0].lien && (
-              <div className="Lien">
-                <a href={exercice.exercice[0].questions[0].lien} target="_blank" rel="noreferrer">Lien d'explication</a>
-              </div>
-            )} */}
           </div>
 
           {/* Contenu principal de l'exercice */}
