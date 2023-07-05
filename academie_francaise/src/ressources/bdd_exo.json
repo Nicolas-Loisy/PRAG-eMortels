@@ -973,34 +973,34 @@
                     {
                       "_id": "1",
                       "type": "reperage",
-                      "question": "Elle a rangé le linge dans l’armoire.",
-                      "reponse": "le linge",
+                      "question": "Elle a&nbsp;rangé le&nbsp;linge dans l’armoire.",
+                      "reponse": "le&nbsp;linge",
                       "extra": "(« qu’ » = C.O.D. ; « le linge » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "2",
                       "type": "reperage",
-                      "question": "Le linge qu’elle a rangé dans l’armoire est propre.",
+                      "question": "Le&nbsp;linge qu’elle a&nbsp;rangé dans l’armoire est propre.",
                       "reponse": "qu’",
                       "extra": "(« qu’ » = C.O.D. ; « le linge » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "3",
                       "type": "reperage",
-                      "question": "Ma sœur ? Je l’ai rencontrée dans le métro tout à l’heure.",
+                      "question": "Ma&nbsp;sœur ? Je l’ai rencontrée dans le&nbsp;métro tout à l’heure.",
                       "reponse": "l’",
                       "extra": "(« l’ » = C.O.D. ; « Ma sœur » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "4",
                       "type": "reperage",
-                      "question": "Il a accompli sa tâche en deux heures.",
-                      "reponse": "sa tâche"
+                      "question": "Il a&nbsp;accompli sa&nbsp;tâche en deux heures.",
+                      "reponse": "sa&nbsp;tâche"
                     },
                     {
                       "_id": "5",
                       "type": "reperage",
-                      "question": "La tâche qu’il a accomplie est considérable.",
+                      "question": "La&nbsp;tâche qu’il a&nbsp;accomplie est considérable.",
                       "reponse": "qu’",
                       "extra": "(« qu’ » = C.O.D. ; « La tâche » = mot qui détermine l’accord du participe passé)"
                     }
@@ -1015,33 +1015,33 @@
                     {
                       "_id": "1",
                       "type": "reperage",
-                      "question": "As-tu fini ton travail ?",
-                      "reponse": "ton travail"
+                      "question": "As-tu fini ton&nbsp;travail ?",
+                      "reponse": "ton&nbsp;travail"
                     },
                     {
                       "_id": "2",
                       "type": "reperage",
-                      "question": "Il a assuré la direction des opérations avec efficacité.",
-                      "reponse": "la direction"
+                      "question": "Il a&nbsp;assuré la&nbsp;direction des opérations avec efficacité.",
+                      "reponse": "la&nbsp;direction"
                     },
                     {
                       "_id": "3",
                       "type": "reperage",
-                      "question": "La commande que j’ai passée est arrivée.",
+                      "question": "La&nbsp;commande que j’ai passée est&nbsp;arrivée.",
                       "reponse": "que",
                       "extra": "(« que » = C.O.D. ; « La commande » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "4",
                       "type": "reperage",
-                      "question": "Les enfants, nous les avons vus hier.",
+                      "question": "Les&nbsp;enfants, nous les avons vus hier.",
                       "reponse": "les",
                       "extra": "(« les » = C.O.D. ; « Les enfants » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "5",
                       "type": "reperage",
-                      "question": "La direction que nous avons suivie n’était pas la bonne.",
+                      "question": "La&nbsp;direction que nous avons&nbsp;suivie n’était pas la bonne.",
                       "reponse": "que",
                       "extra": "(« que » = C.O.D. ; « La direction » = mot qui détermine l’accord du participe passé)"
                     }
@@ -1460,9 +1460,9 @@
                     {
                       "_id": "1",
                       "type": "EF",
-                      "question": "Il a peut être changé d’avis.", 
+                      "question": "Il a peut&nbsp;être changé d’avis.", 
                       "reponse": "peut-être",
-                      "motErreur": "peut être"
+                      "motErreur": "peut&nbsp;être"
                     },
                     {
                       "_id": "2",
@@ -1475,21 +1475,21 @@
                       "_id": "3",
                       "type": "EF",
                       "question": "Sa lettre ne peut-être perdue.",
-                      "reponse": "peut être",
+                      "reponse": "peut&nbsp;être",
                       "motErreur": "peut-être"
                     },
                     {
                       "_id": "4",
                       "type": "EF",
-                      "question": "Peut être aurait-il réussi, s’il avait essayé ?",
+                      "question": "Peut&nbsp;être aurait-il réussi, s’il avait essayé ?",
                       "reponse": "Peut-être",
-                      "motErreur": "Peut être"
+                      "motErreur": "Peut&nbsp;être"
                     },
                     {
                       "_id": "5",
                       "type": "EF",
                       "question": "L’horloger me dit que cette montre ne peut-être réparée.",
-                      "reponse": "peut être",
+                      "reponse": "peut&nbsp;être",
                       "motErreur": "peut-être"
                     }
                   ]
@@ -1546,37 +1546,37 @@
                     {
                       "_id": "1",
                       "type": "EF",
-                      "question": "Le serveur nous apporte les menus et, ce faisant, présente le plat du jour.",
+                      "question": "Le serveur nous apporte les menus et, ce&nbsp;faisant, présente le plat du jour.",
                       "reponse": "Pas de faute",
                       "motErreur": ""
                     },
                     {
                       "_id": "2",
                       "type": "EF",
-                      "question": "On m’a donné une nouvelle mission, et se faisant, j’ai développé de nouvelles compétences.",
-                      "reponse": "ce faisant",
-                      "motErreur": "se faisant"
+                      "question": "On m’a donné une nouvelle mission, et se&nbsp;faisant, j’ai développé de nouvelles compétences.",
+                      "reponse": "ce&nbsp;faisant",
+                      "motErreur": "se&nbsp;faisant"
                     },
                     {
                       "_id": "3",
                       "type": "EF",
-                      "question": "Ils ont réussi à dévaliser la banque en ce faisant passer pour des membres de la sécurité.",
-                      "reponse": "se faisant",
-                      "motErreur": "ce faisant"
+                      "question": "Ils ont réussi à dévaliser la banque en ce&nbsp;faisant passer pour des membres de la sécurité.",
+                      "reponse": "se&nbsp;faisant",
+                      "motErreur": "ce&nbsp;faisant"
                     },
                     {
                       "_id": "4",
                       "type": "EF",
-                      "question": "Il a pu partir en vacances discrètement en se faisant remplacer par son jumeau.",
+                      "question": "Il a pu partir en vacances discrètement en se&nbsp;faisant remplacer par son jumeau.",
                       "reponse": "Pas de faute",
                       "motErreur": ""
                     },
                     {
                       "_id": "5",
                       "type": "EF",
-                      "question": "Ce faisant tout petit, il a pu passer.",
-                      "reponse": "Se faisant",
-                      "motErreur": "Ce faisant"
+                      "question": "Ce&nbsp;faisant tout petit, il a pu passer.",
+                      "reponse": "Se&nbsp;faisant",
+                      "motErreur": "Ce&nbsp;faisant"
                     }
                   ]
                 },
@@ -2332,9 +2332,9 @@
                     {
                       "_id": "3",
                       "type": "EF",
-                      "question": "Il a été confronté à de nombreux propos racistes durant son séjour à l’étranger.",
-                      "reponse": "a fait face à",
-                      "motErreur": "a été confronté à",
+                      "question": "Il a&nbsp;été&nbsp;confronté&nbsp;à de nombreux propos racistes durant son séjour à l’étranger.",
+                      "reponse": "a&nbsp;fait&nbsp;face&nbsp;à",
+                      "motErreur": "a&nbsp;été&nbsp;confronté&nbsp;à",
                       "extra": "(Dans la langue du droit, le verbe confronter signifie « mettre des personnes en présence l’une de l’autre pour opposer et vérifier leurs déclarations » : on dit confronter des témoins à l’accusé, avec l’accusé. Dans la langue courante, il signifie « rapprocher deux choses pour les comparer », par exemple dans : nous avons confronté nos points de vue ; confronter deux écritures, des programmes politiques. Mais on ne doit pas employer ce verbe au passif avec le sens d’« être aux prises », de « devoir faire face », calque de l’anglais to be confronted with, « être placé devant une difficulté, un obstacle, etc. ».)",
                       "lien": "https://www.academie-francaise.fr/etre-confronte-au-sens-d-etre-aux-prises-ou-de-devoir-faire-face"
                     },
@@ -2377,7 +2377,7 @@
                       "_id": "2",
                       "type": "EF",
                       "question": "Je trouve bien convénient d’habiter près de la gare.",
-                      "reponse": "pratique / commode",
+                      "reponse": "pratique&nbsp;/&nbsp;commode",
                       "motErreur": "convénient",
                       "extra": "(Inconvénient est un nom français, inconvenient est un adjectif anglais signifiant « malcommode, gênant, inopportun ». Certes, il a aussi existé jadis en français un adjectif inconvénient, qui signifiait « inconvenant », mais, à son sujet, Littré disait déjà, dans son Dictionnaire, qu’il était vieilli. Et, même si la langue anglaise a également un adjectif, convenient, qui signifie « commode, pratique, opportun… », il convient d’éviter la forme convénient, que l’on commence à rencontrer ici ou là, puisque notre langue dispose de suffisamment de termes pour rendre compte des différents sens de cet anglicisme.)",
                       "lien": "https://www.academie-francaise.fr/convenient"
@@ -2403,9 +2403,9 @@
                     {
                       "_id": "5",
                       "type": "EF",
-                      "question": "Je reviens vers vous pour discuter de ma demande de visa.",
-                      "reponse": "reprendre notre échange",
-                      "motErreur": "reviens vers vous",
+                      "question": "Je reviens&nbsp;vers&nbsp;vous pour discuter de ma demande de visa.",
+                      "reponse": "reprendre&nbsp;notre&nbsp;échange",
+                      "motErreur": "reviens&nbsp;vers&nbsp;vous",
                       "extra": "(L’expression Je reviens vers vous, employée en lieu et place de « Je reprends contact avec vous », « Je reprends nos affaires, notre sujet, etc. … », est incorrecte. Il s’agit d’un anglicisme, traduction hasardeuse de I’ll get back to you, devenu tic de langage, qu’il convient d’éviter. On pourra dire, outre les formes vues plus haut : Je me tourne à nouveau vers vous, revenons à nos affaires, etc.)",
                       "lien": "https://www.academie-francaise.fr/je-reviens-vers-vous"
                     }
@@ -2794,7 +2794,7 @@
                       "_id": "1",
                       "type": "EF",
                       "question": "Quoique je dise, personne ne me croit.",
-                      "reponse": "Quoi que",
+                      "reponse": "Quoi&nbsp;que",
                       "motErreur": "Quoique",
                       "extra": ""
                     },
@@ -2809,9 +2809,9 @@
                     {
                       "_id": "3",
                       "type": "EF",
-                      "question": "Quoi que de petite taille, il a beaucoup de prestance.",
+                      "question": "Quoi&nbsp;que de petite taille, il a beaucoup de prestance.",
                       "reponse": "Quoique",
-                      "motErreur": "Quoi que",
+                      "motErreur": "Quoi&nbsp;que",
                       "extra": ""
                     },
                     {
@@ -2825,9 +2825,9 @@
                     {
                       "_id": "5",
                       "type": "EF",
-                      "question": "Quoi que ces deux chapeaux soient beaux, je préfère le premier.",
+                      "question": "Quoi&nbsp;que ces deux chapeaux soient beaux, je préfère le premier.",
                       "reponse": "Quoique",
-                      "motErreur": "Quoi que",
+                      "motErreur": "Quoi&nbsp;que",
                       "extra": ""
                     }
                   ]
