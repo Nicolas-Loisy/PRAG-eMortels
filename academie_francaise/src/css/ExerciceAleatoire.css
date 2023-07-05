@@ -73,3 +73,54 @@
 .ExerciceAleatoire .Mascotte:hover {
   content: url("../ressources/Images/renart_bouche.png");
 }
+
+.ExerciceAleatoire .Explication {
+  max-width: 33vh; 
+  max-height: 35vh;
+  border-radius: 5px; 
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  padding: 5px;
+  overflow: auto;
+  display: inline-block;
+}
+
+.ExerciceAleatoire .Explication .Lien {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.ExerciceAleatoire .Explication::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.ExerciceAleatoire .Explication::-webkit-scrollbar-thumb {
+  background-color: #F27E19;
+  border-radius: 100px;
+  max-height: 30px;
+}
+
+.ExerciceAleatoire .Lien a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #F27E19;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.ExerciceAleatoire .Lien a:hover {
+  background-color: #D1600E;
+}
+
+.ExerciceAleatoire .ExplicationEtLien {
+  position: absolute;
+  bottom: 60%;
+  left: 13%;
+  max-width: 20%; 
+  max-height: 15%; 
+}

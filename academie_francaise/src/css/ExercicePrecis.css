@@ -78,37 +78,37 @@
   content: url("../ressources/Images/renart_bouche.png");
 }
 
-.Exercice .Explication {
+.ExercicePrecis .Explication {
   max-width: 33vh; 
   max-height: 35vh;
   border-radius: 5px; 
   background-color: #ffffff;
   border: 1px solid #000000;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  text-align: left; 
+  text-align: justify; 
   padding: 5px;
   overflow: auto;
   display: inline-block;
 }
 
-.Exercice .Explication .Lien {
+.ExercicePrecis .Explication .Lien {
   text-align: center;
   margin-top: 15px;
   margin-bottom: 5px;
 }
 
-.Exercice .Explication::-webkit-scrollbar {
+.ExercicePrecis .Explication::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-.Exercice .Explication::-webkit-scrollbar-thumb {
+.ExercicePrecis .Explication::-webkit-scrollbar-thumb {
   background-color: #F27E19;
   border-radius: 100px;
   max-height: 30px;
 }
 
-.Exercice .Lien a {
+.ExercicePrecis .Lien a {
   display: inline-block;
   padding: 5px 10px;
   border-radius: 5px;
@@ -117,11 +117,11 @@
   text-decoration: none;
 }
 
-.Exercice .Lien a:hover {
+.ExercicePrecis .Lien a:hover {
   background-color: #D1600E;
 }
 
-.Exercice .ExplicationEtLien {
+.ExercicePrecis .ExplicationEtLien {
   position: absolute;
   bottom: 60%;
   left: 13%;
