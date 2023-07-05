@@ -1,23 +1,22 @@
+import React from 'react';
 import '../css/Numerotation.css';
 
-function Numerotation({ Num, onClick, isSelected, repondu }) {
-  const handleClick = () => {
-    onClick(Num);
+function Numerotation({ questions, questionCourante, onClick }) {
+  const handleClick = (index) => {
+    onClick(index);
   };
 
-  let containerClassName = 'Numerotation';
-
-  if (isSelected) {
-    containerClassName += ' selected';
-  }
-
-  if (repondu !== null) {
-    containerClassName += repondu ? ' correct' : ' incorrect';
-  }
-
   return (
-    <div className={containerClassName} onClick={handleClick}>
-      <p>{Num + 1}</p>
+    <div className='Numerotation'>
+      {questions.map((question, index) => (
+        <div
+          key={index}
+          className={`Numero ${index === questionCourante ? 'selected' : ''} ${question.repondu !== null ? (question.repondu ? 'correct' : 'incorrect') : ''}`}
+          onClick={() => handleClick(index)}
+        >
+          <p>{index + 1}</p>
+        </div>
+      ))}
     </div>
   );
 }

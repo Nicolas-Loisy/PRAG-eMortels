@@ -1,33 +1,82 @@
-function EfQuestion({ ennonce, reponse, motErreur }) {
-  const mots = ennonce.split(' '); // Divise la chaîne de caractères "ennonce" en mots individuels
-  const msgPasErreur = "Pas de faute"; // Message à afficher pour le bouton "Pas de faute"
+import '../css/EfQuestion.css';
 
+function EfQuestion({ enonce, reponse, motErreur, repondu, onUserResponse, reponseUtilisateur }) {
+  const mots = enonce.split(' ');
+  const msgPasErreur = "Pas de faute";
+
+  // Vérifie s'il s'agit de la bonne réponse ou non
+  function verifMot(mot, motErreur) {
+    if (reponse.toLowerCase().includes(msgPasErreur.toLowerCase())) {
+      if (reponse.toLowerCase().includes(mot.toLowerCase())) {
+        return true;
+      }
+    }
+    else if (!reponse.toLowerCase().includes(msgPasErreur.toLowerCase())) {
+      if (mot.toLowerCase().includes(motErreur.toLowerCase())) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  // Définition du nom de la classe (pour le style du texte)
+  function defineNomClasse(mot, repondu, isCorrection) {
+    if (isCorrection) {
+      if (mot.toLowerCase().includes(reponse.toLowerCase())) {
+        return 'correct correction';
+      } else {
+        return 'text';
+      }
+    } else if (repondu !== null) {
+      if (repondu && mot.toLowerCase().includes(reponseUtilisateur.toLowerCase())) {
+        return 'correct';
+      } else if (!repondu && mot.toLowerCase() === reponseUtilisateur.toLowerCase()) {
+        return 'incorrect';
+      } else return 'text';
+    }
+    return 'enonce';
+    
+  }
+
+  function affichageEnonce(mot, index, repondu, isCorrection) {
+    return(
+      <span
+        className={defineNomClasse(mot, repondu, isCorrection)}
+        key={index} 
+        onClick={() => repondu === null ? onUserResponse(verifMot(mot, motErreur), mot) : null} 
+        dangerouslySetInnerHTML={{ __html: mot + ' '}}
+      />
+    );
+  }
+
+  function affichageCorrection() {
+    var motCorrige;
+    if (reponse.toLowerCase().includes(msgPasErreur.toLowerCase())) 
+      return(
+        <p className='EfQuestion correction correct'>{msgPasErreur}</p>
+      );
+    else 
+      return(
+        <div className='EfQuestion correction'>
+          {mots.map((mot, index) => {
+            mot.toLowerCase().includes(motErreur.toLowerCase()) ? motCorrige = reponse : motCorrige = mot;
+            return affichageEnonce(motCorrige, index, repondu, true);
+          })}
+        </div>
+      );
+  }
+
+  // Affichage HTML (ternaires à refaire)
   return (
-    <div>
+    <div className='EfQuestion'>
       {mots.map((mot, index) => (
-        <span key={index} onClick={() => verifMot(mot, motErreur) ? console.log("Bonne réponse") : console.log("Mauvaise réponse")}>
-          {mot}{' '}
-        </span>
+        affichageEnonce(mot, index, repondu)
       ))}
-      <button onClick={() => verifMot(msgPasErreur, motErreur) ? console.log("Bonne réponse") : console.log("Mauvaise réponse")}>{msgPasErreur}</button>
+      {repondu !== null && reponseUtilisateur.toLowerCase().includes(msgPasErreur.toLowerCase()) ? <p className={defineNomClasse(msgPasErreur, repondu, false)}>{msgPasErreur}</p> : null}
+      {repondu !== null && motErreur.toLowerCase().includes(msgPasErreur.toLowerCase()) === false ? repondu && reponseUtilisateur.toLowerCase().includes(msgPasErreur.toLowerCase()) ? null : affichageCorrection() : null}
+      {repondu === null ? <button className='button' onClick={() => onUserResponse(verifMot(msgPasErreur, motErreur), msgPasErreur)}>{msgPasErreur}</button> : null}
     </div>
   );
 }
-
-function verifMot(mot, motErreur) {
-  console.log(`Mot cliqué: ${mot}`);
-  if (motErreur !== "Pas de faute") {
-    if (mot.includes(motErreur)) {
-      return true;
-    }
-  } else {
-    if (mot === motErreur) {
-      return true;
-    }
-  }
-  return false;
-}
-
-
 
 export default EfQuestion;

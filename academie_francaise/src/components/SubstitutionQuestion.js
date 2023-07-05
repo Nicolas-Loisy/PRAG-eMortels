@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/SubstitutionQuestion.css';
 
-function SubstitutionQuestion({ ennonce, reponse, repondu, onUserResponse, reponseUtilisateur }) {
+function SubstitutionQuestion({ enonce, reponse, repondu, onUserResponse, reponseUtilisateur }) {
 	const [inputValue, setInputValue] = useState('');
 	const [corrige, setCorrige] = useState('');
 
@@ -18,7 +18,7 @@ function SubstitutionQuestion({ ennonce, reponse, repondu, onUserResponse, repon
 				</>
 			);
 		}
-	}, [reponse, reponseUtilisateur, ennonce, repondu]);
+	}, [reponse, reponseUtilisateur, enonce, repondu]);
 
 	// Actions effectuées en cliquant sur "Valider"
 	function handleClick() {
@@ -45,6 +45,7 @@ function SubstitutionQuestion({ ennonce, reponse, repondu, onUserResponse, repon
 		<div className='SubstitutionQuestion'>
 			<div className='ennonce'>
 				<p dangerouslySetInnerHTML={{ __html: ennonce  }} /> {/* Affiche le contenu de "ennonce" en tant que balise HTML */}
+
 			</div>
 			{repondu === null ? (
 				<><input type="text" placeholder="Entrez votre texte ici" className="user-input" value={inputValue} onChange={(event) => setInputValue(event.target.value)} /><div className='validation'>

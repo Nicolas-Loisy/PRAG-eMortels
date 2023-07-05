@@ -1,16 +1,19 @@
 .Content {
-  text-align: center;
   display: flex;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
   flex-direction: column;
-  background-color: #f3f3f3;
-  background-image: url("../ressources/Images/fondLogoAccueilCell.png");
-  background-repeat: no-repeat;
-  background-position: top right;
+  background-color: #fff9f4;
   font-family: Georgia, Times;
   min-height: 100vh;
 }
 
-
-
-
-
+.Content .Page {
+  border-radius: 10px;
+  background-color: #ffffff;
+  max-width: 80%;
+  min-height: 80vh;
+  margin: 1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}

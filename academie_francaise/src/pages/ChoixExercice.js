@@ -46,7 +46,7 @@ function ChoixExercice() {
       const typesAffichage = formatUniqueValues(typesUniques);
       return (
         <Tag className="Cliquable" key={index}>
-          <p onClick={() => handleClick("/parcours-precis/categorie/" + params.categorie + "/sousCategorie/" + params.sousCategorie + "/niveau/" + niveau._id + "/exercice/" + exercice._id)}>
+          <p onClick={() => handleClick("/catalogue/categorie/" + params.categorie + "/sousCategorie/" + params.sousCategorie + "/niveau/" + niveau._id + "/exercice/" + exercice._id)}>
             {
               "Exercice " + exercice._id + typesAffichage
             }

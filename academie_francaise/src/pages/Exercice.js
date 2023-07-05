@@ -5,13 +5,13 @@ import QcmQuestion from "../components/QcmQuestion";
 import TrouQuestion from "../components/TrouQuestion";
 import Content from "../components/Content"
 import Tag from "../components/Tag";
-import Numerotation from "../components/Numerotation";
+import NumQuestion from "../components/NumQuestion";
 import Recap from '../components/Recap';
 
 import { api } from "../api/Api";
 
 import '../css/Exercice.css';
-import SubstitutionQuestion from '../components/SubstitutionQuestion';
+import EfQuestion from '../components/EfQuestions';
 
 function Exercice() {
   const params = useParams();
@@ -20,7 +20,7 @@ function Exercice() {
   const [voirRecap, setVoirRecap] = useState(false);
   const [renderedQuestions, setRenderedQuestions] = useState([]);
 
-  const fetchData = useCallback(async () => {
+  const fetchData =  useCallback(async () => {
     try {
       const exerciceData = await api.getExercice(
         params.categorie,
@@ -28,26 +28,26 @@ function Exercice() {
         params.niveau,
         params.exercice
       );
-
+  
       const updatedQuestions = exerciceData.exercice[0].questions.map((question) => ({
         ...question,
         repondu: null,
       }));
-
+  
       const updatedExercice = {
         ...exerciceData.exercice[0],
         questions: updatedQuestions,
       };
-
+  
       setExercice({
         ...exerciceData,
         exercice: [updatedExercice],
       });
-
+  
     } catch (error) {
       console.error(error);
     }
-  }, [params]);
+  }, [params]);  
 
   useEffect(() => {
     fetchData();
@@ -61,7 +61,7 @@ function Exercice() {
             return (
               <QcmQuestion
                 key={index}
-                ennonce={question.question}
+                enonce={question.question}
                 reponses={question.reponses}
                 repondu={question.repondu}
                 onUserResponse={(isCorrect, reponseUtilisateur) =>
@@ -74,7 +74,7 @@ function Exercice() {
             return (
               <TrouQuestion
                 key={index}
-                ennonce={question.question}
+                enonce={question.question}
                 reponse={question.reponse}
                 repondu={question.repondu}
                 onUserResponse={(isCorrect, reponseUtilisateur) =>
@@ -83,12 +83,12 @@ function Exercice() {
                 reponseUtilisateur={question.reponseUtilisateur}
               />
             );
-          case "substitution":
+          case "EF":
             return (
-              <SubstitutionQuestion
-                key={index}
-                ennonce={question.question}
+              <EfQuestion
+                enonce={question.question}
                 reponse={question.reponse}
+                motErreur={question.motErreur}
                 repondu={question.repondu}
                 onUserResponse={(isCorrect, reponseUtilisateur) =>
                   handleUserResponse(index, isCorrect, reponseUtilisateur)
@@ -183,7 +183,7 @@ function Exercice() {
                   </div>
                 ) : (
                   <div>
-                    <p className="intitule">{exercice.exercice[0].intitule}</p>
+                    <p className="intitule" dangerouslySetInnerHTML={{ __html: exercice.exercice[0].intitule}} />
                     {renderedQuestions.length > 0 && renderedQuestions[questionCourante]}
                   </div>
                 )}
@@ -230,7 +230,7 @@ function Exercice() {
                 <div className="pagination">
                   {exercice.exercice[0].questions.map((question, i) =>
                   (
-                    <Numerotation
+                    <NumQuestion
                       key={i}
                       Num={i}
                       isSelected={i === questionCourante}

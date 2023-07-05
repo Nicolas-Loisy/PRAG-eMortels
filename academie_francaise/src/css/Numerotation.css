@@ -1,4 +1,10 @@
 .Numerotation {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.Numerotation .Numero {
   border: 2px solid #2B5877;
   border-radius: 50%;
   width: 30px;
@@ -10,18 +16,18 @@
   transition: border 0.15s ease;
 }
 
-.Numerotation.correct {
+.Numerotation .Numero.correct {
   border: 2px solid #5CA03B;
 }
 
-.Numerotation.incorrect {
+.Numerotation .Numero.incorrect {
   border: 2px solid #BD0000;
 }
 
-.Numerotation:hover {
+.Numerotation .Numero:hover {
   border: 2px solid #F27E19;
 }
 
-.Numerotation.selected {
+.Numerotation .Numero.selected {
   border: 2px solid #F27E19;
 }

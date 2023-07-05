@@ -1,0 +1,75 @@
+.ExercicePrecis {
+  min-height: 60vh;
+}
+
+.ExercicePrecis .TagList {
+  display: flex;
+  justify-content: center;
+}
+
+.ExercicePrecis .TagList .col_1,
+.ExercicePrecis .TagList .col_2 {
+  width: 30%;
+  gap: 1em;
+  display: flex;
+}
+
+.ExercicePrecis .TagList .col_2 {
+  justify-content: flex-end;
+}
+
+.ExercicePrecis .pagination {
+  display: flex;
+  justify-content: center;
+  margin: 3em;
+  gap: 0.7em;
+}
+
+.ExercicePrecis .intitule {
+  margin-top: 3em;
+  font-weight: bold;
+}
+
+.ExercicePrecis .col_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ExercicePrecis .col_1,
+.ExercicePrecis .col_2,
+.ExercicePrecis .col3 {
+  flex-basis: 30%;
+}
+
+.ExercicePrecis .tagCliquable {
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.ExercicePrecis .Navigation {
+  gap: 1em;
+}
+
+.ExercicePrecis .Recap {
+  display: flex;
+  flex-direction: column;
+  min-height: 40vh;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.ExercicePrecis .Mascotte::before {
+  content: url("../ressources/Images/renart_bouche.png");
+}
+
+.ExercicePrecis .Mascotte {
+  content: url("../ressources/Images/renart_bouche_fermee_queue_droite.png");
+  max-width: 100%;
+  max-height: 45vh;
+}
+
+.ExercicePrecis .Mascotte:hover {
+  content: url("../ressources/Images/renart_bouche.png");
+}
