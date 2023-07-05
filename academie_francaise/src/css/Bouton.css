@@ -13,3 +13,9 @@
 .Bouton.Primaire:hover {
   border: 2.3px solid #F27E19;
 }
+.Bouton.Primaire.Big {
+  border-radius: 5px;
+  padding: 0.5em;
+  width: 15em;
+  min-height: 5em;
+}

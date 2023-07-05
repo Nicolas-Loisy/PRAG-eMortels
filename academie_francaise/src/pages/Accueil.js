@@ -31,12 +31,12 @@ function Accueil() {
               <Bouton
                 nom="Mode Catalogue"
                 url="/catalogue"
-                version="Primaire"
+                className="Primaire"
               />
               <Bouton
                 nom="Mode Entrainement"
                 url="/entrainement"
-                version="Primaire"
+                className="Primaire"
               />
             </div>
           </div>

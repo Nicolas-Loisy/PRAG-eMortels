@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import Content from "../components/Content";
-import ConteneurTag from "../components/ConteneurTag";
-import Tag from "../components/Tag";
+import Bouton from '../components/Bouton';
 
 import { api } from "../api/Api";
 import "../css/ChoixTheme.css";
@@ -24,34 +23,29 @@ function ChoixTheme() {
     }
   };
 
-  // Fonction pour gérer le clic sur un tag et rediriger l'utilisateur vers une autre page
-  const handleClick = (url) => {
-    window.location.href = url;
-  };
-
-  // Fonction pour rendre les tags à partir des sous-catégories d'une catégorie
-  const renderTags = (categorie) => {
-    return categorie.sousCategories.map((sousCategorie, index) => (
-      <Tag className="Cliquable" key={index}>
-        <p onClick={() => handleClick("/catalogue/categorie/" + categorie._id + "/sousCategorie/" + sousCategorie._id)}>{sousCategorie.nom}</p>
-      </Tag>
-    ));
-  };
-
   return (
     <Content>
-      <h1>Catégories</h1>
       {categories.length > 0 && (
         <div className="ChoixTheme">
-          <div className="CategorieContainer">
-            {categories.map((categorie, index) => (
-              <ConteneurTag
-                nom={categorie.nom}
-                tags={renderTags(categorie)}
-                key={index}
-              />
-            ))}
-          </div>
+          <h1>Catégories</h1>
+          {/* Pour chaque catégorie */}
+          {categories.map((categorie, index) => (
+            <div className="Categorie" key={index}>
+              <h2>{categorie.nom}</h2>
+
+              {/* Pour chaque sous-catégorie */}
+              <div className='Conteneur_SousCategorie'>
+                {categorie.sousCategories.map((sousCategorie, subIndex) => (
+                  <Bouton
+                    key={subIndex}
+                    className={"Primaire Big"}
+                    nom={sousCategorie.nom}
+                    url={"/catalogue/categorie/" + categorie._id + "/sousCategorie/" + sousCategorie._id}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       )}
     </Content>
