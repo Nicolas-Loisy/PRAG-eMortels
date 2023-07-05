@@ -1,6 +1,74 @@
-.optionContainer {
+.Accueil .Titre {
+  margin-top: 1em;
+}
+
+.Accueil .Titre img {
+  max-width: 20%;
+}
+
+.Accueil h1 {
+  font-family: "Klee_one";
+  margin: 0 auto; /* Centrer le titre h1 horizontalement */
+}
+
+.Accueil .ColContainer {
   display: flex;
-  gap: 2em;
+}
+
+.Accueil .Col1 {
+  width: 25%;
+}
+
+.Accueil .Mascotte {
+  content: url("../ressources/Images/renart_bouche_fermee_queue_droite.png");
+  max-width: 100%;
+  margin-top: 30%;
+}
+
+.Accueil .Col2 {
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 2em;
+  text-align: justify;
+}
+
+.Accueil .Col2 .Navigation {
+  margin-top: 5em;
+  display: flex;
+  gap: 1.5em;
+  justify-content: flex-end;
+}
+
+.Accueil .Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2.3px solid #2B5877;
+  min-width: 10em;
+  min-height: 2.5em;
+  border-radius: 12px;
+  transition: border 0.15s ease;
+  cursor: pointer;
+}
+
+.Accueil .Button:hover {
+  border: 2.3px solid #F27E19;
+}
+
+.BulleBD {
+  border: 2.3px solid #2B5877;
+  padding: 1em 2em;
+  border-radius: 10px;
+  background-color: white;
+  position: relative; /* Ajoutez cette ligne pour que l'élément ::after utilise une position relative à .BulleBD */
+}
+
+.BulleBD::after {
+  content: "";
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #2B5877;
+  position: absolute;
+  bottom: -20px; /* Déplace le triangle vers le bas pour le superposer au contenu */
 }

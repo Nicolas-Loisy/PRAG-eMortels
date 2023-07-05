@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Klee_one"; /* Nom de la police que vous souhaitez utiliser */
+  src: url("../ressources/font/Klee_One/KleeOne-SemiBold.ttf") format("truetype"); /* Chemin vers le fichier de police */
+}
+
 body {
   margin: 0;
   padding: 0;

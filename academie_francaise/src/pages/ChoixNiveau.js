@@ -33,7 +33,7 @@ function ChoixNiveau() {
               return (<BlocChoix
                 key={index}
                 titre={niveau.nom}
-                url={"parcours-aleatoire/niveau/" + niveau._id}
+                url={"entrainement/niveau/" + niveau._id}
                 description={"Je souhaite m'entrainer sur des questions aléatoires de niveau " + niveau._id}
               />)
             })
