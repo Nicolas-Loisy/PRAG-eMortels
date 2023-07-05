@@ -43,8 +43,8 @@ function SubstitutionQuestion({ enonce, reponse, repondu, onUserResponse, repons
 
 	return (
 		<div className='SubstitutionQuestion'>
-			<div className='ennonce'>
-				<p dangerouslySetInnerHTML={{ __html: ennonce  }} /> {/* Affiche le contenu de "ennonce" en tant que balise HTML */}
+			<div className='enonce'>
+				<p dangerouslySetInnerHTML={{ __html: enonce  }} /> {/* Affiche le contenu de "enonce" en tant que balise HTML */}
 
 			</div>
 			{repondu === null ? (
