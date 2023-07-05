@@ -1,6 +1,12 @@
 import '../css/Footer.css';
+import logo from "../ressources/Images/Logo.png";
 
 function Footer() {
+  const handleClick = (url) => {
+    window.location.href = url;
+  };
+
+
   return (
     <div className='Footer'>
 
@@ -36,6 +42,10 @@ function Footer() {
       </div>
 
       <div className='col col-3'>
+        <div className="logo" onClick={() => handleClick("/")}>
+          <img src={logo} alt="Logo" />
+          <p>Académie de Renart</p>
+        </div>
 
       </div>
     </div>

@@ -1,6 +1,7 @@
+import React from 'react';
 import '../css/QcmQuestion.css';
 
-function QcmQuestion({ ennonce, reponses, repondu, onUserResponse }) {
+function QcmQuestion({ enonce, reponses, repondu, onUserResponse, reponseUtilisateur }) {
   const handleClick = (reponse) => {
     if (repondu === null) {
       onUserResponse(reponse.correcte, reponse.reponse);
@@ -9,13 +10,13 @@ function QcmQuestion({ ennonce, reponses, repondu, onUserResponse }) {
 
   return (
     <div className='QcmQuestion'>
-      <h3>{ennonce}</h3>
+      <p>{enonce}</p>
       <ul>
         {Object.values(reponses).map((reponse, indexReponse) => (
           <li
             key={indexReponse}
             onClick={() => handleClick(reponse)}
-            className={repondu !== null ? (reponse.correcte ? 'correct' : 'incorrect') : ''}
+            className={`${repondu !== null ? (reponse.correcte ? 'correct' : 'incorrect') : ''} ${reponseUtilisateur === reponse.reponse ? 'selected' : ''}`}
           >
             {reponse.reponse}
           </li>

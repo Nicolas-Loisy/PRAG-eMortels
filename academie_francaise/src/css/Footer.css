@@ -2,8 +2,10 @@
   position: relative;
   bottom: 0;
   margin-top: auto;
-  display: flex;
+  display: flex; /* Ajout de cette ligne */
+  justify-content: flex-end; /* Aligner le contenu à droite */
   font-family: "Baskerville";
+  font-size: 80%;
   background-color: #2B5877;
   color: white;
   width: 100%;
@@ -35,4 +37,15 @@
 
 .Footer .col-1 ul {
   padding: 1em 0;
+}
+
+.Footer .logo {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.Footer .logo img {
+  max-width: 30%;
+  margin-bottom: 1em;
+  filter: invert(100%);
 }
