@@ -1,8 +1,11 @@
 import Content from "../components/Content";
 import logo from "../ressources/Images/Logo.png";
-import "../css/Accueil.css";
 import Bouton from "../components/Bouton";
 import Bulle from "../components/Bulle";
+
+import "../css/Accueil.css";
+import feuilleOlivier from "../ressources/Images/feuille-mini.png";
+
 
 function Accueil() {
   return (
@@ -28,6 +31,12 @@ function Accueil() {
               </p>
             </Bulle>
             <div className="Navigation">
+              <img src={feuilleOlivier} alt="FeuilleOlivier" />
+              <Bouton
+                nom="Défi du jour"
+                url="/DefiDuJour"
+                className="Primaire"
+              />
               <Bouton
                 nom="Catalogue"
                 url="/catalogue"

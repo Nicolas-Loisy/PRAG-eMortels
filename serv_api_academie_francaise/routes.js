@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const MyModel = require('./models/MyModel');
 
+const seedrandom = require('seedrandom');
 
 // GET /categories : Récupère la liste des catégories disponibles.
 router.get('/categories', async (req, res) => {
@@ -154,13 +155,16 @@ router.get('/exercices/:categorie/:sousCategorie/:niveau', async (req, res) => {
       }
     ]).exec();
 
+    if (!result || result.length === 0) {
+      return res.status(404).json({ error: 'Exercices not found' });
+    }
+
     res.json(result);
   } catch (error) {
     res.status(500).json({ error: 'Internal server error. Error: ' + error });
   }
 });
 
-// GET /exercice/:categorie/:sousCategorie/:niveau/:exerciceId : Récupère un exercice en fonction d'une catégorie, d'une sous-catégorie, d'un niveau et de l'id de l'exercice.
 router.get('/exercice/:categorie/:sousCategorie/:niveau/:exerciceId', async (req, res) => {
   try {
     const { categorie, sousCategorie, niveau, exerciceId } = req.params;
@@ -169,7 +173,10 @@ router.get('/exercice/:categorie/:sousCategorie/:niveau/:exerciceId', async (req
 
     const [categorieInfo, sousCategorieInfo, exo] = await Promise.all([
       MyModel.findOne({ "categories._id": categorie }, { "categories.$": 1 }),
-      MyModel.findOne({ "categories.sousCategories._id": sousCategorie }, { "categories.$": 1 }),
+      MyModel.findOne(
+        { "categories._id": categorie, "categories.sousCategories._id": sousCategorie },
+        { "categories.sousCategories.$": 1 }
+      ),
       MyModel.aggregate([
         { $unwind: "$categories" },
         { $match: { "categories._id": categorie } },
@@ -178,20 +185,23 @@ router.get('/exercice/:categorie/:sousCategorie/:niveau/:exerciceId', async (req
         { $unwind: "$categories.sousCategories.niveaux" },
         { $match: { "categories.sousCategories.niveaux._id": niveau } },
         { $unwind: "$categories.sousCategories.niveaux.exercices" },
-        { $match: { "categories.sousCategories.niveaux.exercices._id": exerciceId } },
+        {
+          $match: { "categories.sousCategories.niveaux.exercices._id": exerciceId }
+        },
         {
           $project: {
             "_id": "$categories.sousCategories.niveaux.exercices._id",
             "intitule": "$categories.sousCategories.niveaux.exercices.intitule",
             "lien": "$categories.sousCategories.niveaux.exercices.lien",
             "explication": "$categories.sousCategories.niveaux.exercices.explication",
-            "questions": "$categories.sousCategories.niveaux.exercices.questions"
+            "questions": "$categories.sousCategories.niveaux.exercices.questions",
+            "categories": 1
           }
-        }  
+        }
       ]).exec()
     ]);
 
-    if (!exo) {
+    if (!exo || exo.length === 0) {
       return res.status(404).json({ error: 'Exercice not found' });
     }
 
@@ -217,6 +227,10 @@ router.get('/niveaux', async (req, res) => {
       { $group: { _id: "$categories.sousCategories.niveaux._id", nom: { $first: "$categories.sousCategories.niveaux.nom" } } }
     ]);
 
+    if (!niveaux || niveaux.length === 0) {
+      return res.status(404).json({ error: 'Niveaux not found' });
+    }
+
     res.json(niveaux);
   } catch (err) {
     console.error('Erreur lors de la récupération des niveaux', err);
@@ -240,6 +254,10 @@ router.get('/exercices/:nbExercice', async (req, res) => {
       { $limit: parseInt(nbExercice) }
     ]);
 
+    if (!exercices || exercices.length === 0) {
+      return res.status(404).json({ error: 'Exercices not found' });
+    }
+    
     res.json(exercices);
   } catch (err) {
     console.error('Erreur lors de la récupération des exercices', err);
@@ -273,6 +291,10 @@ router.get('/questions/:nbQuestions', async (req, res) => {
         "question": question.categories.sousCategories.niveaux.exercices.questions
       };
     });
+
+    if (!formattedQuestions || formattedQuestions.length === 0) {
+      return res.status(404).json({ error: 'Questions not found' });
+    }
 
     res.json({ questions: formattedQuestions });
   } catch (err) {
@@ -309,10 +331,71 @@ router.get('/questions/:niveauId/:nbQuestions', async (req, res) => {
       };
     });
 
+    if (!formattedQuestions || formattedQuestions.length === 0) {
+      return res.status(404).json({ error: 'Questions not found' });
+    }
+
     res.json({ questions: formattedQuestions });
   } catch (err) {
     console.error('Erreur lors de la récupération des questions', err);
     res.status(500).send('Erreur lors de la récupération des questions');
+  }
+});
+
+// GET /exo-journalier : Récupère un exercice aléatoire par jour mais identique pour chaque joueur.
+router.get('/exo-journalier', async (req, res) => {
+  try {
+    const today = new Date();
+    const day = today.getDate();
+    const month = today.getMonth() + 1;
+    const year = today.getFullYear();
+
+    const dateString = `${day}-${month}-${year}`;
+    const random = seedrandom(dateString)();
+
+    const allExercises = await MyModel.aggregate([
+      { $unwind: "$categories" },
+      { $unwind: "$categories.sousCategories" },
+      { $unwind: "$categories.sousCategories.niveaux" },
+      { $unwind: "$categories.sousCategories.niveaux.exercices" },
+      {
+        $project: {
+          "_id": "$categories.sousCategories.niveaux.exercices._id",
+          "intitule": "$categories.sousCategories.niveaux.exercices.intitule",
+          "lien": "$categories.sousCategories.niveaux.exercices.lien",
+          "explication": "$categories.sousCategories.niveaux.exercices.explication",
+          "questions": "$categories.sousCategories.niveaux.exercices.questions",
+          "categorieId": "$categories._id",
+          "categorieNom": "$categories.nom",
+          "sousCategorieId": "$categories.sousCategories._id",
+          "sousCategorieNom": "$categories.sousCategories.nom",
+          "niveauId": "$categories.sousCategories.niveaux._id",
+          "niveauNom": "$categories.sousCategories.niveaux.nom"
+        }
+      }
+    ]);
+
+    const exerciseIndex = Math.floor(random * allExercises.length);
+    const exercise = allExercises[exerciseIndex];
+
+    if (!exercise) {
+      return res.status(404).json({ error: 'Exercice not found' });
+    }
+
+    res.json({
+      categorieNom: exercise.categorieNom,
+      sousCategorieNom: exercise.sousCategorieNom,
+      niveauNom: exercise.niveauNom,
+      exercice: {
+        _id: exercise._id,
+        intitule: exercise.intitule,
+        lien: exercise.lien,
+        explication: exercise.explication,
+        questions: exercise.questions
+      }
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error. Error: ' + error });
   }
 });
 

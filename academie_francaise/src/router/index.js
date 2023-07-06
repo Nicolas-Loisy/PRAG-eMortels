@@ -6,6 +6,7 @@ import ExercicePrecis from "../pages/ExercicePrecis";
 import NotFound from "../pages/NotFound";
 import ChoixNiveau from "../pages/ChoixNiveau";
 import ExerciceAleatoire from "../pages/ExerciceAleatoire";
+import ExerciceDuJour from "../pages/ExerciceDuJour";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
   {
     path: "/entrainement/niveau/:niveau",
     element: <ExerciceAleatoire />
+  },
+  {
+    path: "/DefiDuJour",
+    element: <ExerciceDuJour />
   },
   {
     path: "*",

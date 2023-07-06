@@ -6,36 +6,31 @@ import Content from "../components/Content"
 import Tag from "../components/Tag";
 import Numerotation from "../components/Numerotation";
 import Recap from '../components/Recap';
+import Chronometre from '../components/Chronometre';
 import Bulle from '../components/Bulle';
-import Bouton from '../components/Bouton';
-
 
 import { api } from "../api/Api";
 
-import '../css/ExercicePrecis.css';
+import '../css/ExerciceDuJour.css';
+import Bouton from '../components/Bouton';
 
-function ExercicePrecis() {
+function ExerciceDuJour() {
   const params = useParams();
   const [exercice, setExercice] = useState(null);
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
-  const [message, setMessage] = useState({
-    suggestion: <p>Besoin d'aide ?<br /><b>Clique sur moi !</b></p>,
-    aide: null
-  });
-  const [statutMessage, setStatutMessage] = useState("attente");
+  const [isTimerRunning, setIsTimerRunning] = useState(true);
+
+  const handleStopTimer = () => {
+    setIsTimerRunning(false);
+  };
 
   // Extraction des données de la BDD
   const fetchData = useCallback(async () => {
     try {
       // Etape 1 : Requête API
-      const exerciceData = await api.getExercice(
-        params.categorie,
-        params.sousCategorie,
-        params.niveau,
-        params.exercice
-      );
-
+      const exerciceData = await api.getExoJournalier();
+      console.log(exerciceData);
       // Etape 2 : Ajout du champ repondu = null
       const updatedQuestions = exerciceData.exercice.questions.map((question) => ({
         ...question,
@@ -53,134 +48,69 @@ function ExercicePrecis() {
         ...exerciceData,
         exercice: updatedExercice,
       });
+
     } catch (error) {
       console.error(error);
     }
-  }, [params]); // Si params change alors fetchData est actualisé
+  }, []);
 
 
   // Enregistrer la réponse d'un utilisateur
-  const handleUserResponse = (index, isCorrect, reponseUtilisateur) => {
-    setExercice((prevExercice) => {
-      // récupération de la variable exercice
-      const { exercice } = prevExercice;
+  // Enregistrer la réponse d'un utilisateur
+const handleUserResponse = (index, isCorrect, reponseUtilisateur) => {
+  setExercice((prevExercice) => {
+    // récupération de la variable exercice
+    const { exercice } = prevExercice;
 
-      // Copie des questions existantes avec le spread operator
-      const updatedQuestions = [...exercice.questions];
+    // Copie des questions existantes avec le spread operator
+    const updatedQuestions = [...exercice.questions];
 
-      // Enregistrement de la réponse de l'utilisateur
-      const updatedQuestion = {
-        ...updatedQuestions[index],
-        repondu: isCorrect,
-        reponseUtilisateur: reponseUtilisateur,
-      };
+    // Enregistrement de la réponse de l'utilisateur
+    const updatedQuestion = {
+      ...updatedQuestions[index],
+      repondu: isCorrect,
+      reponseUtilisateur: reponseUtilisateur,
+    };
 
-      // Remplace la question existante par la nouvelle question mise à jour
-      updatedQuestions[index] = updatedQuestion;
+    // Remplace la question existante par la nouvelle question mise à jour
+    updatedQuestions[index] = updatedQuestion;
 
-      // Création de l'objet updatedExercice avec les questions mises à jour
-      const updatedExercice = {
-        ...exercice,
-        questions: updatedQuestions,
-      };
+    // Création de l'objet updatedExercice avec les questions mises à jour
+    const updatedExercice = {
+      ...exercice,
+      questions: updatedQuestions,
+    };
 
-      // Retour de l'exercice mis à jour dans l'objet retourné par setExercice
-      return {
-        ...prevExercice,
-        exercice: updatedExercice,
-      };
-    });
-    setStatutMessage("aide");
-  };
+    // Retour de l'exercice mis à jour dans l'objet retourné par setExercice
+    const newExercice = {
+      ...prevExercice,
+      exercice: updatedExercice,
+    };
+
+    if (updatedExercice.questions.every((question) => question.repondu !== null)) {
+      handleStopTimer();
+    }
+
+    return newExercice;
+  });
+};
+
 
   // Afficher la question sélectionnée
   const handleClickQuestion = (numQuestion) => {
     setVoirRecap(false); // Masquer le résumé de fin d'exercice
     setQuestionCourante(numQuestion); // Modifier la question à afficher
-
-    if (exercice.exercice.questions[numQuestion] && exercice.exercice.questions[numQuestion].repondu != null){
-      setStatutMessage("aide");
-    } else {
-      setStatutMessage("attente");
-    }
   };
 
-  // Afficher l'explication/règle, l'extra et le lien
-  const handleClickMascotte = () => {
-    if (statutMessage !== "aide"){
-      setStatutMessage("aide");
-    } else {
-      setStatutMessage("masque");
-    }
-  };
-
-  // Requète API lorsque params change
+  // Effectue une requète API lorsque params change
   useEffect(() => {
     fetchData();
   }, [fetchData, params]);
 
-  // Création du message d'aide 
-  useEffect(() => {
-    if (exercice !== null) {
-      var messageAide = null;
-  
-      // Récupération du message (extra = spécifique à la question par défaut, puis explication = lié à l'exercice)
-      if (exercice.exercice.questions[questionCourante] && exercice.exercice.questions[questionCourante].extra && exercice.exercice.questions[questionCourante].extra !== null) {
-        messageAide = <p dangerouslySetInnerHTML={{ __html: exercice.exercice.questions[questionCourante].extra }} />;
-      }
-      else if (exercice.exercice.explication && exercice.exercice.explication !== null) {
-        messageAide = <p dangerouslySetInnerHTML={{ __html: exercice.exercice.explication }} />;
-      }
-  
-      // Récupération du lien avec la même logique
-      if (exercice.exercice.questions[questionCourante] && exercice.exercice.questions[questionCourante].lien && exercice.exercice.questions[questionCourante].lien !== null) {
-        messageAide = (
-          <>
-            {messageAide}
-            <a href={exercice.exercice.questions[questionCourante].lien} target='_blank' rel='noopener noreferrer'>
-              En savoir plus
-            </a>
-          </>
-        );
-      }
-      else if (exercice.exercice.lien && exercice.exercice.lien !== null) {
-        messageAide = (
-          <>
-            {messageAide}
-            <a href={exercice.exercice.lien} target='_blank' rel='noopener noreferrer'>
-              En savoir plus
-            </a>
-          </>
-        );
-      }
-  
-      // Mise à jour de la valeur 
-      setMessage(prevMessage => ({
-        ...prevMessage,
-        aide: messageAide
-      }));
-    }
-  }, [exercice, questionCourante]);
-  
-  
-  // Effectue  l'apparition d'une bulle de dialogue toutes les 10 secondes
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (statutMessage === "attente") {
-        setStatutMessage("suggestion");
-      }
-    }, 10000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [questionCourante, statutMessage]);
-
-
   return (
     <Content>
-      <h1>EXERCICE</h1>
-      <div className="ExercicePrecis">
+      <h1>DÉFI DU JOUR</h1>
+      <div className="ExerciceDuJour">
 
         {/* Tags d'identifications de l'exercice */}
         {exercice &&
@@ -196,25 +126,24 @@ function ExercicePrecis() {
 
             <div className="col_2">
               <Tag>
-                <p>{"Niveau " + params.niveau}</p>
+                <p>{exercice.niveauNom}</p>
               </Tag>
               <Tag>
-                <p>{"Exercice " + params.exercice}</p>
+                <p>{"Exercice " + exercice.exercice._id}</p>
               </Tag>
             </div>
           </div>
         }
+        
+        <Chronometre onStopTimer={handleStopTimer} isRunning={isTimerRunning} />
 
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
-            <div className="Mascotte" onClick={handleClickMascotte} />
-            {
-              statutMessage !== "attente" && statutMessage !== "masque" &&
+            <div className="Mascotte"/>
               <Bulle>
-                {message[statutMessage]}
+                <p>Bonne chance !</p>
               </Bulle>
-            }
           </div>
 
           <div className="col_2">
@@ -238,7 +167,7 @@ function ExercicePrecis() {
                       {questionCourante > 0 && (
                         <div>
                           <Tag className="Cliquable">
-                            <p onClick={() => handleClickQuestion(questionCourante - 1)}>
+                            <p onClick={() => setQuestionCourante((prevQuestionCourante) => prevQuestionCourante - 1)}>
                               Précédent
                             </p>
                           </Tag>
@@ -248,7 +177,7 @@ function ExercicePrecis() {
                       {exercice.exercice.questions[questionCourante].repondu !== null && questionCourante < exercice.exercice.questions.length - 1 && (
                         <div>
                           <Tag className="Cliquable">
-                            <p onClick={() => handleClickQuestion(questionCourante + 1)}>
+                            <p onClick={() => setQuestionCourante((prevQuestionCourante) => prevQuestionCourante + 1)}>
                               Suivant
                             </p>
                           </Tag>
@@ -264,7 +193,6 @@ function ExercicePrecis() {
                             onClick={() => {
                               setVoirRecap(true);
                               setQuestionCourante(-1);
-                              setStatutMessage("masque");
                             }}
                           >
                             Résumé
@@ -279,9 +207,9 @@ function ExercicePrecis() {
                   <div className="Recap">
                     <Recap questions={exercice.exercice.questions} />
                     <Bouton 
-                      nom={"Accueil"}
-                      url={"/"}
-                      className={"Primaire"}
+                      nom="Accueil"
+                      url="/"
+                      className="Primaire"
                     />
                   </div>
                 )}
@@ -305,4 +233,4 @@ function ExercicePrecis() {
   );
 }
 
-export default ExercicePrecis;
+export default ExerciceDuJour;

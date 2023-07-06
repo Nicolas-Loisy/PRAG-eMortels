@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 import Content from "../components/Content";
+import Bulle from '../components/Bulle';
 
 import { api } from "../api/Api";
 import "../css/ChoixNiveau.css";
@@ -32,6 +33,16 @@ function ChoixNiveau() {
             <div className='Mascotte' />
           </div>
           <div className='Col2'>
+          <Bulle>
+              <h2>Bienvenue&nbsp;dans&nbsp;mon&nbsp;entraînement jeune&nbsp;E-mortel&nbsp;!</h2>
+              <p>Dans ce mode de jeu, ton Français sera mis à rude épreuve avec une série d'exercices aléatoires concoctés par mes soins. <br/>
+                 Installe-toi confortablement et fais ton choix parmi mes trois niveaux de difficulté. Plus le chiffre du niveau est élevé, plus le défi sera relevé ! <br/>
+                 Chaque niveau comprend une série de 10 exercices sur des règles de Français variées.<br/><br/>
+                 <strong>Alors prépare-toi à affronter mes terribles niveaux et bonne chance !!! </strong>
+              </p>
+            </Bulle>
+          </div>
+          <div className='Col3'>
             <div className='Niveaux'>
               {
                 niveaux && niveaux.map((niveau, index) => {

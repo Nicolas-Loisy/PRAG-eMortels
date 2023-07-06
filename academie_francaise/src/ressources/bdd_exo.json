@@ -91,7 +91,7 @@
               ]
             },
             {
-              "_id" : "2",
+              "_id": "2",
               "nom": "Niveau 2",
               "exercices": [
                 {
@@ -211,7 +211,7 @@
               ]
             },
             {
-              "_id" : "3",
+              "_id": "3",
               "nom": "Niveau 3",
               "exercices": [
                 {
@@ -771,7 +771,7 @@
                       "_id": "1",
                       "type": "QCM",
                       "question": "J'ai ... trois croissants à la boulangerie.",
-                      "reponse": [
+                      "reponses": [
                         {
                           "_id": "1",
                           "reponse": "acheter",
@@ -788,7 +788,7 @@
                       "_id": "2",
                       "type": "QCM",
                       "question": "Avez-vous ... l'éclipse lunaire cette nuit ?",
-                      "reponse": [
+                      "reponses": [
                         {
                           "_id": "1",
                           "reponse": "contempler",
@@ -805,7 +805,7 @@
                       "_id": "3",
                       "type": "QCM",
                       "question": "Nous avons ... à le convaincre.",
-                      "reponse": [
+                      "reponses": [
                         {
                           "_id": "1",
                           "reponse": "renoncer",
@@ -822,7 +822,7 @@
                       "_id": "4",
                       "type": "QCM",
                       "question": "Allons ... en forêt cet après-midi.",
-                      "reponse": [
+                      "reponses": [
                         {
                           "_id": "1",
                           "reponse": "marcher",
@@ -839,7 +839,7 @@
                       "_id": "5",
                       "type": "QCM",
                       "question": "Ma voiture a été ... par le garagiste.",
-                      "reponse": [
+                      "reponses": [
                         {
                           "_id": "1",
                           "reponse": "réviser",
@@ -864,15 +864,15 @@
                       "_id": "1",
                       "type": "QCM",
                       "question": "Les mûres qu'ils ont ... sont délicieuses.",
-                      "choix": [
+                      "reponses": [
                         {
                           "_id": "1",
-                          "option": "ramasser",
+                          "reponse": "ramasser",
                           "correcte": false
                         },
                         {
                           "_id": "2",
-                          "option": "ramassées",
+                          "reponse": "ramassées",
                           "correcte": true
                         }
                       ]
@@ -881,15 +881,15 @@
                       "_id": "2",
                       "type": "QCM",
                       "question": "Il faut se ... les mains avant de dîner.",
-                      "choix": [
+                      "reponses": [
                         {
                           "_id": "1",
-                          "option": "laver",
+                          "reponse": "laver",
                           "correcte": true
                         },
                         {
                           "_id": "2",
-                          "option": "lavé",
+                          "reponse": "lavé",
                           "correcte": false
                         }
                       ]
@@ -898,15 +898,15 @@
                       "_id": "3",
                       "type": "QCM",
                       "question": "Elle s'est ... avant de sortir.",
-                      "choix": [
+                      "reponses": [
                         {
                           "_id": "1",
-                          "option": "doucher",
+                          "reponse": "doucher",
                           "correcte": false
                         },
                         {
                           "_id": "2",
-                          "option": "douchée",
+                          "reponse": "douchée",
                           "correcte": true
                         }
                       ]
@@ -915,15 +915,15 @@
                       "_id": "4",
                       "type": "QCM",
                       "question": "Quand iras-tu ... ton petit frère à l'école ?",
-                      "choix": [
+                      "reponses": [
                         {
                           "_id": "1",
-                          "option": "chercher",
+                          "reponse": "chercher",
                           "correcte": true
                         },
                         {
                           "_id": "2",
-                          "option": "cherché",
+                          "reponse": "cherché",
                           "correcte": false
                         }
                       ]
@@ -932,15 +932,15 @@
                       "_id": "5",
                       "type": "QCM",
                       "question": "J'ai beaucoup ri à l'histoire qu'elle m'a ... .",
-                      "choix": [
+                      "reponses": [
                         {
                           "_id": "1",
-                          "option": "raconter",
+                          "reponse": "raconter",
                           "correcte": false
                         },
                         {
                           "_id": "2",
-                          "option": "racontée",
+                          "reponse": "racontée",
                           "correcte": true
                         }
                       ]
@@ -1029,9 +1029,9 @@
                     {
                       "_id": "4",
                       "type": "reperage",
-                      "question": "Les&nbsp;enfants, nous les avons vus hier.",
-                      "reponse": "les",
-                      "extra": "(« les » = C.O.D. ; « Les enfants » = mot qui détermine l'accord du participe passé)"
+                      "question": "La tâche qu'il a accomplie est considérable.",
+                      "reponse": "qu'",
+                      "extra": "(« qu’ » = C.O.D. ; « La tâche » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "5",
@@ -1455,7 +1455,7 @@
                     {
                       "_id": "1",
                       "type": "EF",
-                      "question": "Il a peut&nbsp;être changé d'avis.", 
+                      "question": "Il a peut&nbsp;être changé d'avis.",
                       "reponse": "peut-être",
                       "motErreur": "peut&nbsp;être"
                     },

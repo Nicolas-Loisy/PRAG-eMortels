@@ -24,6 +24,7 @@ function Content({ children }) {
       } else if (url.includes("entrainement")) {
         baseURL += "entrainement";
       }
+
     } else {
         if (url.includes("catalogue")) {
           array.push({ nom: "Accueil", url: baseURL });
@@ -32,6 +33,10 @@ function Content({ children }) {
         if (url.includes("entrainement")) {
           array.push({ nom: "Accueil", url: baseURL });
           array.push({ nom: "Entrainement" });
+        }
+        if (url.includes("DefiDuJour")) {
+          array.push({ nom: "Accueil", url: baseURL });
+          array.push({ nom: "Défi du jour" });
         }
     }
 

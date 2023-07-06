@@ -1,25 +1,55 @@
-.ChoixNiveau .ColContainer{
+.ChoixNiveau .ColContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .ChoixNiveau .Col1 {
-  width: 30%;
+  width: 25%;
   position: relative;
+  margin-bottom: -1em;
+}
+
+.ChoixNiveau .Mascotte {
+  content: url("../ressources/Images/renart4_epee.png");
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .ChoixNiveau .Col2 {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+.ChoixNiveau .Bulle h2 {
+  margin-bottom: 0.7em;
+}
+
+.ChoixNiveau .Bulle {
+  margin-bottom: 4px; /* Ajoute un espace de 10 pixels en bas du paragraphe */
+} 
+
+.ChoixNiveau .Col3 {
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+.ChoixNiveau .Col3 {
   max-width: 50%;
 }
 
-.ChoixNiveau .Col2 .Niveaux {
+.ChoixNiveau .Col3 .Niveaux {
   margin: 4em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ChoixNiveau .Col2 .Niveaux .Bouton {
+.ChoixNiveau .Col3 .Niveaux .Bouton {
   margin-bottom: 2em;
-}
+} 
