@@ -91,7 +91,7 @@
               ]
             },
             {
-              "_id" : "2",
+              "_id": "2",
               "nom": "Niveau 2",
               "exercices": [
                 {
@@ -211,7 +211,7 @@
               ]
             },
             {
-              "_id" : "3",
+              "_id": "3",
               "nom": "Niveau 3",
               "exercices": [
                 {
@@ -1029,7 +1029,7 @@
                     {
                       "_id": "4",
                       "type": "reperage",
-                      "question": "Les&nbsp;enfants, nous les avons vus hier.",
+                      "question": "Les enfants, nous les avons vus hier.",
                       "reponse": "les",
                       "extra": "(« les » = C.O.D. ; « Les enfants » = mot qui détermine l'accord du participe passé)"
                     },
@@ -1455,7 +1455,7 @@
                     {
                       "_id": "1",
                       "type": "EF",
-                      "question": "Il a peut&nbsp;être changé d'avis.", 
+                      "question": "Il a peut&nbsp;être changé d'avis.",
                       "reponse": "peut-être",
                       "motErreur": "peut&nbsp;être"
                     },
