@@ -7,10 +7,12 @@ import Tag from "../components/Tag";
 import Numerotation from "../components/Numerotation";
 import Recap from '../components/Recap';
 import Chronometre from '../components/Chronometre';
+import Bulle from '../components/Bulle';
 
 import { api } from "../api/Api";
 
 import '../css/ExerciceDuJour.css';
+import Bouton from '../components/Bouton';
 
 function ExerciceDuJour() {
   const params = useParams();
@@ -138,6 +140,10 @@ const handleUserResponse = (index, isCorrect, reponseUtilisateur) => {
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
+            <div className="Mascotte"/>
+              <Bulle>
+                <p>Bonne chance !</p>
+              </Bulle>
           </div>
 
           <div className="col_2">
@@ -200,11 +206,11 @@ const handleUserResponse = (index, isCorrect, reponseUtilisateur) => {
                   /* Affichage du score du joueur */
                   <div className="Recap">
                     <Recap questions={exercice.exercice.questions} />
-                    <div>
-                      <Tag className="Cliquable">
-                        <p onClick={() => { window.location.href = "/" }}>Accueil</p>
-                      </Tag>
-                    </div>
+                    <Bouton 
+                      nom="Accueil"
+                      url="/"
+                      className="Primaire"
+                    />
                   </div>
                 )}
 

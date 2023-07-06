@@ -11,6 +11,7 @@ import Bouton from '../components/Bouton';
 import { api } from "../api/Api";
 
 import '../css/ExerciceAleatoire.css';
+import Bulle from '../components/Bulle';
 
 function ExerciceAleatoire() {
   const params = useParams();
@@ -119,6 +120,9 @@ function ExerciceAleatoire() {
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
               <div className="Mascotte" />
+              <Bulle>
+                <p>Bon courage !</p>
+              </Bulle>
           </div>
 
           <div className="col_2">

@@ -78,6 +78,10 @@
   content: url("../ressources/Images/renart_bouche.png");
 }
 
-.ExercicePrecis .Recap .Bouton {
+.ExerciceAleatoire .Recap .Bouton {
   margin-bottom: 2em;
+}
+
+.ExerciceAleatoire .Bulle {
+  margin-top: 3em;
 }
