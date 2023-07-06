@@ -1071,14 +1071,8 @@
                       "_id": "2",
                       "type": "EF",
                       "question": "Ces prisonniers, ils les ont laissés partir",
-                      "reponses": [
-                        "Pas de faute.",
-                        "laissé"
-                      ],
-                      "motsErreur": [
-                        "",
-                        "laissés"
-                      ]
+                      "reponse": "Pas de faute.",
+                      "motsErreur": ""
                     },
                     {
                       "_id": "3",
@@ -1866,10 +1860,7 @@
                       "_id": "3",
                       "type": "phraseTrous",
                       "question": "Il cherche un appartement avec un (rooftop) ... .",
-                      "reponses": [
-                        "toit-terrasse",
-                        "toit en terrasse"
-                      ],
+                      "reponse": "toit-terrasse",
                       "extra": "(Le mot anglais <I>rooftop<i> est composé de <I>roof<i>, « le toit » et de top, « la partie supérieure, le dessus », et désigne la couverture plate d'un bâtiment pouvant être aménagée. Les locutions françaises <I>toit en terrasse<i> ou <I>toit-terrasse<i> rendent compte de cette réalité.)",
                       "lien": "https://www.academie-francaise.fr/roof-top"
                     },
@@ -1885,10 +1876,7 @@
                       "_id": "5",
                       "type": "phraseTrous",
                       "question": "Il collectionne le mobilier des (seventies) ... .",
-                      "reponses": [
-                        "années 1970",
-                        "années soixante-dix"
-                      ],
+                      "reponse": "années soixante-dix",
                       "extra": "(La façon de situer un événement dans une décennie particulière en disant « les années » suivi d'une date arrondie à la dizaine, est implantée dans notre langue depuis longtemps. Aussi, il n'est pas nécessaire de remplacer ces formes par un équivalent anglais comme <I>seventies<i> ou <I>eighties<i>... Rappelons enfin que l'on peut écrire la décennie en toutes lettres, lorsqu'il n'y a pas d'ambiguïté sur le siècle : <I>le cinéma des années soixante, la crise des années trente<i>...)",
                       "lien": "https://www.academie-francaise.fr/les-sixties-les-seventies"
                     }
@@ -1976,10 +1964,7 @@
                       "_id": "4",
                       "type": "phraseTrous",
                       "question": "On lui reproche de ne pas avoir (un esprit corporate) ... .",
-                      "reponses": [
-                        "un esprit de corps",
-                        "la culture de l'entreprise"
-                      ],
+                      "reponse": "un esprit de corps",
                       "extra": "(L'adjectif anglais <I>corporate<i> s'entend de plus en plus en français. Ce mot est issu du latin <I>corporatus<i>, participe passé de <I>corporare<i>, « incorporer », et, conformément à son étymologie, il signifie « qui a un esprit de corps ». Cette locution ou d'autres de même sens peuvent avantageusement se substituer à cet anglicisme.)",
                       "lien": "https://www.academie-francaise.fr/corporate"
                     },
@@ -2075,11 +2060,7 @@
                       "_id": "4",
                       "type": "phraseTrous",
                       "question": "Elle adore les bibelots (vintage) ... .",
-                      "reponses": [
-                        "anciens",
-                        "rétro",
-                        "d'époque"
-                      ],
+                      "reponse": "d'époque",
                       "extra": "(Le nom anglais <em>vintage</em> est dérivé de <em>vint(ner), </em>lui-même emprunté de l'ancien français <em>vinetier, </em>« vigneron ». <em>Vintage </em>qualifie d'abord un porto d'une cuvée particulière ou d'un millésime particulier. Cet emploi, correct quand il désigne un porto, ne doit pas, par extension, qualifier tel ou tel objet qui, comme les grands crus, aurait pris de la valeur en vieillissant. C'est en ce sens que cet adjectif tend à se répandre en français ; on peut le remplacer par la locution adjectivale <em>d'époque </em>ou, si l'on veut garder la métaphore vinicole, par l'adjectif <em>millésimé.</em>)",
                       "lien": "https://www.academie-francaise.fr/vintage"
                     },
