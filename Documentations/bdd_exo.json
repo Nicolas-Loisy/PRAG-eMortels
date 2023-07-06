@@ -1072,7 +1072,7 @@
                       "type": "EF",
                       "question": "Ces prisonniers, ils les ont laissés partir",
                       "reponse": "Pas de faute.",
-                      "motsErreur": ""
+                      "motErreur": ""
                     },
                     {
                       "_id": "3",
