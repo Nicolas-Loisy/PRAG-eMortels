@@ -72,7 +72,7 @@ function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUti
   // Affichage HTML (ternaires à refaire)
   return (
     <div className='ReperageQuestion'>
-      <div className='enonce'>
+      <div className='ReperageQuestion lenonce'>
         {mots.map((mot, index) => (
           affichageEnonce(mot, index, repondu)
         ))}

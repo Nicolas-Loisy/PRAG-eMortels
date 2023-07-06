@@ -51,9 +51,11 @@
   margin-top: 1em;
 }
 
-.ReperageQuestion .enonce {
+.ReperageQuestion .lenonce {
   margin-top: 1em;
   border-radius: 10px;
   background-color: #f9f8f8;
   padding: 40px;
+  font-family: 'Amethysta';
+  font-size: 110%;
 }

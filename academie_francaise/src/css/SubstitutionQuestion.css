@@ -85,6 +85,13 @@
     border-radius: 10px;
     background-color: #f9f8f8;
     padding: 40px;
+    font-size: 110%;
+    font-family: 'Amethysta';
+}
+
+.SubstitutionQuestion div.enonce p {
+    font-size: 110%;
+    font-family: 'Amethysta';
 }
 
 .SubstitutionQuestion {

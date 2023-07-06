@@ -69,10 +69,11 @@ function EfQuestion({ enonce, reponse, motErreur, repondu, onUserResponse, repon
   // Affichage HTML (ternaires à refaire)
   return (
     <div className='EfQuestion'>
-      <div className='EfQuestion enonce '>
+      <div className='EfQuestion lenonce'>
         {mots.map((mot, index) => (
           affichageEnonce(mot, index, repondu)
-        ))}</div>
+        ))}
+      </div>
       {repondu !== null && reponseUtilisateur.toLowerCase().includes(msgPasErreur.toLowerCase()) ? <p className={defineNomClasse(msgPasErreur, repondu, false)}>{msgPasErreur}</p> : null}
       {repondu !== null && motErreur.toLowerCase().includes(msgPasErreur.toLowerCase()) === false ? repondu && reponseUtilisateur.toLowerCase().includes(msgPasErreur.toLowerCase()) ? null : affichageCorrection() : null}
       {repondu === null ? <button className='button' onClick={() => onUserResponse(verifMot(msgPasErreur, motErreur), msgPasErreur)}>{msgPasErreur}</button> : null}
