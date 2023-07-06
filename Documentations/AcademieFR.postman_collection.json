@@ -59,7 +59,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/niveaux/:categorie/:sousCategorie",
+					"raw": "http://localhost:3000/api/niveaux_types_exo/:categorie/:sousCategorie",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -67,7 +67,7 @@
 					"port": "3000",
 					"path": [
 						"api",
-						"niveaux",
+						"niveaux_types_exo",
 						":categorie",
 						":sousCategorie"
 					],
@@ -107,15 +107,15 @@
 					"variable": [
 						{
 							"key": "categorie",
-							"value": "syntaxe"
+							"value": "lexique"
 						},
 						{
 							"key": "sousCategorie",
-							"value": "couleur"
+							"value": "anglicismes"
 						},
 						{
 							"key": "niveau",
-							"value": "1"
+							"value": "2"
 						}
 					]
 				}
@@ -265,6 +265,26 @@
 							"key": "nbExercice",
 							"value": "2"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exo-journalier",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/exo-journalier",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"exo-journalier"
 					]
 				}
 			},

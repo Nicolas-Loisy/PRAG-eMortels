@@ -177,6 +177,18 @@ class Api {
       throw error;
     }
   }
+
+  /**
+   * GET /exo-journalier
+   */
+  async getExoJournalier() {
+    try {
+      return await this.get(`/exo-journalier`);
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
 }
 
 export const api = new Api("http://localhost:3000/api");
