@@ -5,21 +5,41 @@
 }
 
 .ChoixNiveau .Col1 {
-  width: 30%;
+  width: 15%;
   position: relative;
 }
 
+.ChoixNiveau .Mascotte {
+  content: url("../ressources/Images/renart_bouche.png");
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.ChoixNiveau .Bulle h2 {
+  margin-bottom: 0.7em;
+}
+
 .ChoixNiveau .Col2 {
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+.ChoixNiveau .Col3 {
   max-width: 50%;
 }
 
-.ChoixNiveau .Col2 .Niveaux {
+.ChoixNiveau .Col3 .Niveaux {
   margin: 4em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ChoixNiveau .Col2 .Niveaux .Bouton {
+.ChoixNiveau .Col3 .Niveaux .Bouton {
   margin-bottom: 2em;
 }
+
