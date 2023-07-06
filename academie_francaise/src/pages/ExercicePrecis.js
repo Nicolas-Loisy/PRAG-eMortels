@@ -7,6 +7,8 @@ import Tag from "../components/Tag";
 import Numerotation from "../components/Numerotation";
 import Recap from '../components/Recap';
 import Bulle from '../components/Bulle';
+import Bouton from '../components/Bouton';
+
 
 import { api } from "../api/Api";
 
@@ -118,7 +120,7 @@ function ExercicePrecis() {
       var messageAide = null;
   
       // Récupération du message (extra = spécifique à la question par défaut, puis explication = lié à l'exercice)
-      if (exercice.exercice.questions[questionCourante].extra && exercice.exercice.questions[questionCourante].extra !== null) {
+      if (exercice.exercice.questions[questionCourante] && exercice.exercice.questions[questionCourante].extra && exercice.exercice.questions[questionCourante].extra !== null) {
         messageAide = <p dangerouslySetInnerHTML={{ __html: exercice.exercice.questions[questionCourante].extra }} />;
       }
       else if (exercice.exercice.explication && exercice.exercice.explication !== null) {
@@ -126,11 +128,11 @@ function ExercicePrecis() {
       }
   
       // Récupération du lien avec la même logique
-      if (exercice.exercice.questions[questionCourante].lien && exercice.exercice.questions[questionCourante].lien !== null) {
+      if (exercice.exercice.questions[questionCourante] && exercice.exercice.questions[questionCourante].lien && exercice.exercice.questions[questionCourante].lien !== null) {
         messageAide = (
           <>
             {messageAide}
-            <a className='BoutonBulle' href={exercice.exercice.questions[questionCourante].lien} target='_blank' rel='noopener noreferrer'>
+            <a href={exercice.exercice.questions[questionCourante].lien} target='_blank' rel='noopener noreferrer'>
               En savoir plus
             </a>
           </>
@@ -140,7 +142,7 @@ function ExercicePrecis() {
         messageAide = (
           <>
             {messageAide}
-            <a className='BoutonBulle' href={exercice.exercice.lien} target='_blank' rel='noopener noreferrer'>
+            <a href={exercice.exercice.lien} target='_blank' rel='noopener noreferrer'>
               En savoir plus
             </a>
           </>
@@ -201,15 +203,13 @@ function ExercicePrecis() {
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
-            <div>
-              <div className="Mascotte" onClick={handleClickMascotte} />
-              {
-                statutMessage !== "attente" && statutMessage !== "masque" &&
-                <Bulle>
-                  {message[statutMessage]}
-                </Bulle>
-              }
-            </div>
+            <div className="Mascotte" onClick={handleClickMascotte} />
+            {
+              statutMessage !== "attente" && statutMessage !== "masque" &&
+              <Bulle>
+                {message[statutMessage]}
+              </Bulle>
+            }
           </div>
 
           <div className="col_2">
@@ -272,11 +272,11 @@ function ExercicePrecis() {
                   /* Affichage du score du joueur */
                   <div className="Recap">
                     <Recap questions={exercice.exercice.questions} />
-                    <div>
-                      <Tag className="Cliquable">
-                        <p onClick={() => { window.location.href = "/" }}>Accueil</p>
-                      </Tag>
-                    </div>
+                    <Bouton 
+                      nom={"Accueil"}
+                      url={"/"}
+                      className={"Primaire"}
+                    />
                   </div>
                 )}
 

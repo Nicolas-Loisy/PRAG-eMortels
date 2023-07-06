@@ -6,6 +6,7 @@ import Content from "../components/Content"
 import Tag from "../components/Tag";
 import Numerotation from "../components/Numerotation";
 import Recap from '../components/Recap';
+import Bouton from '../components/Bouton';
 
 import { api } from "../api/Api";
 
@@ -180,11 +181,11 @@ function ExerciceAleatoire() {
                   /* Affichage du score du joueur */
                   <div className="Recap">
                     <Recap questions={questions} />
-                    <div>
-                      <Tag className="Cliquable">
-                        <p onClick={() => { window.location.href = "/" }}>Accueil</p>
-                      </Tag>
-                    </div>
+                    <Bouton 
+                      nom={"Accueil"}
+                      url={"/"}
+                      className={"Primaire"}
+                    />
                   </div>
                 )}
 
