@@ -5,6 +5,10 @@
 .QcmQuestion p {
   margin-bottom: 1em;
   font-size: 110%;
+  margin-top: 1em;
+  border-radius: 10px;
+  background-color: #f9f8f8;
+  padding: 40px;
 }
 
 .QcmQuestion ul {
@@ -41,4 +45,3 @@
   cursor: default;
   border: 2px solid #BD0000;
 }
-

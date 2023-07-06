@@ -7,7 +7,7 @@ function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUti
   function nbIterationMot(index, mot) {
     var nbIteration = 0;
     for (var i = 0; i <= index; i++) {
-      if (mots[i].toLowerCase().includes(mot.toLowerCase())) { 
+      if (mots[i].toLowerCase().includes(mot.toLowerCase())) {
         nbIteration++;
       }
     }
@@ -17,7 +17,7 @@ function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUti
   // Vérifie s'il s'agit de la bonne réponse ou non
   function verifMot(mot, index) {
     if (reponse.toLowerCase().includes(mot.toLowerCase()) && nbIterationMot(index, mot) <= 1) {
-        return true;
+      return true;
     }
     return false;
   }
@@ -45,36 +45,38 @@ function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUti
       } else return 'text';
     }
     return 'enonce';
-    
+
   }
 
   function affichageEnonce(mot, index, repondu, isCorrection) {
-    return(
+    return (
       <span
         className={defineNomClasse(mot, repondu, index, isCorrection)}
-        key={index} 
+        key={index}
         onClick={() => repondu === null ? onUserResponse(verifMot(mot, index), mot) : null}
-        dangerouslySetInnerHTML={{ __html: mot.includes("'") ? mot : mot + ' '}}
+        dangerouslySetInnerHTML={{ __html: mot.includes("'") ? mot : mot + ' ' }}
       />
     );
   }
 
   function affichageCorrection() {
-    return(
-        <div className='ReperageQuestion correction'>
-            {mots.map((mot, index) => {
-                return affichageEnonce(mot, index, repondu, true);
-            })}
-        </div>
+    return (
+      <div className='ReperageQuestion correction'>
+        {mots.map((mot, index) => {
+          return affichageEnonce(mot, index, repondu, true);
+        })}
+      </div>
     );
   }
 
   // Affichage HTML (ternaires à refaire)
   return (
     <div className='ReperageQuestion'>
-      {mots.map((mot, index) => (
-        affichageEnonce(mot, index, repondu)
-      ))}
+      <div className='ReperageQuestion lenonce'>
+        {mots.map((mot, index) => (
+          affichageEnonce(mot, index, repondu)
+        ))}
+      </div>
       {repondu !== null && !repondu ? affichageCorrection() : null}
     </div>
   );
