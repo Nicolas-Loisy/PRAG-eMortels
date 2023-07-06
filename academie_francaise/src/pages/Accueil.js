@@ -1,9 +1,11 @@
 import Content from "../components/Content";
 import logo from "../ressources/Images/Logo.png";
-import feuilleOlivier from "../ressources/Images/feuille-mini.png";
-import "../css/Accueil.css";
 import Bouton from "../components/Bouton";
 import Bulle from "../components/Bulle";
+
+import "../css/Accueil.css";
+import feuilleOlivier from "../ressources/Images/feuille-mini.png";
+
 
 function Accueil() {
   return (

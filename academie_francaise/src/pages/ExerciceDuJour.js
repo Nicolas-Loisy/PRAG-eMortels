@@ -52,7 +52,7 @@ function ExerciceDuJour() {
     } catch (error) {
       console.error(error);
     }
-  }, [params]); // Si params change alors fetchData est actualisé
+  }, []);
 
 
   // Enregistrer la réponse d'un utilisateur
