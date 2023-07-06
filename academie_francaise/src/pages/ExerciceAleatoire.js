@@ -17,7 +17,7 @@ function ExerciceAleatoire() {
   const [questions, setQuestions] = useState([]);
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
-  const [voirExplication, setVoirExplication] = useState(false);
+
 
   const fetchData = useCallback(async () => {
     try {
@@ -71,12 +71,6 @@ function ExerciceAleatoire() {
   const handleClickQuestion = (numQuestion) => {
     setVoirRecap(false); // Masquer le résumé de fin d'exercice
     setQuestionCourante(numQuestion); // Modifier la question à afficher
-    setVoirExplication(false); // Masquer l'explication de l'exercice
-  };
-
-  // Afficher l'explication/règle, l'extra et le lien
-  const handleClickExplication = () => {
-    setVoirExplication(!voirExplication);
   };
 
   // Effectue une requète API lorsque params change
@@ -123,18 +117,7 @@ function ExerciceAleatoire() {
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
-            <div className="Mascotte" onClick={handleClickExplication}/>
-              {/* Affichage de la règle de français et du lien si ils existent */}
-              {voirExplication && exercice.exercice.explication && exercice.exercice.lien && (
-                    <div className='ExplicationEtLien'>
-                      <div className="Explication">
-                        <p dangerouslySetInnerHTML={{ __html: exercice.exercice.explication}}/>
-                        <div className="Lien">
-                          <a href={exercice.exercice.lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
-                        </div>
-                      </div>
-                    </div>
-              )}
+              <div className="Mascotte" />
           </div>
 
           <div className="col_2">

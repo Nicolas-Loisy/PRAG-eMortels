@@ -17,8 +17,11 @@ function ExercicePrecis() {
   const [exercice, setExercice] = useState(null);
   const [questionCourante, setQuestionCourante] = useState(0);
   const [voirRecap, setVoirRecap] = useState(false);
-  const [voirExplication, setVoirExplication] = useState(false);
-  const [voirBulle, setVoirBulle] = useState(false);
+  const [message, setMessage] = useState({
+    suggestion: <p>Besoin d'aide ?<br /><b>Clique sur moi !</b></p>,
+    aide: null
+  });
+  const [statutMessage, setStatutMessage] = useState("attente");
 
   // Extraction des données de la BDD
   const fetchData = useCallback(async () => {
@@ -48,7 +51,6 @@ function ExercicePrecis() {
         ...exerciceData,
         exercice: updatedExercice,
       });
-
     } catch (error) {
       console.error(error);
     }
@@ -74,12 +76,6 @@ function ExercicePrecis() {
       // Remplace la question existante par la nouvelle question mise à jour
       updatedQuestions[index] = updatedQuestion;
 
-      // Vérification si l'utilisateur a répondu à la question
-      const aRepondu = updatedQuestions.some((question) => question.repondu !== null);
-
-      // Mettre à jour l'état de voirExplication en fonction de la réponse de l'utilisateur
-      setVoirExplication(aRepondu);
-
       // Création de l'objet updatedExercice avec les questions mises à jour
       const updatedExercice = {
         ...exercice,
@@ -92,42 +88,88 @@ function ExercicePrecis() {
         exercice: updatedExercice,
       };
     });
+    setStatutMessage("aide");
   };
 
   // Afficher la question sélectionnée
   const handleClickQuestion = (numQuestion) => {
     setVoirRecap(false); // Masquer le résumé de fin d'exercice
     setQuestionCourante(numQuestion); // Modifier la question à afficher
-    setVoirExplication(false); // Masquer l'explication de l'exercice
-    setVoirBulle(false); // Masquer la bulle de discussion de la mascotte
+    setStatutMessage("attente");
   };
 
   // Afficher l'explication/règle, l'extra et le lien
-  const handleClickExplication = () => {
-    setVoirExplication(!voirExplication); // Changer l'apparition de l'explication à chaque clic
-    setVoirBulle(false); // Masquer la bulle de discussion de la mascotte
+  const handleClickMascotte = () => {
+    if (statutMessage !== "aide"){
+      setStatutMessage("aide");
+    } else {
+      setStatutMessage("masque");
+    }
   };
 
-  // Effectue une requète API lorsque params change
+  // Requète API lorsque params change
   useEffect(() => {
     fetchData();
   }, [fetchData, params]);
 
+  // Création du message d'aide 
+  useEffect(() => {
+    if (exercice !== null) {
+      var messageAide = null;
+  
+      // Récupération du message (extra = spécifique à la question par défaut, puis explication = lié à l'exercice)
+      if (exercice.exercice.questions[questionCourante].extra && exercice.exercice.questions[questionCourante].extra !== null) {
+        messageAide = <p dangerouslySetInnerHTML={{ __html: exercice.exercice.questions[questionCourante].extra }} />;
+      }
+      else if (exercice.exercice.explication && exercice.exercice.explication !== null) {
+        messageAide = <p dangerouslySetInnerHTML={{ __html: exercice.exercice.explication }} />;
+      }
+  
+      // Récupération du lien avec la même logique
+      if (exercice.exercice.questions[questionCourante].lien && exercice.exercice.questions[questionCourante].lien !== null) {
+        messageAide = (
+          <>
+            {messageAide}
+            <a className='BoutonBulle' href={exercice.exercice.questions[questionCourante].lien} target='_blank' rel='noopener noreferrer'>
+              En savoir plus
+            </a>
+          </>
+        );
+      }
+      else if (exercice.exercice.lien && exercice.exercice.lien !== null) {
+        messageAide = (
+          <>
+            {messageAide}
+            <a className='BoutonBulle' href={exercice.exercice.lien} target='_blank' rel='noopener noreferrer'>
+              En savoir plus
+            </a>
+          </>
+        );
+      }
+  
+      // Mise à jour de la valeur 
+      setMessage(prevMessage => ({
+        ...prevMessage,
+        aide: messageAide
+      }));
+    }
+  }, [exercice, questionCourante]);
+  
+  
   // Effectue  l'apparition d'une bulle de dialogue toutes les 10 secondes
   useEffect(() => {
-    setVoirBulle(false); // Réinitialise la valeur de voirBulle à false à chaque changement de question
-
     const timeout = setTimeout(() => {
-      if (!voirExplication){
-        setVoirBulle(true); // Active la bulle après 10 secondes
+      if (statutMessage === "attente") {
+        setStatutMessage("suggestion");
       }
-    }, 2000);
-  
+    }, 10000);
+
     return () => {
-      clearTimeout(timeout); // Annule le timer lorsque le composant est démonté
+      clearTimeout(timeout);
     };
-  }, [questionCourante, voirExplication]);
-  
+  }, [questionCourante, statutMessage]);
+
+
   return (
     <Content>
       <h1>EXERCICE</h1>
@@ -159,51 +201,15 @@ function ExercicePrecis() {
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
-            <div className="Mascotte" onClick={handleClickExplication}/>
-              {/* Affichage de la bulle de dialogue uniquement après 10s et si l'utilisateur n'a pas déjà répondu */}
-              {voirBulle && exercice.exercice.questions[questionCourante].repondu === null && !exercice.exercice.questions[questionCourante].extra && !exercice.exercice.questions[questionCourante].lien && (
+            <div>
+              <div className="Mascotte" onClick={handleClickMascotte} />
+              {
+                statutMessage !== "attente" && statutMessage !== "masque" &&
                 <Bulle>
-                <p> Si tu as besoin d'aide pour cette question, n'hésite pas à cliquer sur moi ! <br/>
-                    Je suis là pour t'assister et te guider dans la bonne direction.
-                </p>
-              </Bulle>
-              )}
-
-              {/* Affichage de la règle de français et du lien s'ils existent */}
-              {voirExplication && exercice.exercice.explication && exercice.exercice.lien && (
-                    <div className='ExplicationEtLien'>
-                      <div className="Explication">
-                        <p dangerouslySetInnerHTML={{ __html: exercice.exercice.explication}}/>
-                        <div className="Lien">
-                          <a href={exercice.exercice.lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
-                        </div>
-                      </div>
-                    </div>
-              )}
-              
-              {/* Affichage de la règle de français et du lien s'ils existent */}
-              {voirExplication && exercice.exercice.explication && exercice.exercice.lien && (
-                    <div className='ExplicationEtLien'>
-                      <div className="Explication">
-                        <p dangerouslySetInnerHTML={{ __html: exercice.exercice.explication}}/>
-                        <div className="Lien">
-                          <a href={exercice.exercice.lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
-                        </div>
-                      </div>
-                    </div>
-              )}
-
-              {/* Affichage de l'extra et du lien s'ils existent et que l'utilisateur ait répondu à la question */}
-              {voirExplication && exercice.exercice.questions[questionCourante].repondu !== null && exercice.exercice.questions[questionCourante].extra && exercice.exercice.questions[questionCourante].lien && (
-                    <div className='ExplicationEtLien'>
-                      <div className="Explication">
-                        <p dangerouslySetInnerHTML={{ __html: exercice.exercice.questions[questionCourante].extra}}/>
-                        <div className="Lien">
-                          <a href={exercice.exercice.questions[questionCourante].lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
-                        </div>
-                      </div>
-                    </div>
-              )}
+                  {message[statutMessage]}
+                </Bulle>
+              }
+            </div>
           </div>
 
           <div className="col_2">
