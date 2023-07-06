@@ -94,7 +94,7 @@ function ExerciceAleatoire() {
       <div className="ExerciceAleatoire">
         <h1>EXERCICE</h1>
         {/* Tags d'identifications de l'exercice */}
-        {exercice &&
+        {exercice && exercice[questionCourante] &&
           <div className="TagList">
             <div className="col_1">
               <Tag>

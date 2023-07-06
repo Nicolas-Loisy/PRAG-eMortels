@@ -77,7 +77,7 @@ function Question({ question, index, handleUserResponse }) {
             />
           );
       default:
-        console.log('Type de question non pris en charge: ' + question.type);
+        console.error('Type de question non pris en charge: ' + question.type);
         return null;
     }
   }, [question, index, handleUserResponse]);
