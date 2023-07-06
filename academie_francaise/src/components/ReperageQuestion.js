@@ -12,8 +12,8 @@ function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUti
   }
 
   function separerMots(phrase) {
-    var phraseAvecEspaces = phrase.replace(/'/g, "' ");
-    var mots = phraseAvecEspaces.split(' ');
+    var espaceApresApostrophes = phrase.replace(/'/g, "' ");
+    var mots = espaceApresApostrophes.split(' ');
     return mots;
   }
 
@@ -42,7 +42,7 @@ function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUti
         className={defineNomClasse(mot, repondu, isCorrection)}
         key={index} 
         onClick={() => repondu === null ? onUserResponse(verifMot(mot, reponse), mot) : null} 
-        dangerouslySetInnerHTML={{ __html: mot + ' '}}
+        dangerouslySetInnerHTML={{ __html: mot.includes("'") ? mot : mot + ' '}}
       />
     );
   }
@@ -51,7 +51,7 @@ function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUti
     return(
         <div className='ReperageQuestion correction'>
             {mots.map((mot, index) => {
-            return affichageEnonce(mot, index, repondu, true);
+                return affichageEnonce(mot, index, repondu, true);
             })}
         </div>
     );
@@ -63,6 +63,7 @@ function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUti
       {mots.map((mot, index) => (
         affichageEnonce(mot, index, repondu)
       ))}
+      {repondu !== null && !repondu ? affichageCorrection() : null}
     </div>
   );
 }
