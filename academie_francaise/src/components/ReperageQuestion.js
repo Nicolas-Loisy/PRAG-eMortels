@@ -3,9 +3,20 @@ import '../css/ReperageQuestion.css';
 function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUtilisateur }) {
   const mots = separerMots(enonce);
 
+  // Compte le nombre de fois qu'un mot apparait dans la phrase en fonction de sa position dans la liste
+  function nbIterationMot(index, mot) {
+    var nbIteration = 0;
+    for (var i = 0; i <= index; i++) {
+      if (mots[i].toLowerCase().includes(mot.toLowerCase())) { 
+        nbIteration++;
+      }
+    }
+    return nbIteration;
+  }
+
   // Vérifie s'il s'agit de la bonne réponse ou non
-  function verifMot(mot) {
-    if (reponse.toLowerCase().includes(mot.toLowerCase())) {
+  function verifMot(mot, index) {
+    if (reponse.toLowerCase().includes(mot.toLowerCase()) && nbIterationMot(index, mot) <= 1) {
         return true;
     }
     return false;
@@ -18,18 +29,19 @@ function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUti
   }
 
   // Définition du nom de la classe (pour le style du texte)
-  function defineNomClasse(mot, repondu, isCorrection) {
+  function defineNomClasse(mot, repondu, index, isCorrection) {
     if (isCorrection) {
-      if (mot.toLowerCase().includes(reponse.toLowerCase())) {
+      if (reponse.toLowerCase().includes(mot.toLowerCase()) && nbIterationMot(index, mot) <= 1) {
         return 'correct correction';
       } else {
         return 'text';
       }
     } else if (repondu !== null) {
-      if (repondu && mot.toLowerCase().includes(reponseUtilisateur.toLowerCase())) {
+      if ((repondu && mot.toLowerCase().includes(reponseUtilisateur.toLowerCase())) && nbIterationMot(index, mot) <= 1) {
         return 'correct';
-      } else if (!repondu && mot.toLowerCase() === reponseUtilisateur.toLowerCase()) {
-        return 'incorrect';
+      } else if (!repondu && mot.toLowerCase().includes(reponseUtilisateur.toLowerCase())) {
+        if (nbIterationMot(index, mot) > 1 || nbIterationMot(mots.length - 1, mot) === 1) return 'incorrect';
+        return 'text';
       } else return 'text';
     }
     return 'enonce';
@@ -39,9 +51,9 @@ function ReperageQuestion({ enonce, reponse, repondu, onUserResponse, reponseUti
   function affichageEnonce(mot, index, repondu, isCorrection) {
     return(
       <span
-        className={defineNomClasse(mot, repondu, isCorrection)}
+        className={defineNomClasse(mot, repondu, index, isCorrection)}
         key={index} 
-        onClick={() => repondu === null ? onUserResponse(verifMot(mot, reponse), mot) : null} 
+        onClick={() => repondu === null ? onUserResponse(verifMot(mot, index), mot) : null}
         dangerouslySetInnerHTML={{ __html: mot.includes("'") ? mot : mot + ' '}}
       />
     );
