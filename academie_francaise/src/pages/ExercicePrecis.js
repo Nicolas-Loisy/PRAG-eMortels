@@ -97,7 +97,12 @@ function ExercicePrecis() {
   const handleClickQuestion = (numQuestion) => {
     setVoirRecap(false); // Masquer le résumé de fin d'exercice
     setQuestionCourante(numQuestion); // Modifier la question à afficher
-    setStatutMessage("attente");
+
+    if (exercice.exercice.questions[numQuestion] && exercice.exercice.questions[numQuestion].repondu != null){
+      setStatutMessage("aide");
+    } else {
+      setStatutMessage("attente");
+    }
   };
 
   // Afficher l'explication/règle, l'extra et le lien
@@ -233,7 +238,7 @@ function ExercicePrecis() {
                       {questionCourante > 0 && (
                         <div>
                           <Tag className="Cliquable">
-                            <p onClick={() => setQuestionCourante((prevQuestionCourante) => prevQuestionCourante - 1)}>
+                            <p onClick={() => handleClickQuestion(questionCourante - 1)}>
                               Précédent
                             </p>
                           </Tag>
@@ -243,7 +248,7 @@ function ExercicePrecis() {
                       {exercice.exercice.questions[questionCourante].repondu !== null && questionCourante < exercice.exercice.questions.length - 1 && (
                         <div>
                           <Tag className="Cliquable">
-                            <p onClick={() => setQuestionCourante((prevQuestionCourante) => prevQuestionCourante + 1)}>
+                            <p onClick={() => handleClickQuestion(questionCourante + 1)}>
                               Suivant
                             </p>
                           </Tag>
@@ -259,6 +264,7 @@ function ExercicePrecis() {
                             onClick={() => {
                               setVoirRecap(true);
                               setQuestionCourante(-1);
+                              setStatutMessage("masque");
                             }}
                           >
                             Résumé
