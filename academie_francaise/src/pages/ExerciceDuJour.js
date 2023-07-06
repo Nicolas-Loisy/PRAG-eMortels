@@ -30,7 +30,6 @@ function ExerciceDuJour() {
     try {
       // Etape 1 : Requête API
       const exerciceData = await api.getExoJournalier();
-      console.log(exerciceData);
       // Etape 2 : Ajout du champ repondu = null
       const updatedQuestions = exerciceData.exercice.questions.map((question) => ({
         ...question,
