@@ -116,7 +116,7 @@ function ExercicePrecis() {
   // Effectue  l'apparition d'une bulle de dialogue toutes les 10 secondes
   useEffect(() => {
     setVoirBulle(false); // Réinitialise la valeur de voirBulle à false à chaque changement de question
-  
+
     const timeout = setTimeout(() => {
       if (!voirExplication){
         setVoirBulle(true); // Active la bulle après 10 secondes
@@ -214,14 +214,14 @@ function ExercicePrecis() {
                   <>
                     {/* Contenu de l'exercice */}
                     <div>
-                      <p className="intitule" dangerouslySetInnerHTML={{ __html: exercice.exercice.intitule}}/>
+                      <p className="intitule" dangerouslySetInnerHTML={{ __html: exercice.exercice.intitule }} />
                       <Question
                         question={exercice.exercice.questions[questionCourante]}
                         index={questionCourante}
                         handleUserResponse={handleUserResponse}
                       />
                     </div>
-          
+
                     {/* Navigation (précédent / suivant) */}
                     <div className="Navigation tagCliquable">
                       {questionCourante > 0 && (

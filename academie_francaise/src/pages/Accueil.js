@@ -10,7 +10,7 @@ function Accueil() {
       <div className="Accueil">
         <div className="Titre">
           <img src={logo} alt="Logo" />
-          <h1>L'ACADEMIE DE RENART</h1>
+          <h1>L'ACADÉMIE DE RENART</h1>
         </div>
 
         <div className="ColContainer">
@@ -34,7 +34,7 @@ function Accueil() {
                 className="Primaire"
               />
               <Bouton
-                nom="Entrainement"
+                nom="Entraînement"
                 url="/entrainement"
                 className="Primaire"
               />
