@@ -1,0 +1,25 @@
+.Bulle {
+  border: 2.3px solid #2B5877;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.Bulle h1, .Bulle h2, .Bulle h3, .Bulle h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.Bulle::after {
+  content: "";
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #2B5877;
+  position: absolute;
+  bottom: -20px;
+}

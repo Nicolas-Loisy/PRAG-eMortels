@@ -1,0 +1,25 @@
+.ChoixNiveau .ColContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChoixNiveau .Col1 {
+  width: 30%;
+  position: relative;
+}
+
+.ChoixNiveau .Col2 {
+  max-width: 50%;
+}
+
+.ChoixNiveau .Col2 .Niveaux {
+  margin: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ChoixNiveau .Col2 .Niveaux .Bouton {
+  margin-bottom: 2em;
+}

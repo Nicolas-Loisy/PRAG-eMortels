@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "b1c29317-610e-4d50-b13d-8ed760463abd",
+		"name": "AcademieFR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26053945"
+	},
+	"item": [
+		{
+			"name": "Categories et SousCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sous catégories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/sousCategories/:categorie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sousCategories",
+						":categorie"
+					],
+					"variable": [
+						{
+							"key": "categorie",
+							"value": "syntaxe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Niveaux et types exercices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/niveaux/:categorie/:sousCategorie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"niveaux",
+						":categorie",
+						":sousCategorie"
+					],
+					"variable": [
+						{
+							"key": "categorie",
+							"value": "syntaxe"
+						},
+						{
+							"key": "sousCategorie",
+							"value": "couleur"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/exercices/:categorie/:sousCategorie/:niveau",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"exercices",
+						":categorie",
+						":sousCategorie",
+						":niveau"
+					],
+					"variable": [
+						{
+							"key": "categorie",
+							"value": "syntaxe"
+						},
+						{
+							"key": "sousCategorie",
+							"value": "couleur"
+						},
+						{
+							"key": "niveau",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exercice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/exercice/:categorie/:sousCategorie/:niveau/:exerciceId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"exercice",
+						":categorie",
+						":sousCategorie",
+						":niveau",
+						":exerciceId"
+					],
+					"variable": [
+						{
+							"key": "categorie",
+							"value": "lexique"
+						},
+						{
+							"key": "sousCategorie",
+							"value": "anglicismes"
+						},
+						{
+							"key": "niveau",
+							"value": "2"
+						},
+						{
+							"key": "exerciceId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Niveaux",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/niveaux",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"niveaux"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "X Questions d'un niveau",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/questions/:niveau/:nbQuestions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"questions",
+						":niveau",
+						":nbQuestions"
+					],
+					"variable": [
+						{
+							"key": "niveau",
+							"value": "1"
+						},
+						{
+							"key": "nbQuestions",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "X Questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/questions/:nbQuestions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"questions",
+						":nbQuestions"
+					],
+					"variable": [
+						{
+							"key": "nbQuestions",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "X Exercices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/exercices/:nbExercice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"exercices",
+						":nbExercice"
+					],
+					"variable": [
+						{
+							"key": "nbExercice",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

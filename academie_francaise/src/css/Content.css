@@ -1,16 +1,29 @@
 .Content {
-  text-align: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   flex-direction: column;
-  background-color: #f3f3f3;
-  background-image: url("../ressources/Images/fondLogoAccueilCell.png");
-  background-repeat: no-repeat;
-  background-position: top right;
-  font-family: Georgia, Times;
   min-height: 100vh;
+  background: url('../ressources/Images/BG_feuilles.png'), rgb(248, 251, 255); 
+  background-size: 50%;
+  background-repeat: repeat;
 }
 
+.Content .Page {
+  border-radius: 10px;
+  background-color: #ffffff !important;
+  min-width: 80%;
+  max-width: 80%;
+  min-height: 80vh;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background: url('../ressources/Images/feuille.png') right top/150px auto no-repeat;
+  position: relative;
+}
 
-
-
-
+.Content .Ariane {
+  position: absolute;
+  top: 0;
+}

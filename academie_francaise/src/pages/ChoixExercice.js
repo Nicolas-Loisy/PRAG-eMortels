@@ -1,67 +1,65 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from "react-router";
 
 import Content from "../components/Content";
-import ConteneurTag from "../components/ConteneurTag"
-import Tag from "../components/Tag";
+import Bouton from '../components/Bouton';
 
 import { api } from "../api/Api";
 import "../css/ChoixExercice.css";
 
 function ChoixExercice() {
-  const params = useParams();
+  const params = useParams(); // Extraction des paramètres de l'URL
   const [niveaux, setNiveaux] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, );
-
-  const fetchData = async () => {
+  // Définition de la fonction fetchData en utilisant useCallback
+  const fetchData = useCallback(async () => {
     try {
-      const niveauxData = await api.getNiveaux(params.categorie, params.sousCategorie);
-      console.log(niveauxData);
-      setNiveaux(niveauxData);
+      const niveauxData = await api.getNiveauxTypesExo(params.categorie, params.sousCategorie); // Appel de l'API pour récupérer les données de niveaux
+      setNiveaux(niveauxData); // Mise à jour de la variable d'état niveaux avec les données récupérées
     } catch (error) {
       console.error(error);
     }
-  };
+  }, [params.categorie, params.sousCategorie]);
 
-  const handleClick = (url) => {
-    window.location.href = url;
-  };
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
-  function formatUniqueValues(uniqueValues) {
-    var str = ` - ${uniqueValues.join(', ')}`;
+  // Fonction pour formater les valeurs uniques et les afficher dans les tags
+  function getUniquesTypes(exercice) {
+    const typesUniques = [...new Set(exercice.questions.map(obj => obj.type))];
+    var str = `${typesUniques.join(', ')}`;
     str = str.replace("phraseTrous", "Texte à trous");
     str = str.replace("EF", "Enoncé fautif");
     return str;
   }
 
-  function getTags(niveau) {
-    return niveau.exercices.map((exercice, index) => {
-      const typesUniques = [...new Set(exercice.questions.map(obj => obj.type))];
-      const typesAffichage = formatUniqueValues(typesUniques);
-      return (
-        <Tag className="Cliquable" key={index}>
-          <p onClick={() => handleClick("/parcours-precis/categorie/" + params.categorie + "/sousCategorie/" + params.sousCategorie + "/niveau/" + niveau._id + "/exercice/" + exercice._id)}>
-            {
-              "Exercice " + exercice._id + typesAffichage
-            }
-          </p>
-        </Tag>
-      );
-    });
-  }
-
   return (
     <Content>
-      <h1>Exercices</h1>
       <div className="ChoixExercice">
-        <div className="ExercicesConteneur">
+        <h1>EXERCICES</h1>
+        <div className="Niveaux">
           {
             niveaux.map((niveau, index) => {
-              return <ConteneurTag nom={niveau.nom} tags={getTags(niveau)} key={index} />;
-            })
+              return (
+              <div className='Niveau' key={index}>
+                <h2>{niveau.nom}</h2>
+                <div className='Exercices'>
+                    {
+                      niveau.exercices.map((exercice, subIndex) => {
+                        return (
+                          <Bouton
+                            key={subIndex}
+                            nom={"<b>Exercice " + exercice._id + "</b><br>" + getUniquesTypes(exercice)}
+                            url={"/catalogue/categorie/" + params.categorie + "/sousCategorie/" + params.sousCategorie + "/niveau/" + niveau._id + "/exercice/" + exercice._id}
+                            className={"Primaire Big"}
+                          />
+                        )
+                      })
+                    }
+                </div>
+              </div>
+            )})
           }
         </div>
       </div>

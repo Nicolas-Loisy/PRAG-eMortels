@@ -1,6 +1,44 @@
-.optionContainer {
+.Accueil .Titre img {
+  max-width: 20%;
+}
+
+.Accueil h1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+
+.Accueil .ColContainer {
   display: flex;
-  gap: 2em;
+}
+
+.Accueil .Col1 {
+  width: 25%;
+  position: relative;
+}
+
+.Accueil .Mascotte {
+  content: url("../ressources/Images/renart_bouche.png");
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.Accueil .Col2 {
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 2em;
+  text-align: justify;
+}
+
+.Accueil .Col2 .Navigation {
+  margin-top: 5em;
+  display: flex;
+  gap: 1.5em;
+  justify-content: flex-end;
+}
+
+.Accueil .Bulle h2 {
+  margin-bottom: 0.7em;
 }
