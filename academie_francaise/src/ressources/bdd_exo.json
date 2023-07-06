@@ -1029,9 +1029,9 @@
                     {
                       "_id": "4",
                       "type": "reperage",
-                      "question": "Les enfants, nous les avons vus hier.",
-                      "reponse": "les",
-                      "extra": "(« les » = C.O.D. ; « Les enfants » = mot qui détermine l'accord du participe passé)"
+                      "question": "La tâche qu'il a accomplie est considérable.",
+                      "reponse": "qu'",
+                      "extra": "(« qu’ » = C.O.D. ; « La tâche » = mot qui détermine l’accord du participe passé)"
                     },
                     {
                       "_id": "5",

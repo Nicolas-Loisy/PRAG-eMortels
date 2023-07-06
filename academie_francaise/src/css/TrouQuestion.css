@@ -11,6 +11,13 @@
     font-weight: bold;
   }
 
+  .TrouQuestion .textenonce {
+    margin-top: 1em;
+    border-radius: 10px;
+    background-color: #f9f8f8;
+    padding: 40px;
+  }
+
   .TrouQuestion.inline-div {
     display: inline;
   }
@@ -25,7 +32,7 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .TrouQuestion input.user-input {
     font-family: inherit;
     width: 100%;
@@ -49,6 +56,7 @@
     padding: 0.5em 1.3em;
     transition: border 0.15s ease;
     margin-top: 1em;
+    color: #2B5877;
   }
 
   .TrouQuestion .button:hover {

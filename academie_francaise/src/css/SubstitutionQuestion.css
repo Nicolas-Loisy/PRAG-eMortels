@@ -56,13 +56,13 @@
     border: 0;
     border-bottom: 2px solid #9b9b9b;
     outline: 0;
-    font-weight: bold;
     color: black;
     background: transparent;
     transition: border-color 0.2s;
     max-width: 80%;
     margin-bottom: 1em;
     margin-top: 1em;
+    text-align: center;
 }
 
 .SubstitutionQuestion .button {
@@ -73,6 +73,7 @@
     padding: 0.5em 1.3em;
     transition: border 0.15s ease;
     margin-top: 1em;
+    color: #2B5877;
 }
 
 .SubstitutionQuestion .button:hover {
@@ -81,6 +82,9 @@
 
 .SubstitutionQuestion div.enonce {
     margin-top: 1em;
+    border-radius: 10px;
+    background-color: #f9f8f8;
+    padding: 40px;
 }
 
 .SubstitutionQuestion {

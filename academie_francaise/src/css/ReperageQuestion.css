@@ -1,52 +1,59 @@
 .ReperageQuestion .correct {
-    color: hsl(100, 46%, 43%);
-    font-weight: bold;
-    margin-top: 1em;
-  }
+  color: hsl(100, 46%, 43%);
+  font-weight: bold;
+  margin-top: 1em;
+}
 
-  .ReperageQuestion .incorrect {
-    color: #BD0000;
-    font-weight: bold;
-    margin-top: 1em;
-  }
+.ReperageQuestion .incorrect {
+  color: #BD0000;
+  font-weight: bold;
+  margin-top: 1em;
+}
 
-  .ReperageQuestion.inline-div {
-    display: inline;
-  }
+.ReperageQuestion.inline-div {
+  display: inline;
+}
 
-  .ReperageQuestion .correction {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-style: italic;
-  }
+.ReperageQuestion .correction {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-style: italic;
+}
 
-  .ReperageQuestion .validation {
-    display: flex;
-    justify-content: center;
-  }
+.ReperageQuestion .validation {
+  display: flex;
+  justify-content: center;
+}
 
-  .ReperageQuestion button {
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    cursor: pointer;
-    border: 2px solid #2B5877;
-    border-radius: 10px;
-    width: fit-content;
-    padding: 0.5em 1.3em;
-    transition: border 0.15s ease;
-    margin-top: 1em;
-  }
+.ReperageQuestion button {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  cursor: pointer;
+  border: 2px solid #2B5877;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 0.5em 1.3em;
+  transition: border 0.15s ease;
+  margin-top: 1em;
+}
 
-  .ReperageQuestion .button:hover {
-    border: 2px solid #F27E19;
-  }
+.ReperageQuestion .button:hover {
+  border: 2px solid #F27E19;
+}
 
-  .ReperageQuestion span.enonce:hover {
-    color: #F27E19;
-    cursor: pointer;
-  }
+.ReperageQuestion span.enonce:hover {
+  color: #F27E19;
+  cursor: pointer;
+}
 
-  .ReperageQuestion {
-    margin-top: 1em;
-  }
+.ReperageQuestion {
+  margin-top: 1em;
+}
+
+.ReperageQuestion .enonce {
+  margin-top: 1em;
+  border-radius: 10px;
+  background-color: #f9f8f8;
+  padding: 40px;
+}
