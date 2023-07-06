@@ -110,16 +110,16 @@ function ExercicePrecis() {
   // Effectue  l'apparition d'une bulle de dialogue toutes les 10 secondes
   useEffect(() => {
     setVoirBulle(false); // Réinitialise la valeur de voirBulle à false à chaque changement de question
-  
+
     const timeout = setTimeout(() => {
       setVoirBulle(true); // Active la bulle après 10 secondes
     }, 10000);
-  
+
     return () => {
       clearTimeout(timeout); // Annule le timer lorsque le composant est démonté
     };
   }, [questionCourante]);
-  
+
   return (
     <Content>
       <h1>EXERCICE</h1>
@@ -151,48 +151,48 @@ function ExercicePrecis() {
         <div className="col_container">
           {/* Affichage de la mascotte et des règles de français */}
           <div className="col_1">
-            <div className="Mascotte" onClick={handleClickExplication}/>
-              {/* Affichage de la bulle de dialogue uniquement après 10s et si l'utilisateur n'a pas déjà répondu */}
-              {voirBulle && exercice.exercice.questions[questionCourante].repondu === null && exercice.sousCategorie !== "anglicismes" && exercice.sousCategorie !== "prealable-2" && (
-                <Bulle>
-                <p> Si tu as besoin d'aide pour cette question, n'hésite pas à cliquer sur moi ! <br/>
-                    Je suis là pour t'assister et te guider dans la bonne direction.
+            <div className="Mascotte" onClick={handleClickExplication} />
+            {/* Affichage de la bulle de dialogue uniquement après 10s et si l'utilisateur n'a pas déjà répondu */}
+            {voirBulle && exercice.exercice.questions[questionCourante].repondu === null && exercice.exercice.questions[questionCourante].extra !== null && (
+              <Bulle>
+                <p> Si tu as besoin d'aide pour cette question, n'hésite pas à cliquer sur moi ! <br />
+                  Je suis là pour t'assister et te guider dans la bonne direction.
                 </p>
               </Bulle>
-              )}
-              
-              {/* (Tous) Affichage de la règle de français et du lien s'ils existent */}
-              {voirExplication && exercice.exercice.explication && exercice.exercice.lien && (
-                    <div className='ExplicationEtLien'>
-                      <div className="Explication">
-                        <p dangerouslySetInnerHTML={{ __html: exercice.exercice.explication}}/>
-                        <div className="Lien">
-                          <a href={exercice.exercice.lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
-                        </div>
-                      </div>
-                    </div>
-              )}
+            )}
 
-              {/* (Anglicismes) Affichage de l'extra et du lien s'ils existent et que l'utilisateur ait répondu à la question (A REVOIR) */}
-              {voirExplication && exercice.sousCategorie === "anglicismes" && exercice.exercice.questions[questionCourante].repondu !== null && exercice.exercice.questions[questionCourante].extra && exercice.exercice.questions[questionCourante].lien && (
-                    <div className='ExplicationEtLien'>
-                      <div className="Explication">
-                        <p dangerouslySetInnerHTML={{ __html: exercice.exercice.questions[questionCourante].extra}}/>
-                        <div className="Lien">
-                          <a href={exercice.exercice.questions[questionCourante].lien}  target="_blank" rel="noreferrer">Lien d'explication</a>
-                        </div>
-                      </div>
-                    </div>
-              )}
+            {/* (Tous) Affichage de la règle de français et du lien s'ils existent */}
+            {voirExplication && exercice.exercice.explication && exercice.exercice.lien && (
+              <div className='ExplicationEtLien'>
+                <div className="Explication">
+                  <p dangerouslySetInnerHTML={{ __html: exercice.exercice.explication }} />
+                  <div className="Lien">
+                    <a href={exercice.exercice.lien} target="_blank" rel="noreferrer">Lien d'explication</a>
+                  </div>
+                </div>
+              </div>
+            )}
 
-              {/* (prealable-2) Affichage de l'extra s'il existe et que l'utilisateur ait répondu à la question (A REVOIR) */}
-              {voirExplication && exercice.sousCategorie === "prealable-2" && exercice.exercice.questions[questionCourante].repondu !== null && exercice.exercice.questions[questionCourante].extra && (
-                    <div className='ExplicationEtLien'>
-                      <div className="Explication">
-                        <p dangerouslySetInnerHTML={{ __html: exercice.exercice.questions[questionCourante].extra}}/>
-                      </div>
-                    </div>
-              )}
+            {/* (Anglicismes) Affichage de l'extra et du lien s'ils existent et que l'utilisateur ait répondu à la question (A REVOIR) */}
+            {voirExplication && exercice.exercice.questions[questionCourante].extra !== null && exercice.exercice.questions[questionCourante].repondu !== null && exercice.exercice.questions[questionCourante].extra && exercice.exercice.questions[questionCourante].lien && (
+              <div className='ExplicationEtLien'>
+                <div className="Explication">
+                  <p dangerouslySetInnerHTML={{ __html: exercice.exercice.questions[questionCourante].extra }} />
+                  <div className="Lien">
+                    <a href={exercice.exercice.questions[questionCourante].lien} target="_blank" rel="noreferrer">Lien d'explication</a>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* (prealable-2) Affichage de l'extra s'il existe et que l'utilisateur ait répondu à la question (A REVOIR) */}
+            {voirExplication && exercice.sousCategorie === "prealable-2" && exercice.exercice.questions[questionCourante].repondu !== null && exercice.exercice.questions[questionCourante].extra && (
+              <div className='ExplicationEtLien'>
+                <div className="Explication">
+                  <p dangerouslySetInnerHTML={{ __html: exercice.exercice.questions[questionCourante].extra }} />
+                </div>
+              </div>
+            )}
 
           </div>
 
@@ -204,14 +204,14 @@ function ExercicePrecis() {
                   <>
                     {/* Contenu de l'exercice */}
                     <div>
-                      <p className="intitule" dangerouslySetInnerHTML={{ __html: exercice.exercice.intitule}}/>
+                      <p className="intitule" dangerouslySetInnerHTML={{ __html: exercice.exercice.intitule }} />
                       <Question
                         question={exercice.exercice.questions[questionCourante]}
                         index={questionCourante}
                         handleUserResponse={handleUserResponse}
                       />
                     </div>
-          
+
                     {/* Navigation (précédent / suivant) */}
                     <div className="Navigation tagCliquable">
                       {questionCourante > 0 && (
