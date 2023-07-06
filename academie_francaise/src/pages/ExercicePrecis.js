@@ -53,6 +53,7 @@ function ExercicePrecis() {
         ...exerciceData,
         exercice: updatedExercice,
       });
+
     } catch (error) {
       console.error(error);
     }
@@ -89,6 +90,7 @@ function ExercicePrecis() {
         ...prevExercice,
         exercice: updatedExercice,
       };
+
     });
     setStatutMessage("aide");
   };
@@ -180,6 +182,7 @@ function ExercicePrecis() {
   return (
     <Content>
       <h1>EXERCICE</h1>
+      {console.log(exercice)}
       <div className="ExercicePrecis">
 
         {/* Tags d'identifications de l'exercice */}
