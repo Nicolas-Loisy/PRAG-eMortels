@@ -32,6 +32,12 @@
   text-align: justify;
 }
 
+.Accueil .Col2 .Navigation img {
+  width : 5%;
+  transform: rotate(90deg);
+  margin-right: -15px;
+}
+
 .Accueil .Col2 .Navigation {
   margin-top: 5em;
   display: flex;

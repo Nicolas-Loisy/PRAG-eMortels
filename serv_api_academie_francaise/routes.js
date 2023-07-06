@@ -350,7 +350,7 @@ router.get('/exo-journalier', async (req, res) => {
     const month = today.getMonth() + 1;
     const year = today.getFullYear();
 
-    const dateString = `${day+1}-${month}-${year}`;
+    const dateString = `${day}-${month}-${year}`;
     const random = seedrandom(dateString)();
 
     const allExercises = await MyModel.aggregate([
@@ -368,7 +368,9 @@ router.get('/exo-journalier', async (req, res) => {
           "categorieId": "$categories._id",
           "categorieNom": "$categories.nom",
           "sousCategorieId": "$categories.sousCategories._id",
-          "sousCategorieNom": "$categories.sousCategories.nom"
+          "sousCategorieNom": "$categories.sousCategories.nom",
+          "niveauId": "$categories.sousCategories.niveaux._id",
+          "niveauNom": "$categories.sousCategories.niveaux.nom"
         }
       }
     ]);
@@ -383,6 +385,7 @@ router.get('/exo-journalier', async (req, res) => {
     res.json({
       categorieNom: exercise.categorieNom,
       sousCategorieNom: exercise.sousCategorieNom,
+      niveauNom: exercise.niveauNom,
       exercice: {
         _id: exercise._id,
         intitule: exercise.intitule,
